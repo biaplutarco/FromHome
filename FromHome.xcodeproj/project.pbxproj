@@ -16,6 +16,8 @@
 		A4AE77AC24B3994700A49E7F /* FromHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE77AB24B3994700A49E7F /* FromHomeUITests.swift */; };
 		A4AE77BA24B39A8A00A49E7F /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = A4AE77B924B39A8900A49E7F /* README.MD */; };
 		A4AE77BC24B39AD000A49E7F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A4AE77BB24B39AD000A49E7F /* .gitignore */; };
+		A4AE77BF24B3BC6700A49E7F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE77BE24B3BC6700A49E7F /* Coordinator.swift */; };
+		A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		A4AE77AD24B3994700A49E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4AE77B924B39A8900A49E7F /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		A4AE77BB24B39AD000A49E7F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A4AE77BE24B3BC6700A49E7F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +107,11 @@
 		A4AE778524B3994400A49E7F /* FromHome */ = {
 			isa = PBXGroup;
 			children = (
+				A4AE77BD24B3BAE400A49E7F /* Coordinator */,
 				A4AE778624B3994400A49E7F /* AppDelegate.swift */,
 				A4AE778824B3994400A49E7F /* SceneDelegate.swift */,
-				A4AE779224B3994700A49E7F /* Assets.xcassets */,
 				A4AE779424B3994700A49E7F /* LaunchScreen.storyboard */,
+				A4AE779224B3994700A49E7F /* Assets.xcassets */,
 				A4AE779724B3994700A49E7F /* Info.plist */,
 				A4AE778F24B3994400A49E7F /* FromHome.xcdatamodeld */,
 			);
@@ -129,6 +134,15 @@
 				A4AE77AD24B3994700A49E7F /* Info.plist */,
 			);
 			path = FromHomeUITests;
+			sourceTree = "<group>";
+		};
+		A4AE77BD24B3BAE400A49E7F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A4AE77BE24B3BC6700A49E7F /* Coordinator.swift */,
+				A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AE77BF24B3BC6700A49E7F /* Coordinator.swift in Sources */,
 				A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
+				A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */,
 				A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
