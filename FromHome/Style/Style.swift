@@ -72,7 +72,7 @@ class Style {
         label.backgroundColor = attributes.backgroundColor
     }
     
-    func apply(textStyle: TextStyle = .button, to button: UIButton) {
+    func apply(textStyle: TextStyle, to button: UIButton) {
         
         let attributes = attributesForStyle(textStyle)
        
