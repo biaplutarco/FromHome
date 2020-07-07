@@ -61,4 +61,23 @@ class Style {
     func backgroundColor(for style: TextStyle) -> UIColor? {
         return attributesForStyle(style).backgroundColor
     }
+    
+    //  Applying Style to UI Elements
+    func apply(textStyle: TextStyle, to label: UILabel) {
+        
+        let attributes = attributesForStyle(textStyle)
+        
+        label.font = attributes.font
+        label.textColor = attributes.color
+        label.backgroundColor = attributes.backgroundColor
+    }
+    
+    func apply(textStyle: TextStyle = .button, to button: UIButton) {
+        
+        let attributes = attributesForStyle(textStyle)
+       
+        button.setTitleColor(attributes.color, for: .normal)
+        button.titleLabel?.font = attributes.font
+        button.backgroundColor = attributes.backgroundColor
+    }
 }
