@@ -86,6 +86,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		278045E724B411AC00AEDFBA /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				278045DD24B405FA00AEDFBA /* Style.swift */,
+				278045E824B411BE00AEDFBA /* Extension */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		278045E824B411BE00AEDFBA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */,
+				278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */,
+				278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		A4AE777A24B3994400A49E7F = {
 			isa = PBXGroup;
 			children = (
@@ -113,10 +132,7 @@
 			children = (
 				A4AE778624B3994400A49E7F /* AppDelegate.swift */,
 				A4AE778824B3994400A49E7F /* SceneDelegate.swift */,
-				278045DD24B405FA00AEDFBA /* Style.swift */,
-				278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */,
-				278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */,
-				278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */,
+				278045E724B411AC00AEDFBA /* Style */,
 				A4AE779224B3994700A49E7F /* Assets.xcassets */,
 				A4AE779424B3994700A49E7F /* LaunchScreen.storyboard */,
 				A4AE779724B3994700A49E7F /* Info.plist */,
