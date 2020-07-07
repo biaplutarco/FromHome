@@ -16,7 +16,7 @@ class Style {
         case username
         
         case titleCardHeader
-        case titleTasks
+        case checklist
         
         case titleCardFooter
         case subtitleCardFooter
@@ -24,7 +24,7 @@ class Style {
         
         case titleAlert
         
-        case positiveTitleButton
+        case titleButton
         case destructiveTitleButton
     }
     
