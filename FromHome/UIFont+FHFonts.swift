@@ -8,21 +8,6 @@
 
 import UIKit
 
-//case greeting
-//case username
-//
-//case titleCardHeader
-//case titleTasks
-//
-//case titleCardFooter
-//case subtitleCardFooter
-//case bodyCardFooter
-//
-//case titleAlert
-//
-//case positiveTitleButton
-//case destructiveTitleButton
-
 extension UIFont {
     
     static var greeting: UIFont {
