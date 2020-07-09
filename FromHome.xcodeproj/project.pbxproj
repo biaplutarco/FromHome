@@ -20,6 +20,8 @@
 		A48B2DD724B7BAB00017B79D /* TimersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2DD624B7BAB00017B79D /* TimersCoordinator.swift */; };
 		A48B2DD924B7BB120017B79D /* TasksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2DD824B7BB120017B79D /* TasksCoordinator.swift */; };
 		A48B2DDD24B7BB310017B79D /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2DDC24B7BB310017B79D /* TasksViewController.swift */; };
+		A48B2DE724B7BC380017B79D /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2DE624B7BC380017B79D /* NotificationViewController.swift */; };
+		A48B2DE924B7BC5D0017B79D /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2DE824B7BC5D0017B79D /* NotificationCoordinator.swift */; };
 		A49ED7AD24B7B572006C70B6 /* TodayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */; };
 		A49ED7B124B7B597006C70B6 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ED7B024B7B597006C70B6 /* TodayViewController.swift */; };
 		A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778624B3994400A49E7F /* AppDelegate.swift */; };
@@ -68,6 +70,8 @@
 		A48B2DD624B7BAB00017B79D /* TimersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersCoordinator.swift; sourceTree = "<group>"; };
 		A48B2DD824B7BB120017B79D /* TasksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCoordinator.swift; sourceTree = "<group>"; };
 		A48B2DDC24B7BB310017B79D /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		A48B2DE624B7BC380017B79D /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationViewController.swift; path = FromHome/Coordinators/ChildCoordinators/NotificationViewController.swift; sourceTree = SOURCE_ROOT; };
+		A48B2DE824B7BC5D0017B79D /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
 		A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCoordinator.swift; sourceTree = "<group>"; };
 		A49ED7B024B7B597006C70B6 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A4AE778324B3994400A49E7F /* FromHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FromHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,12 +164,29 @@
 			path = TasksScreen;
 			sourceTree = "<group>";
 		};
+		A48B2DE424B7BC1E0017B79D /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				A48B2DE524B7BC280017B79D /* NotificationScreen */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		A48B2DE524B7BC280017B79D /* NotificationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A48B2DE624B7BC380017B79D /* NotificationViewController.swift */,
+			);
+			path = NotificationScreen;
+			sourceTree = "<group>";
+		};
 		A49ED7A824B7A797006C70B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				A49ED7AE24B7B578006C70B6 /* Today */,
 				A48B2DD224B7BA4A0017B79D /* Timers */,
 				A48B2DDA24B7BB1A0017B79D /* Tasks */,
+				A48B2DE424B7BC1E0017B79D /* Notification */,
 				A49ED7A924B7A7A8006C70B6 /* Components */,
 			);
 			path = View;
@@ -195,6 +216,7 @@
 				A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */,
 				A48B2DD624B7BAB00017B79D /* TimersCoordinator.swift */,
 				A48B2DD824B7BB120017B79D /* TasksCoordinator.swift */,
+				A48B2DE824B7BC5D0017B79D /* NotificationCoordinator.swift */,
 			);
 			path = ChildCoordinators;
 			sourceTree = "<group>";
@@ -530,6 +552,7 @@
 			files = (
 				A4AE77BF24B3BC6700A49E7F /* Coordinator.swift in Sources */,
 				A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */,
+				A48B2DE924B7BC5D0017B79D /* NotificationCoordinator.swift in Sources */,
 				A48B2DD724B7BAB00017B79D /* TimersCoordinator.swift in Sources */,
 				A48B2DD524B7BA630017B79D /* TimersViewController.swift in Sources */,
 				A49ED7AD24B7B572006C70B6 /* TodayCoordinator.swift in Sources */,
@@ -542,6 +565,7 @@
 				A48B2DD924B7BB120017B79D /* TasksCoordinator.swift in Sources */,
 				A48B2DDD24B7BB310017B79D /* TasksViewController.swift in Sources */,
 				A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */,
+				A48B2DE724B7BC380017B79D /* NotificationViewController.swift in Sources */,
 				A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */,
 				27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */,
 				278045DE24B405FA00AEDFBA /* Style.swift in Sources */,

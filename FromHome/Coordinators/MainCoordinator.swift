@@ -21,11 +21,12 @@ class MainCoordinator: Coordinator {
 
         window.windowScene = windowScene
 
-        childCoordinators.append(TodayCoordinator.init(self))
-        childCoordinators.append(TimersCoordinator.init(self))
-        childCoordinators.append(TasksCoordinator.init(self))
+        childCoordinators.append(TodayCoordinator(self))
+        childCoordinators.append(TimersCoordinator(self))
+        childCoordinators.append(TasksCoordinator(self))
+        childCoordinators.append(NotificationCoordinator(self))
 
-        tabBarController = UITabBarController.init()
+        tabBarController = UITabBarController()
 
         tabBarController?.viewControllers = childCoordinators.map({ $0.navigationController })
 
