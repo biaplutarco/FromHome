@@ -1,5 +1,5 @@
 //
-//  TodayViewController.swift
+//  TimersViewController.swift
 //  FromHome
 //
 //  Created by Daniboy on 7/9/20.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class TodayViewController: UIViewController {
+class TimersViewController: UIViewController {
 
-    var coordinator: TodayCoordinator?
+    var coordinator: TimersCoordinator?
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        tabBarItem = UITabBarItem(title: "Today", image: UIImage(), tag: 0)
+        tabBarItem = UITabBarItem(title: "Timers", image: UIImage(), tag: 0)
     }
 
     @available(*, unavailable)

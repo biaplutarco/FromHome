@@ -16,6 +16,8 @@
 		278045E624B40DC800AEDFBA /* UIFont+FHFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */; };
 		42D144E78D035D1BE4EA7C47 /* Pods_FromHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147D5965E0FD62DA0408A57A /* Pods_FromHome.framework */; };
 		8CF228F9FB95080DCB43F60B /* Pods_FromHome_FromHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344516298486A939C3EDF6F6 /* Pods_FromHome_FromHomeUITests.framework */; };
+		A48B2DD524B7BA630017B79D /* TimersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2DD424B7BA630017B79D /* TimersViewController.swift */; };
+		A48B2DD724B7BAB00017B79D /* TimersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2DD624B7BAB00017B79D /* TimersCoordinator.swift */; };
 		A49ED7AD24B7B572006C70B6 /* TodayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */; };
 		A49ED7B124B7B597006C70B6 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ED7B024B7B597006C70B6 /* TodayViewController.swift */; };
 		A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778624B3994400A49E7F /* AppDelegate.swift */; };
@@ -60,6 +62,8 @@
 		383ED69634AAD6D6AAD683AF /* Pods-FromHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome.debug.xcconfig"; path = "Target Support Files/Pods-FromHome/Pods-FromHome.debug.xcconfig"; sourceTree = "<group>"; };
 		445A17B74F5FEC3993225741 /* Pods-FromHome-FromHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome-FromHomeUITests.debug.xcconfig"; path = "Target Support Files/Pods-FromHome-FromHomeUITests/Pods-FromHome-FromHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A55388DE651E6CCDD9C7396 /* Pods-FromHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-FromHomeTests/Pods-FromHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A48B2DD424B7BA630017B79D /* TimersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersViewController.swift; sourceTree = "<group>"; };
+		A48B2DD624B7BAB00017B79D /* TimersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersCoordinator.swift; sourceTree = "<group>"; };
 		A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCoordinator.swift; sourceTree = "<group>"; };
 		A49ED7B024B7B597006C70B6 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A4AE778324B3994400A49E7F /* FromHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FromHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,10 +124,27 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		A48B2DD224B7BA4A0017B79D /* Timers */ = {
+			isa = PBXGroup;
+			children = (
+				A48B2DD324B7BA550017B79D /* TimersScreen */,
+			);
+			path = Timers;
+			sourceTree = "<group>";
+		};
+		A48B2DD324B7BA550017B79D /* TimersScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A48B2DD424B7BA630017B79D /* TimersViewController.swift */,
+			);
+			path = TimersScreen;
+			sourceTree = "<group>";
+		};
 		A49ED7A824B7A797006C70B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				A49ED7AE24B7B578006C70B6 /* Today */,
+				A48B2DD224B7BA4A0017B79D /* Timers */,
 				A49ED7A924B7A7A8006C70B6 /* Components */,
 			);
 			path = View;
@@ -151,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */,
+				A48B2DD624B7BAB00017B79D /* TimersCoordinator.swift */,
 			);
 			path = ChildCoordinators;
 			sourceTree = "<group>";
@@ -486,6 +508,8 @@
 			files = (
 				A4AE77BF24B3BC6700A49E7F /* Coordinator.swift in Sources */,
 				A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */,
+				A48B2DD724B7BAB00017B79D /* TimersCoordinator.swift in Sources */,
+				A48B2DD524B7BA630017B79D /* TimersViewController.swift in Sources */,
 				A49ED7AD24B7B572006C70B6 /* TodayCoordinator.swift in Sources */,
 				278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */,
 				278045E624B40DC800AEDFBA /* UIFont+FHFonts.swift in Sources */,

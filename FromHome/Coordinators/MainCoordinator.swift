@@ -22,6 +22,7 @@ class MainCoordinator: Coordinator {
         window.windowScene = windowScene
 
         childCoordinators.append(TodayCoordinator.init(self))
+        childCoordinators.append(TimersCoordinator.init(self))
 
         tabBarController = UITabBarController.init()
 
