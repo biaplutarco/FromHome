@@ -23,6 +23,7 @@ class MainCoordinator: Coordinator {
 
         childCoordinators.append(TodayCoordinator.init(self))
         childCoordinators.append(TimersCoordinator.init(self))
+        childCoordinators.append(TasksCoordinator.init(self))
 
         tabBarController = UITabBarController.init()
 
