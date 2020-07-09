@@ -1,0 +1,263 @@
+# Find all the available rules by running:
+# swiftlint rules
+
+disabled_rules: # rule identifiers to exclude from running
+# lint
+  - class_delegate_protocol
+  - discouraged_direct_init
+  - expiring_todo
+  - missing_docs # check per project
+  - orphaned_doc_comment # check per project
+  - required_deinit # todo: check again later
+  - required_enum_case # todo: check again later
+  - strong_iboutlet # todo: check again later
+  - superfluous_disable_command # todo: check again later
+# style
+  - conditional_returns_on_newline
+  - control_statement
+  - explicit_self
+  - file_header # check per project
+  - prefixed_toplevel_constant
+  - single_test_class # todo: check again later
+  - sorted_imports
+  - trailing_closure
+  - vertical_parameter_alignment # todo: check again later
+  - vertical_parameter_alignment_on_call # todo: check again later
+# idiomatic
+  - explicit_acl
+  - explicit_init
+  - explicit_top_level_acl
+  - explicit_type_interface
+  - extension_access_modifier
+  - file_name # todo: check again later
+  - implicitly_unwrapped_optional # todo: check again later
+  - object_literal
+  - private_over_fileprivate # todo: check again later
+  - static_operator # todo: check again later
+  - strict_fileprivate
+  - type_name # todo: check again later
+# metric
+  - enum_case_associated_values_count
+  - type_body_length
+# performance
+
+opt_in_rules: # some rules are only opt-in
+# lint
+  - anyobject_protocol
+  - array_init
+  - deployment_target
+  - discarded_notification_center_observer
+  - duplicate_enum_cases
+  - dynamic_inline
+  - empty_xctest_method
+  - identical_operands
+  - inert_defer
+  - lower_acl_than_parent
+  - notification_center_detachment
+  - nslocalizedstring_key # todo: check later if useful
+  - nsobject_prefer_isequal
+  - overridden_super_call
+  - override_in_extension
+  - private_action
+  - private_outlet
+  - private_unit_test # todo: check later if useful
+  - prohibited_interface_builder
+  - prohibited_super_call # todo: check later if useful
+  - quick_discouraged_call # todo: check later if useful
+  - quick_discouraged_pending_test # todo: check later if useful
+  - raw_value_for_camel_cased_codable_enum
+  - todo
+  - unowned_variable_capture
+  - unused_closure_parameter # todo: check later if useful
+  - unused_control_flow_label # todo: check later if useful
+  - unused_declaration
+  - unused_import
+  - unused_setter_value
+  - valid_ibinspectable # todo: check later if useful
+  - weak_delegate
+  - yoda_condition
+# style
+  - attributes
+  - closing_brace
+  - closure_end_indentation
+  - closure_parameter_position
+  - closure_spacing
+  - collection_alignment
+  - colon
+  - comma
+  - compiler_protocol_init
+  - empty_enum_arguments
+  - empty_parameters
+  - empty_parentheses_with_trailing_closure
+  - file_types_order # todo: check later if useful
+  - identifier_name # todo: check later to add config
+  - implicit_getter
+  - implicit_return
+  - indentation_width
+  - leading_whitespace # todo: check later if useful
+  - let_var_whitespace
+  - literal_expression_end_indentation
+  - modifier_order
+  - multiline_arguments
+  - multiline_arguments_brackets
+  - multiline_function_chains
+  - multiline_literal_brackets
+  - multiline_parameters
+  - multiline_parameters_brackets
+  - multiple_closures_with_trailing_closure
+  - no_space_in_method_call
+  - number_separator
+  - opening_brace
+  - operator_usage_whitespace
+  - operator_whitespace
+  - optional_enum_case_matching # todo: check later if useful
+  - prefer_self_type_over_type_of_self
+  - protocol_property_accessors_order
+  - redundant_discardable_let
+  - return_arrow_whitespace
+  - shorthand_operator
+  - statement_position
+  - switch_case_alignment
+  - switch_case_on_newline
+  - trailing_comma
+  - trailing_newline # todo: check later if useful
+  - trailing_whitespace # todo: check later if useful
+  - type_contents_order # todo: check later if useful
+  - unneeded_parentheses_in_closure_argument
+  - unused_optional_binding
+  - vertical_whitespace
+  - vertical_whitespace_between_cases
+  - vertical_whitespace_closing_braces # todo: check later if useful
+  - vertical_whitespace_opening_braces # todo: check later if useful
+  - void_return # todo: check later if useful
+# idiomatic
+  - block_based_kvo
+  - convenience_type
+  - discouraged_object_literal
+  - discouraged_optional_boolean
+  - discouraged_optional_collection
+  - duplicate_imports
+  - explicit_enum_raw_value
+  - fallthrough
+  - fatal_error_message
+  - sfile_name_no_space
+  - for_where
+  - force_cast
+  - force_try
+  - force_unwrapping # todo: check later if useful
+  - function_default_parameter_at_end
+  - generic_type_name # todo: check later to add config
+  - is_disjoint
+  - joined_default_parameter
+  - legacy_cggeometry_functions
+  - legacy_constant
+  - legacy_constructor
+  - legacy_hashing
+  - legacy_multiple
+  - legacy_nsgeometry_functions
+  - legacy_random
+  - nimble_operator
+  - no_extension_access_modifier # todo: check later if useful
+  - no_fallthrough_only
+  - no_grouping_extension
+  - pattern_matching_keywords # todo: check later if useful
+  - redundant_nil_coalescing
+  - redundant_objc_attribute
+  - redundant_optional_initialization
+  - redundant_set_access_control
+  - redundant_string_enum_value
+  - redundant_type_annotation
+  - redundant_void_return
+  - syntactic_sugar
+  - toggle_bool
+  - trailing_semicolon
+  - unavailable_function # todo: check later if useful
+  - unneeded_break_in_switch # todo: check later if useful
+  - untyped_error_in_catch
+  - unused_capture_list
+  - unused_enumerated # todo: check later if useful
+  - xct_specific_matcher
+  - xctfail_message
+# metric
+  - closure_body_length
+  - cyclomatic_complexity
+  - file_length
+  - function_body_length
+  - function_parameter_count
+  - large_tuple # todo: check again later
+  - line_length
+  - nesting # todo: check later to add config
+# performance
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
+  - empty_collection_literal
+  - empty_count
+  - empty_string
+  - first_where
+  - flatmap_over_map_reduce
+  - last_where
+  - reduce_boolean
+  - reduce_into
+  - sorted_first_last
+
+included: # paths to include during linting. `--path` is ignored if present.
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - SwiftLint/Common/3rdPartyLib
+analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
+
+# configurable rules can be customized from this configuration file
+# lint
+# style
+modifier_order:
+  preferred_modifier_order: [override, acl, setterACL, dynamic, mutators, lazy, final, required, convenience, typeMethods, owned]
+multiline_arguments:
+  first_argument_location: any_line
+  only_enforce_after_first_closure_on_first_line: false
+switch_case_alignment:
+  indented_cases: true
+vertical_whitespace:
+  max_empty_lines: 1
+# idiomatic
+discouraged_object_literal:
+  image_literal: true
+  color_literal: true
+# metric
+closure_body_length:
+  warning: 15
+  error: 50
+cyclomatic_complexity: # todo: check again later
+  warning: 10 #default
+  error: 20 #default
+file_length:
+  warning: 500
+  error: 750
+  ignore_comment_only_lines: true
+function_body_length:
+  warning: 75
+  error: 100
+function_parameter_count:
+  warning: 5
+  error: 8
+  ignores_default_parameters: true
+indentation_width:
+  indentation_width: 4
+  include_comments: true
+large_tuple:
+  warning: 3
+  error: 4
+line_length:
+  warning: 120
+  error: 200
+  ignores_urls: true
+  ignores_function_declarations: false
+  ignores_comments: true
+  ignores_interpolated_strings: true
+# performance
+
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
