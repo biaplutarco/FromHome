@@ -12,19 +12,16 @@ class NotificationCoordinator: Coordinator {
 
     var childCoordinators = [Coordinator]()
 
-    var navigationController: UINavigationController!
+    var viewController: UIViewController!
 
     weak var parentCoordinator: Coordinator?
 
     init(_ parentCoordinator: MainCoordinator) {
         self.parentCoordinator = parentCoordinator
 
-        let viewController = NotificationViewController()
-
-        navigationController = UINavigationController.init(rootViewController: viewController)
-
-        viewController.navigationItem.hidesBackButton = true
-        viewController.coordinator = self
+        let notificationViewController = NotificationViewController()
+        notificationViewController.coordinator = self
+        viewController = notificationViewController
     }
 
     func start() {}

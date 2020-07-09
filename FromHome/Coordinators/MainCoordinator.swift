@@ -11,7 +11,7 @@ import UIKit
 class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
 
-    var navigationController: UINavigationController!
+    var viewController: UIViewController!
     var tabBarController: UITabBarController?
 
     var window: UIWindow
@@ -28,7 +28,7 @@ class MainCoordinator: Coordinator {
 
         tabBarController = UITabBarController()
 
-        tabBarController?.viewControllers = childCoordinators.map({ $0.navigationController })
+        tabBarController?.viewControllers = childCoordinators.map({ $0.viewController })
 
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
