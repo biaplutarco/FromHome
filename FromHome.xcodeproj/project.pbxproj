@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		172BD5C4802E6C2DEE159BC2 /* Pods_FromHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6E22448571902684372A4A /* Pods_FromHomeTests.framework */; };
-		42D144E78D035D1BE4EA7C47 /* Pods_FromHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147D5965E0FD62DA0408A57A /* Pods_FromHome.framework */; };
-		8CF228F9FB95080DCB43F60B /* Pods_FromHome_FromHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344516298486A939C3EDF6F6 /* Pods_FromHome_FromHomeUITests.framework */; };
 		278045DE24B405FA00AEDFBA /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045DD24B405FA00AEDFBA /* Style.swift */; };
 		278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */; };
 		278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */; };
 		278045E624B40DC800AEDFBA /* UIFont+FHFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */; };
+		42D144E78D035D1BE4EA7C47 /* Pods_FromHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147D5965E0FD62DA0408A57A /* Pods_FromHome.framework */; };
+		8CF228F9FB95080DCB43F60B /* Pods_FromHome_FromHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344516298486A939C3EDF6F6 /* Pods_FromHome_FromHomeUITests.framework */; };
 		A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778624B3994400A49E7F /* AppDelegate.swift */; };
 		A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778824B3994400A49E7F /* SceneDelegate.swift */; };
 		A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778F24B3994400A49E7F /* FromHome.xcdatamodeld */; };
@@ -46,14 +46,14 @@
 /* Begin PBXFileReference section */
 		147D5965E0FD62DA0408A57A /* Pods_FromHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FromHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F27F5D1CDE3B9FDEB496DB0 /* Pods-FromHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome.release.xcconfig"; path = "Target Support Files/Pods-FromHome/Pods-FromHome.release.xcconfig"; sourceTree = "<group>"; };
-		344516298486A939C3EDF6F6 /* Pods_FromHome_FromHomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FromHome_FromHomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		383ED69634AAD6D6AAD683AF /* Pods-FromHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome.debug.xcconfig"; path = "Target Support Files/Pods-FromHome/Pods-FromHome.debug.xcconfig"; sourceTree = "<group>"; };
-		445A17B74F5FEC3993225741 /* Pods-FromHome-FromHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome-FromHomeUITests.debug.xcconfig"; path = "Target Support Files/Pods-FromHome-FromHomeUITests/Pods-FromHome-FromHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8A55388DE651E6CCDD9C7396 /* Pods-FromHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-FromHomeTests/Pods-FromHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		278045DD24B405FA00AEDFBA /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FHColors.swift"; sourceTree = "<group>"; };
 		278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Style+FHSyle.swift"; sourceTree = "<group>"; };
 		278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+FHFonts.swift"; sourceTree = "<group>"; };
+		344516298486A939C3EDF6F6 /* Pods_FromHome_FromHomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FromHome_FromHomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		383ED69634AAD6D6AAD683AF /* Pods-FromHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome.debug.xcconfig"; path = "Target Support Files/Pods-FromHome/Pods-FromHome.debug.xcconfig"; sourceTree = "<group>"; };
+		445A17B74F5FEC3993225741 /* Pods-FromHome-FromHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome-FromHomeUITests.debug.xcconfig"; path = "Target Support Files/Pods-FromHome-FromHomeUITests/Pods-FromHome-FromHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A55388DE651E6CCDD9C7396 /* Pods-FromHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-FromHomeTests/Pods-FromHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4AE778324B3994400A49E7F /* FromHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FromHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AE778624B3994400A49E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4AE778824B3994400A49E7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,7 +152,6 @@
 				A4AE778624B3994400A49E7F /* AppDelegate.swift */,
 				A4AE778824B3994400A49E7F /* SceneDelegate.swift */,
 				278045E724B411AC00AEDFBA /* Style */,
-				A4AE779224B3994700A49E7F /* Assets.xcassets */,
 				A4AE779424B3994700A49E7F /* LaunchScreen.storyboard */,
 				A4AE779224B3994700A49E7F /* Assets.xcassets */,
 				A4AE779724B3994700A49E7F /* Info.plist */,
