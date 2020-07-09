@@ -9,7 +9,6 @@
 import UIKit
 
 class MainCoordinator: Coordinator {
-
     var childCoordinators = [Coordinator]()
 
     var navigationController: UINavigationController!
@@ -22,7 +21,13 @@ class MainCoordinator: Coordinator {
 
         window.windowScene = windowScene
 
-        window.rootViewController = UITabBarController.init()
+        childCoordinators.append(TodayCoordinator.init(self))
+
+        tabBarController = UITabBarController.init()
+
+        tabBarController?.viewControllers = childCoordinators.map({ $0.navigationController })
+
+        window.rootViewController = tabBarController
         window.makeKeyAndVisible()
     }
 

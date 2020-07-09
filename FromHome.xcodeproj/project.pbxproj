@@ -16,6 +16,8 @@
 		278045E624B40DC800AEDFBA /* UIFont+FHFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */; };
 		42D144E78D035D1BE4EA7C47 /* Pods_FromHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147D5965E0FD62DA0408A57A /* Pods_FromHome.framework */; };
 		8CF228F9FB95080DCB43F60B /* Pods_FromHome_FromHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344516298486A939C3EDF6F6 /* Pods_FromHome_FromHomeUITests.framework */; };
+		A49ED7AD24B7B572006C70B6 /* TodayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */; };
+		A49ED7B124B7B597006C70B6 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ED7B024B7B597006C70B6 /* TodayViewController.swift */; };
 		A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778624B3994400A49E7F /* AppDelegate.swift */; };
 		A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778824B3994400A49E7F /* SceneDelegate.swift */; };
 		A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778F24B3994400A49E7F /* FromHome.xcdatamodeld */; };
@@ -58,6 +60,8 @@
 		383ED69634AAD6D6AAD683AF /* Pods-FromHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome.debug.xcconfig"; path = "Target Support Files/Pods-FromHome/Pods-FromHome.debug.xcconfig"; sourceTree = "<group>"; };
 		445A17B74F5FEC3993225741 /* Pods-FromHome-FromHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome-FromHomeUITests.debug.xcconfig"; path = "Target Support Files/Pods-FromHome-FromHomeUITests/Pods-FromHome-FromHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A55388DE651E6CCDD9C7396 /* Pods-FromHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-FromHomeTests/Pods-FromHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCoordinator.swift; sourceTree = "<group>"; };
+		A49ED7B024B7B597006C70B6 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A4AE778324B3994400A49E7F /* FromHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FromHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AE778624B3994400A49E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4AE778824B3994400A49E7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		A49ED7A824B7A797006C70B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A49ED7AE24B7B578006C70B6 /* Today */,
 				A49ED7A924B7A7A8006C70B6 /* Components */,
 			);
 			path = View;
@@ -140,6 +145,30 @@
 				27309F0024B541EA00D60FE8 /* UIView+Constraints.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A49ED7AB24B7A99D006C70B6 /* ChildCoordinators */ = {
+			isa = PBXGroup;
+			children = (
+				A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */,
+			);
+			path = ChildCoordinators;
+			sourceTree = "<group>";
+		};
+		A49ED7AE24B7B578006C70B6 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				A49ED7AF24B7B57E006C70B6 /* TodayScreen */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		A49ED7AF24B7B57E006C70B6 /* TodayScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A49ED7B024B7B597006C70B6 /* TodayViewController.swift */,
+			);
+			path = TodayScreen;
 			sourceTree = "<group>";
 		};
 		A4AE777A24B3994400A49E7F = {
@@ -169,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				A49ED7A824B7A797006C70B6 /* View */,
-				A4AE77BD24B3BAE400A49E7F /* Coordinator */,
+				A4AE77BD24B3BAE400A49E7F /* Coordinators */,
 				278045E724B411AC00AEDFBA /* Style */,
 				A49ED7AA24B7A7B7006C70B6 /* Extensions */,
 				A4AE778624B3994400A49E7F /* AppDelegate.swift */,
@@ -200,13 +229,14 @@
 			path = FromHomeUITests;
 			sourceTree = "<group>";
 		};
-		A4AE77BD24B3BAE400A49E7F /* Coordinator */ = {
+		A4AE77BD24B3BAE400A49E7F /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				A4AE77BE24B3BC6700A49E7F /* Coordinator.swift */,
 				A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */,
+				A49ED7AB24B7A99D006C70B6 /* ChildCoordinators */,
 			);
-			path = Coordinator;
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		B2C2D0FF71464E60BA365C7D /* Frameworks */ = {
@@ -456,10 +486,12 @@
 			files = (
 				A4AE77BF24B3BC6700A49E7F /* Coordinator.swift in Sources */,
 				A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */,
+				A49ED7AD24B7B572006C70B6 /* TodayCoordinator.swift in Sources */,
 				278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */,
 				278045E624B40DC800AEDFBA /* UIFont+FHFonts.swift in Sources */,
 				27309F0124B541EA00D60FE8 /* UIView+Constraints.swift in Sources */,
 				278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */,
+				A49ED7B124B7B597006C70B6 /* TodayViewController.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
 				A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */,
 				A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */,
