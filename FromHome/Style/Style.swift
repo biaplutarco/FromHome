@@ -9,7 +9,6 @@
 import UIKit
 
 class Style {
-
     enum TextStyle {
 
         case greeting
@@ -50,17 +49,11 @@ class Style {
         self.attributesForStyle = attributesForStyle
     }
 
-    func font(for style: TextStyle) -> UIFont {
-        return attributesForStyle(style).font
-    }
+    func font(for style: TextStyle) -> UIFont { attributesForStyle(style).font }
 
-    func color(for style: TextStyle) -> UIColor {
-        return attributesForStyle(style).color
-    }
+    func color(for style: TextStyle) -> UIColor { attributesForStyle(style).color }
 
-    func backgroundColor(for style: TextStyle) -> UIColor? {
-        return attributesForStyle(style).backgroundColor
-    }
+    func backgroundColor(for style: TextStyle) -> UIColor? { attributesForStyle(style).backgroundColor }
 
     //  Applying Style to UI Elements
     func apply(textStyle: TextStyle, to label: UILabel) {

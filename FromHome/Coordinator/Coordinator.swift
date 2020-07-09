@@ -9,7 +9,7 @@
 import UIKit
 
 protocol Coordinator: AnyObject {
-    
+
     var childCoordinators: [Coordinator] { get set }
     var navigationController: UINavigationController! { get set }
 
@@ -17,9 +17,9 @@ protocol Coordinator: AnyObject {
 }
 
 extension Coordinator {
-    
+
     func childDidFinish(_ childCoordinator: Coordinator?) {
-        
+
         guard let index = childCoordinators.firstIndex(where: { $0 === childCoordinator }) else {
             fatalError("Child not listed as child on parent")
         }
@@ -27,7 +27,6 @@ extension Coordinator {
         childCoordinators.remove(at: index)
 
         if childCoordinators.isEmpty {
-            
             start()
         }
     }

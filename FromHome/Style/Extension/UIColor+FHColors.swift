@@ -11,55 +11,31 @@ import UIKit
 extension UIColor {
 
     // Background
-    static var backgroundAlert: UIColor {
-        return UIColor(named: "BackgroundAlert")!
-    }
+    static var backgroundAlert: UIColor { UIColor(named: "BackgroundAlert")! }
 
-    static var backgroundButton: UIColor {
-        return UIColor(named: "BackgroundButton")!
-    }
+    static var backgroundButton: UIColor { UIColor(named: "BackgroundButton")! }
 
-    static var backgroundTextfield: UIColor {
-        return UIColor(named: "BackgroundTextfield")!
-    }
+    static var backgroundTextfield: UIColor { UIColor(named: "BackgroundTextfield")! }
 
     // Gradient
-    static var gradientBottom: UIColor {
-        return UIColor(named: "GradientBottom")!
-    }
+    static var gradientBottom: UIColor { UIColor(named: "GradientBottom")! }
 
-    static var gradientTop: UIColor {
-        return UIColor(named: "GradientTop")!
-    }
+    static var gradientTop: UIColor { UIColor(named: "GradientTop")! }
 
     // Line
-    static var lineAlert: UIColor {
-        return UIColor(named: "LineAlert")!
-    }
+    static var lineAlert: UIColor { UIColor(named: "LineAlert")! }
 
-    static var lineBottom: UIColor {
-        return UIColor(named: "LineBottom")!
-    }
+    static var lineBottom: UIColor { UIColor(named: "LineBottom")! }
 
-    static var lineTop: UIColor {
-        return UIColor(named: "LineTop")!
-    }
+    static var lineTop: UIColor { UIColor(named: "LineTop")! }
 
     // Text
-    static var primaryText: UIColor {
-        return UIColor(named: "PrimaryText")!
-    }
+    static var primaryText: UIColor { UIColor(named: "PrimaryText")! }
 
-    static var secondaryText: UIColor {
-        return UIColor(named: "SecondaryText")!
-    }
+    static var secondaryText: UIColor { UIColor(named: "SecondaryText")! }
 
     // Shadow
-    static var shadowBottom: UIColor {
-        return UIColor(named: "ShadowBottom")!
-    }
+    static var shadowBottom: UIColor { UIColor(named: "ShadowBottom")! }
 
-    static var shadowTop: UIColor {
-        return UIColor(named: "ShadowTop")!
-    }
+    static var shadowTop: UIColor { UIColor(named: "ShadowTop")! }
 }

@@ -9,15 +9,13 @@
 import UIKit
 
 extension UIView {
-    
+
     func fulfillSuperview() {
-        
         guard let superview = self.superview else { return }
-        
+
         translatesAutoresizingMaskIntoConstraints = false
-        
+
         NSLayoutConstraint.activate([
-            
             topAnchor.constraint(equalTo: superview.topAnchor),
             leadingAnchor.constraint(equalTo: superview.leadingAnchor),
             trailingAnchor.constraint(equalTo: superview.trailingAnchor),
