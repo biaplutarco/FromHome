@@ -15,7 +15,7 @@ extension Style {
     }
 }
 
-private extension Style.TextStyle {
+extension Style.TextStyle {
 
     var fromHomeAttributes: Style.TextAttributes {
 
