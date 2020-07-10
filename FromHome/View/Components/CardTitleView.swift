@@ -72,6 +72,7 @@ class CardTitleView: UIView {
         line.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
+
             line.heightAnchor.constraint(equalToConstant: 1),
             line.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.2)
         ])
