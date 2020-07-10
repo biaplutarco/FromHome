@@ -42,6 +42,8 @@ class GreetingHeader: UIView {
 
     private func setupView() {
 
+        clipsToBounds = false
+
         addSubview(cardView)
         addSubview(stackView)
         addSubview(astronautView)
