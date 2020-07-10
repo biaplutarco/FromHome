@@ -33,7 +33,7 @@ class Style {
         let color: UIColor
         let backgroundColor: UIColor?
 
-        init(font: UIFont, color: UIColor, backgroundColor: UIColor? = nil) {
+        init(font: UIFont, color: UIColor, backgroundColor: UIColor? = .clear) {
             self.font = font
             self.color = color
             self.backgroundColor = backgroundColor
