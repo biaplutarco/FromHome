@@ -12,19 +12,16 @@ class TodayCoordinator: Coordinator {
 
     var childCoordinators = [Coordinator]()
 
-    var navigationController: UINavigationController!
+    var viewController: UIViewController!
 
     weak var parentCoordinator: Coordinator?
 
     init(_ parentCoordinator: MainCoordinator) {
         self.parentCoordinator = parentCoordinator
 
-        let viewController = TodayViewController()
-
-        navigationController = UINavigationController.init(rootViewController: viewController)
-
-        viewController.navigationItem.hidesBackButton = true
-        viewController.coordinator = self
+        let todayViewController = TodayViewController()
+        todayViewController.coordinator = self
+        viewController = todayViewController
     }
 
     func start() {}

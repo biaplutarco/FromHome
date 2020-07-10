@@ -12,19 +12,16 @@ class TimersCoordinator: Coordinator {
 
     var childCoordinators = [Coordinator]()
 
-    var navigationController: UINavigationController!
+    var viewController: UIViewController!
 
     weak var parentCoordinator: Coordinator?
 
     init(_ parentCoordinator: MainCoordinator) {
         self.parentCoordinator = parentCoordinator
 
-        let viewController = TimersViewController()
-
-        navigationController = UINavigationController.init(rootViewController: viewController)
-
-        viewController.navigationItem.hidesBackButton = true
-        viewController.coordinator = self
+        let timersViewControllers = TimersViewController()
+        timersViewControllers.coordinator = self
+        viewController = timersViewControllers
     }
 
     func start() {}
