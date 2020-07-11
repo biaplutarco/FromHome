@@ -24,24 +24,5 @@ class TodayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let universeView = UniverseView(frame: view.frame)
-
-        view.addSubview(universeView)
-
-        universeView.fulfillSuperview()
-        
-        let greeting = GreetingView(viewModel: GreetingViewModel(username: "Dani"))
-        
-        view.addSubview(greeting)
-        
-        greeting.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-
-            greeting.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            greeting.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            greeting.topAnchor.constraint(equalTo: view.topAnchor, constant: 56),
-        ])
     }
 }
