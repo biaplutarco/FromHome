@@ -16,8 +16,11 @@
 		278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */; };
 		278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */; };
 		278045E624B40DC800AEDFBA /* UIFont+FHFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */; };
+		279CB34824BA6D9A003126C9 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB34724BA6D9A003126C9 /* UIView+Animations.swift */; };
+		279CB34B24BA6F9A003126C9 /* GreetingVewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB34A24BA6F9A003126C9 /* GreetingVewDelegate.swift */; };
+		279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB34C24BA8391003126C9 /* GreetingViewModel.swift */; };
 		27C1D2D824B806F500AA95BF /* CAShapeLayer+Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */; };
-		27C1D2DA24B80A0500AA95BF /* GreetingHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D924B80A0500AA95BF /* GreetingHeader.swift */; };
+		27C1D2DA24B80A0500AA95BF /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D924B80A0500AA95BF /* GreetingView.swift */; };
 		42D144E78D035D1BE4EA7C47 /* Pods_FromHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147D5965E0FD62DA0408A57A /* Pods_FromHome.framework */; };
 		8CF228F9FB95080DCB43F60B /* Pods_FromHome_FromHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344516298486A939C3EDF6F6 /* Pods_FromHome_FromHomeUITests.framework */; };
 		A48B2DD524B7BA630017B79D /* TimersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2DD424B7BA630017B79D /* TimersViewController.swift */; };
@@ -68,8 +71,11 @@
 		278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FHColors.swift"; sourceTree = "<group>"; };
 		278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Style+FHSyle.swift"; sourceTree = "<group>"; };
 		278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+FHFonts.swift"; sourceTree = "<group>"; };
+		279CB34724BA6D9A003126C9 /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		279CB34A24BA6F9A003126C9 /* GreetingVewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingVewDelegate.swift; sourceTree = "<group>"; };
+		279CB34C24BA8391003126C9 /* GreetingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewModel.swift; sourceTree = "<group>"; };
 		27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+Star.swift"; sourceTree = "<group>"; };
-		27C1D2D924B80A0500AA95BF /* GreetingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingHeader.swift; sourceTree = "<group>"; };
+		27C1D2D924B80A0500AA95BF /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		344516298486A939C3EDF6F6 /* Pods_FromHome_FromHomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FromHome_FromHomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		383ED69634AAD6D6AAD683AF /* Pods-FromHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome.debug.xcconfig"; path = "Target Support Files/Pods-FromHome/Pods-FromHome.debug.xcconfig"; sourceTree = "<group>"; };
 		445A17B74F5FEC3993225741 /* Pods-FromHome-FromHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome-FromHomeUITests.debug.xcconfig"; path = "Target Support Files/Pods-FromHome-FromHomeUITests/Pods-FromHome-FromHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +146,16 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		279CB34924BA6F84003126C9 /* GreetingHeader */ = {
+			isa = PBXGroup;
+			children = (
+				27C1D2D924B80A0500AA95BF /* GreetingView.swift */,
+				279CB34A24BA6F9A003126C9 /* GreetingVewDelegate.swift */,
+				279CB34C24BA8391003126C9 /* GreetingViewModel.swift */,
+			);
+			path = GreetingHeader;
+			sourceTree = "<group>";
+		};
 		A48B2DD224B7BA4A0017B79D /* Timers */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +221,7 @@
 			children = (
 				27309EFE24B531B400D60FE8 /* CardTitleView.swift */,
 				2722122024B7C3390053478F /* UniverseView.swift */,
-				27C1D2D924B80A0500AA95BF /* GreetingHeader.swift */,
+				279CB34924BA6F84003126C9 /* GreetingHeader */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -218,6 +234,7 @@
 				27309F0024B541EA00D60FE8 /* UIView+Constraints.swift */,
 				27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */,
 				2720BE8824B80DBE00A98F87 /* UIView+Card.swift */,
+				279CB34724BA6D9A003126C9 /* UIView+Animations.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -571,14 +588,17 @@
 				A49ED7AD24B7B572006C70B6 /* TodayCoordinator.swift in Sources */,
 				278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */,
 				27C1D2D824B806F500AA95BF /* CAShapeLayer+Star.swift in Sources */,
-				27C1D2DA24B80A0500AA95BF /* GreetingHeader.swift in Sources */,
+				27C1D2DA24B80A0500AA95BF /* GreetingView.swift in Sources */,
 				278045E624B40DC800AEDFBA /* UIFont+FHFonts.swift in Sources */,
 				27309F0124B541EA00D60FE8 /* UIView+Constraints.swift in Sources */,
+				279CB34B24BA6F9A003126C9 /* GreetingVewDelegate.swift in Sources */,
 				278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */,
 				A49ED7B124B7B597006C70B6 /* TodayViewController.swift in Sources */,
 				2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */,
+				279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
 				A48B2DD924B7BB120017B79D /* TasksCoordinator.swift in Sources */,
+				279CB34824BA6D9A003126C9 /* UIView+Animations.swift in Sources */,
 				A48B2DDD24B7BB310017B79D /* TasksViewController.swift in Sources */,
 				A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */,
 				A48B2DE724B7BC380017B79D /* NotificationViewController.swift in Sources */,
@@ -751,6 +771,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H3RQC49HYF;
 				INFOPLIST_FILE = FromHome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -769,6 +790,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H3RQC49HYF;
 				INFOPLIST_FILE = FromHome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
