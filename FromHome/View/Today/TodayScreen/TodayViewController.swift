@@ -31,7 +31,7 @@ class TodayViewController: UIViewController {
 
         universeView.fulfillSuperview()
         
-        let greeting = GreetingHeader(withUsername: "Dani")
+        let greeting = GreetingView(viewModel: GreetingViewModel(username: "Dani"))
         
         view.addSubview(greeting)
         
