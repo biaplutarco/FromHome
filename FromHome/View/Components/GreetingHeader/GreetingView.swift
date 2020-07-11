@@ -8,7 +8,11 @@
 
 import UIKit
 
-class GreetingHeader: UIView {
+class GreetingView: UIView {
+
+    weak var delegate: GreetingViewDelegate?
+
+    private let impact = UIImpactFeedbackGenerator()
 
     private var cardView = UIView(cardType: .header)
 
@@ -25,9 +29,9 @@ class GreetingHeader: UIView {
         return stackView
     }()
 
-    init(withUsername username: String) {
+    init(viewModel: GreetingViewModel) {
 
-        self.usernameLabel.text = username
+        self.usernameLabel.text = viewModel.username
         self.greetingLabel.text = "Hello,"
 
         super.init(frame: .zero)
@@ -42,6 +46,9 @@ class GreetingHeader: UIView {
 
     private func setupView() {
 
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        addGestureRecognizer(tap)
+
         clipsToBounds = false
 
         addSubview(cardView)
@@ -50,6 +57,15 @@ class GreetingHeader: UIView {
 
         constraints()
         applyStyle()
+    }
+
+    @objc
+    func tapped() {
+
+        impact.impactOccurred()
+        scale(0.9, withDurarion: 0.1)
+
+        delegate?.didTapChangeUsername()
     }
 
     private func constraints() {
