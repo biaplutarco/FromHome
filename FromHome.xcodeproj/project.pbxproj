@@ -191,6 +191,16 @@
 			path = BodyView;
 			sourceTree = "<group>";
 		};
+		279CB35924BA9EE0003126C9 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				2720BE8824B80DBE00A98F87 /* UIView+Card.swift */,
+				279CB34724BA6D9A003126C9 /* UIView+Animations.swift */,
+				27309F0024B541EA00D60FE8 /* UIView+Constraints.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		A48B2DD224B7BA4A0017B79D /* Timers */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,12 +275,10 @@
 		A49ED7AA24B7A7B7006C70B6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				279CB35924BA9EE0003126C9 /* UIView */,
 				278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */,
 				278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */,
-				27309F0024B541EA00D60FE8 /* UIView+Constraints.swift */,
 				27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */,
-				2720BE8824B80DBE00A98F87 /* UIView+Card.swift */,
-				279CB34724BA6D9A003126C9 /* UIView+Animations.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
