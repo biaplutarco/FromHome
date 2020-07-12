@@ -9,12 +9,7 @@
 import Foundation
 
 protocol FooterViewModel {
+
     var type: FooterViewType { get }
-}
-
-enum FooterViewType {
-
-    case today
-    case options
-    case tasks
+    var title: String { get }
 }

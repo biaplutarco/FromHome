@@ -12,6 +12,7 @@
 		2722122124B7C3390053478F /* UniverseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722122024B7C3390053478F /* UniverseView.swift */; };
 		27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27309EFE24B531B400D60FE8 /* CardTitleView.swift */; };
 		27309F0124B541EA00D60FE8 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27309F0024B541EA00D60FE8 /* UIView+Constraints.swift */; };
+		275A29AB24BBB83A00C6D0DB /* FooterViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275A29AA24BBB83A00C6D0DB /* FooterViewType.swift */; };
 		278045DE24B405FA00AEDFBA /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045DD24B405FA00AEDFBA /* Style.swift */; };
 		278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */; };
 		278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */; };
@@ -71,6 +72,7 @@
 		2722122024B7C3390053478F /* UniverseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseView.swift; sourceTree = "<group>"; };
 		27309EFE24B531B400D60FE8 /* CardTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTitleView.swift; sourceTree = "<group>"; };
 		27309F0024B541EA00D60FE8 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		275A29AA24BBB83A00C6D0DB /* FooterViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterViewType.swift; sourceTree = "<group>"; };
 		278045DD24B405FA00AEDFBA /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FHColors.swift"; sourceTree = "<group>"; };
 		278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Style+FHSyle.swift"; sourceTree = "<group>"; };
@@ -178,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				279CB35124BA976A003126C9 /* FooterViewModel.swift */,
-				279CB35424BA9975003126C9 /* TodayFooterViewModel.swift */,
+				275A29AA24BBB83A00C6D0DB /* FooterViewType.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				279CB35724BA9AFE003126C9 /* TodayBodyView.swift */,
+				279CB35424BA9975003126C9 /* TodayFooterViewModel.swift */,
 			);
 			path = BodyView;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */,
 				A48B2DE724B7BC380017B79D /* NotificationViewController.swift in Sources */,
 				A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */,
+				275A29AB24BBB83A00C6D0DB /* FooterViewType.swift in Sources */,
 				27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */,
 				278045DE24B405FA00AEDFBA /* Style.swift in Sources */,
 			);

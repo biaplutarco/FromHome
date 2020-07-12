@@ -55,7 +55,7 @@ class FooterView: UIView {
         switch type {
 
             case .today:
-                bodyView = TodayBodyView(title: "asaaaa")
+                bodyView = TodayBodyView()
 
             default:
                 break

@@ -29,8 +29,10 @@ class TodayBodyView: UIView {
         return stackView
     }()
 
-    init(title: String) {
-        self.bodyLabel.text = "lorem lorem lorem lorem lorem lorem lorem"
+    private var viewModel: TodayFooterViewModel
+
+    init() {
+        self.viewModel = TodayFooterViewModel()
 
         super.init(frame: .zero)
 

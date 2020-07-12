@@ -9,5 +9,7 @@
 import Foundation
 
 class TodayFooterViewModel: FooterViewModel {
+
     var type: FooterViewType { .today }
+    var title: String { "Today" }
 }
