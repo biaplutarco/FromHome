@@ -18,11 +18,11 @@ extension UIView {
 
             case .footer:
                 layer.shadowColor = UIColor.shadowBottom.cgColor
-                backgroundColor = .gradientBottom
+                backgroundColor = .footerBackground
 
             case .header:
                 layer.shadowColor = UIColor.shadowTop.cgColor
-                backgroundColor = .gradientTop
+                backgroundColor = .headerBackground
         }
 
         layer.shadowOffset = CGSize(width: -1, height: 12)

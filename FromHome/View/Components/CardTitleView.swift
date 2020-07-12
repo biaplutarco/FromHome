@@ -22,6 +22,7 @@ class CardTitleView: UIView {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, line])
         stackView.alignment = .center
         stackView.axis = .vertical
+        stackView.spacing = 12
 
         return stackView
     }()
@@ -74,7 +75,7 @@ class CardTitleView: UIView {
         NSLayoutConstraint.activate([
 
             line.heightAnchor.constraint(equalToConstant: 1),
-            line.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.2)
+            line.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.8)
         ])
 
         stackView.fulfillSuperview()

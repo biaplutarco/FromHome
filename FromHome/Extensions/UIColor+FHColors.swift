@@ -17,6 +17,10 @@ extension UIColor {
 
     static var backgroundTextfield: UIColor { UIColor(named: "BackgroundTextfield")! }
 
+    static var footerBackground: UIColor { UIColor(named: "FooterBackground")! }
+
+    static var headerBackground: UIColor { UIColor(named: "HeaderBackground")! }
+
     // Gradient
     static var gradientBottom: UIColor { UIColor(named: "GradientBottom")! }
 
