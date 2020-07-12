@@ -11,7 +11,7 @@ import UIKit
 class FooterView: UIView {
 
     private var cardView = UIView(cardType: .footer)
-    private var titleView = CardTitleView(withTitle: "Title", for: .footer)
+    private var titleView = CardTitleView(.footer)
     private var bodyView = UIView()
 
     private lazy var stackView: UIStackView = {
@@ -23,11 +23,12 @@ class FooterView: UIView {
         return stackView
     }()
 
-    private var type: FooterViewType
+    private var viewModel: FooterViewModel
 
     init(viewModel: FooterViewModel) {
 
-        self.type = viewModel.type
+        self.viewModel = viewModel
+        self.titleView.title(viewModel.title)
 
         super.init(frame: .zero)
 
@@ -52,10 +53,13 @@ class FooterView: UIView {
 
     private func setupBodyView() {
 
-        switch type {
+        switch viewModel.type {
 
             case .today:
-                bodyView = TodayBodyView()
+                guard let todayViewModel = viewModel as? TodayFooterViewModel else { return }
+
+                bodyView = TodayBodyView(buttonTitle: todayViewModel.buttonTitle,
+                                         bodyText: todayViewModel.bodyText)
 
             default:
                 break

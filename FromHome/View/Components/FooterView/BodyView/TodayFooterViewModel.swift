@@ -12,4 +12,6 @@ class TodayFooterViewModel: FooterViewModel {
 
     var type: FooterViewType { .today }
     var title: String { "Today" }
+    var bodyText: String { "/Users/akhaten Documents/FromHome/ t" }
+    var buttonTitle: String { "Start" }
 }

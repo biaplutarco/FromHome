@@ -170,8 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				279CB34E24BA8C43003126C9 /* FooterView.swift */,
-				279CB35624BA9AEE003126C9 /* BodyView */,
 				279CB35324BA995F003126C9 /* ViewModel */,
+				279CB35624BA9AEE003126C9 /* BodyView */,
 			);
 			path = FooterView;
 			sourceTree = "<group>";

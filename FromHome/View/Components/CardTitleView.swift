@@ -29,9 +29,8 @@ class CardTitleView: UIView {
 
     var type: CardType
 
-    init(withTitle title: String, for type: CardType) {
+    init(_ type: CardType) {
 
-        self.titleLabel.text = title
         self.type = type
 
         super.init(frame: .zero)
@@ -42,6 +41,10 @@ class CardTitleView: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func title(_ title: String) {
+        titleLabel.text = title
     }
 
     private func setupView() {

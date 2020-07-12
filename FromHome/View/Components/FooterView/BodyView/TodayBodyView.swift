@@ -14,7 +14,6 @@ class TodayBodyView: UIView {
 
     private lazy var button: UIButton = {
         let button = UIButton()
-        button.setTitle("Start", for: .normal)
         button.layer.cornerRadius = 18
 
         return button
@@ -29,12 +28,12 @@ class TodayBodyView: UIView {
         return stackView
     }()
 
-    private var viewModel: TodayFooterViewModel
-
-    init() {
-        self.viewModel = TodayFooterViewModel()
+    init(buttonTitle: String, bodyText: String) {
 
         super.init(frame: .zero)
+
+        button.setTitle(buttonTitle, for: .normal)
+        bodyLabel.text = bodyText
 
         setupView()
     }
