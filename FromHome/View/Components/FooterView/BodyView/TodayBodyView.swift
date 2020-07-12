@@ -15,7 +15,7 @@ class TodayBodyView: UIView {
     private lazy var button: UIButton = {
         let button = UIButton()
         button.setTitle("Start", for: .normal)
-        button.layer.cornerRadius = button.frame.height / 2
+        button.layer.cornerRadius = 18
 
         return button
     }()
@@ -24,7 +24,7 @@ class TodayBodyView: UIView {
         let stackView = UIStackView(arrangedSubviews: [bodyLabel, button])
         stackView.alignment = .center
         stackView.axis = .vertical
-        stackView.spacing = 12
+        stackView.spacing = 24
 
         return stackView
     }()
@@ -51,10 +51,20 @@ class TodayBodyView: UIView {
     }
 
     private func applyStyle() {
+
+        Style.fromHome.apply(textStyle: .bodyCardFooter, to: bodyLabel)
         Style.fromHome.apply(textStyle: .titleButton, to: button)
     }
 
     private func constraints() {
+
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            button.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.6),
+            button.heightAnchor.constraint(equalToConstant: 36)
+        ])
+
         stackView.fulfillSuperview()
     }
 }

@@ -46,7 +46,7 @@ class TodayViewController: UIViewController {
             greeting.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             greeting.topAnchor.constraint(equalTo: view.topAnchor, constant: 56),
 
-            footer.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -68),
+            footer.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -108),
             footer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             footer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])

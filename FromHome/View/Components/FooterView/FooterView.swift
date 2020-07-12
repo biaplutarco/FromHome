@@ -15,10 +15,10 @@ class FooterView: UIView {
     private var bodyView = UIView()
 
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [titleView, bodyView])
+        let stackView = UIStackView(arrangedSubviews: [titleView])
         stackView.alignment = .fill
         stackView.axis = .vertical
-        stackView.spacing = 12
+        stackView.spacing = 18
 
         return stackView
     }()
@@ -60,6 +60,8 @@ class FooterView: UIView {
             default:
                 break
         }
+
+        stackView.addArrangedSubview(bodyView)
     }
 
     private func constraints() {
@@ -69,12 +71,10 @@ class FooterView: UIView {
 
         NSLayoutConstraint.activate([
 
-            bodyView.heightAnchor.constraint(equalToConstant: 180),
-
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -18)
         ])
 
         cardView.fulfillSuperview()
