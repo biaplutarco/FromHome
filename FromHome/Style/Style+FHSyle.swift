@@ -41,7 +41,7 @@ extension Style.TextStyle {
                 return Style.TextAttributes(font: .titleAlert, color: .primaryText)
 
             case .titleButton:
-                return Style.TextAttributes(font: .titleButton, color: .primaryText)
+                return Style.TextAttributes(font: .titleButton, color: .primaryText, backgroundColor: .backgroundButton)
 
             case .destructiveTitleButton:
                 return Style.TextAttributes(font: .destructiveTitleButton, color: .secondaryText)

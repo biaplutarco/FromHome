@@ -46,6 +46,7 @@ class FooterView: UIView {
         addSubview(cardView)
         addSubview(stackView)
 
+        setupBodyView()
         constraints()
     }
 
@@ -54,7 +55,7 @@ class FooterView: UIView {
         switch type {
 
             case .today:
-                bodyView = TodayBodyView()
+                bodyView = TodayBodyView(title: "asaaaa")
 
             default:
                 break
