@@ -147,6 +147,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275A29AC24BBBFEA00C6D0DB /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				279CB35724BA9AFE003126C9 /* TodayBodyView.swift */,
+				279CB35424BA9975003126C9 /* TodayFooterViewModel.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
 		278045E724B411AC00AEDFBA /* Style */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,8 +197,7 @@
 		279CB35624BA9AEE003126C9 /* BodyView */ = {
 			isa = PBXGroup;
 			children = (
-				279CB35724BA9AFE003126C9 /* TodayBodyView.swift */,
-				279CB35424BA9975003126C9 /* TodayFooterViewModel.swift */,
+				275A29AC24BBBFEA00C6D0DB /* Today */,
 			);
 			path = BodyView;
 			sourceTree = "<group>";
