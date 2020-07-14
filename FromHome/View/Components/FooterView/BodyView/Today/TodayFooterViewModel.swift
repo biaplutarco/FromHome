@@ -8,8 +8,6 @@
 
 import Foundation
 
-//  Alguma coisa tem que triggar isso aqui e mudar o estado quando a pessoa completar as horas
-//  Observer?
 class TodayFooterViewModel: FooterViewModel {
 
     var type: FooterViewType { .today }
