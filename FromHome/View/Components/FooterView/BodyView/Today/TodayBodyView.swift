@@ -68,4 +68,8 @@ class TodayBodyView: UIView {
 
         stackView.fulfillSuperview()
     }
+
+    private func completeWorkingHours(_ isWorkinHoursCompleted: Bool) {
+        button.isHidden = isWorkinHoursCompleted
+    }
 }

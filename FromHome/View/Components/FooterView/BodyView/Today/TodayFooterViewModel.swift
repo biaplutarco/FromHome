@@ -8,10 +8,25 @@
 
 import Foundation
 
+//  Alguma coisa tem que triggar isso aqui e mudar o estado quando a pessoa completar as horas
+//  Observer?
 class TodayFooterViewModel: FooterViewModel {
 
     var type: FooterViewType { .today }
+
     var title: String { "Today" }
-    var bodyText: String { "/Users/akhaten Documents/FromHome/ t" }
     var buttonTitle: String { "Start" }
+
+    var bodyText: String {
+
+        if isWorkinHoursCompleted {
+
+            return "PArabens fez suas horinhas yay!!"
+        } else {
+
+            return "Vai trabalhar vagabundo antes que eu faça o relatorio!!"
+        }
+    }
+
+    var isWorkinHoursCompleted: Bool { false }
 }
