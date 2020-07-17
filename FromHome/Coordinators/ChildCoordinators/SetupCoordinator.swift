@@ -1,14 +1,14 @@
 //
-//  NotificationCoordinator.swift
+//  SetupCoordinator.swift
 //  FromHome
 //
-//  Created by Daniboy on 7/9/20.
+//  Created by Daniboy on 7/16/20.
 //  Copyright © 2020 biaplutarco. All rights reserved.
 //
 
 //import UIKit
 //
-//class NotificationCoordinator: Coordinator {
+//class SetupCoordinator: Coordinator {
 //
 //    var childCoordinators = [Coordinator]()
 //
@@ -18,10 +18,6 @@
 //
 //    init(_ parentCoordinator: MainCoordinator) {
 //        self.parentCoordinator = parentCoordinator
-//
-//        let notificationViewController = NotificationViewController()
-//        notificationViewController.coordinator = self
-//        viewController = notificationViewController
 //    }
 //
 //    func start() {}

@@ -6,23 +6,23 @@
 //  Copyright © 2020 biaplutarco. All rights reserved.
 //
 
-import UIKit
-
-class TimersCoordinator: Coordinator {
-
-    var childCoordinators = [Coordinator]()
-
-    var viewController: UIViewController!
-
-    weak var parentCoordinator: Coordinator?
-
-    init(_ parentCoordinator: MainCoordinator) {
-        self.parentCoordinator = parentCoordinator
-
-        let timersViewControllers = TimersViewController()
-        timersViewControllers.coordinator = self
-        viewController = timersViewControllers
-    }
-
-    func start() {}
-}
+//import UIKit
+//
+//class TimersCoordinator: Coordinator {
+//
+//    var childCoordinators = [Coordinator]()
+//
+//    var viewController: UIViewController!
+//
+//    weak var parentCoordinator: Coordinator?
+//
+//    init(_ parentCoordinator: MainCoordinator) {
+//        self.parentCoordinator = parentCoordinator
+//
+//        let timersViewControllers = TimersViewController()
+//        timersViewControllers.coordinator = self
+//        viewController = timersViewControllers
+//    }
+//
+//    func start() {}
+//}

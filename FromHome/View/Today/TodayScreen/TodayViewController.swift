@@ -10,7 +10,7 @@ import UIKit
 
 class TodayViewController: UIViewController {
 
-    var coordinator: TodayCoordinator?
+//    var coordinator: TodayCoordinator?
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -25,11 +25,11 @@ class TodayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let universeView = UniverseView(frame: view.frame)
+//        let universeView = UniverseView(frame: view.frame)
 
-        view.addSubview(universeView)
-
-        universeView.fulfillSuperview()
+//        view.addSubview(universeView)
+//
+//        universeView.fulfillSuperview()
 
         let greeting = GreetingView(viewModel: GreetingViewModel(username: "Dani"))
         let footer = FooterView(viewModel: TodayFooterViewModel())
