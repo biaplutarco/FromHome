@@ -15,10 +15,16 @@ class SetupViewController: UIViewController {
 
     var coordinator: MainCoordinator?
 
+    let greeting = GreetingView(viewModel: GreetingViewModel(username: "Dani"))
+
+    let setupScrollView = UIScrollView()
+
     init(_ coordinator: MainCoordinator?) {
         self.coordinator = coordinator
 
         super.init(nibName: nil, bundle: nil)
+
+        greeting.delegate = self
     }
 
     @available(*, unavailable)
@@ -30,5 +36,13 @@ class SetupViewController: UIViewController {
         super.viewDidLoad()
 
         view = UniverseView(frame: view.frame)
+
+        view.addSubviews([greeting])
+
+        setupConstraints()
+    }
+
+    func setupConstraints() {
+        print("setup")
     }
 }

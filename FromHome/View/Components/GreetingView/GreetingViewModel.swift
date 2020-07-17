@@ -9,6 +9,5 @@
 import Foundation
 
 struct GreetingViewModel {
-
     var username: String
 }

@@ -36,6 +36,8 @@ class GreetingView: UIView {
 
         super.init(frame: .zero)
 
+        translatesAutoresizingMaskIntoConstraints = false
+
         setupView()
     }
 
@@ -51,9 +53,7 @@ class GreetingView: UIView {
 
         clipsToBounds = false
 
-        addSubview(cardView)
-        addSubview(stackView)
-        addSubview(astronautView)
+        addSubviews([cardView, stackView, astronautView])
 
         constraints()
         applyStyle()
@@ -92,5 +92,17 @@ class GreetingView: UIView {
 
         Style.fromHome.apply(textStyle: .greeting, to: greetingLabel)
         Style.fromHome.apply(textStyle: .username, to: usernameLabel)
+    }
+
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+
+        guard let superview = superview else { fatalError("No super view") }
+
+        NSLayoutConstraint.activate([
+            leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: 8)
+        ])
     }
 }

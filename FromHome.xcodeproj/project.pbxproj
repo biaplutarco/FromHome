@@ -34,8 +34,9 @@
 		A48B2DE924B7BC5D0017B79D /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2DE824B7BC5D0017B79D /* NotificationCoordinator.swift */; };
 		A48B2E6B24C0E97A0017B79D /* SetupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E6A24C0E97A0017B79D /* SetupCoordinator.swift */; };
 		A48B2E6D24C0EB1C0017B79D /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E6C24C0EB1C0017B79D /* SetupViewController.swift */; };
+		A48B2E6F24C232840017B79D /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E6E24C232840017B79D /* UIView+Subview.swift */; };
+		A48B2E7124C234200017B79D /* SetupViewController+GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E7024C234200017B79D /* SetupViewController+GreetingView.swift */; };
 		A49ED7AD24B7B572006C70B6 /* TodayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */; };
-		A49ED7B124B7B597006C70B6 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ED7B024B7B597006C70B6 /* TodayViewController.swift */; };
 		A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778624B3994400A49E7F /* AppDelegate.swift */; };
 		A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778824B3994400A49E7F /* SceneDelegate.swift */; };
 		A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778F24B3994400A49E7F /* FromHome.xcdatamodeld */; };
@@ -96,8 +97,9 @@
 		A48B2DE824B7BC5D0017B79D /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
 		A48B2E6A24C0E97A0017B79D /* SetupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCoordinator.swift; sourceTree = "<group>"; };
 		A48B2E6C24C0EB1C0017B79D /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		A48B2E6E24C232840017B79D /* UIView+Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subview.swift"; sourceTree = "<group>"; };
+		A48B2E7024C234200017B79D /* SetupViewController+GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupViewController+GreetingView.swift"; sourceTree = "<group>"; };
 		A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCoordinator.swift; sourceTree = "<group>"; };
-		A49ED7B024B7B597006C70B6 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A4AE778324B3994400A49E7F /* FromHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FromHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AE778624B3994400A49E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4AE778824B3994400A49E7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				2720BE8824B80DBE00A98F87 /* UIView+Card.swift */,
 				279CB34724BA6D9A003126C9 /* UIView+Animations.swift */,
 				27309F0024B541EA00D60FE8 /* UIView+Constraints.swift */,
+				A48B2E6E24C232840017B79D /* UIView+Subview.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				A48B2E6C24C0EB1C0017B79D /* SetupViewController.swift */,
+				A48B2E7024C234200017B79D /* SetupViewController+GreetingView.swift */,
 			);
 			path = SetupScreen;
 			sourceTree = "<group>";
@@ -232,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				A48B2E6824C0E9500017B79D /* Setup */,
-				A49ED7AE24B7B578006C70B6 /* Today */,
 				A49ED7A924B7A7A8006C70B6 /* Components */,
 			);
 			path = View;
@@ -270,22 +273,6 @@
 				A48B2E6A24C0E97A0017B79D /* SetupCoordinator.swift */,
 			);
 			path = ChildCoordinators;
-			sourceTree = "<group>";
-		};
-		A49ED7AE24B7B578006C70B6 /* Today */ = {
-			isa = PBXGroup;
-			children = (
-				A49ED7AF24B7B57E006C70B6 /* TodayScreen */,
-			);
-			path = Today;
-			sourceTree = "<group>";
-		};
-		A49ED7AF24B7B57E006C70B6 /* TodayScreen */ = {
-			isa = PBXGroup;
-			children = (
-				A49ED7B024B7B597006C70B6 /* TodayViewController.swift */,
-			);
-			path = TodayScreen;
 			sourceTree = "<group>";
 		};
 		A4AE777A24B3994400A49E7F = {
@@ -620,18 +607,19 @@
 				27B806DA24BE213800D0BC87 /* Observable.swift in Sources */,
 				278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */,
 				279CB35224BA976A003126C9 /* FooterViewModel.swift in Sources */,
-				A49ED7B124B7B597006C70B6 /* TodayViewController.swift in Sources */,
 				2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */,
 				279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
 				A48B2E6B24C0E97A0017B79D /* SetupCoordinator.swift in Sources */,
 				A48B2DD924B7BB120017B79D /* TasksCoordinator.swift in Sources */,
+				A48B2E6F24C232840017B79D /* UIView+Subview.swift in Sources */,
 				279CB34824BA6D9A003126C9 /* UIView+Animations.swift in Sources */,
 				A48B2E6D24C0EB1C0017B79D /* SetupViewController.swift in Sources */,
 				A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */,
 				A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */,
 				275A29AB24BBB83A00C6D0DB /* FooterViewType.swift in Sources */,
 				27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */,
+				A48B2E7124C234200017B79D /* SetupViewController+GreetingView.swift in Sources */,
 				278045DE24B405FA00AEDFBA /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
