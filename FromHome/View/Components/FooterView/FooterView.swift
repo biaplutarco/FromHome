@@ -10,7 +10,6 @@ import UIKit
 
 class FooterView: UIView {
 
-    private var cardView = UIView(cardType: .footer)
     private var titleView = CardTitleView(.footer)
     private var bodyView = UIView()
 
@@ -32,6 +31,8 @@ class FooterView: UIView {
 
         super.init(frame: .zero)
 
+        styleAsCard(.footer)
+
         setupView()
     }
 
@@ -44,7 +45,6 @@ class FooterView: UIView {
 
         clipsToBounds = false
 
-        addSubview(cardView)
         addSubview(stackView)
 
         setupBodyView()
@@ -58,8 +58,9 @@ class FooterView: UIView {
             case .today:
                 guard let todayViewModel = viewModel as? TodayFooterViewModel else { return }
 
-                bodyView = TodayBodyView(buttonTitle: todayViewModel.buttonTitle,
-                                         bodyText: todayViewModel.bodyText)
+                bodyView = TodayBodyView(
+                    buttonTitle: todayViewModel.buttonTitle,
+                    bodyText: todayViewModel.bodyText)
 
             default:
                 break
@@ -80,7 +81,5 @@ class FooterView: UIView {
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -18)
         ])
-
-        cardView.fulfillSuperview()
     }
 }

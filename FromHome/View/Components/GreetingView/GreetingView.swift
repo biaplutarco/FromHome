@@ -14,8 +14,6 @@ class GreetingView: UIView {
 
     private let impact = UIImpactFeedbackGenerator()
 
-    private var cardView = UIView(cardType: .header)
-
     private var greetingLabel = UILabel()
     private var usernameLabel = UILabel()
 
@@ -36,6 +34,8 @@ class GreetingView: UIView {
 
         super.init(frame: .zero)
 
+        styleAsCard(.header)
+
         translatesAutoresizingMaskIntoConstraints = false
 
         setupView()
@@ -53,9 +53,8 @@ class GreetingView: UIView {
 
         clipsToBounds = false
 
-        addSubviews([cardView, stackView, astronautView])
+        addSubviews([stackView, astronautView])
 
-        constraints()
         applyStyle()
     }
 
@@ -66,26 +65,6 @@ class GreetingView: UIView {
         scale(0.9, withDurarion: 0.1)
 
         delegate?.didTapChangeUsername()
-    }
-
-    private func constraints() {
-
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        astronautView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            stackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-            stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
-
-            astronautView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-            astronautView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
-            astronautView.widthAnchor.constraint(equalTo: heightAnchor, multiplier: 0.9),
-            astronautView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
-
-        cardView.fulfillSuperview()
     }
 
     private func applyStyle() {
@@ -100,9 +79,19 @@ class GreetingView: UIView {
         guard let superview = superview else { fatalError("No super view") }
 
         NSLayoutConstraint.activate([
+
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            stackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+
+            astronautView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            astronautView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
+            astronautView.widthAnchor.constraint(equalTo: heightAnchor, multiplier: 0.9),
+            astronautView.bottomAnchor.constraint(equalTo: bottomAnchor),
+
             leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: 8)
+            topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: 16)
         ])
     }
 }

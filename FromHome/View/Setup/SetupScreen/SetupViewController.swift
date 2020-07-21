@@ -15,16 +15,33 @@ class SetupViewController: UIViewController {
 
     var coordinator: MainCoordinator?
 
-    let greeting = GreetingView(viewModel: GreetingViewModel(username: "Dani"))
+    let greetingView = GreetingView(viewModel: GreetingViewModel(username: "Dani"))
 
-    let setupScrollView = UIScrollView()
+    let tabbedScrollView: TabbedScrollView
 
     init(_ coordinator: MainCoordinator?) {
         self.coordinator = coordinator
 
+        let view1 = UIView()
+        let view2 = UIView()
+        let view3 = UIView()
+        let view4 = UIView()
+
+        view1.backgroundColor = .red
+        view2.backgroundColor = .green
+        view3.backgroundColor = .blue
+        view4.backgroundColor = .yellow
+
+        tabbedScrollView = TabbedScrollView.init(views: [view1, view2, view3, view4], images: [
+            (unselected: .todayIcon, selected: .todayFillIcon),
+            (unselected: .timerIcon, selected: .timerFillIcon),
+            (unselected: .taskIcon, selected: .taskFillIcon),
+            (unselected: .notificationIcon, selected: .notificationFillIcon)
+        ])
+
         super.init(nibName: nil, bundle: nil)
 
-        greeting.delegate = self
+        greetingView.delegate = self
     }
 
     @available(*, unavailable)
@@ -37,12 +54,14 @@ class SetupViewController: UIViewController {
 
         view = UniverseView(frame: view.frame)
 
-        view.addSubviews([greeting])
+        view.addSubviews([greetingView, tabbedScrollView])
 
         setupConstraints()
     }
 
     func setupConstraints() {
-        print("setup")
+        NSLayoutConstraint.activate([
+            tabbedScrollView.topAnchor.constraint(equalTo: greetingView.bottomAnchor, constant: 16)
+        ])
     }
 }
