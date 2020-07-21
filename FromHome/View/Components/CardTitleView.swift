@@ -8,12 +8,12 @@
 
 import UIKit
 
-enum CardType {
-    case footer
-    case header
-}
-
 class CardTitleView: UIView {
+
+    enum CardTitleType {
+        case footer
+        case header
+    }
 
     private var titleLabel = UILabel()
     private var line = UIView()
@@ -27,9 +27,9 @@ class CardTitleView: UIView {
         return stackView
     }()
 
-    var type: CardType
+    var type: CardTitleType
 
-    init(_ type: CardType) {
+    init(_ type: CardTitleType) {
 
         self.type = type
 

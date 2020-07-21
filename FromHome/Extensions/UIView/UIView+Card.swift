@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum CardType {
+    case footer
+    case header
+    case alert
+}
+
 extension UIView {
 
     convenience init(cardType: CardType) {
@@ -23,6 +29,10 @@ extension UIView {
             case .header:
                 layer.shadowColor = UIColor.shadowTop.cgColor
                 backgroundColor = .headerBackground
+
+        case .alert:
+                layer.shadowColor = UIColor.shadowBottom.cgColor
+                backgroundColor = .backgroundAlert
         }
 
         layer.shadowOffset = CGSize(width: -1, height: 12)
