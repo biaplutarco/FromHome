@@ -77,7 +77,7 @@ class SegmentedTabView: UIView {
             selectedSegment = index
 
             selected.scale(0.75, withDurarion: 0.15)
-//            selected.scale(1.25, withDurarion: 0.15)
+            //selected.scale(1.25, withDurarion: 0.15)
         }
     }
 

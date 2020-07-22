@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum CardType {
+    case footer
+    case header
+    case alert
+}
+
 extension UIView {
 
     func styleAsCard(_ cardType: CardType) {
@@ -22,6 +28,11 @@ extension UIView {
 
                 addShadow(color: .shadowTop)
                 backgroundColor = .headerBackground
+
+            case .alert:
+
+                addShadow(color: .shadowBottom)
+                backgroundColor = .backgroundAlert
         }
 
         layer.masksToBounds = false
