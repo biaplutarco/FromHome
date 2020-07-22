@@ -29,10 +29,6 @@
 		27C1D2DA24B80A0500AA95BF /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D924B80A0500AA95BF /* GreetingView.swift */; };
 		42D144E78D035D1BE4EA7C47 /* Pods_FromHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147D5965E0FD62DA0408A57A /* Pods_FromHome.framework */; };
 		8CF228F9FB95080DCB43F60B /* Pods_FromHome_FromHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344516298486A939C3EDF6F6 /* Pods_FromHome_FromHomeUITests.framework */; };
-		A48B2DD724B7BAB00017B79D /* TimersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2DD624B7BAB00017B79D /* TimersCoordinator.swift */; };
-		A48B2DD924B7BB120017B79D /* TasksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2DD824B7BB120017B79D /* TasksCoordinator.swift */; };
-		A48B2DE924B7BC5D0017B79D /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2DE824B7BC5D0017B79D /* NotificationCoordinator.swift */; };
-		A48B2E6B24C0E97A0017B79D /* SetupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E6A24C0E97A0017B79D /* SetupCoordinator.swift */; };
 		A48B2E6D24C0EB1C0017B79D /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E6C24C0EB1C0017B79D /* SetupViewController.swift */; };
 		A48B2E6F24C232840017B79D /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E6E24C232840017B79D /* UIView+Subview.swift */; };
 		A48B2E7124C234200017B79D /* SetupViewController+GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E7024C234200017B79D /* SetupViewController+GreetingView.swift */; };
@@ -44,7 +40,6 @@
 		A48B2E7E24C762820017B79D /* UIButton+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E7D24C762820017B79D /* UIButton+Init.swift */; };
 		A48B2E8024C779CA0017B79D /* StackView+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E7F24C779CA0017B79D /* StackView+Init.swift */; };
 		A48B2E8224C79BEF0017B79D /* TabbedScrollView+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E8124C79BEF0017B79D /* TabbedScrollView+Delegates.swift */; };
-		A49ED7AD24B7B572006C70B6 /* TodayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */; };
 		A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778624B3994400A49E7F /* AppDelegate.swift */; };
 		A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778824B3994400A49E7F /* SceneDelegate.swift */; };
 		A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778F24B3994400A49E7F /* FromHome.xcdatamodeld */; };
@@ -100,10 +95,6 @@
 		383ED69634AAD6D6AAD683AF /* Pods-FromHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome.debug.xcconfig"; path = "Target Support Files/Pods-FromHome/Pods-FromHome.debug.xcconfig"; sourceTree = "<group>"; };
 		445A17B74F5FEC3993225741 /* Pods-FromHome-FromHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome-FromHomeUITests.debug.xcconfig"; path = "Target Support Files/Pods-FromHome-FromHomeUITests/Pods-FromHome-FromHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A55388DE651E6CCDD9C7396 /* Pods-FromHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-FromHomeTests/Pods-FromHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A48B2DD624B7BAB00017B79D /* TimersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersCoordinator.swift; sourceTree = "<group>"; };
-		A48B2DD824B7BB120017B79D /* TasksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCoordinator.swift; sourceTree = "<group>"; };
-		A48B2DE824B7BC5D0017B79D /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
-		A48B2E6A24C0E97A0017B79D /* SetupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCoordinator.swift; sourceTree = "<group>"; };
 		A48B2E6C24C0EB1C0017B79D /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		A48B2E6E24C232840017B79D /* UIView+Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subview.swift"; sourceTree = "<group>"; };
 		A48B2E7024C234200017B79D /* SetupViewController+GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupViewController+GreetingView.swift"; sourceTree = "<group>"; };
@@ -115,7 +106,6 @@
 		A48B2E7D24C762820017B79D /* UIButton+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Init.swift"; sourceTree = "<group>"; };
 		A48B2E7F24C779CA0017B79D /* StackView+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView+Init.swift"; sourceTree = "<group>"; };
 		A48B2E8124C79BEF0017B79D /* TabbedScrollView+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabbedScrollView+Delegates.swift"; sourceTree = "<group>"; };
-		A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCoordinator.swift; sourceTree = "<group>"; };
 		A4AE778324B3994400A49E7F /* FromHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FromHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AE778624B3994400A49E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4AE778824B3994400A49E7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -295,18 +285,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A49ED7AB24B7A99D006C70B6 /* ChildCoordinators */ = {
-			isa = PBXGroup;
-			children = (
-				A49ED7AC24B7B572006C70B6 /* TodayCoordinator.swift */,
-				A48B2DD624B7BAB00017B79D /* TimersCoordinator.swift */,
-				A48B2DD824B7BB120017B79D /* TasksCoordinator.swift */,
-				A48B2DE824B7BC5D0017B79D /* NotificationCoordinator.swift */,
-				A48B2E6A24C0E97A0017B79D /* SetupCoordinator.swift */,
-			);
-			path = ChildCoordinators;
-			sourceTree = "<group>";
-		};
 		A4AE777A24B3994400A49E7F = {
 			isa = PBXGroup;
 			children = (
@@ -371,7 +349,6 @@
 			children = (
 				A4AE77BE24B3BC6700A49E7F /* Coordinator.swift */,
 				A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */,
-				A49ED7AB24B7A99D006C70B6 /* ChildCoordinators */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -626,10 +603,7 @@
 				2722122124B7C3390053478F /* UniverseView.swift in Sources */,
 				A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */,
 				279CB34F24BA8C43003126C9 /* FooterView.swift in Sources */,
-				A48B2DE924B7BC5D0017B79D /* NotificationCoordinator.swift in Sources */,
-				A48B2DD724B7BAB00017B79D /* TimersCoordinator.swift in Sources */,
 				279CB35524BA9975003126C9 /* TodayFooterViewModel.swift in Sources */,
-				A49ED7AD24B7B572006C70B6 /* TodayCoordinator.swift in Sources */,
 				A48B2E8024C779CA0017B79D /* StackView+Init.swift in Sources */,
 				A48B2E7E24C762820017B79D /* UIButton+Init.swift in Sources */,
 				278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */,
@@ -647,8 +621,6 @@
 				279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */,
 				A48B2E7824C242360017B79D /* UIView+Shadow.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
-				A48B2E6B24C0E97A0017B79D /* SetupCoordinator.swift in Sources */,
-				A48B2DD924B7BB120017B79D /* TasksCoordinator.swift in Sources */,
 				A48B2E7C24C75D7E0017B79D /* UIImage+Assets.swift in Sources */,
 				A48B2E6F24C232840017B79D /* UIView+Subview.swift in Sources */,
 				279CB34824BA6D9A003126C9 /* UIView+Animations.swift in Sources */,
