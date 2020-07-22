@@ -12,15 +12,20 @@ class AlertViewController: UIViewController {
 
     private var alertView: AlertView
 
-    init(viewModel: AlertViewModel) {
-        self.alertView(viewModel)
+    init(_ alert: Alert) {
+        self.alertView = AlertView(alert.viewModel)
+
+        super.init(nibName: nil, bundle: nil)
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     private func setupView() {
+
+        view.backgroundColor = .clear
 
         view.addSubview(alertView)
 
@@ -32,7 +37,8 @@ class AlertViewController: UIViewController {
         alertView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-
+            alertView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            alertView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }

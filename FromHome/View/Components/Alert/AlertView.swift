@@ -10,12 +10,6 @@ import UIKit
 
 class AlertView: UIView {
 
-    enum AlertType {
-        case skip
-        case input
-        case warning
-    }
-
     private var cardView = UIView(cardType: .alert)
 
     private var titleLabel = UILabel()
@@ -54,6 +48,7 @@ class AlertView: UIView {
         super.init(frame: .zero)
 
         setupView(for: viewModel.type)
+        setupTexts(for: viewModel)
     }
 
     @available(*, unavailable)
@@ -61,7 +56,16 @@ class AlertView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setupView(for type: AlertType) {
+    private func setupTexts(for viewModel: AlertViewModel) {
+
+        titleLabel.text = viewModel.title
+        bodyLabel.text = viewModel.bodyMessage
+
+        rightButton.setTitle(viewModel.rightButtonTitle, for: .normal)
+        leftButton.setTitle(viewModel.leftButtonTitle, for: .normal)
+    }
+
+    private func setupView(for type: AlertViewModelType) {
 
         switch type {
 
@@ -70,7 +74,7 @@ class AlertView: UIView {
 
                 withRigthButton()
 
-            case .skip:
+            case .getOut:
                 textStackView.insertArrangedSubview(bodyLabel, at: 1)
 
                 withRigthButton()

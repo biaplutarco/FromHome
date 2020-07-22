@@ -50,5 +50,7 @@ class TodayViewController: UIViewController {
             footer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             footer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
+
+        present(AlertViewController(.atHome), animated: true, completion: nil)
     }
 }
