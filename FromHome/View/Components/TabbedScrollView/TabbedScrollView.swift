@@ -14,6 +14,8 @@ class TabbedScrollView: UIView {
 
     let segmentedTabView: SegmentedTabView
 
+    var shouldUpdateTab = true
+
     init(views: [UIView], images: [(UIImage, UIImage)]) {
 
         pagedScrollView = PagedScrollView.init(views)

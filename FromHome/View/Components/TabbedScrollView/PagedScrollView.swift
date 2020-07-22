@@ -26,6 +26,7 @@ class PagedScrollView: UIScrollView {
 
         translatesAutoresizingMaskIntoConstraints = false
         isPagingEnabled = true
+        isScrollEnabled = true
         backgroundColor = .clear
         showsHorizontalScrollIndicator = false
         alwaysBounceVertical = false
