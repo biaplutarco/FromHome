@@ -50,6 +50,7 @@
 		A4AE77BA24B39A8A00A49E7F /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = A4AE77B924B39A8900A49E7F /* README.MD */; };
 		A4AE77BF24B3BC6700A49E7F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE77BE24B3BC6700A49E7F /* Coordinator.swift */; };
 		A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */; };
+		A4CF4B4F24C8E2C600BFC3BE /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CF4B4E24C8E2C600BFC3BE /* TodayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		A4AE77B924B39A8900A49E7F /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		A4AE77BE24B3BC6700A49E7F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A4CF4B4E24C8E2C600BFC3BE /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A62FE971FCE64E66462578B8 /* Pods-FromHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHomeTests.release.xcconfig"; path = "Target Support Files/Pods-FromHomeTests/Pods-FromHomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		B98A80FED36B1087F28D2066 /* Pods-FromHome-FromHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome-FromHomeUITests.release.xcconfig"; path = "Target Support Files/Pods-FromHome-FromHomeUITests/Pods-FromHome-FromHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA6E22448571902684372A4A /* Pods_FromHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FromHomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +255,7 @@
 		A49ED7A824B7A797006C70B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4CF4B4C24C8E2A500BFC3BE /* Today */,
 				A48B2E6824C0E9500017B79D /* Setup */,
 				A49ED7A924B7A7A8006C70B6 /* Components */,
 			);
@@ -351,6 +354,22 @@
 				A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		A4CF4B4C24C8E2A500BFC3BE /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				A4CF4B4D24C8E2AC00BFC3BE /* TodayScreen */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		A4CF4B4D24C8E2AC00BFC3BE /* TodayScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A4CF4B4E24C8E2C600BFC3BE /* TodayViewController.swift */,
+			);
+			path = TodayScreen;
 			sourceTree = "<group>";
 		};
 		B2C2D0FF71464E60BA365C7D /* Frameworks */ = {
@@ -618,6 +637,7 @@
 				278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */,
 				279CB35224BA976A003126C9 /* FooterViewModel.swift in Sources */,
 				2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */,
+				A4CF4B4F24C8E2C600BFC3BE /* TodayViewController.swift in Sources */,
 				279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */,
 				A48B2E7824C242360017B79D /* UIView+Shadow.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
