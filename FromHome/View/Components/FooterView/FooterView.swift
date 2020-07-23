@@ -58,8 +58,7 @@ class FooterView: UIView {
             case .today:
                 guard let todayViewModel = viewModel as? TodayFooterViewModel else { return }
 
-                bodyView = TodayBodyView(buttonTitle: todayViewModel.buttonTitle,
-                                         bodyText: todayViewModel.bodyText)
+                bodyView = TodayBodyView(buttonTitle: todayViewModel.buttonTitle, bodyText: todayViewModel.bodyText)
 
             default:
                 break

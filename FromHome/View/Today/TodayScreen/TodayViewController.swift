@@ -21,39 +21,8 @@ class TodayViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    override func viewWillAppear(_ animated: Bool) {
-        coordinator?.viewController.present(AlertViewController(.leave(.coffeeBreak), delegate: nil), animated: true, completion: nil)
-
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let universeView = UniverseView(frame: view.frame)
-
-        view.addSubview(universeView)
-
-        universeView.fulfillSuperview()
-
-        let greeting = GreetingView(viewModel: GreetingViewModel(username: "Dani"))
-        let footer = FooterView(viewModel: TodayFooterViewModel())
-
-        view.addSubview(greeting)
-        view.addSubview(footer)
-
-        greeting.translatesAutoresizingMaskIntoConstraints = false
-        footer.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-
-            greeting.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            greeting.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            greeting.topAnchor.constraint(equalTo: view.topAnchor, constant: 56),
-
-            footer.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -108),
-            footer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            footer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
-        ])
-
     }
 }
