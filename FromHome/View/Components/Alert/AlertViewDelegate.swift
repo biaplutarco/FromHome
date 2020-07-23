@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AlertViewDelegate: AnyClass {
+protocol AlertViewDelegate: AnyObject {
 
     func action()
     func destructiveAction()

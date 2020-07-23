@@ -63,11 +63,13 @@ class AlertView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func rightAction() {
+    @objc
+    func rightAction() {
         delegate?.destructiveAction()
     }
 
-    @objc func leftAction() {
+    @objc
+    func leftAction() {
         delegate?.action()
     }
 
@@ -96,10 +98,13 @@ class AlertView: UIView {
                 textStackView.addArrangedSubview(horizontalLine)
 
                 withRigthButton()
+                bodyLabelConstraints()
 
             case .warning:
                 textStackView.addArrangedSubview(bodyLabel)
                 textStackView.addArrangedSubview(horizontalLine)
+
+                bodyLabelConstraints()
         }
 
         addSubview(cardView)
@@ -172,6 +177,17 @@ class AlertView: UIView {
 
             rightButton.widthAnchor.constraint(equalTo: leftButton.widthAnchor),
             rightButton.heightAnchor.constraint(equalTo: leftButton.heightAnchor)
+        ])
+    }
+
+    private func bodyLabelConstraints() {
+
+        bodyLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+
+            bodyLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 12),
+            bodyLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -12)
         ])
     }
 }
