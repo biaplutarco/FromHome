@@ -25,12 +25,14 @@ extension UIView {
             case .footer:
                 layer.shadowColor = UIColor.shadowBottom.cgColor
                 backgroundColor = .footerBackground
+                alpha = 0.5
 
             case .header:
                 layer.shadowColor = UIColor.shadowTop.cgColor
                 backgroundColor = .headerBackground
+                alpha = 0.5
 
-        case .alert:
+            case .alert:
                 layer.shadowColor = UIColor.shadowBottom.cgColor
                 backgroundColor = .backgroundAlert
         }
@@ -41,6 +43,5 @@ extension UIView {
 
         layer.masksToBounds = false
         layer.cornerRadius = 8
-        alpha = 0.5
     }
 }

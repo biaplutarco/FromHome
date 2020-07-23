@@ -17,6 +17,7 @@
 		2771C49724C673FC00682DF3 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2771C49624C673FC00682DF3 /* AlertView.swift */; };
 		2771C49924C678DE00682DF3 /* UIView+Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2771C49824C678DE00682DF3 /* UIView+Line.swift */; };
 		2776134C24C7C63A00E3C0B9 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2776134B24C7C63A00E3C0B9 /* AlertViewModel.swift */; };
+		2776B7DE24C90E550082F4FF /* UITextField+Dark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2776B7DD24C90E550082F4FF /* UITextField+Dark.swift */; };
 		278045DE24B405FA00AEDFBA /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045DD24B405FA00AEDFBA /* Style.swift */; };
 		278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */; };
 		278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */; };
@@ -90,6 +91,7 @@
 		2771C49624C673FC00682DF3 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		2771C49824C678DE00682DF3 /* UIView+Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Line.swift"; sourceTree = "<group>"; };
 		2776134B24C7C63A00E3C0B9 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		2776B7DD24C90E550082F4FF /* UITextField+Dark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Dark.swift"; sourceTree = "<group>"; };
 		278045DD24B405FA00AEDFBA /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FHColors.swift"; sourceTree = "<group>"; };
 		278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Style+FHSyle.swift"; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 			children = (
 				279CB35924BA9EE0003126C9 /* UIView */,
 				278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */,
+				2776B7DD24C90E550082F4FF /* UITextField+Dark.swift */,
 				278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */,
 				27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */,
 			);
@@ -739,6 +742,7 @@
 				27F019FA24C7C819001870D0 /* SkipAlertViewModel.swift in Sources */,
 				2771C49924C678DE00682DF3 /* UIView+Line.swift in Sources */,
 				27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */,
+				2776B7DE24C90E550082F4FF /* UITextField+Dark.swift in Sources */,
 				278045DE24B405FA00AEDFBA /* Style.swift in Sources */,
 				2771C49724C673FC00682DF3 /* AlertView.swift in Sources */,
 			);

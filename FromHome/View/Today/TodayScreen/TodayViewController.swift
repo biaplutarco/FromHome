@@ -21,6 +21,10 @@ class TodayViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    override func viewWillAppear(_ animated: Bool) {
+        coordinator?.viewController.present(AlertViewController(.atHome), animated: true, completion: nil)
+
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +55,5 @@ class TodayViewController: UIViewController {
             footer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
 
-        present(AlertViewController(.atHome), animated: true, completion: nil)
     }
 }

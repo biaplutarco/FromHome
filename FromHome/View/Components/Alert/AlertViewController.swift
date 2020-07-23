@@ -16,6 +16,7 @@ class AlertViewController: UIViewController {
         self.alertView = AlertView(alert.viewModel)
 
         super.init(nibName: nil, bundle: nil)
+        setupView()
     }
 
     @available(*, unavailable)
@@ -25,7 +26,10 @@ class AlertViewController: UIViewController {
 
     private func setupView() {
 
-        view.backgroundColor = .clear
+        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)
+
+        modalTransitionStyle = .crossDissolve
+        modalPresentationStyle = .overCurrentContext
 
         view.addSubview(alertView)
 
@@ -38,7 +42,8 @@ class AlertViewController: UIViewController {
 
         NSLayoutConstraint.activate([
             alertView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            alertView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            alertView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            alertView.widthAnchor.constraint(equalToConstant: 300)
         ])
     }
 }

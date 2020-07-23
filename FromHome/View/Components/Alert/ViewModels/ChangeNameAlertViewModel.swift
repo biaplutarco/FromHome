@@ -12,11 +12,11 @@ class ChangeNameAlertViewModel: AlertViewModel {
 
     var type: AlertViewModelType { .input }
 
-    var title: String = "How would you like to be call?" 
+    var title: String = "How would you like to be call?"
 
-    var rightButtonTitle: String = "Save" 
+    var leftButtonTitle: String = "Save"
 
     var bodyMessage: String?
 
-    var leftButtonTitle: String? { "Cancel" }
+    var rightButtonTitle: String? { "Cancel" }
 }

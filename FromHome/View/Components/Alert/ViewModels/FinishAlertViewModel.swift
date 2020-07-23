@@ -21,11 +21,11 @@ class FinishAlertViewModel: AlertViewModel {
 
     var title: String
 
-    var rightButtonTitle: String = "OK" 
+    var leftButtonTitle: String = "OK"
 
     var bodyMessage: String?
 
-    var leftButtonTitle: String?
+    var rightButtonTitle: String?
 
     init(_ message: FinishAlertMessage) {
 
