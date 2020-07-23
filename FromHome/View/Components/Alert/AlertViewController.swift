@@ -16,6 +16,7 @@ class AlertViewController: UIViewController {
         self.alertView = AlertView(alert.viewModel)
 
         super.init(nibName: nil, bundle: nil)
+
         setupView()
     }
 

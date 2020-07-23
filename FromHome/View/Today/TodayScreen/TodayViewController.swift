@@ -22,7 +22,7 @@ class TodayViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     override func viewWillAppear(_ animated: Bool) {
-        coordinator?.viewController.present(AlertViewController(.atHome), animated: true, completion: nil)
+        coordinator?.viewController.present(AlertViewController(.leave(.coffeeBreak)), animated: true, completion: nil)
 
     }
 

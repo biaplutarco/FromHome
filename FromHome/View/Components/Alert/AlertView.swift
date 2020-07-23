@@ -13,23 +13,15 @@ class AlertView: UIView {
     private var cardView = UIView(cardType: .alert)
 
     private var titleLabel = UILabel()
+    private var bodyLabel = UILabel(lines: 0)
 
-    private var rightButton = UIButton()
-    private var leftButton = UIButton()
+    private var rightButton = UIButton(action: #selector(rightAction))
+    private var leftButton = UIButton(action: #selector(leftAction))
 
     private lazy var textField = UITextField(inputView: nil)
 
     private var horizontalLine = UIView(lineColor: .lineAlert)
     private var verticalLine = UIView(lineColor: .lineAlert)
-
-    private lazy var bodyLabel: UILabel = {
-        let label = UILabel()
-        label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 0
-        label.textAlignment = .center
-
-        return label
-    }()
 
     private lazy var textStackView: UIStackView = {
         let stackview = UIStackView(arrangedSubviews: [titleLabel])
@@ -57,6 +49,8 @@ class AlertView: UIView {
         return stackview
     }()
 
+    weak var delegate: AlertViewDelegate?
+
     init(_ viewModel: AlertViewModel) {
         super.init(frame: .zero)
 
@@ -67,6 +61,14 @@ class AlertView: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    @objc func rightAction() {
+        delegate?.destructiveAction()
+    }
+
+    @objc func leftAction() {
+        delegate?.action()
     }
 
     private func setupTexts(for viewModel: AlertViewModel) {
