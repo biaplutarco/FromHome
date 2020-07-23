@@ -10,7 +10,7 @@ import UIKit
 
 class AlertView: UIView {
 
-//    private var cardView = UIView(cardType: .alert)
+    private var cardView = UIView()
 
     private var titleLabel = UILabel()
     private var bodyLabel = UILabel(lines: 0)
@@ -123,6 +123,8 @@ class AlertView: UIView {
     }
 
     private func applyStyle() {
+
+        cardView.styleAsCard(.alert)
 
         Style.fromHome.apply(textStyle: .titleAlert, to: titleLabel)
         Style.fromHome.apply(textStyle: .bodyCardFooter, to: bodyLabel)

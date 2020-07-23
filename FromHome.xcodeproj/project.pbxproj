@@ -62,7 +62,6 @@
 		A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */; };
 		A4F42E9C24C8E87D00F6C95E /* UniverseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722122024B7C3390053478F /* UniverseView.swift */; };
 		A4F42E9D24C8E8E300F6C95E /* TodayFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB35424BA9975003126C9 /* TodayFooterViewModel.swift */; };
-		A4F42E9F24C8E9D400F6C95E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42E9E24C8E9D400F6C95E /* TodayViewController.swift */; };
 		A4F42EA124C8E9F400F6C95E /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42EA024C8E9F400F6C95E /* SetupViewController.swift */; };
 		A4F42EA324C8EA0D00F6C95E /* SetupViewController+Greeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42EA224C8EA0D00F6C95E /* SetupViewController+Greeting.swift */; };
 		A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42EA424C8EA3100F6C95E /* TabbedScrollView+Delegates.swift */; };
@@ -151,7 +150,6 @@
 		A4AE77B924B39A8900A49E7F /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		A4AE77BE24B3BC6700A49E7F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		A4F42E9E24C8E9D400F6C95E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A4F42EA024C8E9F400F6C95E /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		A4F42EA224C8EA0D00F6C95E /* SetupViewController+Greeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupViewController+Greeting.swift"; sourceTree = "<group>"; };
 		A4F42EA424C8EA3100F6C95E /* TabbedScrollView+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabbedScrollView+Delegates.swift"; sourceTree = "<group>"; };
@@ -322,7 +320,6 @@
 		A49ED7A824B7A797006C70B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A4CF4B4C24C8E2A500BFC3BE /* Today */,
 				A48B2E6824C0E9500017B79D /* Setup */,
 				A49ED7A924B7A7A8006C70B6 /* Components */,
 			);
@@ -425,22 +422,6 @@
 				A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		A4CF4B4C24C8E2A500BFC3BE /* Today */ = {
-			isa = PBXGroup;
-			children = (
-				A4CF4B4D24C8E2AC00BFC3BE /* TodayScreen */,
-			);
-			path = Today;
-			sourceTree = "<group>";
-		};
-		A4CF4B4D24C8E2AC00BFC3BE /* TodayScreen */ = {
-			isa = PBXGroup;
-			children = (
-				A4F42E9E24C8E9D400F6C95E /* TodayViewController.swift */,
-			);
-			path = TodayScreen;
 			sourceTree = "<group>";
 		};
 		B2C2D0FF71464E60BA365C7D /* Frameworks */ = {
@@ -698,19 +679,12 @@
 				A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */,
 				2776134C24C7C63A00E3C0B9 /* AlertViewModel.swift in Sources */,
 				279CB34F24BA8C43003126C9 /* FooterView.swift in Sources */,
-				A48B2DE924B7BC5D0017B79D /* NotificationCoordinator.swift in Sources */,
-				A48B2DD724B7BAB00017B79D /* TimersCoordinator.swift in Sources */,
-				A48B2DD524B7BA630017B79D /* TimersViewController.swift in Sources */,
-				2771C49524C673BC00682DF3 /* AlertViewController.swift in Sources */,
-				279CB35524BA9975003126C9 /* TodayFooterViewModel.swift in Sources */,
-				A49ED7AD24B7B572006C70B6 /* TodayCoordinator.swift in Sources */,
 				2776B7E024C91A570082F4FF /* UIButton+Action.swift in Sources */,
 				27E8D0BB24C7D1E300E3EE4C /* FinishAlertViewModel.swift in Sources */,
 				A48B2E8024C779CA0017B79D /* StackView+Init.swift in Sources */,
 				A48B2E7E24C762820017B79D /* UIButton+Init.swift in Sources */,
 				278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */,
 				27E8D0BF24C7D63E00E3EE4C /* BreakAlertViewModel.swift in Sources */,
-				A4F42E9F24C8E9D400F6C95E /* TodayViewController.swift in Sources */,
 				27C1D2D824B806F500AA95BF /* CAShapeLayer+Star.swift in Sources */,
 				A4F42EA324C8EA0D00F6C95E /* SetupViewController+Greeting.swift in Sources */,
 				27C1D2DA24B80A0500AA95BF /* GreetingView.swift in Sources */,
@@ -727,7 +701,6 @@
 				27F019FC24C7C8F1001870D0 /* ChangeNameAlertViewModel.swift in Sources */,
 				279CB35224BA976A003126C9 /* FooterViewModel.swift in Sources */,
 				2776B7E224C91AC10082F4FF /* UILabel+MultipleLines.swift in Sources */,
-				A49ED7B124B7B597006C70B6 /* TodayViewController.swift in Sources */,
 				2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */,
 				279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */,
 				A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */,
