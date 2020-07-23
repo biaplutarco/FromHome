@@ -12,7 +12,6 @@ class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
 
     var viewController: UIViewController!
-    var tabBarController: UITabBarController?
 
     var window: UIWindow
 
@@ -21,16 +20,9 @@ class MainCoordinator: Coordinator {
 
         window.windowScene = windowScene
 
-        childCoordinators.append(TodayCoordinator(self))
-        childCoordinators.append(TimersCoordinator(self))
-        childCoordinators.append(TasksCoordinator(self))
-        childCoordinators.append(NotificationCoordinator(self))
+        viewController = SetupViewController(self)
 
-        tabBarController = UITabBarController()
-
-        tabBarController?.viewControllers = childCoordinators.map({ $0.viewController })
-
-        window.rootViewController = tabBarController
+        window.rootViewController = viewController
         window.makeKeyAndVisible()
     }
 

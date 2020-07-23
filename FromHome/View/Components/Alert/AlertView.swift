@@ -10,7 +10,7 @@ import UIKit
 
 class AlertView: UIView {
 
-    private var cardView = UIView(cardType: .alert)
+//    private var cardView = UIView(cardType: .alert)
 
     private var titleLabel = UILabel()
     private var bodyLabel = UILabel(lines: 0)
@@ -107,7 +107,7 @@ class AlertView: UIView {
                 bodyLabelConstraints()
         }
 
-        addSubview(cardView)
+        styleAsCard(.alert)
         addSubview(stackView)
 
         applyStyle()

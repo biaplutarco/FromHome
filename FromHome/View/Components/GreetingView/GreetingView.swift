@@ -14,8 +14,6 @@ class GreetingView: UIView {
 
     private let impact = UIImpactFeedbackGenerator()
 
-    private var cardView = UIView(cardType: .header)
-
     private var greetingLabel = UILabel()
     private var usernameLabel = UILabel()
 
@@ -36,6 +34,10 @@ class GreetingView: UIView {
 
         super.init(frame: .zero)
 
+        styleAsCard(.header)
+
+        translatesAutoresizingMaskIntoConstraints = false
+
         setupView()
     }
 
@@ -51,11 +53,8 @@ class GreetingView: UIView {
 
         clipsToBounds = false
 
-        addSubview(cardView)
-        addSubview(stackView)
-        addSubview(astronautView)
+        addSubviews([stackView, astronautView])
 
-        constraints()
         applyStyle()
     }
 
@@ -68,10 +67,16 @@ class GreetingView: UIView {
         delegate?.didTapChangeUsername()
     }
 
-    private func constraints() {
+    private func applyStyle() {
 
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        astronautView.translatesAutoresizingMaskIntoConstraints = false
+        Style.fromHome.apply(textStyle: .greeting, to: greetingLabel)
+        Style.fromHome.apply(textStyle: .username, to: usernameLabel)
+    }
+
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+
+        guard let superview = superview else { fatalError("No super view") }
 
         NSLayoutConstraint.activate([
 
@@ -82,15 +87,11 @@ class GreetingView: UIView {
             astronautView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
             astronautView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
             astronautView.widthAnchor.constraint(equalTo: heightAnchor, multiplier: 0.9),
-            astronautView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            astronautView.bottomAnchor.constraint(equalTo: bottomAnchor),
+
+            leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: 16)
         ])
-
-        cardView.fulfillSuperview()
-    }
-
-    private func applyStyle() {
-
-        Style.fromHome.apply(textStyle: .greeting, to: greetingLabel)
-        Style.fromHome.apply(textStyle: .username, to: usernameLabel)
     }
 }

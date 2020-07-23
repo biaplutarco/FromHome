@@ -10,7 +10,7 @@ import Foundation
 
 enum BreakAlertMessage: String {
 
-    case meal =  "The clock is stopped. You can eat your meal now. We mean MEALS not snacks, snacks only on coffee time. When you return we'll continue to count the hours!"
+    case meal = "The clock is stopped. You can eat your meal now. We mean MEALS not snacks, snacks only on coffee time. When you return we'll continue to count the hours!"
     case coffee = "Take a break from your work, relaxe your mind. Drink some coffee"
 }
 

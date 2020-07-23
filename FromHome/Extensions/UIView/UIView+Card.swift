@@ -16,19 +16,18 @@ enum CardType {
 
 extension UIView {
 
-    convenience init(cardType: CardType) {
-
-        self.init()
-
+    func styleAsCard(_ cardType: CardType) {
         switch cardType {
 
             case .footer:
-                layer.shadowColor = UIColor.shadowBottom.cgColor
+
+                addShadow(color: .shadowBottom)
                 backgroundColor = .footerBackground
                 alpha = 0.5
 
             case .header:
-                layer.shadowColor = UIColor.shadowTop.cgColor
+
+                addShadow(color: .shadowTop)
                 backgroundColor = .headerBackground
                 alpha = 0.5
 
@@ -36,10 +35,6 @@ extension UIView {
                 layer.shadowColor = UIColor.shadowBottom.cgColor
                 backgroundColor = .backgroundAlert
         }
-
-        layer.shadowOffset = CGSize(width: -1, height: 12)
-        layer.shadowRadius = 8
-        layer.shadowOpacity = 1
 
         layer.masksToBounds = false
         layer.cornerRadius = 8
