@@ -58,7 +58,6 @@
 		A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */; };
 		A4F42E9C24C8E87D00F6C95E /* UniverseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722122024B7C3390053478F /* UniverseView.swift */; };
 		A4F42E9D24C8E8E300F6C95E /* TodayFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB35424BA9975003126C9 /* TodayFooterViewModel.swift */; };
-		A4F42E9F24C8E9D400F6C95E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42E9E24C8E9D400F6C95E /* TodayViewController.swift */; };
 		A4F42EA124C8E9F400F6C95E /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42EA024C8E9F400F6C95E /* SetupViewController.swift */; };
 		A4F42EA324C8EA0D00F6C95E /* SetupViewController+Greeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42EA224C8EA0D00F6C95E /* SetupViewController+Greeting.swift */; };
 		A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42EA424C8EA3100F6C95E /* TabbedScrollView+Delegates.swift */; };
@@ -143,7 +142,6 @@
 		A4AE77B924B39A8900A49E7F /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		A4AE77BE24B3BC6700A49E7F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		A4F42E9E24C8E9D400F6C95E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A4F42EA024C8E9F400F6C95E /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		A4F42EA224C8EA0D00F6C95E /* SetupViewController+Greeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupViewController+Greeting.swift"; sourceTree = "<group>"; };
 		A4F42EA424C8EA3100F6C95E /* TabbedScrollView+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabbedScrollView+Delegates.swift"; sourceTree = "<group>"; };
@@ -222,19 +220,19 @@
 			isa = PBXGroup;
 			children = (
 				279CB34E24BA8C43003126C9 /* FooterView.swift */,
-				279CB35324BA995F003126C9 /* ViewModel */,
+				279CB35324BA995F003126C9 /* Protocol */,
 				279CB35624BA9AEE003126C9 /* BodyView */,
 			);
 			path = FooterView;
 			sourceTree = "<group>";
 		};
-		279CB35324BA995F003126C9 /* ViewModel */ = {
+		279CB35324BA995F003126C9 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				279CB35124BA976A003126C9 /* FooterViewModel.swift */,
 				275A29AA24BBB83A00C6D0DB /* FooterViewType.swift */,
 			);
-			path = ViewModel;
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		279CB35624BA9AEE003126C9 /* BodyView */ = {
@@ -313,7 +311,6 @@
 		A49ED7A824B7A797006C70B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A4CF4B4C24C8E2A500BFC3BE /* Today */,
 				A48B2E6824C0E9500017B79D /* Setup */,
 				A49ED7A924B7A7A8006C70B6 /* Components */,
 			);
@@ -413,22 +410,6 @@
 				A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		A4CF4B4C24C8E2A500BFC3BE /* Today */ = {
-			isa = PBXGroup;
-			children = (
-				A4CF4B4D24C8E2AC00BFC3BE /* TodayScreen */,
-			);
-			path = Today;
-			sourceTree = "<group>";
-		};
-		A4CF4B4D24C8E2AC00BFC3BE /* TodayScreen */ = {
-			isa = PBXGroup;
-			children = (
-				A4F42E9E24C8E9D400F6C95E /* TodayViewController.swift */,
-			);
-			path = TodayScreen;
 			sourceTree = "<group>";
 		};
 		B2C2D0FF71464E60BA365C7D /* Frameworks */ = {
@@ -690,7 +671,6 @@
 				A48B2E7E24C762820017B79D /* UIButton+Init.swift in Sources */,
 				278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */,
 				27E8D0BF24C7D63E00E3EE4C /* BreakAlertViewModel.swift in Sources */,
-				A4F42E9F24C8E9D400F6C95E /* TodayViewController.swift in Sources */,
 				27C1D2D824B806F500AA95BF /* CAShapeLayer+Star.swift in Sources */,
 				A4F42EA324C8EA0D00F6C95E /* SetupViewController+Greeting.swift in Sources */,
 				27C1D2DA24B80A0500AA95BF /* GreetingView.swift in Sources */,
