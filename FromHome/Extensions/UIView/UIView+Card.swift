@@ -32,7 +32,7 @@ extension UIView {
                 alpha = 0.5
 
             case .alert:
-                layer.shadowColor = UIColor.shadowBottom.cgColor
+                addShadow(color: .shadowBottom)
                 backgroundColor = .backgroundAlert
         }
 
