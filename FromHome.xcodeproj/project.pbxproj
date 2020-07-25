@@ -22,6 +22,9 @@
 		278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */; };
 		278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */; };
 		278045E624B40DC800AEDFBA /* UIFont+FHFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */; };
+		278B3A1524CBD41400A6DDB3 /* TasksBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278B3A1424CBD41400A6DDB3 /* TasksBodyView.swift */; };
+		278B3A1724CBDCDD00A6DDB3 /* TaskSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278B3A1624CBDCDD00A6DDB3 /* TaskSectionView.swift */; };
+		278B3A1924CBE9F200A6DDB3 /* UIButton+FHCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278B3A1824CBE9F200A6DDB3 /* UIButton+FHCornerRadius.swift */; };
 		279CB34824BA6D9A003126C9 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB34724BA6D9A003126C9 /* UIView+Animations.swift */; };
 		279CB34B24BA6F9A003126C9 /* GreetingVewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB34A24BA6F9A003126C9 /* GreetingVewDelegate.swift */; };
 		279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB34C24BA8391003126C9 /* GreetingViewModel.swift */; };
@@ -103,6 +106,9 @@
 		278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FHColors.swift"; sourceTree = "<group>"; };
 		278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Style+FHSyle.swift"; sourceTree = "<group>"; };
 		278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+FHFonts.swift"; sourceTree = "<group>"; };
+		278B3A1424CBD41400A6DDB3 /* TasksBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksBodyView.swift; sourceTree = "<group>"; };
+		278B3A1624CBDCDD00A6DDB3 /* TaskSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSectionView.swift; sourceTree = "<group>"; };
+		278B3A1824CBE9F200A6DDB3 /* UIButton+FHCornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+FHCornerRadius.swift"; sourceTree = "<group>"; };
 		279CB34724BA6D9A003126C9 /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		279CB34A24BA6F9A003126C9 /* GreetingVewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingVewDelegate.swift; sourceTree = "<group>"; };
 		279CB34C24BA8391003126C9 /* GreetingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewModel.swift; sourceTree = "<group>"; };
@@ -215,6 +221,15 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		278B3A1324CBD26800A6DDB3 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				278B3A1424CBD41400A6DDB3 /* TasksBodyView.swift */,
+				278B3A1624CBDCDD00A6DDB3 /* TaskSectionView.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
 		279CB34924BA6F84003126C9 /* GreetingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +262,7 @@
 		279CB35624BA9AEE003126C9 /* BodyView */ = {
 			isa = PBXGroup;
 			children = (
+				278B3A1324CBD26800A6DDB3 /* Tasks */,
 				275A29AC24BBBFEA00C6D0DB /* Today */,
 			);
 			path = BodyView;
@@ -348,6 +364,7 @@
 				278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */,
 				2776B7DF24C91A570082F4FF /* UIButton+Action.swift */,
 				2776B7E124C91AC10082F4FF /* UILabel+MultipleLines.swift */,
+				278B3A1824CBE9F200A6DDB3 /* UIButton+FHCornerRadius.swift */,
 				27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */,
 				A48B2E7B24C75D7E0017B79D /* UIImage+Assets.swift */,
 				A48B2E7D24C762820017B79D /* UIButton+Init.swift */,
@@ -676,6 +693,7 @@
 				A4F42E9D24C8E8E300F6C95E /* TodayFooterViewModel.swift in Sources */,
 				A4F42EA124C8E9F400F6C95E /* SetupViewController.swift in Sources */,
 				27E8D0C124C7D86B00E3EE4C /* AtHomeAlertViewModel.swift in Sources */,
+				278B3A1724CBDCDD00A6DDB3 /* TaskSectionView.swift in Sources */,
 				A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */,
 				2776134C24C7C63A00E3C0B9 /* AlertViewModel.swift in Sources */,
 				279CB34F24BA8C43003126C9 /* FooterView.swift in Sources */,
@@ -706,6 +724,8 @@
 				A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */,
 				A48B2E7824C242360017B79D /* UIView+Shadow.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
+				278B3A1524CBD41400A6DDB3 /* TasksBodyView.swift in Sources */,
+				278B3A1924CBE9F200A6DDB3 /* UIButton+FHCornerRadius.swift in Sources */,
 				A48B2E7C24C75D7E0017B79D /* UIImage+Assets.swift in Sources */,
 				A48B2E6F24C232840017B79D /* UIView+Subview.swift in Sources */,
 				279CB34824BA6D9A003126C9 /* UIView+Animations.swift in Sources */,
