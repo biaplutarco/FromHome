@@ -14,9 +14,9 @@ class PauseAlertViewModel: AlertViewModel {
 
     var title: String = "In pause"
 
-    var rightButtonTitle: String = "I'm back!"
+    var leftButtonTitle: String = "I'm back!"
 
     var bodyMessage: String? = "It’s no cool do that, but we will got your back. The clock is stopped now. Hurry up!"
 
-    var leftButtonTitle: String?
+    var rightButtonTitle: String?
 }

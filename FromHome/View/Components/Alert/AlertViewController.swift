@@ -12,10 +12,13 @@ class AlertViewController: UIViewController {
 
     private var alertView: AlertView
 
-    init(_ alert: Alert) {
+    init(_ alert: Alert, delegate: AlertViewDelegate?) {
         self.alertView = AlertView(alert.viewModel)
+        self.alertView.delegate = delegate
 
         super.init(nibName: nil, bundle: nil)
+
+        setupView()
     }
 
     @available(*, unavailable)
@@ -25,7 +28,10 @@ class AlertViewController: UIViewController {
 
     private func setupView() {
 
-        view.backgroundColor = .clear
+        view.backgroundColor = .backgroundTransparentAlert
+
+        modalTransitionStyle = .crossDissolve
+        modalPresentationStyle = .overCurrentContext
 
         view.addSubview(alertView)
 
@@ -37,8 +43,10 @@ class AlertViewController: UIViewController {
         alertView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
+
             alertView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            alertView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            alertView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+            alertView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24)
         ])
     }
 }

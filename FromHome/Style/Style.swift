@@ -24,6 +24,7 @@ class Style {
         case titleAlert
 
         case titleButton
+        case alertTitleButton
         case destructiveTitleButton
     }
 

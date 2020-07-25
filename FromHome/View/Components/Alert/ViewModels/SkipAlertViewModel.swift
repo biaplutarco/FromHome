@@ -20,11 +20,11 @@ class SkipAlertViewModel: AlertViewModel {
 
     var title: String = "Skip"
 
-    var rightButtonTitle: String = "Skip"
+    var leftButtonTitle: String = "Skip"
 
     var bodyMessage: String?
 
-    var leftButtonTitle: String? { "Cancel" }
+    var rightButtonTitle: String? { "Cancel" }
 
     init(_ message: SkipAlertMessage) {
         self.bodyMessage = message.rawValue

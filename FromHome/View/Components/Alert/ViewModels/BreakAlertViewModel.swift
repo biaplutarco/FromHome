@@ -20,11 +20,11 @@ class BreakAlertViewModel: AlertViewModel {
 
     var title: String
 
-    var rightButtonTitle: String
+    var leftButtonTitle: String
 
     var bodyMessage: String?
 
-    var leftButtonTitle: String?
+    var rightButtonTitle: String?
 
     init(_ message: BreakAlertMessage) {
 
@@ -34,11 +34,11 @@ class BreakAlertViewModel: AlertViewModel {
 
             case .coffee:
                 self.title = "Meal break"
-                self.rightButtonTitle = "I'm back!"
+                self.leftButtonTitle = "I'm back!"
 
             case .meal:
                 self.title = "It’s coffe time!"
-                self.rightButtonTitle = "OK"
+                self.leftButtonTitle = "OK"
         }
     }
 }
