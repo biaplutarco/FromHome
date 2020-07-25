@@ -17,6 +17,8 @@ extension UIColor {
     static var footerBackground: UIColor { UIColor(named: "FooterBackground")! }
     static var headerBackground: UIColor { UIColor(named: "HeaderBackground")! }
 
+    static var backgroundTransparentAlert: UIColor { UIColor(named: "BackgroundTransparentAlert")! }
+
     // Gradient
     static var gradientBottom: UIColor { UIColor(named: "GradientBottom")! }
     static var gradientTop: UIColor { UIColor(named: "GradientTop")! }

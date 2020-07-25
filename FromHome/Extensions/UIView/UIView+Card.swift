@@ -23,15 +23,16 @@ extension UIView {
 
                 addShadow(color: .shadowBottom)
                 backgroundColor = .footerBackground
+                alpha = 0.5
 
             case .header:
 
                 addShadow(color: .shadowTop)
                 backgroundColor = .headerBackground
+                alpha = 0.5
 
             case .alert:
-
-                addShadow(color: .shadowBottom)
+                layer.shadowColor = UIColor.shadowBottom.cgColor
                 backgroundColor = .backgroundAlert
         }
 

@@ -15,6 +15,9 @@
 		2771C49724C673FC00682DF3 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2771C49624C673FC00682DF3 /* AlertView.swift */; };
 		2771C49924C678DE00682DF3 /* UIView+Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2771C49824C678DE00682DF3 /* UIView+Line.swift */; };
 		2776134C24C7C63A00E3C0B9 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2776134B24C7C63A00E3C0B9 /* AlertViewModel.swift */; };
+		2776B7DE24C90E550082F4FF /* UITextField+Dark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2776B7DD24C90E550082F4FF /* UITextField+Dark.swift */; };
+		2776B7E024C91A570082F4FF /* UIButton+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2776B7DF24C91A570082F4FF /* UIButton+Action.swift */; };
+		2776B7E224C91AC10082F4FF /* UILabel+MultipleLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2776B7E124C91AC10082F4FF /* UILabel+MultipleLines.swift */; };
 		278045DE24B405FA00AEDFBA /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045DD24B405FA00AEDFBA /* Style.swift */; };
 		278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */; };
 		278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */; };
@@ -36,6 +39,7 @@
 		27E8D0C124C7D86B00E3EE4C /* AtHomeAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0C024C7D86B00E3EE4C /* AtHomeAlertViewModel.swift */; };
 		27F019FA24C7C819001870D0 /* SkipAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F019F924C7C819001870D0 /* SkipAlertViewModel.swift */; };
 		27F019FC24C7C8F1001870D0 /* ChangeNameAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F019FB24C7C8F1001870D0 /* ChangeNameAlertViewModel.swift */; };
+		27F1BBF324C91BF500AEFF01 /* AlertViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1BBF224C91BF500AEFF01 /* AlertViewDelegate.swift */; };
 		42D144E78D035D1BE4EA7C47 /* Pods_FromHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147D5965E0FD62DA0408A57A /* Pods_FromHome.framework */; };
 		8CF228F9FB95080DCB43F60B /* Pods_FromHome_FromHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344516298486A939C3EDF6F6 /* Pods_FromHome_FromHomeUITests.framework */; };
 		A48B2E6F24C232840017B79D /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E6E24C232840017B79D /* UIView+Subview.swift */; };
@@ -92,6 +96,9 @@
 		2771C49624C673FC00682DF3 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		2771C49824C678DE00682DF3 /* UIView+Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Line.swift"; sourceTree = "<group>"; };
 		2776134B24C7C63A00E3C0B9 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		2776B7DD24C90E550082F4FF /* UITextField+Dark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Dark.swift"; sourceTree = "<group>"; };
+		2776B7DF24C91A570082F4FF /* UIButton+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Action.swift"; sourceTree = "<group>"; };
+		2776B7E124C91AC10082F4FF /* UILabel+MultipleLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+MultipleLines.swift"; sourceTree = "<group>"; };
 		278045DD24B405FA00AEDFBA /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FHColors.swift"; sourceTree = "<group>"; };
 		278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Style+FHSyle.swift"; sourceTree = "<group>"; };
@@ -114,6 +121,7 @@
 		27E8D0C024C7D86B00E3EE4C /* AtHomeAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtHomeAlertViewModel.swift; sourceTree = "<group>"; };
 		27F019F924C7C819001870D0 /* SkipAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipAlertViewModel.swift; sourceTree = "<group>"; };
 		27F019FB24C7C8F1001870D0 /* ChangeNameAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameAlertViewModel.swift; sourceTree = "<group>"; };
+		27F1BBF224C91BF500AEFF01 /* AlertViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewDelegate.swift; sourceTree = "<group>"; };
 		344516298486A939C3EDF6F6 /* Pods_FromHome_FromHomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FromHome_FromHomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		383ED69634AAD6D6AAD683AF /* Pods-FromHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome.debug.xcconfig"; path = "Target Support Files/Pods-FromHome/Pods-FromHome.debug.xcconfig"; sourceTree = "<group>"; };
 		445A17B74F5FEC3993225741 /* Pods-FromHome-FromHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome-FromHomeUITests.debug.xcconfig"; path = "Target Support Files/Pods-FromHome-FromHomeUITests/Pods-FromHome-FromHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +200,7 @@
 			children = (
 				2771C49424C673BC00682DF3 /* AlertViewController.swift */,
 				2771C49624C673FC00682DF3 /* AlertView.swift */,
+				27F1BBF224C91BF500AEFF01 /* AlertViewDelegate.swift */,
 				27F019F824C7C7FD001870D0 /* ViewModels */,
 			);
 			path = Alert;
@@ -335,7 +344,10 @@
 			children = (
 				279CB35924BA9EE0003126C9 /* UIView */,
 				278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */,
+				2776B7DD24C90E550082F4FF /* UITextField+Dark.swift */,
 				278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */,
+				2776B7DF24C91A570082F4FF /* UIButton+Action.swift */,
+				2776B7E124C91AC10082F4FF /* UILabel+MultipleLines.swift */,
 				27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */,
 				A48B2E7B24C75D7E0017B79D /* UIImage+Assets.swift */,
 				A48B2E7D24C762820017B79D /* UIButton+Init.swift */,
@@ -657,6 +669,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F1BBF324C91BF500AEFF01 /* AlertViewDelegate.swift in Sources */,
 				A48B2E7624C239620017B79D /* SegmentedTabView.swift in Sources */,
 				A4AE77BF24B3BC6700A49E7F /* Coordinator.swift in Sources */,
 				A4F42E9C24C8E87D00F6C95E /* UniverseView.swift in Sources */,
@@ -666,6 +679,7 @@
 				A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */,
 				2776134C24C7C63A00E3C0B9 /* AlertViewModel.swift in Sources */,
 				279CB34F24BA8C43003126C9 /* FooterView.swift in Sources */,
+				2776B7E024C91A570082F4FF /* UIButton+Action.swift in Sources */,
 				27E8D0BB24C7D1E300E3EE4C /* FinishAlertViewModel.swift in Sources */,
 				A48B2E8024C779CA0017B79D /* StackView+Init.swift in Sources */,
 				A48B2E7E24C762820017B79D /* UIButton+Init.swift in Sources */,
@@ -686,6 +700,7 @@
 				278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */,
 				27F019FC24C7C8F1001870D0 /* ChangeNameAlertViewModel.swift in Sources */,
 				279CB35224BA976A003126C9 /* FooterViewModel.swift in Sources */,
+				2776B7E224C91AC10082F4FF /* UILabel+MultipleLines.swift in Sources */,
 				2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */,
 				279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */,
 				A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */,
@@ -700,6 +715,7 @@
 				27F019FA24C7C819001870D0 /* SkipAlertViewModel.swift in Sources */,
 				2771C49924C678DE00682DF3 /* UIView+Line.swift in Sources */,
 				27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */,
+				2776B7DE24C90E550082F4FF /* UITextField+Dark.swift in Sources */,
 				A48B2E7424C236C40017B79D /* TabbedScrollView.swift in Sources */,
 				278045DE24B405FA00AEDFBA /* Style.swift in Sources */,
 				2771C49724C673FC00682DF3 /* AlertView.swift in Sources */,
