@@ -18,14 +18,16 @@ class TaskSectionView: UIView {
 
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, firstButton, secondButton, thirdButton])
-        stackView.alignment = .center
+        stackView.alignment = .fill
         stackView.axis = .vertical
-        stackView.spacing = 24
+        stackView.spacing = 18
 
         return stackView
     }()
 
     init(sectionTitle: String, tasks: [String]) {
+
+        self.titleLabel.text = sectionTitle
 
         super.init(frame: .zero)
 
@@ -77,7 +79,9 @@ class TaskSectionView: UIView {
         NSLayoutConstraint.activate([
 
             firstButton.heightAnchor.constraint(equalToConstant: 36),
+
             secondButton.heightAnchor.constraint(equalTo: firstButton.heightAnchor),
+
             thirdButton.heightAnchor.constraint(equalTo: firstButton.heightAnchor)
         ])
 

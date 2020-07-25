@@ -34,6 +34,7 @@
 		27B806DA24BE213800D0BC87 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B806D924BE213700D0BC87 /* Observable.swift */; };
 		27C1D2D824B806F500AA95BF /* CAShapeLayer+Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */; };
 		27C1D2DA24B80A0500AA95BF /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D924B80A0500AA95BF /* GreetingView.swift */; };
+		27C9EBCF24CCCFC700FDAFCC /* TasksFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9EBCE24CCCFC700FDAFCC /* TasksFooterViewModel.swift */; };
 		27E8D0B624C7CFC200E3EE4C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0B524C7CFC200E3EE4C /* Alert.swift */; };
 		27E8D0B924C7D01200E3EE4C /* LeaveAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0B824C7D01200E3EE4C /* LeaveAlertViewModel.swift */; };
 		27E8D0BB24C7D1E300E3EE4C /* FinishAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0BA24C7D1E300E3EE4C /* FinishAlertViewModel.swift */; };
@@ -119,6 +120,7 @@
 		27B806D924BE213700D0BC87 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+Star.swift"; sourceTree = "<group>"; };
 		27C1D2D924B80A0500AA95BF /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
+		27C9EBCE24CCCFC700FDAFCC /* TasksFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksFooterViewModel.swift; sourceTree = "<group>"; };
 		27E8D0B524C7CFC200E3EE4C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		27E8D0B824C7D01200E3EE4C /* LeaveAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveAlertViewModel.swift; sourceTree = "<group>"; };
 		27E8D0BA24C7D1E300E3EE4C /* FinishAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishAlertViewModel.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			children = (
 				278B3A1424CBD41400A6DDB3 /* TasksBodyView.swift */,
 				278B3A1624CBDCDD00A6DDB3 /* TaskSectionView.swift */,
+				27C9EBCE24CCCFC700FDAFCC /* TasksFooterViewModel.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -710,6 +713,7 @@
 				27309F0124B541EA00D60FE8 /* UIView+Constraints.swift in Sources */,
 				27E8D0BD24C7D37D00E3EE4C /* PauseAlertViewModel.swift in Sources */,
 				279CB35824BA9AFE003126C9 /* TodayBodyView.swift in Sources */,
+				27C9EBCF24CCCFC700FDAFCC /* TasksFooterViewModel.swift in Sources */,
 				A48B2E7A24C5BAE50017B79D /* PagedScrollView.swift in Sources */,
 				279CB34B24BA6F9A003126C9 /* GreetingVewDelegate.swift in Sources */,
 				27E8D0B924C7D01200E3EE4C /* LeaveAlertViewModel.swift in Sources */,

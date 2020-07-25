@@ -28,12 +28,13 @@ class SetupViewController: UIViewController {
         let view4 = UIView()
 
         view2.backgroundColor = .green
-        view3.backgroundColor = .blue
         view4.backgroundColor = .yellow
 
         let todayView = FooterView(viewModel: TodayFooterViewModel())
+        let tasksView = FooterView(viewModel: TasksFooterViewModel())
 
         view1.addSubview(todayView)
+        view3.addSubview(tasksView)
 
         tabbedScrollView = TabbedScrollView.init(views: [view1, view2, view3, view4], images: [
             (unselected: .todayIcon, selected: .todayFillIcon),

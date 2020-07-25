@@ -14,4 +14,3 @@ extension UIButton {
         layer.cornerRadius = 18
     }
 }
-

@@ -10,30 +10,24 @@ import UIKit
 
 class TasksBodyView: UIView {
 
-    private var bodyLabel = UILabel()
-
-    private lazy var button: UIButton = {
-        let button = UIButton()
-        button.layer.cornerRadius = 18
-
-        return button
-    }()
+    private var getReadySectionView: TaskSectionView
+    private var goHomeSectionView: TaskSectionView
 
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [bodyLabel, button])
+        let stackView = UIStackView(arrangedSubviews: [getReadySectionView, goHomeSectionView])
         stackView.alignment = .center
         stackView.axis = .vertical
-        stackView.spacing = 24
+        stackView.spacing = 28
 
         return stackView
     }()
 
-    init(buttonTitle: String, bodyText: String) {
+    init(getReadySection: (sectionTitle: String, tasks: [String]), goHomeSection: (sectionTitle: String, tasks: [String])) {
+
+        self.getReadySectionView = TaskSectionView(sectionTitle: getReadySection.sectionTitle, tasks: getReadySection.tasks)
+        self.goHomeSectionView = TaskSectionView(sectionTitle: goHomeSection.sectionTitle, tasks: goHomeSection.tasks)
 
         super.init(frame: .zero)
-
-        button.setTitle(buttonTitle, for: .normal)
-        bodyLabel.text = bodyText
 
         setupView()
     }
@@ -47,29 +41,20 @@ class TasksBodyView: UIView {
 
         addSubview(stackView)
 
-        constraints()
-        applyStyle()
+        contraints()
     }
 
-    private func applyStyle() {
+    private func contraints() {
 
-        Style.fromHome.apply(textStyle: .bodyCardFooter, to: bodyLabel)
-        Style.fromHome.apply(textStyle: .titleButton, to: button)
-    }
-
-    private func constraints() {
-
-        button.translatesAutoresizingMaskIntoConstraints = false
+        getReadySectionView.translatesAutoresizingMaskIntoConstraints = false
+        goHomeSectionView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            button.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.6),
-            button.heightAnchor.constraint(equalToConstant: 36)
+
+            getReadySectionView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
+            goHomeSectionView.widthAnchor.constraint(equalTo: getReadySectionView.widthAnchor)
         ])
 
         stackView.fulfillSuperview()
-    }
-
-    private func completeWorkingHours(_ isWorkinHoursCompleted: Bool) {
-        button.isHidden = isWorkinHoursCompleted
     }
 }

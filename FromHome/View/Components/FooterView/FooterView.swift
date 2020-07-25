@@ -59,6 +59,11 @@ class FooterView: UIView {
 
                 bodyView = TodayBodyView(buttonTitle: todayViewModel.buttonTitle, bodyText: todayViewModel.bodyText)
 
+            case .tasks:
+                guard let tasksViewModel = viewModel as? TasksFooterViewModel else { return }
+
+                bodyView = TasksBodyView(getReadySection: tasksViewModel.getReady, goHomeSection: tasksViewModel.goHome)
+
             default:
                 break
         }
