@@ -25,6 +25,8 @@ class TaskSectionView: UIView {
         return stackView
     }()
 
+    weak var delegate: TaskSectionViewDelegate?
+
     init(sectionTitle: String, tasks: [String]) {
 
         self.titleLabel.text = sectionTitle
@@ -44,8 +46,21 @@ class TaskSectionView: UIView {
 
         addSubview(stackView)
 
+        actions()
         constraints()
         applyStyle()
+    }
+
+    private func actions() {
+
+        firstButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        secondButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        thirdButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+    }
+
+    @objc
+    func didTapButton() {
+        delegate?.presentChangeTaskAlert()
     }
 
     private func setButtonTitles(to tasks: [String]) {

@@ -46,6 +46,7 @@ class SetupViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         greetingView.delegate = self
+        tasksView.delegate = self
     }
 
     @available(*, unavailable)

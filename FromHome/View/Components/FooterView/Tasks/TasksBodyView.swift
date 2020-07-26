@@ -22,12 +22,21 @@ class TasksBodyView: UIView {
         return stackView
     }()
 
-    init(getReadySection: (sectionTitle: String, tasks: [String]), goHomeSection: (sectionTitle: String, tasks: [String])) {
+    private var viewModel: TasksFooterViewModel
 
-        self.getReadySectionView = TaskSectionView(sectionTitle: getReadySection.sectionTitle, tasks: getReadySection.tasks)
-        self.goHomeSectionView = TaskSectionView(sectionTitle: goHomeSection.sectionTitle, tasks: goHomeSection.tasks)
+    weak var delegate: TasksBodyViewDelegate?
+
+    init(viewModel: TasksFooterViewModel) {
+
+        self.viewModel = viewModel
+
+        self.getReadySectionView = TaskSectionView(sectionTitle: viewModel.getReady.sectionTitle, tasks: viewModel.getReady.tasks)
+        self.goHomeSectionView = TaskSectionView(sectionTitle: viewModel.goHome.sectionTitle, tasks: viewModel.goHome.tasks)
 
         super.init(frame: .zero)
+
+        self.getReadySectionView.delegate = self
+        self.goHomeSectionView.delegate = self
 
         setupView()
     }
@@ -56,5 +65,15 @@ class TasksBodyView: UIView {
         ])
 
         stackView.fulfillSuperview()
+    }
+}
+
+extension TasksBodyView: TaskSectionViewDelegate {
+
+    func presentChangeTaskAlert() {
+
+        let alertController = AlertViewController(.input(.changeTask), delegate: nil)
+
+        delegate?.present(alertController, completion: nil)
     }
 }

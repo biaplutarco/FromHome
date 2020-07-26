@@ -24,6 +24,8 @@ class FooterView: UIView {
 
     private var viewModel: FooterViewModel
 
+    weak var delegate: FooterViewDelegate?
+
     init(viewModel: FooterViewModel) {
 
         self.viewModel = viewModel
@@ -62,7 +64,10 @@ class FooterView: UIView {
             case .tasks:
                 guard let tasksViewModel = viewModel as? TasksFooterViewModel else { return }
 
-                bodyView = TasksBodyView(getReadySection: tasksViewModel.getReady, goHomeSection: tasksViewModel.goHome)
+                let tasksBodyView = TasksBodyView(viewModel: tasksViewModel)
+                tasksBodyView.delegate = self
+
+                bodyView = tasksBodyView
 
             default:
                 break
@@ -90,5 +95,12 @@ class FooterView: UIView {
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -18)
         ])
+    }
+}
+
+extension FooterView: TasksBodyViewDelegate {
+
+    func present(_ viewController: UIViewController, completion: (() -> Void)?) {
+        delegate?.present(viewController, completion: completion)
     }
 }
