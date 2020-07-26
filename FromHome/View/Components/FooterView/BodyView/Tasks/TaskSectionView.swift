@@ -50,11 +50,9 @@ class TaskSectionView: UIView {
 
     private func setButtonTitles(to tasks: [String]) {
 
-        let buttons = [firstButton, secondButton, thirdButton]
-
-        tasks.forEach { task in
-            buttons.forEach { $0.setTitle(task, for: .normal) }
-        }
+        firstButton.setTitle(tasks[0], for: .normal)
+        secondButton.setTitle(tasks[1], for: .normal)
+        thirdButton.setTitle(tasks[2], for: .normal)
     }
 
     private func applyStyle() {
