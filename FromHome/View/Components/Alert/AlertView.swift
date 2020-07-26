@@ -13,8 +13,8 @@ class AlertView: UIView {
     private var titleLabel = UILabel()
     private var bodyLabel = UILabel(lines: 0)
 
-    private var rightButton = UIButton(action: #selector(rightAction))
-    private var leftButton = UIButton(action: #selector(leftAction))
+    private var rightButton = UIButton()
+    private var leftButton = UIButton()
 
     private lazy var textField = UITextField(inputView: nil)
 
@@ -59,6 +59,12 @@ class AlertView: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    private func actions() {
+
+        rightButton.addTarget(self, action: #selector(rightAction), for: .touchUpInside)
+        leftButton.addTarget(self, action: #selector(leftAction), for: .touchUpInside)
     }
 
     @objc
