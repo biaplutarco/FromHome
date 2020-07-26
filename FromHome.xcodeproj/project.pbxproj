@@ -62,6 +62,7 @@
 		A4F42EA124C8E9F400F6C95E /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42EA024C8E9F400F6C95E /* SetupViewController.swift */; };
 		A4F42EA324C8EA0D00F6C95E /* SetupViewController+Greeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42EA224C8EA0D00F6C95E /* SetupViewController+Greeting.swift */; };
 		A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42EA424C8EA3100F6C95E /* TabbedScrollView+Delegates.swift */; };
+		A4F42EAB24CDB33600F6C95E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42EAA24CDB33600F6C95E /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,7 @@
 		A4F42EA024C8E9F400F6C95E /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		A4F42EA224C8EA0D00F6C95E /* SetupViewController+Greeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupViewController+Greeting.swift"; sourceTree = "<group>"; };
 		A4F42EA424C8EA3100F6C95E /* TabbedScrollView+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabbedScrollView+Delegates.swift"; sourceTree = "<group>"; };
+		A4F42EAA24CDB33600F6C95E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		A62FE971FCE64E66462578B8 /* Pods-FromHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHomeTests.release.xcconfig"; path = "Target Support Files/Pods-FromHomeTests/Pods-FromHomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		B98A80FED36B1087F28D2066 /* Pods-FromHome-FromHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome-FromHomeUITests.release.xcconfig"; path = "Target Support Files/Pods-FromHome-FromHomeUITests/Pods-FromHome-FromHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA6E22448571902684372A4A /* Pods_FromHomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FromHomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -373,6 +375,7 @@
 		A4AE778524B3994400A49E7F /* FromHome */ = {
 			isa = PBXGroup;
 			children = (
+				A4F42EA924CDB32500F6C95E /* Managers */,
 				A49ED7A824B7A797006C70B6 /* View */,
 				A4AE77BD24B3BAE400A49E7F /* Coordinators */,
 				278045E724B411AC00AEDFBA /* Style */,
@@ -429,6 +432,14 @@
 				A4F42E9E24C8E9D400F6C95E /* TodayViewController.swift */,
 			);
 			path = TodayScreen;
+			sourceTree = "<group>";
+		};
+		A4F42EA924CDB32500F6C95E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A4F42EAA24CDB33600F6C95E /* CoreDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		B2C2D0FF71464E60BA365C7D /* Frameworks */ = {
@@ -706,6 +717,7 @@
 				278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */,
 				27F019FC24C7C8F1001870D0 /* ChangeNameAlertViewModel.swift in Sources */,
 				279CB35224BA976A003126C9 /* FooterViewModel.swift in Sources */,
+				A4F42EAB24CDB33600F6C95E /* CoreDataManager.swift in Sources */,
 				2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */,
 				279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */,
 				A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */,
