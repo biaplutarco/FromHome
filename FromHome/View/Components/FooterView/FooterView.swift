@@ -104,10 +104,3 @@ class FooterView: UIView {
         ])
     }
 }
-
-extension FooterView: TasksBodyViewDelegate {
-
-    func present(_ viewController: UIViewController, completion: (() -> Void)?) {
-        delegate?.present(viewController, completion: completion)
-    }
-}
