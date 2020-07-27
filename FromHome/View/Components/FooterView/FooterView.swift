@@ -24,6 +24,8 @@ class FooterView: UIView {
 
     private var viewModel: FooterViewModel
 
+    weak var delegate: FooterViewDelegate?
+
     init(viewModel: FooterViewModel) {
 
         self.viewModel = viewModel
@@ -48,7 +50,6 @@ class FooterView: UIView {
         addSubview(stackView)
 
         setupBodyView()
-        constraints()
     }
 
     private func setupBodyView() {
@@ -58,28 +59,55 @@ class FooterView: UIView {
             case .today:
                 guard let todayViewModel = viewModel as? TodayFooterViewModel else { return }
 
-                bodyView = TodayBodyView(
-                    buttonTitle: todayViewModel.buttonTitle,
-                    bodyText: todayViewModel.bodyText)
+                bodyView = TodayBodyView(buttonTitle: todayViewModel.buttonTitle, bodyText: todayViewModel.bodyText)
 
-            default:
-                break
+            case .tasks:
+                guard let tasksViewModel = viewModel as? TasksFooterViewModel else { return }
+
+                let tasksBodyView = TasksBodyView(viewModel: tasksViewModel)
+                tasksBodyView.delegate = self
+
+                bodyView = tasksBodyView
+
+            case .missionTime:
+                guard let missionTimeViewModel = viewModel as? MissionTimeFooterViewModel else { return }
+
+                bodyView = OptionsBodyView(viewModel: missionTimeViewModel)
+
+            case .notification:
+                guard let notificationViewModel = viewModel as? NotificationFooterViewModel else { return }
+
+                bodyView = OptionsBodyView(viewModel: notificationViewModel)
         }
 
         stackView.addArrangedSubview(bodyView)
     }
 
-    private func constraints() {
+    override func didMoveToSuperview() {
 
+        guard let superview = superview else { fatalError("No super view") }
+
+        translatesAutoresizingMaskIntoConstraints = false
         bodyView.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
+
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 16),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -16),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: 0),
 
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -18)
         ])
+    }
+}
+
+extension FooterView: TasksBodyViewDelegate {
+
+    func present(_ viewController: UIViewController, completion: (() -> Void)?) {
+        delegate?.present(viewController, completion: completion)
     }
 }

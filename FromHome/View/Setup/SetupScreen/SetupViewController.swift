@@ -27,10 +27,15 @@ class SetupViewController: UIViewController {
         let view3 = UIView()
         let view4 = UIView()
 
-        view1.backgroundColor = .red
-        view2.backgroundColor = .green
-        view3.backgroundColor = .blue
-        view4.backgroundColor = .yellow
+        let todayView = FooterView(viewModel: TodayFooterViewModel())
+        let tasksView = FooterView(viewModel: TasksFooterViewModel())
+        let missionTimeView = FooterView(viewModel: MissionTimeFooterViewModel())
+        let notificationView = FooterView(viewModel: NotificationFooterViewModel())
+
+        view1.addSubview(todayView)
+        view2.addSubview(missionTimeView)
+        view3.addSubview(tasksView)
+        view4.addSubview(notificationView)
 
         tabbedScrollView = TabbedScrollView.init(views: [view1, view2, view3, view4], images: [
             (unselected: .todayIcon, selected: .todayFillIcon),
@@ -42,6 +47,7 @@ class SetupViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         greetingView.delegate = self
+        tasksView.delegate = self
     }
 
     @available(*, unavailable)

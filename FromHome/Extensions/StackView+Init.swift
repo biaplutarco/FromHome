@@ -13,7 +13,8 @@ extension UIStackView {
         subviews: [UIView],
         alignment: Alignment = .center,
         distribution: Distribution = .fillEqually,
-        axis: NSLayoutConstraint.Axis = .horizontal
+        axis: NSLayoutConstraint.Axis = .horizontal,
+        spacing: CGFloat = 0
     ) {
 
         self.init(arrangedSubviews: subviews)
@@ -21,5 +22,6 @@ extension UIStackView {
         self.alignment = alignment
         self.distribution = distribution
         self.axis = axis
+        self.spacing = spacing
     }
 }

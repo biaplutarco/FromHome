@@ -11,7 +11,7 @@ import Foundation
 enum Alert {
 
     case skip(_ type: SkipAlertMessage)
-    case changeName
+    case input(_ type: InputAlertTitle)
     case leave(_ type: LeaveAlertMessage)
     case finish(_ type: FinishAlertMessage)
     case stopClock
@@ -25,8 +25,8 @@ enum Alert {
             case .skip(let type):
                 return SkipAlertViewModel(type)
 
-            case .changeName:
-                return ChangeNameAlertViewModel()
+            case .input(let type):
+                return InputAlertViewModel(type)
 
             case .leave(let type):
                 return LeaveAlertViewModel(type)

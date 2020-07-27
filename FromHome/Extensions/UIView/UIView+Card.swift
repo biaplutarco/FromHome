@@ -30,7 +30,6 @@ extension UIView {
                 backgroundColor = .headerBackground
 
             case .alert:
-
                 addShadow(color: .shadowBottom)
                 backgroundColor = .backgroundAlert
         }
