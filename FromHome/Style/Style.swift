@@ -74,4 +74,12 @@ class Style {
         button.titleLabel?.font = attributes.font
         button.backgroundColor = attributes.backgroundColor
     }
+
+    func atributedStringFrom(textStyle: TextStyle, to string: String) -> NSAttributedString{
+
+        let attributes = attributesForStyle(textStyle)
+
+        return NSAttributedString(string: string, attributes: [NSAttributedString.Key.foregroundColor: attributes.color,
+                                                               NSAttributedString.Key.font: attributes.font])
+    }
 }

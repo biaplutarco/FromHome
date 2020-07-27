@@ -69,8 +69,15 @@ class FooterView: UIView {
 
                 bodyView = tasksBodyView
 
-            default:
-                break
+            case .missionTime:
+                guard let missionTimeViewModel = viewModel as? MissionTimeFooterViewModel else { return }
+
+                bodyView = OptionsBodyView(viewModel: missionTimeViewModel)
+
+            case .notification:
+                guard let notificationViewModel = viewModel as? NotificationFooterViewModel else { return }
+
+                bodyView = OptionsBodyView(viewModel: notificationViewModel)
         }
 
         stackView.addArrangedSubview(bodyView)
