@@ -16,7 +16,7 @@ class AlertView: UIView {
     private var rightButton = UIButton()
     private var leftButton = UIButton()
 
-    private lazy var textField = UITextField(inputView: nil)
+    private lazy var textField = FHTextField()
 
     private var horizontalLine = UIView(lineColor: .lineAlert)
     private var verticalLine = UIView(lineColor: .lineAlert)
