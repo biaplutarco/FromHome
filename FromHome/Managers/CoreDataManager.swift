@@ -9,60 +9,57 @@
 import UIKit
 import CoreData
 
-enum CoreDataModel {
-    static var context: NSManagedObjectContext {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError("No aplication found")
-        }
-        return appDelegate.persistentContainer.viewContext
+struct CoreDataManager {
+
+    let context: NSManagedObjectContext
+
+    init(context: NSManagedObjectContext = AppContext.context) {
+        self.context = context
     }
 
-    static func writeChanges() {
+    func writeChanges() -> Error? {
         do {
-            try Self.context.save()
+            try self.context.save()
+            return nil
         } catch {
-            print(error)
+            return error
         }
     }
 
-    static func delete<T: NSManagedObject>(object: T) {
-        Self.context.delete(object)
+    func delete<T: NSManagedObject>(object: T) -> Error? {
+        self.context.delete(object)
+
         do {
-            try Self.context.save()
+            try self.context.save()
+            return nil
         } catch {
-            print(error)
+            return error
         }
     }
 
-    static func allOf<T: NSManagedObject>(objectType: T.Type) -> [Self] {
+    func fetchAllOf<T: NSManagedObject>(objectType: T.Type) -> (res: [T]?, err: Error?) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: objectType.description())
         fetchRequest.predicate = NSPredicate(value: true)
         fetchRequest.returnsObjectsAsFaults = false
 
         do {
-            guard let response = try context.fetch(fetchRequest) as? [Self] else {
-                fatalError("Received from coredata a unexpected type")
-            }
-            return response
+            let res = try context.fetch(fetchRequest) as? [T]
+            return (res, nil)
         } catch {
-            print(error)
-            return []
+            return (nil, error)
         }
     }
 
-    static func find<T: NSManagedObject>(objectType: T.Type, predicate: NSPredicate) -> [Self] {
+    func find<T: NSManagedObject>(objectType: T.Type, predicate: NSPredicate) -> (res: [T]?, err: Error?) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: objectType.description())
         fetchRequest.predicate = predicate
         fetchRequest.returnsObjectsAsFaults = false
 
         do {
-            guard let response = try context.fetch(fetchRequest) as? [Self] else {
-                fatalError("Received from coredata a unexpected type")
-            }
-            return response
+            let res = try context.fetch(fetchRequest) as? [T]
+            return (res, nil)
         } catch {
-            print(error)
-            return []
+            return (nil, error)
         }
     }
 }
