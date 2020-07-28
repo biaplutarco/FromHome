@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		172BD5C4802E6C2DEE159BC2 /* Pods_FromHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6E22448571902684372A4A /* Pods_FromHomeTests.framework */; };
+		270E394524D08F470012C890 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E394424D08F470012C890 /* UserDefaultsManager.swift */; };
 		2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720BE8824B80DBE00A98F87 /* UIView+Card.swift */; };
 		27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27309EFE24B531B400D60FE8 /* CardTitleView.swift */; };
 		27309F0124B541EA00D60FE8 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27309F0024B541EA00D60FE8 /* UIView+Constraints.swift */; };
@@ -103,6 +104,7 @@
 /* Begin PBXFileReference section */
 		147D5965E0FD62DA0408A57A /* Pods_FromHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FromHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F27F5D1CDE3B9FDEB496DB0 /* Pods-FromHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome.release.xcconfig"; path = "Target Support Files/Pods-FromHome/Pods-FromHome.release.xcconfig"; sourceTree = "<group>"; };
+		270E394424D08F470012C890 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		2720BE8824B80DBE00A98F87 /* UIView+Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Card.swift"; sourceTree = "<group>"; };
 		2722122024B7C3390053478F /* UniverseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseView.swift; sourceTree = "<group>"; };
 		27309EFE24B531B400D60FE8 /* CardTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTitleView.swift; sourceTree = "<group>"; };
@@ -506,6 +508,7 @@
 			children = (
 				A4F42EAA24CDB33600F6C95E /* CoreDataManager.swift */,
 				A4F42EAE24CDB9A000F6C95E /* AppContext.swift */,
+				270E394424D08F470012C890 /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -763,6 +766,7 @@
 				A4F42EA124C8E9F400F6C95E /* SetupViewController.swift in Sources */,
 				27E8D0C124C7D86B00E3EE4C /* AtHomeAlertViewModel.swift in Sources */,
 				278B3A1724CBDCDD00A6DDB3 /* TaskSectionView.swift in Sources */,
+				270E394524D08F470012C890 /* UserDefaultsManager.swift in Sources */,
 				A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */,
 				2776134C24C7C63A00E3C0B9 /* AlertViewModel.swift in Sources */,
 				279CB34F24BA8C43003126C9 /* FooterView.swift in Sources */,
