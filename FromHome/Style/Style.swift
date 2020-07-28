@@ -75,11 +75,13 @@ class Style {
         button.backgroundColor = attributes.backgroundColor
     }
 
-    func atributedStringFrom(textStyle: TextStyle, to string: String) -> NSAttributedString{
+    func atributedStringFrom(textStyle: TextStyle, to string: String) -> NSAttributedString {
 
         let attributes = attributesForStyle(textStyle)
 
-        return NSAttributedString(string: string, attributes: [NSAttributedString.Key.foregroundColor: attributes.color,
-                                                               NSAttributedString.Key.font: attributes.font])
+        return NSAttributedString(string: string, attributes: [
+            NSAttributedString.Key.foregroundColor: attributes.color,
+            NSAttributedString.Key.font: attributes.font
+        ])
     }
 }
