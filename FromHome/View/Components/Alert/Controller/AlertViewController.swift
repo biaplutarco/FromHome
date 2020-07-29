@@ -35,6 +35,10 @@ class AlertViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+//        alertView.scale(0.5, withDurarion: 0.1)
+    }
+
     private func setupView() {
 
         view.backgroundColor = .backgroundTransparentAlert

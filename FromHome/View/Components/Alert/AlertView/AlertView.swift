@@ -128,7 +128,7 @@ class AlertView: UIView {
         styleAsCard(.alert)
         applyStyle()
         constraints()
-        actions() 
+        actions()
     }
 
     private func withRigthButton() {

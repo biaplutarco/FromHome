@@ -65,9 +65,10 @@ class GreetingView: UIView {
     func tapped() {
 
         impact.impactOccurred()
-        scale(0.9, withDurarion: 0.1)
 
-        delegate?.didTapChangeUsername()
+        scale(0.97, withDurarion: 0.1) {
+            self.delegate?.didTapChangeUsername()
+        }
     }
 
     private func applyStyle() {
