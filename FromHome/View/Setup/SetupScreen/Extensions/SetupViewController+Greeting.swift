@@ -9,7 +9,12 @@
 import UIKit
 
 extension SetupViewController: GreetingViewDelegate {
+
     func didTapChangeUsername() {
-        print("todo - should change username")
+
+        let alert = AlertViewController(.input(.changeName))
+        alert.delegate = self
+
+        present(alert, completion: nil)
     }
 }

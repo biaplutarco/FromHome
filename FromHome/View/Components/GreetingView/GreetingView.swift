@@ -13,6 +13,7 @@ class GreetingView: UIView {
     weak var delegate: GreetingViewDelegate?
 
     private let impact = UIImpactFeedbackGenerator()
+    private let viewModel = GreetingViewModel()
 
     private var greetingLabel = UILabel()
     private var usernameLabel = UILabel()
@@ -27,7 +28,7 @@ class GreetingView: UIView {
         return stackView
     }()
 
-    init(viewModel: GreetingViewModel) {
+    init() {
 
         self.usernameLabel.text = viewModel.username
         self.greetingLabel.text = "Hello,"
@@ -35,9 +36,6 @@ class GreetingView: UIView {
         super.init(frame: .zero)
 
         styleAsCard(.header)
-
-        translatesAutoresizingMaskIntoConstraints = false
-
         setupView()
     }
 
@@ -46,12 +44,17 @@ class GreetingView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    func updateView() {
+        usernameLabel.text = viewModel.username
+    }
+
     private func setupView() {
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
         addGestureRecognizer(tap)
 
         clipsToBounds = false
+        translatesAutoresizingMaskIntoConstraints = false
 
         addSubviews([stackView, astronautView])
 

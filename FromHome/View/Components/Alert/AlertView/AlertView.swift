@@ -21,6 +21,8 @@ class AlertView: UIView {
     private var horizontalLine = UIView(lineColor: .lineAlert)
     private var verticalLine = UIView(lineColor: .lineAlert)
 
+    private var type: AlertViewModelType
+
     private lazy var textStackView: UIStackView = {
         let stackview = UIStackView(arrangedSubviews: [titleLabel])
         stackview.axis = .vertical
@@ -50,9 +52,11 @@ class AlertView: UIView {
     weak var delegate: AlertViewDelegate?
 
     init(_ viewModel: AlertViewModel) {
+        self.type = viewModel.type
+
         super.init(frame: .zero)
 
-        setupView(for: viewModel.type)
+        setupView()
         setupTexts(for: viewModel)
     }
 
@@ -74,7 +78,15 @@ class AlertView: UIView {
 
     @objc
     func leftAction() {
-        delegate?.action()
+
+        switch type {
+
+            case .input:
+                delegate?.action(withInput: textField.text)
+
+            default:
+                delegate?.action(withInput: nil)
+        }
     }
 
     private func setupTexts(for viewModel: AlertViewModel) {
@@ -86,7 +98,7 @@ class AlertView: UIView {
         rightButton.setTitle(viewModel.rightButtonTitle, for: .normal)
     }
 
-    private func setupView(for type: AlertViewModelType) {
+    private func setupView() {
 
         switch type {
 
@@ -116,6 +128,7 @@ class AlertView: UIView {
         styleAsCard(.alert)
         applyStyle()
         constraints()
+        actions() 
     }
 
     private func withRigthButton() {

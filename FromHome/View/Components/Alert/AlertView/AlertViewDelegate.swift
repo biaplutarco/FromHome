@@ -10,11 +10,6 @@ import Foundation
 
 protocol AlertViewDelegate: AnyObject {
 
-    func action()
+    func action(withInput input: String?)
     func destructiveAction()
-}
-
-extension AlertView {
-
-    func destructiveAction() { }
 }

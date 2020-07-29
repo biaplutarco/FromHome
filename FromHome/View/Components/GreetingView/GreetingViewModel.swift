@@ -8,6 +8,7 @@
 
 import Foundation
 
-struct GreetingViewModel {
-    var username: String
+class GreetingViewModel: NSObject {
+
+    var username: String { UserDefaultsManager.userName() }
 }
