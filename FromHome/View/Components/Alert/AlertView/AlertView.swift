@@ -33,6 +33,8 @@ class AlertView: UIView {
         return stackview
     }()
 
+    private var centerYConstraint: NSLayoutConstraint?
+
     weak var delegate: AlertViewDelegate?
 
     init(_ viewModel: AlertViewModel) {
@@ -67,12 +69,12 @@ class AlertView: UIView {
     private func setupView() {
 
         NotificationCenter.default.addObserver(
-            self, selector: #selector(keyboardWillShowOrHide(notification:)),
+            self, selector: #selector(keyboardWillShow(notification:)),
             name: UIResponder.keyboardWillShowNotification, object: nil
         )
 
         NotificationCenter.default.addObserver(
-            self, selector: #selector(keyboardWillShowOrHide(notification:)),
+            self, selector: #selector(keyboardWillHide),
             name: UIResponder.keyboardWillHideNotification, object: nil
         )
 
@@ -165,34 +167,35 @@ class AlertView: UIView {
     }
 
     @objc
-    func keyboardWillShowOrHide(notification: NSNotification) {
+    func keyboardWillShow(notification: NSNotification) {
 
         guard let userInfo = notification.userInfo,
-            let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] else { return }
+            let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey],
+            let superview = superview else { return }
 
-        guard let durationValue = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] else { return }
+        let endRect = convert((endValue as AnyObject).cgRectValue, from: window)
+        let keyboardOverlap = frame.maxY - endRect.origin.y
 
-        if let curveValue = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] {
+        let offSet = superview.center.y - keyboardOverlap
 
-            let endRect = convert((endValue as AnyObject).cgRectValue, from: window)
-            let keyboardOverlap = frame.maxY - endRect.origin.y
+        centerYConstraint?.isActive = false
+        centerYConstraint?.constant = -offSet
+        centerYConstraint?.isActive = true
 
-            guard let superview = superview else { return }
+        UIView.animate(withDuration: 0.5) {
+            self.layoutIfNeeded()
+        }
+    }
 
-            let offSet = superview.center.y - keyboardOverlap
+    @objc
+    func keyboardWillHide() {
 
-            NSLayoutConstraint.activate([
+        centerYConstraint?.isActive = false
+        centerYConstraint?.constant = 0
+        centerYConstraint?.isActive = true
 
-                centerYAnchor.constraint(equalTo: superview.centerYAnchor, constant: -offSet)
-            ])
-
-            let duration = (durationValue as AnyObject).doubleValue
-            let options = UIView.AnimationOptions(rawValue: UInt((curveValue as AnyObject).integerValue << 16))
-
-            UIView.animate(withDuration: duration!, delay: 0, options: options, animations: {
-
-                self.layoutIfNeeded()
-            }, completion: nil)
+        UIView.animate(withDuration: 0.5) {
+            self.layoutIfNeeded()
         }
     }
 
@@ -202,9 +205,11 @@ class AlertView: UIView {
 
         guard let superview = superview else { return }
 
+        centerYConstraint = centerYAnchor.constraint(equalTo: superview.centerYAnchor)
+        centerYConstraint?.isActive = true
+
         NSLayoutConstraint.activate([
 
-            centerYAnchor.constraint(equalTo: superview.centerYAnchor),
             leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 24),
             trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -24)
         ])

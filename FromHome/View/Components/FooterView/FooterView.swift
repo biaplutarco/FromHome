@@ -23,6 +23,7 @@ class FooterView: UIView {
     }()
 
     private var viewModel: FooterViewModel
+    private var bottomConstraint: NSLayoutConstraint?
 
     weak var delegate: FooterViewDelegate?
 
@@ -57,7 +58,7 @@ class FooterView: UIView {
         )
 
         NotificationCenter.default.addObserver(
-            self, selector: #selector(keyboardWillHide(notification:)),
+            self, selector: #selector(keyboardWillHide),
             name: UIResponder.keyboardWillHideNotification, object: nil
         )
 
@@ -103,55 +104,33 @@ class FooterView: UIView {
     func keyboardWillShow(notification: NSNotification) {
 
         guard let userInfo = notification.userInfo,
-            let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] else { return }
+            let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey],
+            let superview = superview else { return }
 
-        guard let durationValue = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] else { return }
+        let endRect = convert((endValue as AnyObject).cgRectValue, from: stackView)
+        let keyboardOverlap = frame.maxY - endRect.origin.y
 
-        if let curveValue = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] {
+        let offSet = superview.center.y - keyboardOverlap
 
-            let endRect = convert((endValue as AnyObject).cgRectValue, from: stackView)
-            let keyboardOverlap = frame.maxY - endRect.origin.y
+        bottomConstraint?.isActive = false
+        bottomConstraint?.constant = -offSet
+        bottomConstraint?.isActive = true
 
-            guard let superview = superview else { return }
-
-            let offSet = superview.center.y - keyboardOverlap
-
-            NSLayoutConstraint.activate([
-
-                bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -offSet)
-            ])
-
-            let duration = (durationValue as AnyObject).doubleValue
-            let options = UIView.AnimationOptions(rawValue: UInt((curveValue as AnyObject).integerValue << 16))
-
-            UIView.animate(withDuration: duration!, delay: 0, options: options, animations: {
-
-                self.layoutIfNeeded()
-            }, completion: nil)
+        UIView.animate(withDuration: 0.5) {
+            self.layoutIfNeeded()
         }
     }
 
     @objc
-    func keyboardWillHide(notification: NSNotification) {
+    func keyboardWillHide() {
 
-        guard let userInfo = notification.userInfo,
-            let durationValue = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey],
-            let curveValue = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] else { return }
+        bottomConstraint?.isActive = false
+        bottomConstraint?.constant = 0
+        bottomConstraint?.isActive = true
 
-        guard let superview = superview else { return }
-
-        NSLayoutConstraint.activate([
-
-            bottomAnchor.constraint(equalTo: superview.bottomAnchor)
-        ])
-
-        let duration = (durationValue as AnyObject).doubleValue
-        let options = UIView.AnimationOptions(rawValue: UInt((curveValue as AnyObject).integerValue << 16))
-
-        UIView.animate(withDuration: duration!, delay: 0, options: options, animations: {
-
+        UIView.animate(withDuration: 0.5) {
             self.layoutIfNeeded()
-        }, completion: nil)
+        }
     }
 
     override func didMoveToSuperview() {
@@ -162,11 +141,16 @@ class FooterView: UIView {
         bodyView.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
+        self.bottomConstraint = bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: 0)
+
+        guard let bottomConstraint = self.bottomConstraint else { return }
+
         NSLayoutConstraint.activate([
+
+            bottomConstraint,
 
             leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 16),
             trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -16),
-            bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: 0),
 
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
