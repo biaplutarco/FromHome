@@ -16,31 +16,15 @@ class AlertView: UIView {
     private var rightButton = UIButton()
     private var leftButton = UIButton()
 
-    private lazy var textField = FHTextField()
+    private var textField = FHTextField()
 
     private var horizontalLine = UIView(lineColor: .lineAlert)
     private var verticalLine = UIView(lineColor: .lineAlert)
 
     private var type: AlertViewModelType
 
-    private lazy var textStackView: UIStackView = {
-        let stackview = UIStackView(arrangedSubviews: [titleLabel])
-        stackview.axis = .vertical
-        stackview.spacing = 18
-        stackview.distribution = .fill
-        stackview.alignment = .center
-
-        return stackview
-    }()
-
-    private lazy var buttonStackView: UIStackView = {
-        let stackview = UIStackView(arrangedSubviews: [leftButton])
-        stackview.axis = .horizontal
-        stackview.alignment = .fill
-        stackview.distribution = .fill
-
-        return stackview
-    }()
+    private lazy var textStackView = UIStackView(subviews: [titleLabel], alignment: .center, distribution: .fill, axis: .vertical, spacing: 18)
+    private lazy var buttonStackView = UIStackView(subviews: [leftButton], alignment: .fill, distribution: .fill, axis: .horizontal, spacing: 0)
 
     private lazy var stackView: UIStackView = {
         let stackview = UIStackView(arrangedSubviews: [textStackView, buttonStackView])
@@ -60,9 +44,95 @@ class AlertView: UIView {
         setupTexts(for: viewModel)
     }
 
+    deinit {
+
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    private func setupTexts(for viewModel: AlertViewModel) {
+
+        titleLabel.text = viewModel.title
+        bodyLabel.text = viewModel.bodyMessage
+
+        leftButton.setTitle(viewModel.leftButtonTitle, for: .normal)
+        rightButton.setTitle(viewModel.rightButtonTitle, for: .normal)
+    }
+
+    private func setupView() {
+
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(keyboardWillShowOrHide(notification:)),
+            name: UIResponder.keyboardWillShowNotification, object: nil
+        )
+
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(keyboardWillShowOrHide(notification:)),
+            name: UIResponder.keyboardWillHideNotification, object: nil
+        )
+
+        textField.delegate = self
+
+        setupStackViews()
+        styleAsCard(.alert)
+        applyStyle()
+        subviewsConstraints()
+        actions()
+        initializeHideKeyboard()
+    }
+
+    private func setupStackViews() {
+
+        switch type {
+
+            case .input:
+                textStackView.addArrangedSubview(textField)
+                textStackView.addArrangedSubview(horizontalLine)
+
+                withRigthButton()
+                textFieldConstraints()
+
+            case .getOut:
+                textStackView.addArrangedSubview(bodyLabel)
+                textStackView.addArrangedSubview(horizontalLine)
+
+                withRigthButton()
+                bodyLabelConstraints()
+
+            case .warning:
+                textStackView.addArrangedSubview(bodyLabel)
+                textStackView.addArrangedSubview(horizontalLine)
+
+                bodyLabelConstraints()
+        }
+
+        addSubview(stackView)
+    }
+
+    private func withRigthButton() {
+
+        buttonStackView.addArrangedSubview(verticalLine)
+        buttonStackView.addArrangedSubview(rightButton)
+
+        rigtButtonConstraints()
+    }
+
+    private func applyStyle() {
+
+        Style.fromHome.apply(textStyle: .titleAlert, to: titleLabel)
+        Style.fromHome.apply(textStyle: .bodyCardFooter, to: bodyLabel)
+
+        Style.fromHome.apply(textStyle: .alertTitleButton, to: leftButton)
+        Style.fromHome.apply(textStyle: .destructiveTitleButton, to: rightButton)
+    }
+
+    private func initializeHideKeyboard() {
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
     }
 
     private func actions() {
@@ -89,66 +159,58 @@ class AlertView: UIView {
         }
     }
 
-    private func setupTexts(for viewModel: AlertViewModel) {
-
-        titleLabel.text = viewModel.title
-        bodyLabel.text = viewModel.bodyMessage
-
-        leftButton.setTitle(viewModel.leftButtonTitle, for: .normal)
-        rightButton.setTitle(viewModel.rightButtonTitle, for: .normal)
+    @objc
+    func dismissKeyboard() {
+        endEditing(true)
     }
 
-    private func setupView() {
+    @objc
+    func keyboardWillShowOrHide(notification: NSNotification) {
 
-        switch type {
+        guard let userInfo = notification.userInfo,
+            let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] else { return }
 
-            case .input:
-                textStackView.addArrangedSubview(textField)
-                textStackView.addArrangedSubview(horizontalLine)
+        guard let durationValue = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] else { return }
 
-                withRigthButton()
-                textFieldConstraints()
+        if let curveValue = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] {
 
-            case .getOut:
-                textStackView.addArrangedSubview(bodyLabel)
-                textStackView.addArrangedSubview(horizontalLine)
+            let endRect = convert((endValue as AnyObject).cgRectValue, from: window)
+            let keyboardOverlap = frame.maxY - endRect.origin.y
 
-                withRigthButton()
-                bodyLabelConstraints()
+            guard let superview = superview else { return }
 
-            case .warning:
-                textStackView.addArrangedSubview(bodyLabel)
-                textStackView.addArrangedSubview(horizontalLine)
+            let offSet = superview.center.y - keyboardOverlap
 
-                bodyLabelConstraints()
+            NSLayoutConstraint.activate([
+
+                centerYAnchor.constraint(equalTo: superview.centerYAnchor, constant: -offSet)
+            ])
+
+            let duration = (durationValue as AnyObject).doubleValue
+            let options = UIView.AnimationOptions(rawValue: UInt((curveValue as AnyObject).integerValue << 16))
+
+            UIView.animate(withDuration: duration!, delay: 0, options: options, animations: {
+
+                self.layoutIfNeeded()
+            }, completion: nil)
         }
-
-        addSubview(stackView)
-
-        styleAsCard(.alert)
-        applyStyle()
-        constraints()
-        actions()
     }
 
-    private func withRigthButton() {
+    override func didMoveToSuperview() {
 
-        buttonStackView.addArrangedSubview(verticalLine)
-        buttonStackView.addArrangedSubview(rightButton)
+        translatesAutoresizingMaskIntoConstraints = false
 
-        rigtButtonConstraints()
+        guard let superview = superview else { return }
+
+        NSLayoutConstraint.activate([
+
+            centerYAnchor.constraint(equalTo: superview.centerYAnchor),
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 24),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -24)
+        ])
     }
 
-    private func applyStyle() {
-
-        Style.fromHome.apply(textStyle: .titleAlert, to: titleLabel)
-        Style.fromHome.apply(textStyle: .bodyCardFooter, to: bodyLabel)
-
-        Style.fromHome.apply(textStyle: .alertTitleButton, to: leftButton)
-        Style.fromHome.apply(textStyle: .destructiveTitleButton, to: rightButton)
-    }
-
-    private func constraints() {
+    private func subviewsConstraints() {
 
         stackView.translatesAutoresizingMaskIntoConstraints = false
         horizontalLine.translatesAutoresizingMaskIntoConstraints = false

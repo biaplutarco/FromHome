@@ -10,7 +10,7 @@ import UIKit
 
 class OptionsBodyView: UIView {
 
-    private let stackView = UIStackView(subviews: [], alignment: .center, distribution: .fillEqually, axis: .horizontal, spacing: 24)
+    let stackView = UIStackView(subviews: [], alignment: .center, distribution: .fillEqually, axis: .horizontal, spacing: 24)
 
     private var viewModel: OptionsFooterViewModel
 
@@ -36,8 +36,6 @@ class OptionsBodyView: UIView {
         stackView.fulfillSuperview()
     }
 
-    private func contraints() { }
-
     private func setupOptions(_ options: Options) {
 
         options.forEach { option in
@@ -53,6 +51,7 @@ class OptionsBodyView: UIView {
         Style.fromHome.apply(textStyle: .bodyCardFooter, to: titleLabel)
 
         let textField = FHTextField()
+        textField.delegate = self
         textField.attributedPlaceholder = Style.fromHome.atributedStringFrom(textStyle: .titleButton, to: placeholder)
 
         return UIStackView(subviews: [titleLabel, textField], alignment: .center, distribution: .fill, axis: .vertical, spacing: 18)

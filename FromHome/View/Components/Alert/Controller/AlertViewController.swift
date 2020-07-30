@@ -35,10 +35,6 @@ class AlertViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-//        alertView.scale(0.5, withDurarion: 0.1)
-    }
-
     private func setupView() {
 
         view.backgroundColor = .backgroundTransparentAlert
@@ -47,19 +43,5 @@ class AlertViewController: UIViewController {
         modalPresentationStyle = .overCurrentContext
 
         view.addSubview(alertView)
-
-        constraints()
-    }
-
-    private func constraints() {
-
-        alertView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-
-            alertView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            alertView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            alertView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24)
-        ])
     }
 }

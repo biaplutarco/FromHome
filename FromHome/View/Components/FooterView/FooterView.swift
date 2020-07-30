@@ -38,12 +38,28 @@ class FooterView: UIView {
         setupView()
     }
 
+    deinit {
+
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     private func setupView() {
+
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(keyboardWillShow(notification:)),
+            name: UIResponder.keyboardWillShowNotification, object: nil
+        )
+
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(keyboardWillHide(notification:)),
+            name: UIResponder.keyboardWillHideNotification, object: nil
+        )
 
         clipsToBounds = false
 
@@ -81,6 +97,61 @@ class FooterView: UIView {
         }
 
         stackView.addArrangedSubview(bodyView)
+    }
+
+    @objc
+    func keyboardWillShow(notification: NSNotification) {
+
+        guard let userInfo = notification.userInfo,
+            let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] else { return }
+
+        guard let durationValue = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] else { return }
+
+        if let curveValue = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] {
+
+            let endRect = convert((endValue as AnyObject).cgRectValue, from: stackView)
+            let keyboardOverlap = frame.maxY - endRect.origin.y
+
+            guard let superview = superview else { return }
+
+            let offSet = superview.center.y - keyboardOverlap
+
+            NSLayoutConstraint.activate([
+
+                bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -offSet)
+            ])
+
+            let duration = (durationValue as AnyObject).doubleValue
+            let options = UIView.AnimationOptions(rawValue: UInt((curveValue as AnyObject).integerValue << 16))
+
+            UIView.animate(withDuration: duration!, delay: 0, options: options, animations: {
+
+                self.layoutIfNeeded()
+            }, completion: nil)
+        }
+    }
+
+    @objc
+    func keyboardWillHide(notification: NSNotification) {
+
+        guard let userInfo = notification.userInfo,
+            let durationValue = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey],
+            let curveValue = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] else { return }
+
+        guard let superview = superview else { return }
+
+        NSLayoutConstraint.activate([
+
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor)
+        ])
+
+        let duration = (durationValue as AnyObject).doubleValue
+        let options = UIView.AnimationOptions(rawValue: UInt((curveValue as AnyObject).integerValue << 16))
+
+        UIView.animate(withDuration: duration!, delay: 0, options: options, animations: {
+
+            self.layoutIfNeeded()
+        }, completion: nil)
     }
 
     override func didMoveToSuperview() {

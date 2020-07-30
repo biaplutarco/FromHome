@@ -43,6 +43,8 @@
 		27C1D2DA24B80A0500AA95BF /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D924B80A0500AA95BF /* GreetingView.swift */; };
 		27C9EBCF24CCCFC700FDAFCC /* TasksFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9EBCE24CCCFC700FDAFCC /* TasksFooterViewModel.swift */; };
 		27C9EBD224CD173900FDAFCC /* TaskSectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9EBD124CD173900FDAFCC /* TaskSectionViewDelegate.swift */; };
+		27CDB9C724D2457F00214097 /* AlertView+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDB9C624D2457F00214097 /* AlertView+TextFieldDelegate.swift */; };
+		27CDB9C924D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDB9C824D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift */; };
 		27E8870724CE68C0001A2868 /* FHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8870624CE68C0001A2868 /* FHTextField.swift */; };
 		27E8D0B624C7CFC200E3EE4C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0B524C7CFC200E3EE4C /* Alert.swift */; };
 		27E8D0B924C7D01200E3EE4C /* LeaveAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0B824C7D01200E3EE4C /* LeaveAlertViewModel.swift */; };
@@ -144,6 +146,8 @@
 		27C1D2D924B80A0500AA95BF /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		27C9EBCE24CCCFC700FDAFCC /* TasksFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksFooterViewModel.swift; sourceTree = "<group>"; };
 		27C9EBD124CD173900FDAFCC /* TaskSectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSectionViewDelegate.swift; sourceTree = "<group>"; };
+		27CDB9C624D2457F00214097 /* AlertView+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertView+TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		27CDB9C824D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OptionsBodyView+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		27E8870624CE68C0001A2868 /* FHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHTextField.swift; sourceTree = "<group>"; };
 		27E8D0B524C7CFC200E3EE4C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		27E8D0B824C7D01200E3EE4C /* LeaveAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveAlertViewModel.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 			children = (
 				2771C49624C673FC00682DF3 /* AlertView.swift */,
 				27F1BBF224C91BF500AEFF01 /* AlertViewDelegate.swift */,
+				27CDB9C624D2457F00214097 /* AlertView+TextFieldDelegate.swift */,
 				27F019F824C7C7FD001870D0 /* ViewModels */,
 			);
 			path = AlertView;
@@ -286,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				2796D9BB24CE59830015BE2C /* OptionsBodyView.swift */,
+				27CDB9C824D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift */,
 			);
 			path = Options;
 			sourceTree = "<group>";
@@ -829,6 +835,7 @@
 				27462B0C24CD1F6700AC776B /* AlertViewController.swift in Sources */,
 				A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */,
 				A48B2E7824C242360017B79D /* UIView+Shadow.swift in Sources */,
+				27CDB9C924D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
 				278B3A1524CBD41400A6DDB3 /* TasksBodyView.swift in Sources */,
 				27EFB4F924CD1A13007FDBC0 /* FooterViewDelegate.swift in Sources */,
@@ -845,6 +852,7 @@
 				27C9EBD224CD173900FDAFCC /* TaskSectionViewDelegate.swift in Sources */,
 				A408176C24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift in Sources */,
 				275A29AB24BBB83A00C6D0DB /* FooterViewType.swift in Sources */,
+				27CDB9C724D2457F00214097 /* AlertView+TextFieldDelegate.swift in Sources */,
 				27F019FA24C7C819001870D0 /* SkipAlertViewModel.swift in Sources */,
 				2771C49924C678DE00682DF3 /* UIView+Line.swift in Sources */,
 				27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */,

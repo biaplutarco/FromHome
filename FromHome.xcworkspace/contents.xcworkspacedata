@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/akhaten/Documents/FromHome/FromHome/View/Components/FooterView/ViewModels/Protocol/OptionsFooterViewModel.swift">
-   </FileRef>
-   <FileRef
       location = "group:FromHome.xcodeproj">
    </FileRef>
    <FileRef
