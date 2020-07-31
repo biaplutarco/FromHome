@@ -12,25 +12,14 @@ class UserDefaultsManager {
 
     enum Key: String {
 
-        case notification = "notification"
+        case notificationEnable = "notificationEnable"
+        case notificationHour = "notificationHour"
         case userName = "userName"
         case workingHours = "workingHours"
         case coffeeBreakHours = "coffeeBreakHours"
         case mealBreak = "mealBreak"
     }
 
-    struct Notification {
-
-        let enable: Bool
-        let time: String?
-
-        init(_ json: [String: Any]) {
-            self.enable = json[notificationEnable] as? Bool ?? false
-            self.time = json[notificationTime] as? String ?? ""
-        }
-    }
-
-    static let (notificationEnable, notificationTime) = ("notificationEnable", "notificationTime")
     private static let userDefault = UserDefaults.standard
 
     static func save(name: String) {
@@ -45,12 +34,16 @@ class UserDefaultsManager {
         userDefault.set(coffeeBreakHours, forKey: Key.coffeeBreakHours.rawValue)
     }
 
+    static func save(notificationHour: Int) {
+        userDefault.set(notificationHour, forKey: Key.notificationHour.rawValue)
+    }
+
     static func toggle(mealBreak: Bool) {
         userDefault.set(mealBreak, forKey: Key.mealBreak.rawValue)
     }
 
-    static func toggle(notification: Notification) {
-        userDefault.set([notificationEnable: notification.enable, notificationTime: notification.time ?? ""], forKey: Key.notification.rawValue)
+    static func toggle(notification: Bool) {
+        userDefault.set(notification, forKey: Key.notificationEnable.rawValue)
     }
 
     static func userName() -> String {
@@ -69,7 +62,11 @@ class UserDefaultsManager {
         userDefault.value(forKey: Key.mealBreak.rawValue) as? Bool ?? false
     }
 
-    static func notification() -> Notification {
-        Notification((userDefault.value(forKey: Key.notification.rawValue) as? [String: Any]) ?? [:])
+    static func notificationEnable() -> Bool {
+        userDefault.value(forKey: Key.notificationEnable.rawValue) as? Bool ?? false
+    }
+
+    static func notificationHour() -> Int {
+        userDefault.value(forKey: Key.notificationHour.rawValue) as? Int ?? 8
     }
 }

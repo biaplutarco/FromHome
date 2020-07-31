@@ -24,6 +24,7 @@ class FooterView: UIView {
 
     private var viewModel: FooterViewModel
     private var bottomConstraint: NSLayoutConstraint?
+    private var isKeyboardUp: Bool = false
 
     weak var delegate: FooterViewDelegate?
 
@@ -104,32 +105,38 @@ class FooterView: UIView {
     func keyboardWillShow(notification: NSNotification) {
 
         guard let userInfo = notification.userInfo,
-            let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey],
-            let superview = superview else { return }
+            let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] else { return }
 
         let endRect = convert((endValue as AnyObject).cgRectValue, from: stackView)
         let keyboardOverlap = frame.maxY - endRect.origin.y
+        let offSet = stackView.frame.maxY - keyboardOverlap
 
-        let offSet = superview.center.y - keyboardOverlap
+        if !isKeyboardUp {
 
-        bottomConstraint?.isActive = false
-        bottomConstraint?.constant = -offSet
-        bottomConstraint?.isActive = true
+            bottomConstraint?.isActive = false
+            bottomConstraint?.constant = -offSet
+            bottomConstraint?.isActive = true
+        }
 
         UIView.animate(withDuration: 0.5) {
             self.layoutIfNeeded()
+            self.isKeyboardUp = true
         }
     }
 
     @objc
     func keyboardWillHide() {
 
-        bottomConstraint?.isActive = false
-        bottomConstraint?.constant = 0
-        bottomConstraint?.isActive = true
+        if isKeyboardUp {
+
+            bottomConstraint?.isActive = false
+            bottomConstraint?.constant = 0
+            bottomConstraint?.isActive = true
+        }
 
         UIView.animate(withDuration: 0.5) {
             self.layoutIfNeeded()
+            self.isKeyboardUp = false
         }
     }
 

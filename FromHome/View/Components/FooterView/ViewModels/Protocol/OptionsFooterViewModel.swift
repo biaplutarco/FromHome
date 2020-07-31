@@ -5,10 +5,18 @@
 //  Created by Bia Plutarco on 26/07/20.
 //
 
-import Foundation
+import UIKit
 
-typealias Options = [(title: String, input: String)]
+struct Option {
 
-protocol OptionsFooterViewModel: FooterViewModel {
-    var options: Options { get }
+    var title: String
+    var inputSelected: String
+    var type: OptionType
+}
+
+protocol OptionsFooterViewModel: FooterViewModel, UIPickerViewDelegate, UIPickerViewDataSource {
+
+    var options: [Option] { get set }
+
+    func save()
 }
