@@ -20,4 +20,9 @@ extension UIImage {
 
     static let notificationIcon = UIImage.init(named: "Notification")!
     static let notificationFillIcon = UIImage.init(named: "NotificationFill")!
+
+    static let back = UIImage.init(named: "Back")!
+    static let meal = UIImage.init(named: "Meal")!
+    static let pause = UIImage.init(named: "Pause")!
+    static let skip = UIImage.init(named: "Skip")!
 }
