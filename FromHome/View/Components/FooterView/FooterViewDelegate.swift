@@ -6,8 +6,8 @@
 //  Copyright © 2020 biaplutarco. All rights reserved.
 //
 
-import UIKit
-
-protocol FooterViewDelegate: AnyObject {
-    func present(_ viewController: UIViewController, completion: (() -> Void)?)
-}
+//import UIKit
+//
+//protocol FooterViewDelegate: AnyObject {
+//    func present(_ viewController: UIViewController, completion: (() -> Void)?)
+//}

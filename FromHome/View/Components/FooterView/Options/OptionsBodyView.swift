@@ -12,16 +12,15 @@ class OptionsBodyView: UIView {
 
     private let stackView = UIStackView(subviews: [], alignment: .center, distribution: .fillEqually, axis: .horizontal, spacing: 24)
 
-    private var viewModel: OptionsFooterViewModel
-
-    init(viewModel: OptionsFooterViewModel) {
-
-        self.viewModel = viewModel
+    init(options: Options) {
 
         super.init(frame: .zero)
 
-        setupView()
-        setupOptions(viewModel.options)
+        addSubviewCoveringSuperView(stackView)
+
+        options.forEach { option in
+            self.stackView.addArrangedSubview(self.addOption(title: option.title, placeholder: option.input))
+        }
     }
 
     @available(*, unavailable)
@@ -29,23 +28,7 @@ class OptionsBodyView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setupView() {
-
-        addSubview(stackView)
-
-        stackView.fulfillSuperview()
-    }
-
-    private func contraints() { }
-
-    private func setupOptions(_ options: Options) {
-
-        options.forEach { option in
-            self.stackView.addArrangedSubview(self.option(title: option.title, placeholder: option.input))
-        }
-    }
-
-    private func option(title: String, placeholder: String) -> UIStackView {
+    private func addOption(title: String, placeholder: String) -> UIStackView {
 
         let titleLabel = UILabel()
         titleLabel.text = title

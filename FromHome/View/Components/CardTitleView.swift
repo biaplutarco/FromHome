@@ -8,12 +8,12 @@
 
 import UIKit
 
-class CardTitleView: UIView {
+enum CardTitleType {
+    case footer
+    case header
+}
 
-    enum CardTitleType {
-        case footer
-        case header
-    }
+class CardTitleView: UIView {
 
     private var titleLabel = UILabel()
     private var line = UIView()
@@ -43,7 +43,7 @@ class CardTitleView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func title(_ title: String) {
+    func changeTitle(_ title: String) {
         titleLabel.text = title
     }
 

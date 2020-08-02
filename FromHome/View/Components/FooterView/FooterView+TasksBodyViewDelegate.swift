@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension FooterView: TasksBodyViewDelegate {
-
-    func present(_ viewController: UIViewController, completion: (() -> Void)?) {
-        delegate?.present(viewController, completion: completion)
-    }
-}
+//extension FooterView: TasksBodyViewDelegate {
+//
+//    func present(_ viewController: UIViewController, completion: (() -> Void)?) {
+//        delegate?.present(viewController, completion: completion)
+//    }
+//}

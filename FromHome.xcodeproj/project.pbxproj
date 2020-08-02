@@ -56,6 +56,11 @@
 		A408176A24CEC8D7009C14E3 /* OptionsFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408176924CEC8D7009C14E3 /* OptionsFooterViewModel.swift */; };
 		A408176C24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408176B24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift */; };
 		A408176E24CECA19009C14E3 /* FooterView+TasksBodyViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408176D24CECA19009C14E3 /* FooterView+TasksBodyViewDelegate.swift */; };
+		A476AFD124D445670025DFE8 /* SetupTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD024D445670025DFE8 /* SetupTodayView.swift */; };
+		A476AFD324D445760025DFE8 /* SetupTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD224D445760025DFE8 /* SetupTimerView.swift */; };
+		A476AFD524D445850025DFE8 /* SetupTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD424D445850025DFE8 /* SetupTasksView.swift */; };
+		A476AFD724D445940025DFE8 /* SetupNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD624D445940025DFE8 /* SetupNotificationView.swift */; };
+		A476AFD924D45F200025DFE8 /* TitledCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD824D45F200025DFE8 /* TitledCardView.swift */; };
 		A48B2E6F24C232840017B79D /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E6E24C232840017B79D /* UIView+Subview.swift */; };
 		A48B2E7424C236C40017B79D /* TabbedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E7324C236C40017B79D /* TabbedScrollView.swift */; };
 		A48B2E7624C239620017B79D /* SegmentedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E7524C239620017B79D /* SegmentedTabView.swift */; };
@@ -64,6 +69,7 @@
 		A48B2E7C24C75D7E0017B79D /* UIImage+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E7B24C75D7E0017B79D /* UIImage+Assets.swift */; };
 		A48B2E7E24C762820017B79D /* UIButton+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E7D24C762820017B79D /* UIButton+Init.swift */; };
 		A48B2E8024C779CA0017B79D /* StackView+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E7F24C779CA0017B79D /* StackView+Init.swift */; };
+		A4AE132724D6C22C00C208F6 /* SetupViewController+SetupToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE132624D6C22B00C208F6 /* SetupViewController+SetupToday.swift */; };
 		A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778624B3994400A49E7F /* AppDelegate.swift */; };
 		A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778824B3994400A49E7F /* SceneDelegate.swift */; };
 		A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778F24B3994400A49E7F /* FromHome.xcdatamodeld */; };
@@ -155,6 +161,11 @@
 		A408176924CEC8D7009C14E3 /* OptionsFooterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsFooterViewModel.swift; sourceTree = "<group>"; };
 		A408176B24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskBodyView+TaskSectionViewDelegate.swift"; sourceTree = "<group>"; };
 		A408176D24CECA19009C14E3 /* FooterView+TasksBodyViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FooterView+TasksBodyViewDelegate.swift"; sourceTree = "<group>"; };
+		A476AFD024D445670025DFE8 /* SetupTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTodayView.swift; sourceTree = "<group>"; };
+		A476AFD224D445760025DFE8 /* SetupTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTimerView.swift; sourceTree = "<group>"; };
+		A476AFD424D445850025DFE8 /* SetupTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTasksView.swift; sourceTree = "<group>"; };
+		A476AFD624D445940025DFE8 /* SetupNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupNotificationView.swift; sourceTree = "<group>"; };
+		A476AFD824D45F200025DFE8 /* TitledCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledCardView.swift; sourceTree = "<group>"; };
 		A48B2E6E24C232840017B79D /* UIView+Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subview.swift"; sourceTree = "<group>"; };
 		A48B2E7324C236C40017B79D /* TabbedScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedScrollView.swift; sourceTree = "<group>"; };
 		A48B2E7524C239620017B79D /* SegmentedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedTabView.swift; sourceTree = "<group>"; };
@@ -163,6 +174,7 @@
 		A48B2E7B24C75D7E0017B79D /* UIImage+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Assets.swift"; sourceTree = "<group>"; };
 		A48B2E7D24C762820017B79D /* UIButton+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Init.swift"; sourceTree = "<group>"; };
 		A48B2E7F24C779CA0017B79D /* StackView+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView+Init.swift"; sourceTree = "<group>"; };
+		A4AE132624D6C22B00C208F6 /* SetupViewController+SetupToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupViewController+SetupToday.swift"; sourceTree = "<group>"; };
 		A4AE778324B3994400A49E7F /* FromHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FromHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AE778624B3994400A49E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4AE778824B3994400A49E7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -277,6 +289,7 @@
 		279CB35024BA974B003126C9 /* FooterView */ = {
 			isa = PBXGroup;
 			children = (
+				A476AFCC24D444D90025DFE8 /* NewFiles */,
 				279CB34E24BA8C43003126C9 /* FooterView.swift */,
 				A408176D24CECA19009C14E3 /* FooterView+TasksBodyViewDelegate.swift */,
 				27EFB4F824CD1A13007FDBC0 /* FooterViewDelegate.swift */,
@@ -344,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				A4F42EA224C8EA0D00F6C95E /* SetupViewController+Greeting.swift */,
+				A4AE132624D6C22B00C208F6 /* SetupViewController+SetupToday.swift */,
 				27EFB4FA24CD1ADA007FDBC0 /* SetupViewController+Footer.swift */,
 			);
 			path = Extensions;
@@ -363,6 +377,18 @@
 				27E8D0C024C7D86B00E3EE4C /* AtHomeAlertViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A476AFCC24D444D90025DFE8 /* NewFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A476AFD824D45F200025DFE8 /* TitledCardView.swift */,
+				A476AFD024D445670025DFE8 /* SetupTodayView.swift */,
+				A476AFD224D445760025DFE8 /* SetupTimerView.swift */,
+				A476AFD424D445850025DFE8 /* SetupTasksView.swift */,
+				A476AFD624D445940025DFE8 /* SetupNotificationView.swift */,
+			);
+			path = NewFiles;
 			sourceTree = "<group>";
 		};
 		A48B2E6824C0E9500017B79D /* Setup */ = {
@@ -760,6 +786,7 @@
 				A4AE77BF24B3BC6700A49E7F /* Coordinator.swift in Sources */,
 				A4F42E9C24C8E87D00F6C95E /* UniverseView.swift in Sources */,
 				A4F42E9D24C8E8E300F6C95E /* TodayFooterViewModel.swift in Sources */,
+				A476AFD724D445940025DFE8 /* SetupNotificationView.swift in Sources */,
 				A4F42EA124C8E9F400F6C95E /* SetupViewController.swift in Sources */,
 				27E8D0C124C7D86B00E3EE4C /* AtHomeAlertViewModel.swift in Sources */,
 				278B3A1724CBDCDD00A6DDB3 /* TaskSectionView.swift in Sources */,
@@ -787,6 +814,8 @@
 				279478E524CD1DD500AB3E79 /* TasksBodyViewDelegate.swift in Sources */,
 				27E8D0B624C7CFC200E3EE4C /* Alert.swift in Sources */,
 				27B806DA24BE213800D0BC87 /* Observable.swift in Sources */,
+				A476AFD324D445760025DFE8 /* SetupTimerView.swift in Sources */,
+				A476AFD524D445850025DFE8 /* SetupTasksView.swift in Sources */,
 				A408176E24CECA19009C14E3 /* FooterView+TasksBodyViewDelegate.swift in Sources */,
 				2746D17524CE5EB8009EFF6B /* MissionTimeFooterViewModel.swift in Sources */,
 				278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */,
@@ -796,6 +825,7 @@
 				A4F42EAB24CDB33600F6C95E /* CoreDataManager.swift in Sources */,
 				2776B7E224C91AC10082F4FF /* UILabel+MultipleLines.swift in Sources */,
 				2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */,
+				A4AE132724D6C22C00C208F6 /* SetupViewController+SetupToday.swift in Sources */,
 				279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */,
 				27462B0C24CD1F6700AC776B /* AlertViewController.swift in Sources */,
 				A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */,
@@ -813,11 +843,13 @@
 				A408176A24CEC8D7009C14E3 /* OptionsFooterViewModel.swift in Sources */,
 				27C9EBD224CD173900FDAFCC /* TaskSectionViewDelegate.swift in Sources */,
 				A408176C24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift in Sources */,
+				A476AFD924D45F200025DFE8 /* TitledCardView.swift in Sources */,
 				275A29AB24BBB83A00C6D0DB /* FooterViewType.swift in Sources */,
 				27F019FA24C7C819001870D0 /* SkipAlertViewModel.swift in Sources */,
 				2771C49924C678DE00682DF3 /* UIView+Line.swift in Sources */,
 				27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */,
 				A48B2E7424C236C40017B79D /* TabbedScrollView.swift in Sources */,
+				A476AFD124D445670025DFE8 /* SetupTodayView.swift in Sources */,
 				278045DE24B405FA00AEDFBA /* Style.swift in Sources */,
 				2771C49724C673FC00682DF3 /* AlertView.swift in Sources */,
 				27E8870724CE68C0001A2868 /* FHTextField.swift in Sources */,

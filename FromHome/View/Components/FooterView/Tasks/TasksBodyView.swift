@@ -22,23 +22,19 @@ class TasksBodyView: UIView {
         return stackView
     }()
 
-    private var viewModel: TasksFooterViewModel
-
     weak var delegate: TasksBodyViewDelegate?
 
-    init(viewModel: TasksFooterViewModel) {
+    init(getReady: (sectionTitle: String, tasks: [String]), goHome: (sectionTitle: String, tasks: [String])) {
 
-        self.viewModel = viewModel
-
-        self.getReadySectionView = TaskSectionView(sectionTitle: viewModel.getReady.sectionTitle, tasks: viewModel.getReady.tasks)
-        self.goHomeSectionView = TaskSectionView(sectionTitle: viewModel.goHome.sectionTitle, tasks: viewModel.goHome.tasks)
+        self.getReadySectionView = TaskSectionView(sectionTitle: getReady.sectionTitle, tasks: getReady.tasks)
+        self.goHomeSectionView = TaskSectionView(sectionTitle: goHome.sectionTitle, tasks: goHome.tasks)
 
         super.init(frame: .zero)
 
         self.getReadySectionView.delegate = self
         self.goHomeSectionView.delegate = self
 
-        setupView()
+        addSubviews([stackView])
     }
 
     @available(*, unavailable)
@@ -46,14 +42,7 @@ class TasksBodyView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setupView() {
-
-        addSubview(stackView)
-
-        contraints()
-    }
-
-    private func contraints() {
+    override func didMoveToSuperview() {
 
         getReadySectionView.translatesAutoresizingMaskIntoConstraints = false
         goHomeSectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -67,4 +56,3 @@ class TasksBodyView: UIView {
         stackView.fulfillSuperview()
     }
 }
-

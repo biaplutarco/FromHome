@@ -26,6 +26,8 @@ class TabbedScrollView: UIView {
         pagedScrollView.delegate = self
         segmentedTabView.delegate = self
 
+        pagedScrollView.isScrollEnabled = false
+
         addSubviews([pagedScrollView, segmentedTabView])
     }
 

@@ -12,7 +12,7 @@ class TodayBodyView: UIView {
 
     private var bodyLabel = UILabel()
 
-    private lazy var button: UIButton = {
+    lazy var button: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 18
 

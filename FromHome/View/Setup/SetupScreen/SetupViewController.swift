@@ -17,37 +17,30 @@ class SetupViewController: UIViewController {
 
     let greetingView = GreetingView(viewModel: GreetingViewModel(username: "Dani"))
 
-    let tabbedScrollView: TabbedScrollView
+    lazy var todayView = SetupTodayView(self)
+    lazy var timerView = SetupTimerView()
+    lazy var tasksView = SetupTasksView()
+    lazy var notificationView = SetupNotificationView()
+
+    lazy var tabbedScrollView = TabbedScrollView.init(views: [
+        self.todayView,
+        self.timerView,
+        self.tasksView,
+        self.notificationView
+    ], images: [
+        (unselected: .todayIcon, selected: .todayFillIcon),
+        (unselected: .timerIcon, selected: .timerFillIcon),
+        (unselected: .taskIcon, selected: .taskFillIcon),
+        (unselected: .notificationIcon, selected: .notificationFillIcon)
+    ])
 
     init(_ coordinator: MainCoordinator?) {
         self.coordinator = coordinator
 
-        let view1 = UIView()
-        let view2 = UIView()
-        let view3 = UIView()
-        let view4 = UIView()
-
-        let todayView = FooterView(viewModel: TodayFooterViewModel())
-        let tasksView = FooterView(viewModel: TasksFooterViewModel())
-        let missionTimeView = FooterView(viewModel: MissionTimeFooterViewModel())
-        let notificationView = FooterView(viewModel: NotificationFooterViewModel())
-
-        view1.addSubview(todayView)
-        view2.addSubview(missionTimeView)
-        view3.addSubview(tasksView)
-        view4.addSubview(notificationView)
-
-        tabbedScrollView = TabbedScrollView.init(views: [view1, view2, view3, view4], images: [
-            (unselected: .todayIcon, selected: .todayFillIcon),
-            (unselected: .timerIcon, selected: .timerFillIcon),
-            (unselected: .taskIcon, selected: .taskFillIcon),
-            (unselected: .notificationIcon, selected: .notificationFillIcon)
-        ])
-
         super.init(nibName: nil, bundle: nil)
 
         greetingView.delegate = self
-        tasksView.delegate = self
+//        tasksView.delegate = self
     }
 
     @available(*, unavailable)

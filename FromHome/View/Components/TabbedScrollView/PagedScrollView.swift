@@ -55,10 +55,10 @@ class PagedScrollView: UIScrollView {
         ])
     }
 
-    func scrollToPage(_ page: Int) {
+    func scrollToPage(page: Int, animated: Bool) {
         let width = self.bounds.width
         let height = self.bounds.height
 
-        scrollRectToVisible(CGRect(x: width * CGFloat(page), y: 0, width: width, height: height), animated: true)
+        scrollRectToVisible(CGRect(x: width * CGFloat(page), y: 0, width: width, height: height), animated: animated)
     }
 }

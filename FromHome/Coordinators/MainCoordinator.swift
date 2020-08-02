@@ -27,4 +27,8 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {}
+
+    func startDailyWork() {
+        viewController.present(UIViewController(), animated: true, completion: nil)
+    }
 }
