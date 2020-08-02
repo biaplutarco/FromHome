@@ -10,7 +10,7 @@ import UIKit
 
 protocol Coordinator: AnyObject {
     var childCoordinators: [Coordinator] { get set }
-    var viewController: UIViewController! { get set }
+    var rootController: UIViewController! { get set }
 
     func start()
 }

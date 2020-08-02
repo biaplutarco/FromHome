@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SetupTodayViewDelegate: AnyObject {
+    func startTodayButtonPressed(_ setupTodayView: SetupTodayView)
+}
+
 class SetupTodayView: UIView {
 
     let cardView: TitledCardView
@@ -16,7 +20,7 @@ class SetupTodayView: UIView {
 
     let viewModel = TodayFooterViewModel()
 
-    var delegate: SetupTodayViewDelegate?
+    weak var delegate: SetupTodayViewDelegate?
 
     init(_ delegate: SetupTodayViewDelegate? = nil) {
 
@@ -40,8 +44,4 @@ class SetupTodayView: UIView {
     func startTodayButtonPressed(_ sender: UIButton) {
         delegate?.startTodayButtonPressed(self)
     }
-}
-
-protocol SetupTodayViewDelegate {
-    func startTodayButtonPressed(_ view: SetupTodayView)
 }

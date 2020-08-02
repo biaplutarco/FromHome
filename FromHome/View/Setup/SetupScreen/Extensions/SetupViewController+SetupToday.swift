@@ -9,7 +9,13 @@
 import UIKit
 
 extension SetupViewController: SetupTodayViewDelegate {
-    func startTodayButtonPressed(_ view: SetupTodayView) {
-        coordinator?.startDailyWork()
+    func startTodayButtonPressed(_ setupTodayView: SetupTodayView) {
+        guard let universeView = view as? UniverseView else {
+            fatalError("ja era")
+        }
+
+        let universeViewReplica = UniverseView.init(frame: universeView.frame, stars: universeView.stars)
+
+        coordinator?.startDailyWork(universeViewReplica)
     }
 }
