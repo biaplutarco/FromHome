@@ -15,7 +15,7 @@ class SetupViewController: UIViewController {
 
     var coordinator: MainCoordinator?
 
-    let greetingView = GreetingView(viewModel: GreetingViewModel(username: "Dani"))
+    let greetingView = GreetingView()
 
     let tabbedScrollView: TabbedScrollView
 

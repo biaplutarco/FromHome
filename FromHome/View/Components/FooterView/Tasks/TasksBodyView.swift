@@ -67,4 +67,3 @@ class TasksBodyView: UIView {
         stackView.fulfillSuperview()
     }
 }
-

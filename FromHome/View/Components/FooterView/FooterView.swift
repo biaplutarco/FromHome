@@ -23,6 +23,8 @@ class FooterView: UIView {
     }()
 
     private var viewModel: FooterViewModel
+    private var bottomConstraint: NSLayoutConstraint?
+    private var isKeyboardUp: Bool = false
 
     weak var delegate: FooterViewDelegate?
 
@@ -38,12 +40,28 @@ class FooterView: UIView {
         setupView()
     }
 
+    deinit {
+
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     private func setupView() {
+
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(keyboardWillShow(notification:)),
+            name: UIResponder.keyboardWillShowNotification, object: nil
+        )
+
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification, object: nil
+        )
 
         clipsToBounds = false
 
@@ -83,6 +101,45 @@ class FooterView: UIView {
         stackView.addArrangedSubview(bodyView)
     }
 
+    @objc
+    func keyboardWillShow(notification: NSNotification) {
+
+        guard let userInfo = notification.userInfo,
+            let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] else { return }
+
+        let endRect = convert((endValue as AnyObject).cgRectValue, from: stackView)
+        let keyboardOverlap = frame.maxY - endRect.origin.y
+        let offSet = stackView.frame.maxY - keyboardOverlap
+
+        if !isKeyboardUp {
+
+            bottomConstraint?.isActive = false
+            bottomConstraint?.constant = -offSet
+            bottomConstraint?.isActive = true
+        }
+
+        UIView.animate(withDuration: 0.5) {
+            self.layoutIfNeeded()
+            self.isKeyboardUp = true
+        }
+    }
+
+    @objc
+    func keyboardWillHide() {
+
+        if isKeyboardUp {
+
+            bottomConstraint?.isActive = false
+            bottomConstraint?.constant = 0
+            bottomConstraint?.isActive = true
+        }
+
+        UIView.animate(withDuration: 0.5) {
+            self.layoutIfNeeded()
+            self.isKeyboardUp = false
+        }
+    }
+
     override func didMoveToSuperview() {
 
         guard let superview = superview else { fatalError("No super view") }
@@ -91,11 +148,16 @@ class FooterView: UIView {
         bodyView.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
+        self.bottomConstraint = bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: 0)
+
+        guard let bottomConstraint = self.bottomConstraint else { return }
+
         NSLayoutConstraint.activate([
+
+            bottomConstraint,
 
             leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 16),
             trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -16),
-            bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: 0),
 
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),

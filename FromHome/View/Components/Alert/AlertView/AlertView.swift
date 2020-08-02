@@ -16,29 +16,15 @@ class AlertView: UIView {
     private var rightButton = UIButton()
     private var leftButton = UIButton()
 
-    private lazy var textField = FHTextField()
+    private var textField = FHTextField()
 
     private var horizontalLine = UIView(lineColor: .lineAlert)
     private var verticalLine = UIView(lineColor: .lineAlert)
 
-    private lazy var textStackView: UIStackView = {
-        let stackview = UIStackView(arrangedSubviews: [titleLabel])
-        stackview.axis = .vertical
-        stackview.spacing = 18
-        stackview.distribution = .fill
-        stackview.alignment = .center
+    private var type: AlertViewModelType
 
-        return stackview
-    }()
-
-    private lazy var buttonStackView: UIStackView = {
-        let stackview = UIStackView(arrangedSubviews: [leftButton])
-        stackview.axis = .horizontal
-        stackview.alignment = .fill
-        stackview.distribution = .fill
-
-        return stackview
-    }()
+    private lazy var textStackView = UIStackView(subviews: [titleLabel], alignment: .center, distribution: .fill, axis: .vertical, spacing: 18)
+    private lazy var buttonStackView = UIStackView(subviews: [leftButton], alignment: .fill, distribution: .fill, axis: .horizontal, spacing: 0)
 
     private lazy var stackView: UIStackView = {
         let stackview = UIStackView(arrangedSubviews: [textStackView, buttonStackView])
@@ -47,34 +33,28 @@ class AlertView: UIView {
         return stackview
     }()
 
+    private var centerYConstraint: NSLayoutConstraint?
+
     weak var delegate: AlertViewDelegate?
 
     init(_ viewModel: AlertViewModel) {
+        self.type = viewModel.type
+
         super.init(frame: .zero)
 
-        setupView(for: viewModel.type)
+        setupView()
         setupTexts(for: viewModel)
+    }
+
+    deinit {
+
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    private func actions() {
-
-        rightButton.addTarget(self, action: #selector(rightAction), for: .touchUpInside)
-        leftButton.addTarget(self, action: #selector(leftAction), for: .touchUpInside)
-    }
-
-    @objc
-    func rightAction() {
-        delegate?.destructiveAction()
-    }
-
-    @objc
-    func leftAction() {
-        delegate?.action()
     }
 
     private func setupTexts(for viewModel: AlertViewModel) {
@@ -86,7 +66,29 @@ class AlertView: UIView {
         rightButton.setTitle(viewModel.rightButtonTitle, for: .normal)
     }
 
-    private func setupView(for type: AlertViewModelType) {
+    private func setupView() {
+
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(keyboardWillShow(notification:)),
+            name: UIResponder.keyboardWillShowNotification, object: nil
+        )
+
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification, object: nil
+        )
+
+        textField.delegate = self
+
+        setupStackViews()
+        styleAsCard(.alert)
+        applyStyle()
+        subviewsConstraints()
+        actions()
+        initializeHideKeyboard()
+    }
+
+    private func setupStackViews() {
 
         switch type {
 
@@ -112,10 +114,6 @@ class AlertView: UIView {
         }
 
         addSubview(stackView)
-
-        styleAsCard(.alert)
-        applyStyle()
-        constraints()
     }
 
     private func withRigthButton() {
@@ -135,7 +133,89 @@ class AlertView: UIView {
         Style.fromHome.apply(textStyle: .destructiveTitleButton, to: rightButton)
     }
 
-    private func constraints() {
+    private func initializeHideKeyboard() {
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
+    }
+
+    private func actions() {
+
+        rightButton.addTarget(self, action: #selector(rightAction), for: .touchUpInside)
+        leftButton.addTarget(self, action: #selector(leftAction), for: .touchUpInside)
+    }
+
+    @objc
+    func rightAction() {
+        delegate?.destructiveAction()
+    }
+
+    @objc
+    func leftAction() {
+
+        switch type {
+
+            case .input:
+                delegate?.action(withInput: textField.text)
+
+            default:
+                delegate?.action(withInput: nil)
+        }
+    }
+
+    @objc
+    func dismissKeyboard() {
+        endEditing(true)
+    }
+
+    @objc
+    func keyboardWillShow(notification: NSNotification) {
+
+        guard let userInfo = notification.userInfo,
+            let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey],
+            let superview = superview else { return }
+
+        let endRect = convert((endValue as AnyObject).cgRectValue, from: window)
+        let keyboardOverlap = frame.maxY - endRect.origin.y
+
+        let offSet = superview.center.y - keyboardOverlap
+
+        centerYConstraint?.isActive = false
+        centerYConstraint?.constant = -offSet
+        centerYConstraint?.isActive = true
+
+        UIView.animate(withDuration: 0.5) {
+            self.layoutIfNeeded()
+        }
+    }
+
+    @objc
+    func keyboardWillHide() {
+
+        centerYConstraint?.isActive = false
+        centerYConstraint?.constant = 0
+        centerYConstraint?.isActive = true
+
+        UIView.animate(withDuration: 0.5) {
+            self.layoutIfNeeded()
+        }
+    }
+
+    override func didMoveToSuperview() {
+
+        translatesAutoresizingMaskIntoConstraints = false
+
+        guard let superview = superview else { return }
+
+        centerYConstraint = centerYAnchor.constraint(equalTo: superview.centerYAnchor)
+        centerYConstraint?.isActive = true
+
+        NSLayoutConstraint.activate([
+
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 24),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -24)
+        ])
+    }
+
+    private func subviewsConstraints() {
 
         stackView.translatesAutoresizingMaskIntoConstraints = false
         horizontalLine.translatesAutoresizingMaskIntoConstraints = false

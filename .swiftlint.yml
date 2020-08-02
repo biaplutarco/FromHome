@@ -32,6 +32,7 @@ disabled_rules: # rule identifiers to exclude from running
 # idiomatic
   - discouraged_optional_collection
   - explicit_acl
+  - explicit_enum_raw_value
   - explicit_init
   - explicit_top_level_acl
   - explicit_type_interface
@@ -138,7 +139,6 @@ opt_in_rules: # some rules are only opt-in
   - discouraged_object_literal
   - discouraged_optional_boolean
   - duplicate_imports
-  - explicit_enum_raw_value
   - fallthrough
   - fatal_error_message
   - sfile_name_no_space

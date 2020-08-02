@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		172BD5C4802E6C2DEE159BC2 /* Pods_FromHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6E22448571902684372A4A /* Pods_FromHomeTests.framework */; };
+		270E394524D08F470012C890 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E394424D08F470012C890 /* UserDefaultsManager.swift */; };
+		270E394724D0FEFD0012C890 /* AlertViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E394624D0FEFD0012C890 /* AlertViewController+Delegate.swift */; };
+		270E394C24D0FFA50012C890 /* AlertControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E394B24D0FFA50012C890 /* AlertControllerViewModel.swift */; };
 		2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720BE8824B80DBE00A98F87 /* UIView+Card.swift */; };
+		272E95A924D7803E002C5624 /* UIPickerView+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E95A824D7803E002C5624 /* UIPickerView+Int.swift */; };
+		272E95AB24D780B6002C5624 /* NotificationFooterViewModel+Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E95AA24D780B6002C5624 /* NotificationFooterViewModel+Picker.swift */; };
+		272E95AE24D78102002C5624 /* MissionTimeFooterViewModel+Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E95AD24D78102002C5624 /* MissionTimeFooterViewModel+Picker.swift */; };
 		27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27309EFE24B531B400D60FE8 /* CardTitleView.swift */; };
 		27309F0124B541EA00D60FE8 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27309F0024B541EA00D60FE8 /* UIView+Constraints.swift */; };
 		27462B0C24CD1F6700AC776B /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27462B0B24CD1F6700AC776B /* AlertViewController.swift */; };
 		2746D17524CE5EB8009EFF6B /* MissionTimeFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746D17424CE5EB8009EFF6B /* MissionTimeFooterViewModel.swift */; };
 		2746D17724CE5FBB009EFF6B /* NotificationFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746D17624CE5FBB009EFF6B /* NotificationFooterViewModel.swift */; };
 		275A29AB24BBB83A00C6D0DB /* FooterViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275A29AA24BBB83A00C6D0DB /* FooterViewType.swift */; };
+		276151CE24D1137F00228661 /* SetupViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276151CD24D1137F00228661 /* SetupViewController+Alert.swift */; };
 		2771C49724C673FC00682DF3 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2771C49624C673FC00682DF3 /* AlertView.swift */; };
 		2771C49924C678DE00682DF3 /* UIView+Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2771C49824C678DE00682DF3 /* UIView+Line.swift */; };
 		2776134C24C7C63A00E3C0B9 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2776134B24C7C63A00E3C0B9 /* AlertViewModel.swift */; };
@@ -39,6 +46,8 @@
 		27C1D2DA24B80A0500AA95BF /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D924B80A0500AA95BF /* GreetingView.swift */; };
 		27C9EBCF24CCCFC700FDAFCC /* TasksFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9EBCE24CCCFC700FDAFCC /* TasksFooterViewModel.swift */; };
 		27C9EBD224CD173900FDAFCC /* TaskSectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9EBD124CD173900FDAFCC /* TaskSectionViewDelegate.swift */; };
+		27CDB9C724D2457F00214097 /* AlertView+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDB9C624D2457F00214097 /* AlertView+TextFieldDelegate.swift */; };
+		27CDB9C924D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDB9C824D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift */; };
 		27DF3B0D24D66F9200E8AA75 /* UIButton+CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DF3B0C24D66F9200E8AA75 /* UIButton+CardButton.swift */; };
 		27E8870724CE68C0001A2868 /* FHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8870624CE68C0001A2868 /* FHTextField.swift */; };
 		27E8D0B624C7CFC200E3EE4C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0B524C7CFC200E3EE4C /* Alert.swift */; };
@@ -104,14 +113,21 @@
 /* Begin PBXFileReference section */
 		147D5965E0FD62DA0408A57A /* Pods_FromHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FromHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F27F5D1CDE3B9FDEB496DB0 /* Pods-FromHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome.release.xcconfig"; path = "Target Support Files/Pods-FromHome/Pods-FromHome.release.xcconfig"; sourceTree = "<group>"; };
+		270E394424D08F470012C890 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		270E394624D0FEFD0012C890 /* AlertViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertViewController+Delegate.swift"; sourceTree = "<group>"; };
+		270E394B24D0FFA50012C890 /* AlertControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerViewModel.swift; sourceTree = "<group>"; };
 		2720BE8824B80DBE00A98F87 /* UIView+Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Card.swift"; sourceTree = "<group>"; };
 		2722122024B7C3390053478F /* UniverseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseView.swift; sourceTree = "<group>"; };
+		272E95A824D7803E002C5624 /* UIPickerView+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPickerView+Int.swift"; sourceTree = "<group>"; };
+		272E95AA24D780B6002C5624 /* NotificationFooterViewModel+Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationFooterViewModel+Picker.swift"; sourceTree = "<group>"; };
+		272E95AD24D78102002C5624 /* MissionTimeFooterViewModel+Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MissionTimeFooterViewModel+Picker.swift"; sourceTree = "<group>"; };
 		27309EFE24B531B400D60FE8 /* CardTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTitleView.swift; sourceTree = "<group>"; };
 		27309F0024B541EA00D60FE8 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		27462B0B24CD1F6700AC776B /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		2746D17424CE5EB8009EFF6B /* MissionTimeFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTimeFooterViewModel.swift; sourceTree = "<group>"; };
 		2746D17624CE5FBB009EFF6B /* NotificationFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFooterViewModel.swift; sourceTree = "<group>"; };
 		275A29AA24BBB83A00C6D0DB /* FooterViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterViewType.swift; sourceTree = "<group>"; };
+		276151CD24D1137F00228661 /* SetupViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupViewController+Alert.swift"; sourceTree = "<group>"; };
 		2771C49624C673FC00682DF3 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		2771C49824C678DE00682DF3 /* UIView+Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Line.swift"; sourceTree = "<group>"; };
 		2776134B24C7C63A00E3C0B9 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
@@ -137,6 +153,8 @@
 		27C1D2D924B80A0500AA95BF /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		27C9EBCE24CCCFC700FDAFCC /* TasksFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksFooterViewModel.swift; sourceTree = "<group>"; };
 		27C9EBD124CD173900FDAFCC /* TaskSectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSectionViewDelegate.swift; sourceTree = "<group>"; };
+		27CDB9C624D2457F00214097 /* AlertView+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertView+TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		27CDB9C824D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OptionsBodyView+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		27DF3B0C24D66F9200E8AA75 /* UIButton+CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+CardButton.swift"; sourceTree = "<group>"; };
 		27E8870624CE68C0001A2868 /* FHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHTextField.swift; sourceTree = "<group>"; };
 		27E8D0B524C7CFC200E3EE4C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -219,6 +237,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		270E394824D0FF530012C890 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27462B0B24CD1F6700AC776B /* AlertViewController.swift */,
+				270E394624D0FEFD0012C890 /* AlertViewController+Delegate.swift */,
+				270E394B24D0FFA50012C890 /* AlertControllerViewModel.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		270E394924D0FF680012C890 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				2771C49624C673FC00682DF3 /* AlertView.swift */,
+				27F1BBF224C91BF500AEFF01 /* AlertViewDelegate.swift */,
+				27CDB9C624D2457F00214097 /* AlertView+TextFieldDelegate.swift */,
+				27F019F824C7C7FD001870D0 /* ViewModels */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		272E95AC24D780C7002C5624 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				2746D17624CE5FBB009EFF6B /* NotificationFooterViewModel.swift */,
+				272E95AA24D780B6002C5624 /* NotificationFooterViewModel+Picker.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		272E95AF24D78122002C5624 /* Mission Time */ = {
+			isa = PBXGroup;
+			children = (
+				2746D17424CE5EB8009EFF6B /* MissionTimeFooterViewModel.swift */,
+				272E95AD24D78102002C5624 /* MissionTimeFooterViewModel+Picker.swift */,
+			);
+			path = "Mission Time";
+			sourceTree = "<group>";
+		};
 		275A29AC24BBBFEA00C6D0DB /* Today */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,10 +287,8 @@
 		2776134A24C7C5F100E3C0B9 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				2771C49624C673FC00682DF3 /* AlertView.swift */,
-				27462B0B24CD1F6700AC776B /* AlertViewController.swift */,
-				27F1BBF224C91BF500AEFF01 /* AlertViewDelegate.swift */,
-				27F019F824C7C7FD001870D0 /* ViewModels */,
+				270E394824D0FF530012C890 /* Controller */,
+				270E394924D0FF680012C890 /* AlertView */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -262,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				2796D9BB24CE59830015BE2C /* OptionsBodyView.swift */,
+				27CDB9C824D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift */,
 			);
 			path = Options;
 			sourceTree = "<group>";
@@ -346,8 +402,8 @@
 				279CB35324BA995F003126C9 /* Protocol */,
 				279CB35424BA9975003126C9 /* TodayFooterViewModel.swift */,
 				27C9EBCE24CCCFC700FDAFCC /* TasksFooterViewModel.swift */,
-				2746D17424CE5EB8009EFF6B /* MissionTimeFooterViewModel.swift */,
-				2746D17624CE5FBB009EFF6B /* NotificationFooterViewModel.swift */,
+				272E95AF24D78122002C5624 /* Mission Time */,
+				272E95AC24D780C7002C5624 /* Notification */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -356,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				A4F42EA224C8EA0D00F6C95E /* SetupViewController+Greeting.swift */,
+				276151CD24D1137F00228661 /* SetupViewController+Alert.swift */,
 				27EFB4FA24CD1ADA007FDBC0 /* SetupViewController+Footer.swift */,
 			);
 			path = Extensions;
@@ -437,6 +494,7 @@
 				278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */,
 				2776B7E124C91AC10082F4FF /* UILabel+MultipleLines.swift */,
 				27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */,
+				272E95A824D7803E002C5624 /* UIPickerView+Int.swift */,
 				A48B2E7B24C75D7E0017B79D /* UIImage+Assets.swift */,
 				A48B2E7F24C779CA0017B79D /* StackView+Init.swift */,
 			);
@@ -517,6 +575,7 @@
 			children = (
 				A4F42EAA24CDB33600F6C95E /* CoreDataManager.swift */,
 				A4F42EAE24CDB9A000F6C95E /* AppContext.swift */,
+				270E394424D08F470012C890 /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -775,6 +834,7 @@
 				A4F42EA124C8E9F400F6C95E /* SetupViewController.swift in Sources */,
 				27E8D0C124C7D86B00E3EE4C /* AtHomeAlertViewModel.swift in Sources */,
 				278B3A1724CBDCDD00A6DDB3 /* TaskSectionView.swift in Sources */,
+				270E394524D08F470012C890 /* UserDefaultsManager.swift in Sources */,
 				A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */,
 				2776134C24C7C63A00E3C0B9 /* AlertViewModel.swift in Sources */,
 				279CB34F24BA8C43003126C9 /* FooterView.swift in Sources */,
@@ -782,6 +842,7 @@
 				A4F42EAF24CDB9A000F6C95E /* AppContext.swift in Sources */,
 				A48B2E8024C779CA0017B79D /* StackView+Init.swift in Sources */,
 				A48B2E7E24C762820017B79D /* UIButton+Init.swift in Sources */,
+				272E95AE24D78102002C5624 /* MissionTimeFooterViewModel+Picker.swift in Sources */,
 				278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */,
 				27E8D0BF24C7D63E00E3EE4C /* BreakAlertViewModel.swift in Sources */,
 				27C1D2D824B806F500AA95BF /* CAShapeLayer+Star.swift in Sources */,
@@ -790,6 +851,7 @@
 				278045E624B40DC800AEDFBA /* UIFont+FHFonts.swift in Sources */,
 				2796D9BC24CE59830015BE2C /* OptionsBodyView.swift in Sources */,
 				27309F0124B541EA00D60FE8 /* UIView+Constraints.swift in Sources */,
+				272E95AB24D780B6002C5624 /* NotificationFooterViewModel+Picker.swift in Sources */,
 				27E8D0BD24C7D37D00E3EE4C /* PauseAlertViewModel.swift in Sources */,
 				279CB35824BA9AFE003126C9 /* TodayBodyView.swift in Sources */,
 				27C9EBCF24CCCFC700FDAFCC /* TasksFooterViewModel.swift in Sources */,
@@ -812,26 +874,32 @@
 				27462B0C24CD1F6700AC776B /* AlertViewController.swift in Sources */,
 				A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */,
 				A48B2E7824C242360017B79D /* UIView+Shadow.swift in Sources */,
+				27CDB9C924D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
 				278B3A1524CBD41400A6DDB3 /* TasksBodyView.swift in Sources */,
 				27EFB4F924CD1A13007FDBC0 /* FooterViewDelegate.swift in Sources */,
 				278B3A1924CBE9F200A6DDB3 /* UIButton+FHCornerRadius.swift in Sources */,
+				270E394724D0FEFD0012C890 /* AlertViewController+Delegate.swift in Sources */,
 				2746D17724CE5FBB009EFF6B /* NotificationFooterViewModel.swift in Sources */,
 				A48B2E7C24C75D7E0017B79D /* UIImage+Assets.swift in Sources */,
 				A48B2E6F24C232840017B79D /* UIView+Subview.swift in Sources */,
 				279CB34824BA6D9A003126C9 /* UIView+Animations.swift in Sources */,
 				A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */,
+				270E394C24D0FFA50012C890 /* AlertControllerViewModel.swift in Sources */,
 				A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */,
 				A408176A24CEC8D7009C14E3 /* OptionsFooterViewModel.swift in Sources */,
 				27C9EBD224CD173900FDAFCC /* TaskSectionViewDelegate.swift in Sources */,
 				A408176C24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift in Sources */,
 				275A29AB24BBB83A00C6D0DB /* FooterViewType.swift in Sources */,
+				27CDB9C724D2457F00214097 /* AlertView+TextFieldDelegate.swift in Sources */,
 				27F019FA24C7C819001870D0 /* SkipAlertViewModel.swift in Sources */,
 				2771C49924C678DE00682DF3 /* UIView+Line.swift in Sources */,
 				27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */,
 				A48B2E7424C236C40017B79D /* TabbedScrollView.swift in Sources */,
 				278045DE24B405FA00AEDFBA /* Style.swift in Sources */,
+				276151CE24D1137F00228661 /* SetupViewController+Alert.swift in Sources */,
 				2771C49724C673FC00682DF3 /* AlertView.swift in Sources */,
+				272E95A924D7803E002C5624 /* UIPickerView+Int.swift in Sources */,
 				27E8870724CE68C0001A2868 /* FHTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
