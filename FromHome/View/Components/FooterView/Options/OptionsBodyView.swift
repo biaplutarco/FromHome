@@ -48,33 +48,6 @@ class OptionsBodyView: UIView {
         return UIStackView(subviews: [label(option.title), textField(option.inputSelected, type: option.type)], alignment: .center, distribution: .fill, axis: .vertical, spacing: 18)
     }
 
-    private func reloadData() {
-
-        self.stackView.arrangedSubviews.forEach { subview in
-
-            guard let stackView = subview as? UIStackView else { return }
-
-            for i in 0...self.viewModel.options.count - 1 {
-
-                if let textfield = stackView.arrangedSubviews[i] as? UITextField {
-
-                    textfield.placeholder = self.viewModel.options[i].inputSelected
-                }
-            }
-
-//            for i in 0...self.viewModel.options.count {
-//
-//                for
-//            }
-//            stackView.arrangedSubviews.forEach { subview in
-//
-//                guard let textfield = subview as? UITextField else { return }
-//
-//
-//            }
-        }
-    }
-
     private func label(_ title: String) -> UILabel {
 
         let titleLabel = UILabel()
@@ -87,11 +60,11 @@ class OptionsBodyView: UIView {
 
     private func textField(_ placeholder: String, type: OptionType) -> FHTextField {
 
-        let picker = UIPickerView()
+        let picker = UIPickerView(type: type)
         picker.delegate = viewModel
-        picker.tag = type.rawValue
 
         let textField = FHTextField(picker: picker, acessoryView: acessoryView())
+        textField.tag = type.rawValue
         textField.delegate = self
         textField.attributedPlaceholder = Style.fromHome.atributedStringFrom(textStyle: .titleButton, to: placeholder)
 
@@ -114,6 +87,21 @@ class OptionsBodyView: UIView {
         return acessoryView
     }
 
+    private func reloadPlaceholder() {
+
+        self.stackView.arrangedSubviews.forEach { subview in
+
+            guard let stackView = subview as? UIStackView else { return }
+
+            stackView.arrangedSubviews.forEach { subview in
+
+                guard let textField = subview as? UITextField else { return }
+
+                textField.placeholder = self.viewModel.newInput(for: textField.tag)
+            }
+        }
+    }
+
     @objc
     func doneAction() {
 
@@ -121,7 +109,7 @@ class OptionsBodyView: UIView {
 
         viewModel.save()
 
-        reloadData()
+        reloadPlaceholder()
     }
 
     @objc

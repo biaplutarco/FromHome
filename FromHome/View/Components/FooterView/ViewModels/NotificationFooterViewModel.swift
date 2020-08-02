@@ -8,14 +8,6 @@
 
 import UIKit
 
-enum OptionType: Int {
-    case enable = 1
-    case time = 2
-    case mealBreak = 3
-    case workingHours = 4
-    case coffeeBreakHours = 5
-}
-
 extension UIPickerView {
 
     convenience init(type: OptionType) {
@@ -42,7 +34,17 @@ class NotificationFooterViewModel: NSObject, OptionsFooterViewModel {
 
     override init() {
 
-        let enableOption = Option(title: "Enable", inputSelected: String(UserDefaultsManager.notificationEnable()), type: .enable)
+        var enable: String
+
+        if UserDefaultsManager.notificationEnable() {
+
+            enable = "yes"
+        } else {
+
+            enable = "no"
+        }
+
+        let enableOption = Option(title: "Enable", inputSelected: enable, type: .enable)
         let timeOption = Option(title: "Time to work", inputSelected: String(UserDefaultsManager.notificationHour()), type: .time)
 
         options = [enableOption, timeOption]
