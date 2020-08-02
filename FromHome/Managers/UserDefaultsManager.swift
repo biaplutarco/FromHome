@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserDefaultsManager {
+enum UserDefaultsManager {
 
     enum Key: String {
 
@@ -38,11 +38,11 @@ class UserDefaultsManager {
         userDefault.set(notificationHour, forKey: Key.notificationHour.rawValue)
     }
 
-    static func toggle(mealBreak: Bool) {
+    static func change(mealBreak: Bool) {
         userDefault.set(mealBreak, forKey: Key.mealBreak.rawValue)
     }
 
-    static func toggle(notification: Bool) {
+    static func change(notification: Bool) {
         userDefault.set(notification, forKey: Key.notificationEnable.rawValue)
     }
 

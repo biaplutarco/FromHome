@@ -31,6 +31,7 @@ extension AlertViewController: AlertViewDelegate {
                     default:
                         break
                     }
+
             default:
                 break
         }

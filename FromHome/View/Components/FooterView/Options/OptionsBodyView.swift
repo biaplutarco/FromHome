@@ -45,7 +45,13 @@ class OptionsBodyView: UIView {
 
     private func optionView(_ option: Option) -> UIStackView {
 
-        return UIStackView(subviews: [label(option.title), textField(option.inputSelected, type: option.type)], alignment: .center, distribution: .fill, axis: .vertical, spacing: 18)
+        UIStackView(
+            subviews: [label(option.title), textField(option.inputSelected, type: option.type)],
+            alignment: .center,
+            distribution: .fill,
+            axis: .vertical,
+            spacing: 18
+        )
     }
 
     private func label(_ title: String) -> UILabel {

@@ -23,10 +23,11 @@ extension UIView {
                 UIView.animate(withDuration: duration, animations: {
 
                     self.transform = CGAffineTransform.identity
-                }) { _ in
+                },
+                completion: { _ in
 
                     completion?()
-                }
+                })
             })
     }
 }
