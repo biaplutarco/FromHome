@@ -12,12 +12,12 @@ class UserDefaultsManager {
 
     enum Key: String {
 
-        case notificationEnable = "notificationEnable"
-        case notificationHour = "notificationHour"
-        case userName = "userName"
-        case workingHours = "workingHours"
-        case coffeeBreakHours = "coffeeBreakHours"
-        case mealBreak = "mealBreak"
+        case notificationEnable// = "notificationEnable"
+        case notificationHour// = "notificationHour"
+        case userName// = "userName"
+        case workingHours// = "workingHours"
+        case coffeeBreakHours// = "coffeeBreakHours"
+        case mealBreak// = "mealBreak"
     }
 
     private static let userDefault = UserDefaults.standard
