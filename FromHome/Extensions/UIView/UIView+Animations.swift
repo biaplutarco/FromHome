@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
 
-    func scale(_ scale: CGFloat, withDurarion duration: TimeInterval) {
+    func scale(_ scale: CGFloat, withDurarion duration: TimeInterval, _ completion: (() -> Void)?) {
 
         UIView.animate(
             withDuration: duration,
@@ -20,10 +20,14 @@ extension UIView {
             },
             completion: { _ in
 
-                UIView.animate(withDuration: duration) {
+                UIView.animate(withDuration: duration, animations: {
 
                     self.transform = CGAffineTransform.identity
-                }
+                },
+                completion: { _ in
+
+                    completion?()
+                })
             })
     }
 }

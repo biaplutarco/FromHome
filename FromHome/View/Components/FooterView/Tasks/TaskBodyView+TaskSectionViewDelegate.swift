@@ -12,7 +12,7 @@ extension TasksBodyView: TaskSectionViewDelegate {
 
     func presentChangeTaskAlert() {
 
-        let alertController = AlertViewController(.input(.changeTask), delegate: nil)
+        let alertController = AlertViewController(.input(.changeTask))
 
         delegate?.present(alertController, completion: nil)
     }

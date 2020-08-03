@@ -12,10 +12,19 @@ class FHTextField: UITextField {
 
     let padding = UIEdgeInsets(top: 2, left: 10, bottom: 2, right: 10)
 
+    convenience init(picker: UIView, acessoryView: UIView) {
+
+        self.init()
+
+        inputView = picker
+        inputAccessoryView = acessoryView
+    }
+
     init() {
         super.init(frame: .zero)
 
         backgroundColor = .backgroundButton
+        tintColor = .clear
         layer.cornerRadius = 8
     }
 

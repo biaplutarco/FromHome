@@ -12,11 +12,20 @@ class AlertViewController: UIViewController {
 
     private var alertView: AlertView
 
-    init(_ alert: Alert, delegate: AlertViewDelegate?) {
+    let viewModel = AlertControllerViewModel()
+
+    var alert: Alert
+
+    weak var delegate: AlertControllerDelegate?
+
+    init(_ alert: Alert) {
+
         self.alertView = AlertView(alert.viewModel)
-        self.alertView.delegate = delegate
+        self.alert = alert
 
         super.init(nibName: nil, bundle: nil)
+
+        self.alertView.delegate = self
 
         setupView()
     }
@@ -34,19 +43,5 @@ class AlertViewController: UIViewController {
         modalPresentationStyle = .overCurrentContext
 
         view.addSubview(alertView)
-
-        constraints()
-    }
-
-    private func constraints() {
-
-        alertView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-
-            alertView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            alertView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            alertView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24)
-        ])
     }
 }
