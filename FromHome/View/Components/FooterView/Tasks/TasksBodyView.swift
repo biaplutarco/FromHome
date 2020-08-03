@@ -24,15 +24,15 @@ class TasksBodyView: UIView {
 
     weak var delegate: TasksBodyViewDelegate?
 
-    init(getReady: (sectionTitle: String, tasks: [String]), goHome: (sectionTitle: String, tasks: [String])) {
+    init(getReady: (sectionTitle: String, tasks: [String]), goHome: (sectionTitle: String, tasks: [String]), delegate: TaskSectionViewDelegate) {
 
         self.getReadySectionView = TaskSectionView(sectionTitle: getReady.sectionTitle, tasks: getReady.tasks)
         self.goHomeSectionView = TaskSectionView(sectionTitle: goHome.sectionTitle, tasks: goHome.tasks)
 
         super.init(frame: .zero)
 
-        self.getReadySectionView.delegate = self
-        self.goHomeSectionView.delegate = self
+        self.getReadySectionView.delegate = delegate
+        self.goHomeSectionView.delegate = delegate
 
         addSubviews([stackView])
     }

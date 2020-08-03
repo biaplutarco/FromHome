@@ -8,12 +8,12 @@
 
 import UIKit
 
-extension TasksBodyView: TaskSectionViewDelegate {
-
-    func presentChangeTaskAlert() {
-
-        let alertController = AlertViewController(.input(.changeTask))
-
-        delegate?.present(alertController, completion: nil)
-    }
-}
+//extension TasksBodyView: TaskSectionViewDelegate {
+//
+//    func presentChangeTaskAlert() {
+//
+//        let alertController = AlertViewController(.input(.changeTask))
+//
+//        delegate?.present(alertController, completion: nil)
+//    }
+//}

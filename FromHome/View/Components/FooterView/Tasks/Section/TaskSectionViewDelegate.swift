@@ -9,5 +9,5 @@
 import Foundation
 
 protocol TaskSectionViewDelegate: AnyObject {
-    func presentChangeTaskAlert()
+    func presentChangeTaskAlert(taskSection: TaskSectionView, index: Int)
 }

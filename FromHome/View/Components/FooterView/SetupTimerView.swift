@@ -1,5 +1,5 @@
 //
-//  SetupNotificationView.swift
+//  SetupTimerView.swift
 //  FromHome
 //
 //  Created by Daniboy on 7/31/20.
@@ -8,17 +8,17 @@
 
 import UIKit
 
-class SetupNotificationView: UIView {
+class SetupTimerView: UIView {
 
     let cardView: TitledCardView
 
     let cardContent: OptionsBodyView
 
-    let viewModel = NotificationFooterViewModel()
+    let viewModel = MissionTimeFooterViewModel()
 
     init() {
 
-        cardContent = OptionsBodyView(options: viewModel.options)
+        cardContent = OptionsBodyView(options: viewModel.options, viewModel: viewModel)
 
         cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent)
 

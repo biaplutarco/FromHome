@@ -12,14 +12,18 @@ class OptionsBodyView: UIView {
 
     let stackView = UIStackView(subviews: [], alignment: .center, distribution: .fillEqually, axis: .horizontal, spacing: 24)
 
-    init(options: Options) {
+    let viewModel: OptionsFooterViewModel
+
+    init(options: [Option], viewModel: OptionsFooterViewModel) {
+
+        self.viewModel = viewModel
 
         super.init(frame: .zero)
 
         addSubviewCoveringSuperView(stackView)
 
         options.forEach { option in
-            self.stackView.addArrangedSubview(self.addOption(title: option.title, placeholder: option.input))
+            self.stackView.addArrangedSubview(self.optionView(option))
         }
     }
 
@@ -33,13 +37,6 @@ class OptionsBodyView: UIView {
         addSubview(stackView)
 
         stackView.fulfillSuperview()
-    }
-
-    private func setupOptions(_ options: [Option]) {
-
-        options.forEach { option in
-            self.stackView.addArrangedSubview(self.optionView(option))
-        }
     }
 
     private func optionView(_ option: Option) -> UIStackView {

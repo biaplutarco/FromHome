@@ -1,24 +1,25 @@
 //
-//  TransitionTasksView.swift
+//  SetupNotificationView.swift
 //  FromHome
 //
-//  Created by Daniboy on 8/2/20.
+//  Created by Daniboy on 7/31/20.
 //  Copyright © 2020 biaplutarco. All rights reserved.
 //
 
 import UIKit
 
-class TransitionTasksView: UIView {
+class SetupNotificationView: UIView {
 
     let cardView: TitledCardView
 
-    let cardContent: TodayBodyView
+    let cardContent: OptionsBodyView
 
-    let viewModel = TodayFooterViewModel()
+    let viewModel = NotificationFooterViewModel()
 
-    init(_ delegate: SetupTodayViewDelegate? = nil) {
+    init() {
 
-        cardContent = TodayBodyView.init(buttonTitle: viewModel.buttonTitle, bodyText: viewModel.bodyText)
+        cardContent = OptionsBodyView(options: viewModel.options, viewModel: viewModel)
+
         cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent)
 
         super.init(frame: .zero)

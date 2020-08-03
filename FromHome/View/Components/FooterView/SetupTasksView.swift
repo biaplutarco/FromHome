@@ -1,5 +1,5 @@
 //
-//  SetupTimerView.swift
+//  SetupTasksView.swift
 //  FromHome
 //
 //  Created by Daniboy on 7/31/20.
@@ -8,19 +8,15 @@
 
 import UIKit
 
-class SetupTimerView: UIView {
+class SetupTasksView: UIView {
 
-    let cardView: TitledCardView
+    lazy var cardContent = TasksBodyView(getReady: self.viewModel.getReady, goHome: self.viewModel.goHome, delegate: self)
 
-    let cardContent: OptionsBodyView
+    lazy var  cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent)
 
-    let viewModel = MissionTimeFooterViewModel()
+    let viewModel = TasksFooterViewModel()
 
     init() {
-
-        cardContent = OptionsBodyView(options: viewModel.options)
-
-        cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent)
 
         super.init(frame: .zero)
 
