@@ -15,6 +15,6 @@ extension SetupViewController: GreetingViewDelegate {
         let alert = AlertViewController(.input(.changeName))
         alert.delegate = self
 
-        present(alert, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }

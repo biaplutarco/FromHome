@@ -11,7 +11,7 @@ import UIKit
 class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
 
-    var viewController: UIViewController!
+    var rootController: UIViewController!
 
     var window: UIWindow
 
@@ -20,11 +20,19 @@ class MainCoordinator: Coordinator {
 
         window.windowScene = windowScene
 
-        viewController = SetupViewController(self)
+        rootController = SetupViewController(self)
 
-        window.rootViewController = viewController
+        window.rootViewController = rootController
         window.makeKeyAndVisible()
     }
 
     func start() {}
+
+    func startDailyWork(_ backgroundView: UIView) {
+        let viewController = TransitionTaskViewController(backgroundView: backgroundView)
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalTransitionStyle = .crossDissolve
+
+        rootController.present(viewController, animated: true, completion: nil)
+    }
 }

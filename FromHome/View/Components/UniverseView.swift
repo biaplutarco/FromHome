@@ -10,6 +10,8 @@ import UIKit
 
 class UniverseView: UIView {
 
+    var stars = [CAShapeLayer]()
+
     private lazy var gradientLayer: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.gradientTop.cgColor, UIColor.gradientBottom.cgColor]
@@ -22,7 +24,15 @@ class UniverseView: UIView {
         super.init(frame: frame)
 
         layer.addSublayer(gradientLayer)
-        layer.addSublayer(starts(quant: 20))
+        layer.addSublayer(addRandomStars(quant: 20))
+    }
+
+    init(frame: CGRect, stars: [CAShapeLayer]) {
+        super.init(frame: frame)
+        self.stars = stars
+
+        layer.addSublayer(gradientLayer)
+        layer.addSublayer(addStars())
     }
 
     @available(*, unavailable)
@@ -38,7 +48,7 @@ class UniverseView: UIView {
         CGFloat.random(in: 1...5)
     }
 
-    private func starts(quant: Int) -> CALayer {
+    private func addRandomStars(quant: Int) -> CALayer {
 
         let startsLayer = CALayer()
         startsLayer.frame = frame
@@ -46,7 +56,20 @@ class UniverseView: UIView {
         for _ in 0...quant {
 
             let star = CAShapeLayer(startPoint: randomPoint(), size: randomSize(), color: .secondaryText)
+            stars.append(star)
 
+            startsLayer.addSublayer(star)
+        }
+
+        return startsLayer
+    }
+
+    func addStars() -> CALayer {
+
+        let startsLayer = CALayer()
+        startsLayer.frame = frame
+
+        for star in stars {
             startsLayer.addSublayer(star)
         }
 

@@ -10,7 +10,7 @@ import UIKit
 
 extension TabbedScrollView: SegmentedTabViewDelegate {
     func segmentShouldChange(index: Int) {
-        pagedScrollView.scrollToPage(index)
+        pagedScrollView.scrollToPage(page: index, animated: false)
         shouldUpdateTab = false
     }
 }

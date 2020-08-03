@@ -53,14 +53,30 @@ class TaskSectionView: UIView {
 
     private func actions() {
 
-        firstButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-        secondButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-        thirdButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        firstButton.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
+        secondButton.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
+        thirdButton.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
     }
 
     @objc
-    func didTapButton() {
-        delegate?.presentChangeTaskAlert()
+    func didTapButton(_ sender: UIButton) {
+        let index: Int
+
+        switch sender {
+            case firstButton:
+                index = 0
+
+            case secondButton:
+                index = 1
+
+            case thirdButton:
+                index = 2
+
+            default:
+                fatalError("unknown button index")
+        }
+
+        delegate?.presentChangeTaskAlert(taskSection: self, index: index)
     }
 
     private func setButtonTitles(to tasks: [String]) {
