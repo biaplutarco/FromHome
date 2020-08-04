@@ -29,4 +29,8 @@ extension UIFont {
     static var titleButton: UIFont { UIFont.boldSystemFont(ofSize: 16) }
 
     static var destructiveTitleButton: UIFont { UIFont.systemFont(ofSize: 16) }
+
+    static var workClockNumbers: UIFont { UIFont.monospacedSystemFont(ofSize: 64, weight: .regular) }
+
+    static var workClockLabels: UIFont { UIFont.systemFont(ofSize: 14) }
 }

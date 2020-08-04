@@ -25,7 +25,7 @@
 		2771C49724C673FC00682DF3 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2771C49624C673FC00682DF3 /* AlertView.swift */; };
 		2771C49924C678DE00682DF3 /* UIView+Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2771C49824C678DE00682DF3 /* UIView+Line.swift */; };
 		2776134C24C7C63A00E3C0B9 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2776134B24C7C63A00E3C0B9 /* AlertViewModel.swift */; };
-		2776B7E224C91AC10082F4FF /* UILabel+MultipleLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2776B7E124C91AC10082F4FF /* UILabel+MultipleLines.swift */; };
+		2776B7E224C91AC10082F4FF /* UILabel+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2776B7E124C91AC10082F4FF /* UILabel+Init.swift */; };
 		278045DE24B405FA00AEDFBA /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045DD24B405FA00AEDFBA /* Style.swift */; };
 		278045E024B4073700AEDFBA /* UIColor+FHColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */; };
 		278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */; };
@@ -64,6 +64,7 @@
 		A408176A24CEC8D7009C14E3 /* OptionsFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408176924CEC8D7009C14E3 /* OptionsFooterViewModel.swift */; };
 		A408176C24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408176B24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift */; };
 		A418BE5F24D9330A00F6B4E7 /* DailyWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418BE5E24D9330A00F6B4E7 /* DailyWorkViewController.swift */; };
+		A418BE6124D937B500F6B4E7 /* TimerClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418BE6024D937B500F6B4E7 /* TimerClockView.swift */; };
 		A476AFD124D445670025DFE8 /* SetupTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD024D445670025DFE8 /* SetupTodayView.swift */; };
 		A476AFD324D445760025DFE8 /* SetupTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD224D445760025DFE8 /* SetupTimerView.swift */; };
 		A476AFD524D445850025DFE8 /* SetupTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD424D445850025DFE8 /* SetupTasksView.swift */; };
@@ -137,7 +138,7 @@
 		2771C49624C673FC00682DF3 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		2771C49824C678DE00682DF3 /* UIView+Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Line.swift"; sourceTree = "<group>"; };
 		2776134B24C7C63A00E3C0B9 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
-		2776B7E124C91AC10082F4FF /* UILabel+MultipleLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+MultipleLines.swift"; sourceTree = "<group>"; };
+		2776B7E124C91AC10082F4FF /* UILabel+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Init.swift"; sourceTree = "<group>"; };
 		278045DD24B405FA00AEDFBA /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FHColors.swift"; sourceTree = "<group>"; };
 		278045E324B40CAE00AEDFBA /* Style+FHSyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Style+FHSyle.swift"; sourceTree = "<group>"; };
@@ -179,6 +180,7 @@
 		A408176924CEC8D7009C14E3 /* OptionsFooterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsFooterViewModel.swift; sourceTree = "<group>"; };
 		A408176B24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskBodyView+TaskSectionViewDelegate.swift"; sourceTree = "<group>"; };
 		A418BE5E24D9330A00F6B4E7 /* DailyWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWorkViewController.swift; sourceTree = "<group>"; };
+		A418BE6024D937B500F6B4E7 /* TimerClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerClockView.swift; sourceTree = "<group>"; };
 		A476AFD024D445670025DFE8 /* SetupTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTodayView.swift; sourceTree = "<group>"; };
 		A476AFD224D445760025DFE8 /* SetupTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTimerView.swift; sourceTree = "<group>"; };
 		A476AFD424D445850025DFE8 /* SetupTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTasksView.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				278B3A1324CBD26800A6DDB3 /* Tasks */,
 				2796D9BD24CE59890015BE2C /* Options */,
 				275A29AC24BBBFEA00C6D0DB /* Today */,
+				A418BE6224D9431E00F6B4E7 /* Timer */,
 			);
 			path = FooterView;
 			sourceTree = "<group>";
@@ -457,6 +460,14 @@
 			path = DailyWork;
 			sourceTree = "<group>";
 		};
+		A418BE6224D9431E00F6B4E7 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				A418BE6024D937B500F6B4E7 /* TimerClockView.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		A48B2E6824C0E9500017B79D /* Setup */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,7 +521,7 @@
 				27DF3B0E24D66F9500E8AA75 /* UIButton */,
 				278045DF24B4073700AEDFBA /* UIColor+FHColors.swift */,
 				278045E524B40DC800AEDFBA /* UIFont+FHFonts.swift */,
-				2776B7E124C91AC10082F4FF /* UILabel+MultipleLines.swift */,
+				2776B7E124C91AC10082F4FF /* UILabel+Init.swift */,
 				27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */,
 				272E95A824D7803E002C5624 /* UIPickerView+Int.swift */,
 				A48B2E7B24C75D7E0017B79D /* UIImage+Assets.swift */,
@@ -895,9 +906,10 @@
 				27EFB4FB24CD1ADA007FDBC0 /* SetupViewController+Footer.swift in Sources */,
 				279CB35224BA976A003126C9 /* FooterViewModel.swift in Sources */,
 				A4F42EAB24CDB33600F6C95E /* CoreDataManager.swift in Sources */,
-				2776B7E224C91AC10082F4FF /* UILabel+MultipleLines.swift in Sources */,
+				2776B7E224C91AC10082F4FF /* UILabel+Init.swift in Sources */,
 				2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */,
 				A4AE132724D6C22C00C208F6 /* SetupViewController+SetupToday.swift in Sources */,
+				A418BE6124D937B500F6B4E7 /* TimerClockView.swift in Sources */,
 				279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */,
 				27462B0C24CD1F6700AC776B /* AlertViewController.swift in Sources */,
 				A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */,
