@@ -12,7 +12,7 @@ class SetupTasksView: UIView {
 
     lazy var cardContent = TasksBodyView(getReady: self.viewModel.getReady, goHome: self.viewModel.goHome, delegate: self)
 
-    lazy var  cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent)
+    lazy var  cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent, type: .footer)
 
     let viewModel = TasksFooterViewModel()
 

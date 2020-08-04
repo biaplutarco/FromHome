@@ -17,6 +17,8 @@ class TransitionTaskViewController: UIViewController {
         self.init(nibName: nil, bundle: nil)
 
         view = backgroundView
+
+        view.addSubviews([TasksView(viewModel: GetReadyTasksViewModel())])
     }
 
     func backToSetup() {

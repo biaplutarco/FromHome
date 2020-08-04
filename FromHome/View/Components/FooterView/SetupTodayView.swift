@@ -25,7 +25,7 @@ class SetupTodayView: UIView {
     init(_ delegate: SetupTodayViewDelegate? = nil) {
 
         cardContent = TodayBodyView.init(buttonTitle: viewModel.buttonTitle, bodyText: viewModel.bodyText)
-        cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent)
+        cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent, type: .footer)
 
         super.init(frame: .zero)
 
