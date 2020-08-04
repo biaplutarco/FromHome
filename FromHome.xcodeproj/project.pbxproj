@@ -63,6 +63,7 @@
 		8CF228F9FB95080DCB43F60B /* Pods_FromHome_FromHomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344516298486A939C3EDF6F6 /* Pods_FromHome_FromHomeUITests.framework */; };
 		A408176A24CEC8D7009C14E3 /* OptionsFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408176924CEC8D7009C14E3 /* OptionsFooterViewModel.swift */; };
 		A408176C24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408176B24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift */; };
+		A418BE5F24D9330A00F6B4E7 /* DailyWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418BE5E24D9330A00F6B4E7 /* DailyWorkViewController.swift */; };
 		A476AFD124D445670025DFE8 /* SetupTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD024D445670025DFE8 /* SetupTodayView.swift */; };
 		A476AFD324D445760025DFE8 /* SetupTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD224D445760025DFE8 /* SetupTimerView.swift */; };
 		A476AFD524D445850025DFE8 /* SetupTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD424D445850025DFE8 /* SetupTasksView.swift */; };
@@ -177,6 +178,7 @@
 		8A55388DE651E6CCDD9C7396 /* Pods-FromHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHomeTests.debug.xcconfig"; path = "Target Support Files/Pods-FromHomeTests/Pods-FromHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A408176924CEC8D7009C14E3 /* OptionsFooterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsFooterViewModel.swift; sourceTree = "<group>"; };
 		A408176B24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskBodyView+TaskSectionViewDelegate.swift"; sourceTree = "<group>"; };
+		A418BE5E24D9330A00F6B4E7 /* DailyWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWorkViewController.swift; sourceTree = "<group>"; };
 		A476AFD024D445670025DFE8 /* SetupTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTodayView.swift; sourceTree = "<group>"; };
 		A476AFD224D445760025DFE8 /* SetupTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTimerView.swift; sourceTree = "<group>"; };
 		A476AFD424D445850025DFE8 /* SetupTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTasksView.swift; sourceTree = "<group>"; };
@@ -447,6 +449,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		A418BE5D24D932D300F6B4E7 /* DailyWork */ = {
+			isa = PBXGroup;
+			children = (
+				A418BE5E24D9330A00F6B4E7 /* DailyWorkViewController.swift */,
+			);
+			path = DailyWork;
+			sourceTree = "<group>";
+		};
 		A48B2E6824C0E9500017B79D /* Setup */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +482,7 @@
 			children = (
 				A48B2E6824C0E9500017B79D /* Setup */,
 				A4AE132824D6C3DD00C208F6 /* TransitionTasks */,
+				A418BE5D24D932D300F6B4E7 /* DailyWork */,
 				A49ED7A924B7A7A8006C70B6 /* Components */,
 			);
 			path = View;
@@ -893,6 +904,7 @@
 				A48B2E7824C242360017B79D /* UIView+Shadow.swift in Sources */,
 				27CDB9C924D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
+				A418BE5F24D9330A00F6B4E7 /* DailyWorkViewController.swift in Sources */,
 				278B3A1524CBD41400A6DDB3 /* TasksBodyView.swift in Sources */,
 				278B3A1924CBE9F200A6DDB3 /* UIButton+FHCornerRadius.swift in Sources */,
 				270E394724D0FEFD0012C890 /* AlertViewController+Delegate.swift in Sources */,
