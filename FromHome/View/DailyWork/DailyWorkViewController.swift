@@ -17,15 +17,26 @@ class DailyWorkViewController: UIViewController {
 
     lazy var cardContent = TimerClockView()
 
-    convenience init(backgroundView: UIView) {
+    lazy var clockManager = ClockManager.init(hours: 0, minutes: 3, delegate: self)
 
-        self.init(nibName: nil, bundle: nil)
+    init(backgroundView: UIView) {
+        super.init(nibName: nil, bundle: nil)
 
         view = backgroundView
 
         view.addSubviews([cardView])
 
         setupConstraints()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        clockManager.startTimer()
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     func backToSetup() {

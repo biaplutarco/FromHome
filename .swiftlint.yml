@@ -22,6 +22,7 @@ disabled_rules: # rule identifiers to exclude from running
   - multiline_arguments_brackets
   - prefixed_toplevel_constant
   - single_test_class # todo: check again later
+  - shorthand_operator
   - sorted_imports
   - trailing_closure
   - type_contents_order
@@ -121,7 +122,6 @@ opt_in_rules: # some rules are only opt-in
   - protocol_property_accessors_order
   - redundant_discardable_let
   - return_arrow_whitespace
-  - shorthand_operator
   - statement_position
   - switch_case_alignment
   - switch_case_on_newline

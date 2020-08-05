@@ -65,6 +65,8 @@
 		A408176C24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408176B24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift */; };
 		A418BE5F24D9330A00F6B4E7 /* DailyWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418BE5E24D9330A00F6B4E7 /* DailyWorkViewController.swift */; };
 		A418BE6124D937B500F6B4E7 /* TimerClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418BE6024D937B500F6B4E7 /* TimerClockView.swift */; };
+		A429788F24DB2279004A707F /* ClockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A429788E24DB2279004A707F /* ClockManager.swift */; };
+		A429789124DB2AA4004A707F /* DailyWorkViewController+ClockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A429789024DB2AA4004A707F /* DailyWorkViewController+ClockManager.swift */; };
 		A476AFD124D445670025DFE8 /* SetupTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD024D445670025DFE8 /* SetupTodayView.swift */; };
 		A476AFD324D445760025DFE8 /* SetupTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD224D445760025DFE8 /* SetupTimerView.swift */; };
 		A476AFD524D445850025DFE8 /* SetupTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AFD424D445850025DFE8 /* SetupTasksView.swift */; };
@@ -181,6 +183,8 @@
 		A408176B24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskBodyView+TaskSectionViewDelegate.swift"; sourceTree = "<group>"; };
 		A418BE5E24D9330A00F6B4E7 /* DailyWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWorkViewController.swift; sourceTree = "<group>"; };
 		A418BE6024D937B500F6B4E7 /* TimerClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerClockView.swift; sourceTree = "<group>"; };
+		A429788E24DB2279004A707F /* ClockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockManager.swift; sourceTree = "<group>"; };
+		A429789024DB2AA4004A707F /* DailyWorkViewController+ClockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyWorkViewController+ClockManager.swift"; sourceTree = "<group>"; };
 		A476AFD024D445670025DFE8 /* SetupTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTodayView.swift; sourceTree = "<group>"; };
 		A476AFD224D445760025DFE8 /* SetupTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTimerView.swift; sourceTree = "<group>"; };
 		A476AFD424D445850025DFE8 /* SetupTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupTasksView.swift; sourceTree = "<group>"; };
@@ -456,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				A418BE5E24D9330A00F6B4E7 /* DailyWorkViewController.swift */,
+				A429789024DB2AA4004A707F /* DailyWorkViewController+ClockManager.swift */,
 			);
 			path = DailyWork;
 			sourceTree = "<group>";
@@ -613,6 +618,7 @@
 				A4F42EAA24CDB33600F6C95E /* CoreDataManager.swift */,
 				A4F42EAE24CDB9A000F6C95E /* AppContext.swift */,
 				270E394424D08F470012C890 /* UserDefaultsManager.swift */,
+				A429788E24DB2279004A707F /* ClockManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -897,6 +903,7 @@
 				27E8D0B924C7D01200E3EE4C /* LeaveAlertViewModel.swift in Sources */,
 				279478E524CD1DD500AB3E79 /* TasksBodyViewDelegate.swift in Sources */,
 				27E8D0B624C7CFC200E3EE4C /* Alert.swift in Sources */,
+				A429789124DB2AA4004A707F /* DailyWorkViewController+ClockManager.swift in Sources */,
 				27B806DA24BE213800D0BC87 /* Observable.swift in Sources */,
 				A476AFD324D445760025DFE8 /* SetupTimerView.swift in Sources */,
 				A476AFD524D445850025DFE8 /* SetupTasksView.swift in Sources */,
@@ -914,6 +921,7 @@
 				27462B0C24CD1F6700AC776B /* AlertViewController.swift in Sources */,
 				A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */,
 				A48B2E7824C242360017B79D /* UIView+Shadow.swift in Sources */,
+				A429788F24DB2279004A707F /* ClockManager.swift in Sources */,
 				27CDB9C924D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
 				A418BE5F24D9330A00F6B4E7 /* DailyWorkViewController.swift in Sources */,
