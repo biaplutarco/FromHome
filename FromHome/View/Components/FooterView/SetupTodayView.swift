@@ -42,6 +42,10 @@ class SetupTodayView: UIView {
 
     @objc
     func startTodayButtonPressed(_ sender: UIButton) {
-        delegate?.startTodayButtonPressed(self)
+
+        sender.scale(0.97, withDurarion: 0.1) {
+
+            self.delegate?.startTodayButtonPressed(self)
+        }
     }
 }

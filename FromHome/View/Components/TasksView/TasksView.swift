@@ -43,13 +43,24 @@ class TasksView: UIView {
 
     private func taskView(_ taskTitle: String) -> UIStackView {
 
-        UIStackView(
-            subviews: [checkMarkButton(), taskLabel(taskTitle)],
+        let button = checkMarkButton()
+        let label = taskLabel(taskTitle)
+
+        let stackView = UIStackView(
+            subviews: [button, label],
             alignment: .leading,
             distribution: .fill,
             axis: .horizontal,
             spacing: 18
         )
+
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            label.heightAnchor.constraint(equalTo: button.heightAnchor)
+        ])
+
+        return stackView
     }
 
     private func taskLabel(_ title: String) -> UILabel {
@@ -85,12 +96,12 @@ class TasksView: UIView {
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
 
-        guard let superview = superview else { fatalError("No super view") }
+        guard let superview = superview else { return }
 
         NSLayoutConstraint.activate([
 
-            leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor),
+            trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor),
             topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: 16),
 
             cardView.topAnchor.constraint(equalTo: topAnchor)

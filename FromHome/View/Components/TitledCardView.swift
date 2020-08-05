@@ -51,7 +51,7 @@ class TitledCardView: UIView {
 
     override func didMoveToSuperview() {
 
-        guard let superview = superview else { fatalError("No super view") }
+        guard let superview = superview else { return }
 
         translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
