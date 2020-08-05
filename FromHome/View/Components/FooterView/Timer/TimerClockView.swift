@@ -32,7 +32,7 @@ class TimerClockView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupStyle() {
+    private func setupStyle() {
         Style.fromHome.apply(textStyle: .workClockNumbers, to: hoursNumberLabel)
         Style.fromHome.apply(textStyle: .workClockNumbers, to: colonLabel)
         Style.fromHome.apply(textStyle: .workClockNumbers, to: minutesNumberLabel)
