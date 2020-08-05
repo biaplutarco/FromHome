@@ -25,7 +25,7 @@ class SetupTodayView: UIView {
     init(_ delegate: SetupTodayViewDelegate? = nil) {
 
         cardContent = TodayBodyView.init(buttonTitle: viewModel.buttonTitle, bodyText: viewModel.bodyText)
-        cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent)
+        cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent, type: .footer)
 
         super.init(frame: .zero)
 
@@ -42,7 +42,11 @@ class SetupTodayView: UIView {
 
     @objc
     func startTodayButtonPressed(_ sender: UIButton) {
-        delegate?.startTodayButtonPressed(self)
+
+        sender.scale(0.97, withDurarion: 0.1) {
+
+            self.delegate?.startTodayButtonPressed(self)
+        }
     }
 
     override func didMoveToSuperview() {
