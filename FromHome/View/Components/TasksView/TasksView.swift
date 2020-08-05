@@ -11,18 +11,20 @@ import UIKit
 class TasksView: UIView {
 
     let cardView: TitledCardView
-    let stackView = UIStackView(subviews: [], alignment: .fill, distribution: .fill, axis: .vertical, spacing: 18)
+
+    let checkListStackView = UIStackView(subviews: [], alignment: .fill, distribution: .fill, axis: .vertical, spacing: 18)
 
     var viewModel: TasksViewModel
 
     init(viewModel: TasksViewModel) {
 
         self.viewModel = viewModel
-        self.cardView = TitledCardView(titleType: .header, title: viewModel.title, subView: stackView, type: .header)
+        self.cardView = TitledCardView(titleType: .header, title: viewModel.title, subView: checkListStackView, type: .header)
 
         super.init(frame: .zero)
 
         checkListView(for: viewModel.taskList)
+
         addSubviews([cardView])
     }
 
@@ -35,7 +37,7 @@ class TasksView: UIView {
 
         list.forEach { task in
 
-            self.stackView.addArrangedSubview(taskView(task))
+            self.checkListStackView.addArrangedSubview(taskView(task))
         }
     }
 
@@ -90,7 +92,8 @@ class TasksView: UIView {
             leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: 16),
-            heightAnchor.constraint(equalToConstant: 200)
+
+            cardView.topAnchor.constraint(equalTo: topAnchor)
         ])
     }
 }
