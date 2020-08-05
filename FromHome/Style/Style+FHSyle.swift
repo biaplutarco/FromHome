@@ -48,6 +48,12 @@ extension Style.TextStyle {
 
             case .destructiveTitleButton:
                 return Style.TextAttributes(font: .destructiveTitleButton, color: .secondaryText)
+
+            case .workClockNumbers:
+                return Style.TextAttributes(font: .workClockNumbers, color: .primaryText)
+
+            case .workClockLabels:
+                return Style.TextAttributes(font: .workClockLabels, color: .primaryText)
         }
     }
 }

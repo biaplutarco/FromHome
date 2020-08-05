@@ -48,4 +48,14 @@ class SetupTodayView: UIView {
             self.delegate?.startTodayButtonPressed(self)
         }
     }
+
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+
+        NSLayoutConstraint.activate([
+            cardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            cardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            cardView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)
+        ])
+    }
 }

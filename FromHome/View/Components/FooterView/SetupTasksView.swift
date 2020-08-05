@@ -31,4 +31,14 @@ class SetupTasksView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+
+        NSLayoutConstraint.activate([
+            cardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            cardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            cardView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)
+        ])
+    }
 }
