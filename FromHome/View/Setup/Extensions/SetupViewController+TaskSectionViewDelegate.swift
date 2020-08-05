@@ -1,5 +1,5 @@
 //
-//  SetupTasksView+TaskSectionViewDelegate.swift
+//  SetupViewController+TaskSectionViewDelegate.swift
 //  FromHome
 //
 //  Created by Daniboy on 8/3/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension SetupTasksView: TaskSectionViewDelegate {
+extension SetupViewController: TaskSectionViewDelegate {
     func presentChangeTaskAlert(taskSection: TaskSectionView, index: Int) {
         print("show alert, for section \(taskSection) and index \(index)")
     }

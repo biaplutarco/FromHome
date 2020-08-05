@@ -10,13 +10,17 @@ import UIKit
 
 class SetupTasksView: UIView {
 
-    lazy var cardContent = TasksBodyView(getReady: self.viewModel.getReady, goHome: self.viewModel.goHome, delegate: self)
+    let cardContent: TasksBodyView
 
-    lazy var  cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent, type: .footer)
+    let cardView: TitledCardView
 
     let viewModel = TasksFooterViewModel()
 
-    init() {
+    init(_ delegate: TaskSectionViewDelegate) {
+
+        cardContent = TasksBodyView(getReady: self.viewModel.getReady, goHome: self.viewModel.goHome, delegate: delegate)
+
+        cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent, type: .footer)
 
         super.init(frame: .zero)
 

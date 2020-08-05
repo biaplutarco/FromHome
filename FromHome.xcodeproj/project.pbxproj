@@ -82,7 +82,7 @@
 		A48B2E8024C779CA0017B79D /* StackView+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B2E7F24C779CA0017B79D /* StackView+Init.swift */; };
 		A4AE132724D6C22C00C208F6 /* SetupViewController+SetupToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE132624D6C22B00C208F6 /* SetupViewController+SetupToday.swift */; };
 		A4AE132A24D6C3F800C208F6 /* TransitionTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE132924D6C3F800C208F6 /* TransitionTaskViewController.swift */; };
-		A4AE133524D8268600C208F6 /* SetupTasksView+TaskSectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE133424D8268600C208F6 /* SetupTasksView+TaskSectionViewDelegate.swift */; };
+		A4AE133524D8268600C208F6 /* SetupViewController+TaskSectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE133424D8268600C208F6 /* SetupViewController+TaskSectionViewDelegate.swift */; };
 		A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778624B3994400A49E7F /* AppDelegate.swift */; };
 		A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778824B3994400A49E7F /* SceneDelegate.swift */; };
 		A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4AE778F24B3994400A49E7F /* FromHome.xcdatamodeld */; };
@@ -200,7 +200,7 @@
 		A48B2E7F24C779CA0017B79D /* StackView+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView+Init.swift"; sourceTree = "<group>"; };
 		A4AE132624D6C22B00C208F6 /* SetupViewController+SetupToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupViewController+SetupToday.swift"; sourceTree = "<group>"; };
 		A4AE132924D6C3F800C208F6 /* TransitionTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionTaskViewController.swift; sourceTree = "<group>"; };
-		A4AE133424D8268600C208F6 /* SetupTasksView+TaskSectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupTasksView+TaskSectionViewDelegate.swift"; sourceTree = "<group>"; };
+		A4AE133424D8268600C208F6 /* SetupViewController+TaskSectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupViewController+TaskSectionViewDelegate.swift"; sourceTree = "<group>"; };
 		A4AE778324B3994400A49E7F /* FromHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FromHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AE778624B3994400A49E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4AE778824B3994400A49E7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -375,7 +375,6 @@
 				A476AFD024D445670025DFE8 /* SetupTodayView.swift */,
 				A476AFD224D445760025DFE8 /* SetupTimerView.swift */,
 				A476AFD424D445850025DFE8 /* SetupTasksView.swift */,
-				A4AE133424D8268600C208F6 /* SetupTasksView+TaskSectionViewDelegate.swift */,
 				A476AFD624D445940025DFE8 /* SetupNotificationView.swift */,
 				27EFB4F724CD193E007FDBC0 /* ViewModels */,
 				278B3A1324CBD26800A6DDB3 /* Tasks */,
@@ -454,6 +453,7 @@
 				A4AE132624D6C22B00C208F6 /* SetupViewController+SetupToday.swift */,
 				276151CD24D1137F00228661 /* SetupViewController+Alert.swift */,
 				27EFB4FA24CD1ADA007FDBC0 /* SetupViewController+Footer.swift */,
+				A4AE133424D8268600C208F6 /* SetupViewController+TaskSectionViewDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -929,7 +929,7 @@
 				2746D17724CE5FBB009EFF6B /* NotificationFooterViewModel.swift in Sources */,
 				A48B2E7C24C75D7E0017B79D /* UIImage+Assets.swift in Sources */,
 				A48B2E6F24C232840017B79D /* UIView+Subview.swift in Sources */,
-				A4AE133524D8268600C208F6 /* SetupTasksView+TaskSectionViewDelegate.swift in Sources */,
+				A4AE133524D8268600C208F6 /* SetupViewController+TaskSectionViewDelegate.swift in Sources */,
 				279CB34824BA6D9A003126C9 /* UIView+Animations.swift in Sources */,
 				A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */,
 				A4AE132A24D6C3F800C208F6 /* TransitionTaskViewController.swift in Sources */,

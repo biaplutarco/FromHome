@@ -19,7 +19,7 @@ class SetupViewController: UIViewController {
 
     lazy var todayView = SetupTodayView(self)
     lazy var timerView = SetupTimerView()
-    lazy var tasksView = SetupTasksView()
+    lazy var tasksView = SetupTasksView(self)
     lazy var notificationView = SetupNotificationView()
 
     lazy var tabbedScrollView = TabbedScrollView.init(views: [
