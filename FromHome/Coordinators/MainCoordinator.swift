@@ -26,9 +26,7 @@ class MainCoordinator: Coordinator {
         window.makeKeyAndVisible()
     }
 
-    func start() {
-        startDailyWork(UniverseView.init(frame: window.frame))
-    }
+    func start() { }
 
     func startTransitionTasks(_ backgroundView: UIView) {
         let viewController = TransitionTaskViewController(backgroundView: backgroundView)

@@ -14,7 +14,7 @@ class TitledCardView: UIView {
 
     private let stackView: UIStackView
 
-    init(titleType: CardTitleType, title: String, subView: UIView) {
+    init(titleType: CardTitleType, title: String, subView: UIView, type: CardType) {
 
         titleView = CardTitleView.init(titleType)
 
@@ -29,9 +29,6 @@ class TitledCardView: UIView {
         titleView.changeTitle(title)
 
         super.init(frame: .zero)
-
-        translatesAutoresizingMaskIntoConstraints = false
-        stackView.translatesAutoresizingMaskIntoConstraints = false
 
         styleAsCard(type)
 
@@ -51,8 +48,6 @@ class TitledCardView: UIView {
     }
 
     override func didMoveToSuperview() {
-
-        guard let superview = superview else { return }
 
         translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
