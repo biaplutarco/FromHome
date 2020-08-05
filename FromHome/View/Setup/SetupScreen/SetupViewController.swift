@@ -15,11 +15,11 @@ class SetupViewController: UIViewController {
 
     var coordinator: MainCoordinator?
 
-    let greetingView = GreetingView()
+    let greetingView = GreetingView(viewModel: GreetingViewModel(username: "Dani"))
 
     lazy var todayView = SetupTodayView(self)
     lazy var timerView = SetupTimerView()
-    lazy var tasksView = SetupTasksView(self)
+    lazy var tasksView = SetupTasksView()
     lazy var notificationView = SetupNotificationView()
 
     lazy var tabbedScrollView = TabbedScrollView.init(views: [
