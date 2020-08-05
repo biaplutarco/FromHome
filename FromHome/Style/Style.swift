@@ -26,6 +26,9 @@ class Style {
         case titleButton
         case alertTitleButton
         case destructiveTitleButton
+
+        case workClockNumbers
+        case workClockLabels
     }
 
     struct TextAttributes {

@@ -102,9 +102,11 @@ class TasksView: UIView {
 
             leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor),
             trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor),
-            topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: 16),
+            topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor),
 
-            cardView.topAnchor.constraint(equalTo: topAnchor)
+            cardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            cardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            cardView.topAnchor.constraint(equalTo: topAnchor, constant: 16)
         ])
     }
 }

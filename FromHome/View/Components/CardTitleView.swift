@@ -60,12 +60,12 @@ class CardTitleView: UIView {
         switch type {
 
             case .header:
-                line.backgroundColor = .lineTop
+                line.backgroundColor = .headerBackground
 
                 Style.fromHome.apply(textStyle: .titleCardHeader, to: titleLabel)
 
             case .footer:
-                line.backgroundColor = .lineBottom
+                line.backgroundColor = .footerBackground
 
                 Style.fromHome.apply(textStyle: .titleCardFooter, to: titleLabel)
         }

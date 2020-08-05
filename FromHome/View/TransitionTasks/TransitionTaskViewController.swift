@@ -35,12 +35,18 @@ class TransitionTaskViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @objc
+    func skipToWork() {
+        // TODO: Abrir work timer controller
+    }
+
     private func setupButtons() {
 
         buttonStackView.addArrangedSubview(backButton)
         buttonStackView.addArrangedSubview(skipButton)
 
         backButton.addTarget(self, action: #selector(backToSetup), for: .touchUpInside)
+        skipButton.addTarget(self, action: #selector(skipToWork), for: .touchUpInside)
     }
 
     private func setupConstraints() {

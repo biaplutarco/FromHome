@@ -26,10 +26,18 @@ class MainCoordinator: Coordinator {
         window.makeKeyAndVisible()
     }
 
-    func start() {}
+    func start() { }
 
     func startDailyWork(_ backgroundView: UIView) {
         let viewController = TransitionTaskViewController(backgroundView: backgroundView, viewModel: TransitionTaskViewModel(.getReady))
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalTransitionStyle = .crossDissolve
+
+        rootController.present(viewController, animated: true, completion: nil)
+    }
+
+    func startDailyWork(_ backgroundView: UIView) {
+        let viewController = DailyWorkViewController.init(backgroundView: backgroundView)
         viewController.modalPresentationStyle = .fullScreen
         viewController.modalTransitionStyle = .crossDissolve
 
