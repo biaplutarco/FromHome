@@ -25,4 +25,7 @@ extension UIImage {
     static let meal = UIImage.init(named: "Meal")!
     static let pause = UIImage.init(named: "Pause")!
     static let skip = UIImage.init(named: "Skip")!
+
+    static let checklist = UIImage.init(named: "checklist")!
+    static let checklistFill = UIImage.init(named: "checklistFill")!
 }

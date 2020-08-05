@@ -20,7 +20,7 @@ class SetupNotificationView: UIView {
 
         cardContent = OptionsBodyView(options: viewModel.options, viewModel: viewModel)
 
-        cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent)
+        cardView = TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent, type: .footer)
 
         super.init(frame: .zero)
 

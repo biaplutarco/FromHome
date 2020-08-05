@@ -33,7 +33,7 @@ class TitledCardView: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
-        styleAsCard(.footer)
+        styleAsCard(type)
 
         setupView()
     }
@@ -51,6 +51,12 @@ class TitledCardView: UIView {
     }
 
     override func didMoveToSuperview() {
+
+        guard let superview = superview else { return }
+
+        translatesAutoresizingMaskIntoConstraints = false
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),

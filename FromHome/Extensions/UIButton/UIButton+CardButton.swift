@@ -19,6 +19,6 @@ extension UIButton {
         backgroundColor = .footerBackground
 
         layer.masksToBounds = false
-        layer.cornerRadius = 8
+        layer.cornerRadius = 14
     }
 }
