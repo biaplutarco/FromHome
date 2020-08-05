@@ -19,20 +19,15 @@ class TransitionTaskViewController: UIViewController {
         .lightContent
     }
 
-    convenience init(backgroundView: UIView) {
+    convenience init(backgroundView: UIView, viewModel: TransitionTaskViewModel) {
         self.init(nibName: nil, bundle: nil)
-
-        buttonStackView.addArrangedSubview(backButton)
-        buttonStackView.addArrangedSubview(skipButton)
 
         view = backgroundView
 
-        view.addSubviews([TasksView(viewModel: GetReadyTasksViewModel()), buttonStackView])
+        view.addSubviews([TasksView(viewModel: viewModel.tasksViewModel), buttonStackView])
 
+        setupButtons()
         setupConstraints()
-
-        backButton.addTarget(self, action: #selector(backToSetup), for: .touchUpInside)
-        skipButton.addTarget(self, action: #selector(skipToWork), for: .touchUpInside)
     }
 
     @objc
@@ -45,7 +40,16 @@ class TransitionTaskViewController: UIViewController {
         // TODO: Abrir work timer controller
     }
 
-    func setupConstraints() {
+    private func setupButtons() {
+
+        buttonStackView.addArrangedSubview(backButton)
+        buttonStackView.addArrangedSubview(skipButton)
+
+        backButton.addTarget(self, action: #selector(backToSetup), for: .touchUpInside)
+        skipButton.addTarget(self, action: #selector(skipToWork), for: .touchUpInside)
+    }
+
+    private func setupConstraints() {
 
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
 

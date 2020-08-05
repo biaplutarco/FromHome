@@ -21,6 +21,7 @@
 		272E95AE24D78102002C5624 /* MissionTimeFooterViewModel+Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E95AD24D78102002C5624 /* MissionTimeFooterViewModel+Picker.swift */; };
 		27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27309EFE24B531B400D60FE8 /* CardTitleView.swift */; };
 		27309F0124B541EA00D60FE8 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27309F0024B541EA00D60FE8 /* UIView+Constraints.swift */; };
+		2730EE9724DB2839003C0F32 /* TransitionTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730EE9624DB2839003C0F32 /* TransitionTaskViewModel.swift */; };
 		27462B0C24CD1F6700AC776B /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27462B0B24CD1F6700AC776B /* AlertViewController.swift */; };
 		2746D17524CE5EB8009EFF6B /* MissionTimeFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746D17424CE5EB8009EFF6B /* MissionTimeFooterViewModel.swift */; };
 		2746D17724CE5FBB009EFF6B /* NotificationFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746D17624CE5FBB009EFF6B /* NotificationFooterViewModel.swift */; };
@@ -140,6 +141,7 @@
 		272E95AD24D78102002C5624 /* MissionTimeFooterViewModel+Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MissionTimeFooterViewModel+Picker.swift"; sourceTree = "<group>"; };
 		27309EFE24B531B400D60FE8 /* CardTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTitleView.swift; sourceTree = "<group>"; };
 		27309F0024B541EA00D60FE8 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		2730EE9624DB2839003C0F32 /* TransitionTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionTaskViewModel.swift; sourceTree = "<group>"; };
 		27462B0B24CD1F6700AC776B /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		2746D17424CE5EB8009EFF6B /* MissionTimeFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTimeFooterViewModel.swift; sourceTree = "<group>"; };
 		2746D17624CE5FBB009EFF6B /* NotificationFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFooterViewModel.swift; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 			isa = PBXGroup;
 			children = (
 				A4AE132924D6C3F800C208F6 /* TransitionTaskViewController.swift */,
+				2730EE9624DB2839003C0F32 /* TransitionTaskViewModel.swift */,
 			);
 			path = TransitionTasks;
 			sourceTree = "<group>";
@@ -962,6 +965,7 @@
 				A48B2E7C24C75D7E0017B79D /* UIImage+Assets.swift in Sources */,
 				A48B2E6F24C232840017B79D /* UIView+Subview.swift in Sources */,
 				A4AE133524D8268600C208F6 /* SetupViewController+TaskSectionViewDelegate.swift in Sources */,
+				2730EE9724DB2839003C0F32 /* TransitionTaskViewModel.swift in Sources */,
 				279CB34824BA6D9A003126C9 /* UIView+Animations.swift in Sources */,
 				A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */,
 				A4AE132A24D6C3F800C208F6 /* TransitionTaskViewController.swift in Sources */,
