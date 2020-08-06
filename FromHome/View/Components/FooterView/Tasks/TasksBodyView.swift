@@ -50,6 +50,11 @@ class TasksBodyView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    func updateView(getReadyTasks: [String], goHomeTasks: [String]) {
+        getReadySectionView.setButtonTitles(to: getReadyTasks)
+        goHomeSectionView.setButtonTitles(to: goHomeTasks)
+    }
+
     override func didMoveToSuperview() {
 
         getReadySectionView.translatesAutoresizingMaskIntoConstraints = false

@@ -7,23 +7,23 @@
 //
 
 import Foundation
+import CoreData
 
 struct AlertControllerViewModel {
+
+    let coreDataManager = CoreDataManager()
 
     enum InputType {
         case changeName
         case changeTask
     }
 
-    func save(_ input: String, _ type: InputType) {
+    func save(_ name: String) {
+        UserDefaultsManager.save(name: name)
+    }
 
-        switch type {
+    func save(_ task: Task) {
 
-            case .changeName:
-                UserDefaultsManager.save(name: input)
-
-            case .changeTask:
-                break
-        }
+        
     }
 }

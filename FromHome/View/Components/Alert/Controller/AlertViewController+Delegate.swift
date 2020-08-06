@@ -26,12 +26,14 @@ extension AlertViewController: AlertViewDelegate {
 
                         guard let name = input else { return }
 
-                        viewModel.save(name, .changeName)
+                        viewModel.save(name)
 
-                    default:
-                        break
+                    case .changeTask:
+
+                        guard let taskName = input else { return }
+
+//                        viewModel.save(Task(name: taskName, type: <#T##Task.TaskType#>, index: <#T##Int#>))
                     }
-
             default:
                 break
         }

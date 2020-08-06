@@ -14,12 +14,42 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var coordinator: MainCoordinator?
 
+    let coreDataManager = CoreDataManager()
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        defaultTasks()
 
         coordinator = MainCoordinator(withWindowScene: windowScene)
 
         coordinator?.start()
+    }
+
+    private func defaultTasks() {
+
+        let getReadyList = TaskListEntity.init(context: coreDataManager.context)
+        getReadyList.id = "getReady"
+
+        let goHomeList = TaskListEntity.init(context: coreDataManager.context)
+        goHomeList.id = "goHome"
+
+        let getReadyPredicate = NSPredicate(format: "id CONTAINS[cd] %@", getReadyList.id!)
+        let goHomePredicate = NSPredicate(format: "id CONTAINS[cd] %@", goHomeList.id!)
+
+        if coreDataManager.find(objectType: TaskListEntity.self, predicate: getReadyPredicate).res != nil {
+
+            getReadyList.tasks = ["Get dressed for work", "", ""]
+
+            try? coreDataManager.context.save()
+        }
+
+        if coreDataManager.find(objectType: TaskListEntity.self, predicate: goHomePredicate).res != nil {
+
+            goHomeList.tasks = ["Organize your desk", "", ""]
+
+            try? coreDataManager.context.save()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

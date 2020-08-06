@@ -46,6 +46,7 @@
 		279CB35224BA976A003126C9 /* FooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB35124BA976A003126C9 /* FooterViewModel.swift */; };
 		279CB35824BA9AFE003126C9 /* TodayBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB35724BA9AFE003126C9 /* TodayBodyView.swift */; };
 		27B3C63A24DC73CD00BEBC77 /* SetupKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3C63924DC73CD00BEBC77 /* SetupKeyboardView.swift */; };
+		27B3C63C24DCA46D00BEBC77 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3C63B24DCA46D00BEBC77 /* Task.swift */; };
 		27B806DA24BE213800D0BC87 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B806D924BE213700D0BC87 /* Observable.swift */; };
 		27C1D2D824B806F500AA95BF /* CAShapeLayer+Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */; };
 		27C1D2DA24B80A0500AA95BF /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D924B80A0500AA95BF /* GreetingView.swift */; };
@@ -167,6 +168,7 @@
 		279CB35424BA9975003126C9 /* TodayFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFooterViewModel.swift; sourceTree = "<group>"; };
 		279CB35724BA9AFE003126C9 /* TodayBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBodyView.swift; sourceTree = "<group>"; };
 		27B3C63924DC73CD00BEBC77 /* SetupKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupKeyboardView.swift; sourceTree = "<group>"; };
+		27B3C63B24DCA46D00BEBC77 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		27B806D924BE213700D0BC87 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+Star.swift"; sourceTree = "<group>"; };
 		27C1D2D924B80A0500AA95BF /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
@@ -606,6 +608,7 @@
 				278045E724B411AC00AEDFBA /* Style */,
 				A49ED7AA24B7A7B7006C70B6 /* Extensions */,
 				A4AE778624B3994400A49E7F /* AppDelegate.swift */,
+				27B3C63B24DCA46D00BEBC77 /* Task.swift */,
 				A4AE778824B3994400A49E7F /* SceneDelegate.swift */,
 				27B806D924BE213700D0BC87 /* Observable.swift */,
 				A4AE779424B3994700A49E7F /* LaunchScreen.storyboard */,
@@ -946,6 +949,7 @@
 				27B3C63A24DC73CD00BEBC77 /* SetupKeyboardView.swift in Sources */,
 				A4F42EAB24CDB33600F6C95E /* CoreDataManager.swift in Sources */,
 				2776B7E224C91AC10082F4FF /* UILabel+Init.swift in Sources */,
+				27B3C63C24DCA46D00BEBC77 /* Task.swift in Sources */,
 				2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */,
 				A4AE132724D6C22C00C208F6 /* SetupViewController+SetupToday.swift in Sources */,
 				A418BE6124D937B500F6B4E7 /* TimerClockView.swift in Sources */,

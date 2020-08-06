@@ -79,7 +79,7 @@ class TaskSectionView: UIView {
         delegate?.presentChangeTaskAlert(taskSection: self, index: index)
     }
 
-    private func setButtonTitles(to tasks: [String]) {
+    func setButtonTitles(to tasks: [String]) {
 
         firstButton.setTitle(tasks[0], for: .normal)
         secondButton.setTitle(tasks[1], for: .normal)
