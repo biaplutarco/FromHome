@@ -59,7 +59,9 @@ class SetupViewController: UIViewController {
     }
 
     func setupConstraints() {
+
         NSLayoutConstraint.activate([
+
             tabbedScrollView.topAnchor.constraint(equalTo: greetingView.bottomAnchor, constant: 16)
         ])
     }

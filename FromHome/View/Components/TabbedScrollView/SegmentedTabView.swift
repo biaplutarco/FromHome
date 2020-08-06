@@ -54,12 +54,12 @@ class SegmentedTabView: UIView {
             leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 16),
             trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -16),
             bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -16),
-            heightAnchor.constraint(equalToConstant: 64),
 
+            stackView.heightAnchor.constraint(equalToConstant: 32),
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
 
@@ -76,8 +76,7 @@ class SegmentedTabView: UIView {
 
             selectedSegment = index
 
-            selected.scale(0.75, withDurarion: 0.15, nil)
-            //selected.scale(1.25, withDurarion: 0.15)
+            selected.scale(0.9, withDurarion: 0.15, nil)
         }
     }
 

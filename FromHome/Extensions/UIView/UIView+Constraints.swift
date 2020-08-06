@@ -22,4 +22,16 @@ extension UIView {
             bottomAnchor.constraint(equalTo: superview.bottomAnchor)
         ])
     }
+
+    func centeredToSuperview() {
+        guard let superview = self.superview else { return }
+
+        translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: superview.topAnchor),
+            centerXAnchor.constraint(equalTo: superview.centerXAnchor),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor)
+        ])
+    }
 }
