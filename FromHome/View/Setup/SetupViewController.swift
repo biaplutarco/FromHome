@@ -40,7 +40,6 @@ class SetupViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         greetingView.delegate = self
-//        tasksView.delegate = self
     }
 
     @available(*, unavailable)
@@ -56,6 +55,14 @@ class SetupViewController: UIViewController {
         view.addSubviews([greetingView, tabbedScrollView])
 
         setupConstraints()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let view = view as? UniverseView {
+            view.makeSky()
+        }
     }
 
     func setupConstraints() {

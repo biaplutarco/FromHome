@@ -14,8 +14,6 @@ extension SetupViewController: SetupTodayViewDelegate {
             fatalError("ja era")
         }
 
-        let universeViewReplica = UniverseView.init(frame: universeView.frame, stars: universeView.stars)
-
-        coordinator?.startTransitionTasks(universeViewReplica)
+        coordinator?.startTransitionTasks(universeView.stars, .getReady)
     }
 }
