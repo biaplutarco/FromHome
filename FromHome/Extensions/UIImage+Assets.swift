@@ -28,4 +28,6 @@ extension UIImage {
 
     static let checklist = UIImage.init(named: "checklist")!
     static let checklistFill = UIImage.init(named: "checklistFill")!
+
+    static let planet = UIImage.init(named: "planet")!
 }

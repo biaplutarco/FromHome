@@ -13,6 +13,13 @@ class TasksBodyView: UIView {
     private var getReadySectionView: TaskSectionView
     private var goHomeSectionView: TaskSectionView
 
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
+
+        return scrollView
+    }()
+
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [getReadySectionView, goHomeSectionView])
         stackView.alignment = .center
@@ -34,7 +41,8 @@ class TasksBodyView: UIView {
         self.getReadySectionView.delegate = delegate
         self.goHomeSectionView.delegate = delegate
 
-        addSubviews([stackView])
+        addSubviews([scrollView])
+        scrollView.addSubview(stackView)
     }
 
     @available(*, unavailable)
@@ -53,6 +61,7 @@ class TasksBodyView: UIView {
             goHomeSectionView.widthAnchor.constraint(equalTo: getReadySectionView.widthAnchor)
         ])
 
-        stackView.fulfillSuperview()
+        scrollView.fulfillSuperview()
+        stackView.centeredToSuperview()
     }
 }

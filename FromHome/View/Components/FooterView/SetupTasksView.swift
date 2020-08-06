@@ -36,6 +36,7 @@ class SetupTasksView: UIView {
         super.didMoveToSuperview()
 
         NSLayoutConstraint.activate([
+            cardView.topAnchor.constraint(equalTo: topAnchor),
             cardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             cardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             cardView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)

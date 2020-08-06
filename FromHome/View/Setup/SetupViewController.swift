@@ -16,6 +16,7 @@ class SetupViewController: UIViewController {
     var coordinator: MainCoordinator?
 
     let greetingView = GreetingView()
+    let planetView = UIImageView(image: .planet)
 
     lazy var todayView = SetupTodayView(self)
     lazy var timerView = SetupTimerView()
@@ -66,7 +67,16 @@ class SetupViewController: UIViewController {
     }
 
     func setupConstraints() {
+
+        planetView.translatesAutoresizingMaskIntoConstraints = false
+
         NSLayoutConstraint.activate([
+
+//            planetView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            planetView.topAnchor.constraint(equalTo: greetingView.bottomAnchor, constant: 32),
+//            planetView.heightAnchor.constraint(equalTo: planetView.widthAnchor, multiplier: 1),
+//            planetView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 64),
+
             tabbedScrollView.topAnchor.constraint(equalTo: greetingView.bottomAnchor, constant: 16)
         ])
     }

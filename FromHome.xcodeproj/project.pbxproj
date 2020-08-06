@@ -45,6 +45,7 @@
 		279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB34C24BA8391003126C9 /* GreetingViewModel.swift */; };
 		279CB35224BA976A003126C9 /* FooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB35124BA976A003126C9 /* FooterViewModel.swift */; };
 		279CB35824BA9AFE003126C9 /* TodayBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB35724BA9AFE003126C9 /* TodayBodyView.swift */; };
+		27B3C63A24DC73CD00BEBC77 /* SetupKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3C63924DC73CD00BEBC77 /* SetupKeyboardView.swift */; };
 		27B806DA24BE213800D0BC87 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B806D924BE213700D0BC87 /* Observable.swift */; };
 		27C1D2D824B806F500AA95BF /* CAShapeLayer+Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */; };
 		27C1D2DA24B80A0500AA95BF /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D924B80A0500AA95BF /* GreetingView.swift */; };
@@ -166,6 +167,7 @@
 		279CB35124BA976A003126C9 /* FooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterViewModel.swift; sourceTree = "<group>"; };
 		279CB35424BA9975003126C9 /* TodayFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFooterViewModel.swift; sourceTree = "<group>"; };
 		279CB35724BA9AFE003126C9 /* TodayBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBodyView.swift; sourceTree = "<group>"; };
+		27B3C63924DC73CD00BEBC77 /* SetupKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupKeyboardView.swift; sourceTree = "<group>"; };
 		27B806D924BE213700D0BC87 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+Star.swift"; sourceTree = "<group>"; };
 		27C1D2D924B80A0500AA95BF /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 			children = (
 				A476AFD024D445670025DFE8 /* SetupTodayView.swift */,
 				A476AFD224D445760025DFE8 /* SetupTimerView.swift */,
+				27B3C63924DC73CD00BEBC77 /* SetupKeyboardView.swift */,
 				A476AFD424D445850025DFE8 /* SetupTasksView.swift */,
 				A476AFD624D445940025DFE8 /* SetupNotificationView.swift */,
 				27EFB4F724CD193E007FDBC0 /* ViewModels */,
@@ -944,6 +947,7 @@
 				27F019FC24C7C8F1001870D0 /* InputAlertViewModel.swift in Sources */,
 				27EFB4FB24CD1ADA007FDBC0 /* SetupViewController+Footer.swift in Sources */,
 				279CB35224BA976A003126C9 /* FooterViewModel.swift in Sources */,
+				27B3C63A24DC73CD00BEBC77 /* SetupKeyboardView.swift in Sources */,
 				A4F42EAB24CDB33600F6C95E /* CoreDataManager.swift in Sources */,
 				2776B7E224C91AC10082F4FF /* UILabel+Init.swift in Sources */,
 				2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */,
