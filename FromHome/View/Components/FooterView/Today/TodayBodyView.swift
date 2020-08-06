@@ -53,6 +53,10 @@ class TodayBodyView: UIView {
 
     private func applyStyle() {
 
+        bodyLabel.textAlignment = .center
+        bodyLabel.lineBreakMode = .byWordWrapping
+        bodyLabel.numberOfLines = 0
+
         Style.fromHome.apply(textStyle: .bodyCardFooter, to: bodyLabel)
         Style.fromHome.apply(textStyle: .titleButton, to: button)
     }
