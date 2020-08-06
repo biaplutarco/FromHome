@@ -25,10 +25,10 @@ class DailyWorkViewController: UIViewController {
     let mealButton = UIButton(cardWithImage: .meal)
     let playPauseButton = UIButton(cardWithImage: .pause)
 
-    init(backgroundView: UIView, coordinator: MainCoordinator) {
+    init(stars: [CAShapeLayer], coordinator: MainCoordinator) {
         super.init(nibName: nil, bundle: nil)
 
-        view = backgroundView
+        view = UniverseView.init(frame: view.frame, stars: stars)
 
         self.coordinator = coordinator
 
@@ -41,18 +41,27 @@ class DailyWorkViewController: UIViewController {
         setupConstraints()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        clockManager.startTimer()
-    }
-
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        clockManager.startTimer()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let view = view as? UniverseView {
+            view.makeSky()
+        }
+    }
+
     @objc
     func backButtonPressed(_ sender: UIButton) {
+        clockManager.stopTimer()
         coordinator?.returnToSetup()
     }
 

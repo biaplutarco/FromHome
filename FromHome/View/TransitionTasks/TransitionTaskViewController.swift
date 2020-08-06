@@ -20,10 +20,10 @@ class TransitionTaskViewController: UIViewController {
 
     weak var coordinator: MainCoordinator?
 
-    init(backgroundView: UIView, taskType: TransitionTaskViewModel.TransitionType, coordinator: MainCoordinator) {
+    init(stars: [CAShapeLayer], taskType: TransitionTaskViewModel.TransitionType, coordinator: MainCoordinator) {
         super.init(nibName: nil, bundle: nil)
 
-        view = backgroundView
+        view = UniverseView.init(frame: view.frame, stars: stars)
 
         view.addSubviews([TasksView(viewModel: TransitionTaskViewModel(taskType).tasksViewModel), buttonStackView])
 
@@ -38,6 +38,14 @@ class TransitionTaskViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let view = view as? UniverseView {
+            view.makeSky()
+        }
+    }
+
     @objc
     func backToSetup() {
         coordinator?.returnToSetup()
@@ -45,13 +53,9 @@ class TransitionTaskViewController: UIViewController {
 
     @objc
     func skipToWork() {
-        guard let universeView = view as? UniverseView else {
-            fatalError("ja era")
+        if let universeView = view as? UniverseView {
+            coordinator?.startDailyWork(universeView.stars)
         }
-
-        let universeViewReplica = UniverseView.init(frame: universeView.frame, stars: universeView.stars)
-
-        coordinator?.startDailyWork(universeViewReplica)
     }
 
     private func setupButtons() {

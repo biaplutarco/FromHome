@@ -29,9 +29,9 @@ class MainCoordinator: Coordinator {
 
     func start() {}
 
-    func startTransitionTasks(_ backgroundView: UIView, taskType: TransitionTaskViewModel.TransitionType) {
+    func startTransitionTasks(_ stars: [CAShapeLayer], _ taskType: TransitionTaskViewModel.TransitionType) {
         let viewController = TransitionTaskViewController(
-            backgroundView: backgroundView,
+            stars: stars,
             taskType: taskType,
             coordinator: self
         )
@@ -42,8 +42,8 @@ class MainCoordinator: Coordinator {
         rootController.pushViewController(viewController, animated: false)
     }
 
-    func startDailyWork(_ backgroundView: UIView) {
-        let viewController = DailyWorkViewController.init(backgroundView: backgroundView, coordinator: self)
+    func startDailyWork(_ stars: [CAShapeLayer]) {
+        let viewController = DailyWorkViewController.init(stars: stars, coordinator: self)
 
         rootController.pushViewController(viewController, animated: false)
     }

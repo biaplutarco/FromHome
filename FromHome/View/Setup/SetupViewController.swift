@@ -57,6 +57,14 @@ class SetupViewController: UIViewController {
         setupConstraints()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let view = view as? UniverseView {
+            view.makeSky()
+        }
+    }
+
     func setupConstraints() {
         NSLayoutConstraint.activate([
             tabbedScrollView.topAnchor.constraint(equalTo: greetingView.bottomAnchor, constant: 16)
