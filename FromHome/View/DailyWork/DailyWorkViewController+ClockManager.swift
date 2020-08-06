@@ -10,12 +10,14 @@ import UIKit
 
 extension DailyWorkViewController: ClockManagerDelegate {
     func didFinishCounting(clockManager: ClockManager) {
-        print("finished counting to 0, please present a alert")
+        if let universeView = view as? UniverseView {
+            coordinator?.startTransitionTasks(universeView.stars, .goingHome)
+        }
     }
 
     func didTick(clockManager: ClockManager) {
         let currentTime = clockManager.currentTime()
 
-        cardContent.updateClock(hours: currentTime.hours, minutes: currentTime.minutes)
+        cardContent.updateClock(hours: currentTime.hours, minutes: currentTime.minutes, seconds: currentTime.seconds)
     }
 }

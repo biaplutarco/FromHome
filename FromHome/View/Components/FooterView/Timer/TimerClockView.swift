@@ -13,16 +13,28 @@ class TimerClockView: UIView {
     private let hoursNumberLabel = UILabel(text: "--")
     private let colonLabel = UILabel(text: ":")
     private let minutesNumberLabel = UILabel(text: "--")
+    private let colonLabel2 = UILabel(text: ":")
+    private let secondsNumberLabel = UILabel(text: "--")
 
     private let hoursLabel = UILabel(text: "hours")
     private let minutesLabel = UILabel(text: "minutes")
+    private let secondsLabel = UILabel(text: "seconds")
 
     init() {
         super.init(frame: .zero)
 
         translatesAutoresizingMaskIntoConstraints = false
 
-        addSubviews([hoursNumberLabel, colonLabel, minutesNumberLabel, hoursLabel, minutesLabel])
+        addSubviews([
+            hoursNumberLabel,
+            colonLabel,
+            minutesNumberLabel,
+            colonLabel2,
+            secondsNumberLabel,
+            hoursLabel,
+            minutesLabel,
+            secondsLabel
+        ])
 
         setupStyle()
     }
@@ -36,9 +48,12 @@ class TimerClockView: UIView {
         Style.fromHome.apply(textStyle: .workClockNumbers, to: hoursNumberLabel)
         Style.fromHome.apply(textStyle: .workClockNumbers, to: colonLabel)
         Style.fromHome.apply(textStyle: .workClockNumbers, to: minutesNumberLabel)
+        Style.fromHome.apply(textStyle: .workClockNumbers, to: colonLabel2)
+        Style.fromHome.apply(textStyle: .workClockNumbers, to: secondsNumberLabel)
 
         Style.fromHome.apply(textStyle: .workClockLabels, to: hoursLabel)
         Style.fromHome.apply(textStyle: .workClockLabels, to: minutesLabel)
+        Style.fromHome.apply(textStyle: .workClockLabels, to: secondsLabel)
     }
 
     override func didMoveToSuperview() {
@@ -50,10 +65,18 @@ class TimerClockView: UIView {
             hoursNumberLabel.centerYAnchor.constraint(equalTo: colonLabel.centerYAnchor),
 
             colonLabel.topAnchor.constraint(equalTo: topAnchor),
-            colonLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            colonLabel.centerYAnchor.constraint(equalTo: minutesNumberLabel.centerYAnchor),
 
+            minutesNumberLabel.topAnchor.constraint(equalTo: topAnchor),
             minutesNumberLabel.leadingAnchor.constraint(equalTo: colonLabel.trailingAnchor, constant: 16),
-            minutesNumberLabel.centerYAnchor.constraint(equalTo: colonLabel.centerYAnchor),
+            minutesNumberLabel.trailingAnchor.constraint(equalTo: colonLabel2.leadingAnchor, constant: -16),
+            minutesNumberLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+
+            colonLabel2.topAnchor.constraint(equalTo: topAnchor),
+            colonLabel2.centerYAnchor.constraint(equalTo: minutesNumberLabel.centerYAnchor),
+
+            secondsNumberLabel.leadingAnchor.constraint(equalTo: colonLabel2.trailingAnchor, constant: 16),
+            secondsNumberLabel.centerYAnchor.constraint(equalTo: colonLabel2.centerYAnchor),
 
             hoursLabel.topAnchor.constraint(equalTo: hoursNumberLabel.bottomAnchor, constant: 4),
             hoursLabel.centerXAnchor.constraint(equalTo: hoursNumberLabel.centerXAnchor),
@@ -61,12 +84,17 @@ class TimerClockView: UIView {
 
             minutesLabel.topAnchor.constraint(equalTo: minutesNumberLabel.bottomAnchor, constant: 4),
             minutesLabel.centerXAnchor.constraint(equalTo: minutesNumberLabel.centerXAnchor),
-            minutesLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
+            minutesLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
+
+            secondsLabel.topAnchor.constraint(equalTo: secondsNumberLabel.bottomAnchor, constant: 4),
+            secondsLabel.centerXAnchor.constraint(equalTo: secondsNumberLabel.centerXAnchor),
+            secondsLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
         ])
     }
 
-    func updateClock(hours: Int, minutes: Int) {
-        hoursNumberLabel.text = "\(hours)"
-        minutesNumberLabel.text = "\(minutes)"
+    func updateClock(hours: Int, minutes: Int, seconds: Int) {
+        hoursNumberLabel.text = String(format: "%02d", hours)
+        minutesNumberLabel.text = String(format: "%02d", minutes)
+        secondsNumberLabel.text = String(format: "%02d", seconds)
     }
 }
