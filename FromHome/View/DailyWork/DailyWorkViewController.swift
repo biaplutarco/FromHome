@@ -77,7 +77,13 @@ class DailyWorkViewController: UIViewController {
 
     @objc
     func playPauseButtonPressed(_ sender: UIButton) {
-        print("Todo - play pause")
+        if clockManager.isPaused() {
+            clockManager.startTimer()
+            playPauseButton.setImage(.pause, for: .normal)
+        } else {
+            clockManager.stopTimer()
+            playPauseButton.setImage(.play, for: .normal)
+        }
     }
 
     func setupConstraints() {
