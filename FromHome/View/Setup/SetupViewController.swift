@@ -26,13 +26,11 @@ class SetupViewController: UIViewController {
     lazy var tabbedScrollView = TabbedScrollView.init(views: [
         self.todayView,
         self.timerView,
-        self.tasksView,
-        self.notificationView
+        self.tasksView
     ], images: [
         (unselected: .todayIcon, selected: .todayFillIcon),
         (unselected: .timerIcon, selected: .timerFillIcon),
-        (unselected: .taskIcon, selected: .taskFillIcon),
-        (unselected: .notificationIcon, selected: .notificationFillIcon)
+        (unselected: .taskIcon, selected: .taskFillIcon)
     ])
 
     init(_ coordinator: MainCoordinator?) {
