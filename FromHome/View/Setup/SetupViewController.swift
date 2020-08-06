@@ -70,10 +70,10 @@ class SetupViewController: UIViewController {
 
         NSLayoutConstraint.activate([
 
-//            planetView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            planetView.topAnchor.constraint(equalTo: greetingView.bottomAnchor, constant: 32),
-//            planetView.heightAnchor.constraint(equalTo: planetView.widthAnchor, multiplier: 1),
-//            planetView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 64),
+            //planetView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            //planetView.topAnchor.constraint(equalTo: greetingView.bottomAnchor, constant: 32),
+            //planetView.heightAnchor.constraint(equalTo: planetView.widthAnchor, multiplier: 1),
+            //planetView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 64),
 
             tabbedScrollView.topAnchor.constraint(equalTo: greetingView.bottomAnchor, constant: 16)
         ])

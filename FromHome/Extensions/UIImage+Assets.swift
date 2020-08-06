@@ -24,6 +24,7 @@ extension UIImage {
     static let back = UIImage.init(named: "Back")!
     static let meal = UIImage.init(named: "Meal")!
     static let pause = UIImage.init(named: "Pause")!
+    static let play = UIImage.init(named: "Play")!
     static let skip = UIImage.init(named: "Skip")!
 
     static let checklist = UIImage.init(named: "checklist")!
