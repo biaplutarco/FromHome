@@ -62,7 +62,7 @@ class TasksBodyView: UIView {
 
         NSLayoutConstraint.activate([
 
-            getReadySectionView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
+            getReadySectionView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.9),
             goHomeSectionView.widthAnchor.constraint(equalTo: getReadySectionView.widthAnchor)
         ])
 

@@ -17,10 +17,21 @@ class TaskSectionView: UIView {
     private var thirdButton = UIButton()
 
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, firstButton, secondButton, thirdButton])
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, buttonStackView])
         stackView.alignment = .fill
         stackView.axis = .vertical
         stackView.spacing = 18
+
+        return stackView
+    }()
+
+    private lazy var buttonStackView: UIStackView = {
+        let stackView = UIStackView(
+            subviews: [firstButton, secondButton, thirdButton],
+            alignment: .fill,
+            distribution: .fill,
+            axis: .vertical,
+            spacing: 10)
 
         return stackView
     }()
@@ -110,7 +121,7 @@ class TaskSectionView: UIView {
 
         NSLayoutConstraint.activate([
 
-            firstButton.heightAnchor.constraint(equalToConstant: 36),
+            firstButton.heightAnchor.constraint(equalToConstant: 32),
 
             secondButton.heightAnchor.constraint(equalTo: firstButton.heightAnchor),
 
