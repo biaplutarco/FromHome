@@ -19,10 +19,10 @@ class TodayFooterViewModel: FooterViewModel {
 
         if isWorkinHoursCompleted {
 
-            return "PArabens fez suas horinhas yay!!"
+            return "You already completed your working hours for today. Comeback tomorrow!"
         } else {
 
-            return "Vai trabalhar vagabundo antes que eu faça o relatorio!!"
+            return "Would you like to start your today’s mission now?"
         }
     }
 

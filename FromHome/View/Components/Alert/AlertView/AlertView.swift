@@ -126,6 +126,8 @@ class AlertView: UIView {
 
     private func applyStyle() {
 
+        textField.textColor = .secondaryText
+
         Style.fromHome.apply(textStyle: .titleAlert, to: titleLabel)
         Style.fromHome.apply(textStyle: .bodyCardFooter, to: bodyLabel)
 

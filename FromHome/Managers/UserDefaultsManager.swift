@@ -47,7 +47,7 @@ enum UserDefaultsManager {
     }
 
     static func userName() -> String {
-        userDefault.value(forKey: Key.userName.rawValue) as? String ?? "Sem nome"
+        userDefault.value(forKey: Key.userName.rawValue) as? String ?? "You"
     }
 
     static func workingHours() -> Int {
