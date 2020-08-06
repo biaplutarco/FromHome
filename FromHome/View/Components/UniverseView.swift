@@ -23,16 +23,12 @@ class UniverseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        layer.addSublayer(gradientLayer)
-        layer.addSublayer(addRandomStars(quant: 20))
+        stars = randomStars(quant: 20)
     }
 
     init(frame: CGRect, stars: [CAShapeLayer]) {
         super.init(frame: frame)
         self.stars = stars
-
-        layer.addSublayer(gradientLayer)
-        layer.addSublayer(addStars())
     }
 
     @available(*, unavailable)
@@ -48,20 +44,16 @@ class UniverseView: UIView {
         CGFloat.random(in: 1...5)
     }
 
-    private func addRandomStars(quant: Int) -> CALayer {
+    private func randomStars(quant: Int) -> [CAShapeLayer] {
 
-        let startsLayer = CALayer()
-        startsLayer.frame = frame
+        var starList = [CAShapeLayer]()
 
         for _ in 0...quant {
-
             let star = CAShapeLayer(startPoint: randomPoint(), size: randomSize(), color: .secondaryText)
-            stars.append(star)
-
-            startsLayer.addSublayer(star)
+            starList.append(star)
         }
 
-        return startsLayer
+        return starList
     }
 
     func addStars() -> CALayer {
@@ -74,5 +66,12 @@ class UniverseView: UIView {
         }
 
         return startsLayer
+    }
+
+    func makeSky() {
+        let starsLayer = addStars()
+        
+        layer.insertSublayer(starsLayer, at: 0)
+        layer.insertSublayer(gradientLayer, at: 0)
     }
 }
