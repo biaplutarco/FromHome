@@ -64,6 +64,7 @@ class Style {
 
         let attributes = attributesForStyle(textStyle)
 
+        label.adjustsFontForContentSizeCategory = true
         label.font = attributes.font
         label.textColor = attributes.color
         label.backgroundColor = attributes.backgroundColor

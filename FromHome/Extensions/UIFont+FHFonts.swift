@@ -10,27 +10,27 @@ import UIKit
 
 extension UIFont {
 
-    static var greeting: UIFont { UIFont.systemFont(ofSize: 18) }
+    static var greeting: UIFont { UIFont.preferredFont(forTextStyle: .subheadline) }
 
-    static var username: UIFont { UIFont.boldSystemFont(ofSize: 36) }
+    static var username: UIFont { UIFont.preferredFont(forTextStyle: .largeTitle) }
 
-    static var titleCardHeader: UIFont { UIFont.boldSystemFont(ofSize: 16) }
+    static var titleCardHeader: UIFont { UIFont.preferredFont(forTextStyle: .headline) }
 
-    static var checklist: UIFont { UIFont.systemFont(ofSize: 16) }
+    static var checklist: UIFont { UIFont.preferredFont(forTextStyle: .callout) }
 
-    static var titleCardFooter: UIFont { UIFont.boldSystemFont(ofSize: 21) }
+    static var titleCardFooter: UIFont { UIFont.preferredFont(forTextStyle: .headline) }
 
-    static var subtitleCardFooter: UIFont { UIFont.systemFont(ofSize: 16) }
+    static var subtitleCardFooter: UIFont { UIFont.preferredFont(forTextStyle: .callout) }
 
-    static var bodyCardFooter: UIFont { UIFont.systemFont(ofSize: 14) }
+    static var bodyCardFooter: UIFont { UIFont.preferredFont(forTextStyle: .callout) }
 
-    static var titleAlert: UIFont { UIFont.boldSystemFont(ofSize: 16) }
+    static var titleAlert: UIFont { UIFont.preferredFont(forTextStyle: .headline) }
 
-    static var titleButton: UIFont { UIFont.boldSystemFont(ofSize: 16) }
+    static var titleButton: UIFont { UIFont.preferredFont(forTextStyle: .headline) }
 
-    static var destructiveTitleButton: UIFont { UIFont.systemFont(ofSize: 16) }
+    static var destructiveTitleButton: UIFont { UIFont.preferredFont(forTextStyle: .callout) }
 
     static var workClockNumbers: UIFont { UIFont.monospacedSystemFont(ofSize: 64, weight: .regular) }
 
-    static var workClockLabels: UIFont { UIFont.systemFont(ofSize: 14) }
+    static var workClockLabels: UIFont { UIFont.preferredFont(forTextStyle: .subheadline) }
 }
