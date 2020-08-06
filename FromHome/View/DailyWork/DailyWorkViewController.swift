@@ -22,7 +22,7 @@ class DailyWorkViewController: UIViewController {
     weak var coordinator: MainCoordinator?
 
     let backButton = UIButton(cardWithImage: .back)
-    let mealButton = UIButton(cardWithImage: .meal)
+//    let mealButton = UIButton(cardWithImage: .meal)
     let playPauseButton = UIButton(cardWithImage: .pause)
 
     init(stars: [CAShapeLayer], coordinator: MainCoordinator) {
@@ -32,10 +32,15 @@ class DailyWorkViewController: UIViewController {
 
         self.coordinator = coordinator
 
-        view.addSubviews([cardView, backButton, mealButton, playPauseButton])
+        view.addSubviews([
+            cardView,
+            backButton,
+            //mealButton,
+            playPauseButton
+        ])
 
         backButton.addTarget(self, action: #selector(backButtonPressed(_:)), for: .touchUpInside)
-        mealButton.addTarget(self, action: #selector(mealButtonPressed(_:)), for: .touchUpInside)
+        //mealButton.addTarget(self, action: #selector(mealButtonPressed(_:)), for: .touchUpInside)
         playPauseButton.addTarget(self, action: #selector(playPauseButtonPressed(_:)), for: .touchUpInside)
 
         setupConstraints()
@@ -65,10 +70,10 @@ class DailyWorkViewController: UIViewController {
         coordinator?.returnToSetup()
     }
 
-    @objc
-    func mealButtonPressed(_ sender: UIButton) {
-        print("Todo - meal button")
-    }
+//    @objc
+//    func mealButtonPressed(_ sender: UIButton) {
+//        print("Todo - meal button")
+//    }
 
     @objc
     func playPauseButtonPressed(_ sender: UIButton) {
@@ -87,10 +92,10 @@ class DailyWorkViewController: UIViewController {
             backButton.widthAnchor.constraint(equalToConstant: 64),
             backButton.heightAnchor.constraint(equalToConstant: 64),
 
-            mealButton.trailingAnchor.constraint(equalTo: playPauseButton.leadingAnchor, constant: -16),
-            mealButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            mealButton.widthAnchor.constraint(equalToConstant: 64),
-            mealButton.heightAnchor.constraint(equalToConstant: 64),
+            //mealButton.trailingAnchor.constraint(equalTo: playPauseButton.leadingAnchor, constant: -16),
+            //mealButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            //mealButton.widthAnchor.constraint(equalToConstant: 64),
+            //mealButton.heightAnchor.constraint(equalToConstant: 64),
 
             playPauseButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             playPauseButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),

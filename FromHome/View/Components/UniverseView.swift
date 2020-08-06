@@ -70,7 +70,7 @@ class UniverseView: UIView {
 
     func makeSky() {
         let starsLayer = addStars()
-        
+
         layer.insertSublayer(starsLayer, at: 0)
         layer.insertSublayer(gradientLayer, at: 0)
     }
