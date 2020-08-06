@@ -9,35 +9,49 @@
 import UIKit
 
 class TransitionTaskViewController: UIViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 
     let backButton = UIButton(cardWithImage: .back)
     let skipButton = UIButton(cardWithImage: .skip)
 
     let buttonStackView = UIStackView(subviews: [], alignment: .fill, distribution: .equalSpacing, axis: .horizontal, spacing: 0)
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
-    }
+    weak var coordinator: MainCoordinator?
 
-    convenience init(backgroundView: UIView, viewModel: TransitionTaskViewModel) {
-        self.init(nibName: nil, bundle: nil)
+    init(backgroundView: UIView, taskType: TransitionTaskViewModel.TransitionType, coordinator: MainCoordinator) {
+        super.init(nibName: nil, bundle: nil)
 
         view = backgroundView
 
-        view.addSubviews([TasksView(viewModel: viewModel.tasksViewModel), buttonStackView])
+        view.addSubviews([TasksView(viewModel: TransitionTaskViewModel(taskType).tasksViewModel), buttonStackView])
+
+        self.coordinator = coordinator
 
         setupButtons()
         setupConstraints()
     }
 
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     @objc
     func backToSetup() {
-        dismiss(animated: true, completion: nil)
+        coordinator?.returnToSetup()
     }
 
     @objc
     func skipToWork() {
-        // TODO: Abrir work timer controller
+        guard let universeView = view as? UniverseView else {
+            fatalError("ja era")
+        }
+
+        let universeViewReplica = UniverseView.init(frame: universeView.frame, stars: universeView.stars)
+
+        coordinator?.startDailyWork(universeViewReplica)
     }
 
     private func setupButtons() {

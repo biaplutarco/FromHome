@@ -16,6 +16,6 @@ extension SetupViewController: SetupTodayViewDelegate {
 
         let universeViewReplica = UniverseView.init(frame: universeView.frame, stars: universeView.stars)
 
-        coordinator?.startTransitionTasks(universeViewReplica)
+        coordinator?.startTransitionTasks(universeViewReplica, taskType: .getReady)
     }
 }
