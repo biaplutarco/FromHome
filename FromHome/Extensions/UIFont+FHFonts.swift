@@ -30,7 +30,7 @@ extension UIFont {
 
     static var destructiveTitleButton: UIFont { UIFont.preferredFont(forTextStyle: .callout) }
 
-    static var workClockNumbers: UIFont { UIFont.monospacedSystemFont(ofSize: 64, weight: .regular) }
+    static var workClockNumbers: UIFont { UIFont.monospacedSystemFont(ofSize: 48, weight: .regular) }
 
     static var workClockLabels: UIFont { UIFont.preferredFont(forTextStyle: .subheadline) }
 }

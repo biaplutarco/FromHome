@@ -44,21 +44,22 @@ class ClockManager {
 
     func isPaused() -> Bool { isTimerPaused }
 
-    func currentTime() -> (hours: Int, minutes: Int) {
+    func currentTime() -> (hours: Int, minutes: Int, seconds: Int) {
         let hours = counter / 3_600
         let minutes = counter % 3_600 / 60
+        let seconds = counter % 60
 
-        return (hours, minutes)
+        return (hours, minutes, seconds)
     }
 
     @objc
     func tick(_ sender: Timer) {
         print(counter)
+        counter = counter - 1
         if counter == 0 {
             delegate?.didFinishCounting(clockManager: self)
             stopTimer()
         }
-        counter = counter - 1
         delegate?.didTick(clockManager: self)
     }
 }
