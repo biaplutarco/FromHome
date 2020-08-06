@@ -33,8 +33,8 @@ class TasksBodyView: UIView {
 
     init(getReady: (sectionTitle: String, tasks: [String]), goHome: (sectionTitle: String, tasks: [String]), delegate: TaskSectionViewDelegate) {
 
-        self.getReadySectionView = TaskSectionView(sectionTitle: getReady.sectionTitle, tasks: getReady.tasks)
-        self.goHomeSectionView = TaskSectionView(sectionTitle: goHome.sectionTitle, tasks: goHome.tasks)
+        self.getReadySectionView = TaskSectionView(sectionTitle: getReady.sectionTitle, tasks: getReady.tasks, type: .getReady)
+        self.goHomeSectionView = TaskSectionView(sectionTitle: goHome.sectionTitle, tasks: goHome.tasks, type: .goHome)
 
         super.init(frame: .zero)
 

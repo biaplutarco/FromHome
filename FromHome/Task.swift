@@ -8,13 +8,13 @@
 
 import Foundation
 
+enum TaskType: String {
+
+    case getReady = "getReady"
+    case goHome = "goHome"
+}
+
 struct Task {
-
-    enum TaskType: String {
-
-        case getReady = "getReady"
-        case goHome = "goHome"
-    }
 
     var name: String
     var type: TaskType

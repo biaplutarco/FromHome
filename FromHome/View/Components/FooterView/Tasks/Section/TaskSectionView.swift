@@ -27,9 +27,12 @@ class TaskSectionView: UIView {
 
     weak var delegate: TaskSectionViewDelegate?
 
-    init(sectionTitle: String, tasks: [String]) {
+    var type: TaskType
+
+    init(sectionTitle: String, tasks: [String], type: TaskType) {
 
         self.titleLabel.text = sectionTitle
+        self.type = type
 
         super.init(frame: .zero)
 

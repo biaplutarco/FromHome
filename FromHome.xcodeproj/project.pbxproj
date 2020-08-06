@@ -47,6 +47,8 @@
 		279CB35824BA9AFE003126C9 /* TodayBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB35724BA9AFE003126C9 /* TodayBodyView.swift */; };
 		27B3C63A24DC73CD00BEBC77 /* SetupKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3C63924DC73CD00BEBC77 /* SetupKeyboardView.swift */; };
 		27B3C63C24DCA46D00BEBC77 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3C63B24DCA46D00BEBC77 /* Task.swift */; };
+		27B3C63F24DCA77800BEBC77 /* ChangeTaskAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3C63E24DCA77800BEBC77 /* ChangeTaskAlertViewModel.swift */; };
+		27B3C64124DCAB3C00BEBC77 /* ChangeNameAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3C64024DCAB3C00BEBC77 /* ChangeNameAlertViewModel.swift */; };
 		27B806DA24BE213800D0BC87 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B806D924BE213700D0BC87 /* Observable.swift */; };
 		27C1D2D824B806F500AA95BF /* CAShapeLayer+Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */; };
 		27C1D2DA24B80A0500AA95BF /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D924B80A0500AA95BF /* GreetingView.swift */; };
@@ -169,6 +171,8 @@
 		279CB35724BA9AFE003126C9 /* TodayBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBodyView.swift; sourceTree = "<group>"; };
 		27B3C63924DC73CD00BEBC77 /* SetupKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupKeyboardView.swift; sourceTree = "<group>"; };
 		27B3C63B24DCA46D00BEBC77 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		27B3C63E24DCA77800BEBC77 /* ChangeTaskAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTaskAlertViewModel.swift; sourceTree = "<group>"; };
+		27B3C64024DCAB3C00BEBC77 /* ChangeNameAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameAlertViewModel.swift; sourceTree = "<group>"; };
 		27B806D924BE213700D0BC87 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+Star.swift"; sourceTree = "<group>"; };
 		27C1D2D924B80A0500AA95BF /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
@@ -421,6 +425,16 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		27B3C63D24DCA72C00BEBC77 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				27F019FB24C7C8F1001870D0 /* InputAlertViewModel.swift */,
+				27B3C64024DCAB3C00BEBC77 /* ChangeNameAlertViewModel.swift */,
+				27B3C63E24DCA77800BEBC77 /* ChangeTaskAlertViewModel.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
 		27C9EBD024CD172200FDAFCC /* Section */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,8 +489,8 @@
 			isa = PBXGroup;
 			children = (
 				27E8D0B724C7CFD300E3EE4C /* Protocol */,
+				27B3C63D24DCA72C00BEBC77 /* Input */,
 				27E8D0B524C7CFC200E3EE4C /* Alert.swift */,
-				27F019FB24C7C8F1001870D0 /* InputAlertViewModel.swift */,
 				27F019F924C7C819001870D0 /* SkipAlertViewModel.swift */,
 				27E8D0B824C7D01200E3EE4C /* LeaveAlertViewModel.swift */,
 				27E8D0BA24C7D1E300E3EE4C /* FinishAlertViewModel.swift */,
@@ -904,6 +918,8 @@
 			files = (
 				27DF3B0D24D66F9200E8AA75 /* UIButton+CardButton.swift in Sources */,
 				27F1BBF324C91BF500AEFF01 /* AlertViewDelegate.swift in Sources */,
+				27B3C64124DCAB3C00BEBC77 /* ChangeNameAlertViewModel.swift in Sources */,
+				27B3C63F24DCA77800BEBC77 /* ChangeTaskAlertViewModel.swift in Sources */,
 				A48B2E7624C239620017B79D /* SegmentedTabView.swift in Sources */,
 				A4AE77BF24B3BC6700A49E7F /* Coordinator.swift in Sources */,
 				A4F42E9C24C8E87D00F6C95E /* UniverseView.swift in Sources */,

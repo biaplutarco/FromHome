@@ -16,12 +16,15 @@ class AlertViewController: UIViewController {
 
     var alert: Alert
 
+    var alertViewModel: AlertViewModel
+
     weak var delegate: AlertControllerDelegate?
 
     init(_ alert: Alert) {
 
         self.alertView = AlertView(alert.viewModel)
         self.alert = alert
+        self.alertViewModel = alert.viewModel
 
         super.init(nibName: nil, bundle: nil)
 
