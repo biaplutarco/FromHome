@@ -24,7 +24,7 @@ class MissionTimeFooterViewModel: NSObject {
 
     override init() {
 
-        let hourOption = Option(title: "Hours", inputSelected: String(UserDefaultsManager.workingHours()), type: .workingHours)
+        let hourOption = Option(title: "Work Hours", inputSelected: String(UserDefaultsManager.workingHours()), type: .workingHours)
         let coffeeBreakOption = Option(title: "Coffee Break", inputSelected: String(UserDefaultsManager.coffeeBreakHours()), type: .coffeeBreakHours)
 
         var mealBreak: String
@@ -39,7 +39,7 @@ class MissionTimeFooterViewModel: NSObject {
 
         let mealBreakOption = Option(title: "Meal Break", inputSelected: mealBreak, type: .mealBreak)
 
-        options = [hourOption, coffeeBreakOption, mealBreakOption]
+        options = [hourOption, coffeeBreakOption]
     }
 
     func save() {
