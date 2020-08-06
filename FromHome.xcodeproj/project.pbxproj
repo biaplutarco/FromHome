@@ -61,7 +61,6 @@
 		27E8D0BD24C7D37D00E3EE4C /* PauseAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0BC24C7D37D00E3EE4C /* PauseAlertViewModel.swift */; };
 		27E8D0BF24C7D63E00E3EE4C /* BreakAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0BE24C7D63E00E3EE4C /* BreakAlertViewModel.swift */; };
 		27E8D0C124C7D86B00E3EE4C /* AtHomeAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0C024C7D86B00E3EE4C /* AtHomeAlertViewModel.swift */; };
-		27EFB4FB24CD1ADA007FDBC0 /* SetupViewController+Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFB4FA24CD1ADA007FDBC0 /* SetupViewController+Footer.swift */; };
 		27F019FA24C7C819001870D0 /* SkipAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F019F924C7C819001870D0 /* SkipAlertViewModel.swift */; };
 		27F019FC24C7C8F1001870D0 /* InputAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F019FB24C7C8F1001870D0 /* InputAlertViewModel.swift */; };
 		27F1BBF324C91BF500AEFF01 /* AlertViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1BBF224C91BF500AEFF01 /* AlertViewDelegate.swift */; };
@@ -183,7 +182,6 @@
 		27E8D0BC24C7D37D00E3EE4C /* PauseAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseAlertViewModel.swift; sourceTree = "<group>"; };
 		27E8D0BE24C7D63E00E3EE4C /* BreakAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakAlertViewModel.swift; sourceTree = "<group>"; };
 		27E8D0C024C7D86B00E3EE4C /* AtHomeAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtHomeAlertViewModel.swift; sourceTree = "<group>"; };
-		27EFB4FA24CD1ADA007FDBC0 /* SetupViewController+Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupViewController+Footer.swift"; sourceTree = "<group>"; };
 		27F019F924C7C819001870D0 /* SkipAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipAlertViewModel.swift; sourceTree = "<group>"; };
 		27F019FB24C7C8F1001870D0 /* InputAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAlertViewModel.swift; sourceTree = "<group>"; };
 		27F1BBF224C91BF500AEFF01 /* AlertViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewDelegate.swift; sourceTree = "<group>"; };
@@ -466,7 +464,6 @@
 				A4F42EA224C8EA0D00F6C95E /* SetupViewController+Greeting.swift */,
 				A4AE132624D6C22B00C208F6 /* SetupViewController+SetupToday.swift */,
 				276151CD24D1137F00228661 /* SetupViewController+Alert.swift */,
-				27EFB4FA24CD1ADA007FDBC0 /* SetupViewController+Footer.swift */,
 				A4AE133424D8268600C208F6 /* SetupViewController+TaskSectionViewDelegate.swift */,
 			);
 			path = Extensions;
@@ -945,7 +942,6 @@
 				2746D17524CE5EB8009EFF6B /* MissionTimeFooterViewModel.swift in Sources */,
 				278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */,
 				27F019FC24C7C8F1001870D0 /* InputAlertViewModel.swift in Sources */,
-				27EFB4FB24CD1ADA007FDBC0 /* SetupViewController+Footer.swift in Sources */,
 				279CB35224BA976A003126C9 /* FooterViewModel.swift in Sources */,
 				27B3C63A24DC73CD00BEBC77 /* SetupKeyboardView.swift in Sources */,
 				A4F42EAB24CDB33600F6C95E /* CoreDataManager.swift in Sources */,
