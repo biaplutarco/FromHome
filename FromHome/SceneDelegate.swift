@@ -29,10 +29,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func defaultTasks() {
 
         let getReadyList = TaskListEntity.init(context: coreDataManager.context)
-        getReadyList.id = "getReady"
+        getReadyList.id = TaskType.getReady.rawValue
 
         let goHomeList = TaskListEntity.init(context: coreDataManager.context)
-        goHomeList.id = "goHome"
+        goHomeList.id = TaskType.goHome.rawValue
 
         let getReadyPredicate = NSPredicate(format: "id CONTAINS[cd] %@", getReadyList.id!)
         let goHomePredicate = NSPredicate(format: "id CONTAINS[cd] %@", goHomeList.id!)

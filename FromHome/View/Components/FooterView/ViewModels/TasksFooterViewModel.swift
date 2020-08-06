@@ -19,7 +19,7 @@ class TasksFooterViewModel: FooterViewModel {
 
     var getReady: (sectionTitle: String, tasks: [String]) {
 
-        let predicate = NSPredicate(format: "id CONTAINS[cd] %@", "getReady")
+        let predicate = NSPredicate(format: "id CONTAINS[cd] %@", TaskType.getReady.rawValue)
 
         guard let tasks = coreDataManager.find(objectType: TaskListEntity.self, predicate: predicate).res?.first?.tasks else {
 
@@ -31,7 +31,7 @@ class TasksFooterViewModel: FooterViewModel {
 
     var goHome: (sectionTitle: String, tasks: [String]) {
 
-        let predicate = NSPredicate(format: "id CONTAINS[cd] %@", "goHome")
+        let predicate = NSPredicate(format: "id CONTAINS[cd] %@", TaskType.goHome.rawValue)
 
         guard let tasks = coreDataManager.find(objectType: TaskListEntity.self, predicate: predicate).res?.first?.tasks else {
 

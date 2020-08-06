@@ -10,8 +10,8 @@ import Foundation
 
 enum TaskType: String {
 
-    case getReady = "getReady"
-    case goHome = "goHome"
+    case getReady
+    case goHome
 }
 
 struct Task {
