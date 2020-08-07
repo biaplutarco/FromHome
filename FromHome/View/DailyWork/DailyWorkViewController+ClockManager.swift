@@ -11,7 +11,13 @@ import UIKit
 extension DailyWorkViewController: ClockManagerDelegate {
     func didFinishCounting(clockManager: ClockManager) {
         if let universeView = view as? UniverseView {
-            coordinator?.startTransitionTasks(universeView.stars, .goingHome)
+
+            stars = universeView.stars
+
+            let alert = AlertViewController(.finish(.work))
+            alert.delegate = self
+
+            present(alert, animated: true, completion: nil)
         }
     }
 

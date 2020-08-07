@@ -13,23 +13,74 @@ class TransitionTaskViewController: UIViewController {
         .lightContent
     }
 
+    lazy var cardView = TitledCardView(titleType: .header, title: self.viewModel.title, subView: self.tasksView, type: .header)
+
+    let tasksView: UIStackView
+
+    let taskView1: TaskView!
+    let taskView2: TaskView!
+    let taskView3: TaskView!
+
     let backButton = UIButton(cardWithImage: .back)
     let skipButton = UIButton(cardWithImage: .skip)
 
-    let buttonStackView = UIStackView(subviews: [], alignment: .fill, distribution: .equalSpacing, axis: .horizontal, spacing: 0)
+    let type: TransitionTaskViewModel.TransitionType
+
+    let viewModel: TransitionTaskViewModel
+
+    var stars: [CAShapeLayer]?
 
     weak var coordinator: MainCoordinator?
 
     init(stars: [CAShapeLayer], taskType: TransitionTaskViewModel.TransitionType, coordinator: MainCoordinator) {
+        type = taskType
+
+        viewModel = TransitionTaskViewModel.init(taskType: taskType)
+
+        var taskList = [TaskView]()
+
+        taskView1 = TaskView.init(taskTitle: viewModel.taskList[0])
+        if !viewModel.taskList[0].isEmpty {
+            taskList.append(taskView1)
+        }
+
+        taskView2 = TaskView.init(taskTitle: viewModel.taskList[1])
+        if !viewModel.taskList[1].isEmpty {
+            taskList.append(taskView2)
+        }
+
+        taskView3 = TaskView.init(taskTitle: viewModel.taskList[2])
+        if !viewModel.taskList[2].isEmpty {
+            taskList.append(taskView3)
+        }
+
+        tasksView = UIStackView.init(
+            subviews: taskList,
+            alignment: .fill,
+            distribution: .fillEqually,
+            axis: .vertical,
+            spacing: 12
+        )
+
         super.init(nibName: nil, bundle: nil)
+
+        taskView1.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(taskViewTapped(_:))))
+        taskView2.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(taskViewTapped(_:))))
+        taskView3.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(taskViewTapped(_:))))
 
         view = UniverseView.init(frame: view.frame, stars: stars)
 
-        view.addSubviews([TasksView(viewModel: TransitionTaskViewModel(taskType).tasksViewModel), buttonStackView])
+        if taskType == .getReady {
+            view.addSubviews([cardView, backButton, skipButton])
+        } else {
+            view.addSubviews([cardView, skipButton])
+        }
+
+        backButton.addTarget(self, action: #selector(backButtonPressed(_:)), for: .touchUpInside)
+        skipButton.addTarget(self, action: #selector(skipButtonPressed(_:)), for: .touchUpInside)
 
         self.coordinator = coordinator
 
-        setupButtons()
         setupConstraints()
     }
 
@@ -47,39 +98,70 @@ class TransitionTaskViewController: UIViewController {
     }
 
     @objc
-    func backToSetup() {
+    func taskViewTapped(_ sender: UITapGestureRecognizer) {
+        if (taskView1.gestureRecognizers?.contains(sender))! {
+            taskView1.toggleState()
+        } else if (taskView2.gestureRecognizers?.contains(sender))! {
+            taskView2.toggleState()
+        } else if (taskView3.gestureRecognizers?.contains(sender))! {
+            taskView3.toggleState()
+        }
+
+        if taskView1.isSelected && taskView2.isSelected && taskView3.isSelected {
+            if type == .goingHome {
+                coordinator?.returnToSetup()
+            } else {
+                if let universeView = view as? UniverseView {
+
+                    let alert = AlertViewController(.finish(.preparation))
+                    alert.delegate = self
+
+                    present(alert, animated: true, completion: nil)
+
+                    stars = universeView.stars
+                }
+            }
+        }
+    }
+
+    @objc
+    func backButtonPressed(_ sender: UIButton) {
         coordinator?.returnToSetup()
     }
 
     @objc
-    func skipToWork() {
-        if let universeView = view as? UniverseView {
-            coordinator?.startDailyWork(universeView.stars)
+    func skipButtonPressed(_ sender: UIButton) {
+
+        if type == .goingHome {
+            coordinator?.returnToSetup()
+        } else {
+            if let universeView = view as? UniverseView {
+                coordinator?.startDailyWork(universeView.stars)
+            }
         }
-    }
-
-    private func setupButtons() {
-
-        buttonStackView.addArrangedSubview(backButton)
-        buttonStackView.addArrangedSubview(skipButton)
-
-        backButton.addTarget(self, action: #selector(backToSetup), for: .touchUpInside)
-        skipButton.addTarget(self, action: #selector(skipToWork), for: .touchUpInside)
     }
 
     private func setupConstraints() {
 
-        buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        if type == .getReady {
+            NSLayoutConstraint.activate([
+                backButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+                backButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+                backButton.heightAnchor.constraint(equalToConstant: 64),
+                backButton.widthAnchor.constraint(equalToConstant: 64)
+            ])
+        }
 
         NSLayoutConstraint.activate([
 
-            buttonStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            buttonStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            buttonStackView.heightAnchor.constraint(equalToConstant: 64),
+            cardView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            cardView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            cardView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
 
-            backButton.widthAnchor.constraint(equalToConstant: 64),
-            skipButton.widthAnchor.constraint(equalTo: backButton.widthAnchor)
+            skipButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            skipButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            skipButton.heightAnchor.constraint(equalToConstant: 64),
+            skipButton.widthAnchor.constraint(equalToConstant: 64)
         ])
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 
 enum FinishAlertMessage: String {
 
-    case preparation =  "You are prepare to start the mission now"
+    case preparation =  "You are prepare to start your work now"
     case work =  "You finaly finish your work it’s time to go home."
     case coffeeBreak = "Your coffee break it’s over. You need to get back to work now"
 }

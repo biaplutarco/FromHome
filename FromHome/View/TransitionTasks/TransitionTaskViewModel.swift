@@ -10,23 +10,21 @@ import Foundation
 
 struct TransitionTaskViewModel {
 
-    enum TransitionType {
+    enum TransitionType: String {
 
-        case getReady
-        case goingHome
+        case getReady = "Get Ready"
+        case goingHome = "Going Home"
     }
 
-    var tasksViewModel: TasksViewModel
+    var title: String
+    var taskList: [String]
 
-    init(_ type: TransitionType) {
+    init(taskType: TransitionTaskViewModel.TransitionType) {
+        title = taskType.rawValue
 
-        switch type {
+        let predicate = NSPredicate(format: "id CONTAINS[cd] %@", title)
+        let tasksData = CoreDataManager().find(objectType: TaskListEntity.self, predicate: predicate)
 
-            case .getReady:
-                self.tasksViewModel = GetReadyTasksViewModel()
-
-            case .goingHome:
-                self.tasksViewModel = GoingHomeTasksViewModel()
-        }
+        taskList = (tasksData.res?.first?.tasks)!
     }
 }

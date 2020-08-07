@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		172BD5C4802E6C2DEE159BC2 /* Pods_FromHomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6E22448571902684372A4A /* Pods_FromHomeTests.framework */; };
-		270B175224D8A64C00B0F082 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B175124D8A64C00B0F082 /* TasksView.swift */; };
-		270B175424D8BCC600B0F082 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B175324D8BCC600B0F082 /* TasksViewModel.swift */; };
-		270B175724D8C76D00B0F082 /* GetReadyTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B175624D8C76D00B0F082 /* GetReadyTasksViewModel.swift */; };
-		270B175924D8C82200B0F082 /* GoingHomeTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B175824D8C82200B0F082 /* GoingHomeTasksViewModel.swift */; };
+		270B175224D8A64C00B0F082 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270B175124D8A64C00B0F082 /* TaskView.swift */; };
 		270E394524D08F470012C890 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E394424D08F470012C890 /* UserDefaultsManager.swift */; };
 		270E394724D0FEFD0012C890 /* AlertViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E394624D0FEFD0012C890 /* AlertViewController+Delegate.swift */; };
 		270E394C24D0FFA50012C890 /* AlertControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E394B24D0FFA50012C890 /* AlertControllerViewModel.swift */; };
@@ -56,6 +53,8 @@
 		27C9EBD224CD173900FDAFCC /* TaskSectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9EBD124CD173900FDAFCC /* TaskSectionViewDelegate.swift */; };
 		27CDB9C724D2457F00214097 /* AlertView+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDB9C624D2457F00214097 /* AlertView+TextFieldDelegate.swift */; };
 		27CDB9C924D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDB9C824D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift */; };
+		27D9E41524DD9EE30012C810 /* TransitionTaskViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9E41424DD9EE30012C810 /* TransitionTaskViewController+Alert.swift */; };
+		27D9E41724DDA1210012C810 /* DailyWorkViewController+AlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9E41624DDA1210012C810 /* DailyWorkViewController+AlertDelegate.swift */; };
 		27DF3B0D24D66F9200E8AA75 /* UIButton+CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DF3B0C24D66F9200E8AA75 /* UIButton+CardButton.swift */; };
 		27E8870724CE68C0001A2868 /* FHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8870624CE68C0001A2868 /* FHTextField.swift */; };
 		27E8D0B624C7CFC200E3EE4C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0B524C7CFC200E3EE4C /* Alert.swift */; };
@@ -130,10 +129,7 @@
 /* Begin PBXFileReference section */
 		147D5965E0FD62DA0408A57A /* Pods_FromHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FromHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F27F5D1CDE3B9FDEB496DB0 /* Pods-FromHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FromHome.release.xcconfig"; path = "Target Support Files/Pods-FromHome/Pods-FromHome.release.xcconfig"; sourceTree = "<group>"; };
-		270B175124D8A64C00B0F082 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
-		270B175324D8BCC600B0F082 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
-		270B175624D8C76D00B0F082 /* GetReadyTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReadyTasksViewModel.swift; sourceTree = "<group>"; };
-		270B175824D8C82200B0F082 /* GoingHomeTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoingHomeTasksViewModel.swift; sourceTree = "<group>"; };
+		270B175124D8A64C00B0F082 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		270E394424D08F470012C890 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		270E394624D0FEFD0012C890 /* AlertViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertViewController+Delegate.swift"; sourceTree = "<group>"; };
 		270E394B24D0FFA50012C890 /* AlertControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerViewModel.swift; sourceTree = "<group>"; };
@@ -180,6 +176,8 @@
 		27C9EBD124CD173900FDAFCC /* TaskSectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSectionViewDelegate.swift; sourceTree = "<group>"; };
 		27CDB9C624D2457F00214097 /* AlertView+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertView+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		27CDB9C824D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OptionsBodyView+TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		27D9E41424DD9EE30012C810 /* TransitionTaskViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransitionTaskViewController+Alert.swift"; sourceTree = "<group>"; };
+		27D9E41624DDA1210012C810 /* DailyWorkViewController+AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyWorkViewController+AlertDelegate.swift"; sourceTree = "<group>"; };
 		27DF3B0C24D66F9200E8AA75 /* UIButton+CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+CardButton.swift"; sourceTree = "<group>"; };
 		27E8870624CE68C0001A2868 /* FHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHTextField.swift; sourceTree = "<group>"; };
 		27E8D0B524C7CFC200E3EE4C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -271,23 +269,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		270B175024D8A5AD00B0F082 /* TasksView */ = {
+		270B175024D8A5AD00B0F082 /* TaskView */ = {
 			isa = PBXGroup;
 			children = (
-				270B175124D8A64C00B0F082 /* TasksView.swift */,
-				270B175524D8C50900B0F082 /* ViewModel */,
+				270B175124D8A64C00B0F082 /* TaskView.swift */,
 			);
-			path = TasksView;
-			sourceTree = "<group>";
-		};
-		270B175524D8C50900B0F082 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				270B175324D8BCC600B0F082 /* TasksViewModel.swift */,
-				270B175624D8C76D00B0F082 /* GetReadyTasksViewModel.swift */,
-				270B175824D8C82200B0F082 /* GoingHomeTasksViewModel.swift */,
-			);
-			path = ViewModel;
+			path = TaskView;
 			sourceTree = "<group>";
 		};
 		270E394824D0FF530012C890 /* Controller */ = {
@@ -505,6 +492,7 @@
 			isa = PBXGroup;
 			children = (
 				A418BE5E24D9330A00F6B4E7 /* DailyWorkViewController.swift */,
+				27D9E41624DDA1210012C810 /* DailyWorkViewController+AlertDelegate.swift */,
 				A429789024DB2AA4004A707F /* DailyWorkViewController+ClockManager.swift */,
 			);
 			path = DailyWork;
@@ -556,7 +544,7 @@
 				2722122024B7C3390053478F /* UniverseView.swift */,
 				27E8870624CE68C0001A2868 /* FHTextField.swift */,
 				A476AFD824D45F200025DFE8 /* TitledCardView.swift */,
-				270B175024D8A5AD00B0F082 /* TasksView */,
+				270B175024D8A5AD00B0F082 /* TaskView */,
 				279CB35024BA974B003126C9 /* FooterView */,
 				279CB34924BA6F84003126C9 /* GreetingView */,
 				A48B2E7224C236990017B79D /* TabbedScrollView */,
@@ -586,6 +574,7 @@
 			children = (
 				A4AE132924D6C3F800C208F6 /* TransitionTaskViewController.swift */,
 				2730EE9624DB2839003C0F32 /* TransitionTaskViewModel.swift */,
+				27D9E41424DD9EE30012C810 /* TransitionTaskViewController+Alert.swift */,
 			);
 			path = TransitionTasks;
 			sourceTree = "<group>";
@@ -944,7 +933,6 @@
 				278045E624B40DC800AEDFBA /* UIFont+FHFonts.swift in Sources */,
 				2796D9BC24CE59830015BE2C /* OptionsBodyView.swift in Sources */,
 				27309F0124B541EA00D60FE8 /* UIView+Constraints.swift in Sources */,
-				270B175424D8BCC600B0F082 /* TasksViewModel.swift in Sources */,
 				272E95AB24D780B6002C5624 /* NotificationFooterViewModel+Picker.swift in Sources */,
 				27E8D0BD24C7D37D00E3EE4C /* PauseAlertViewModel.swift in Sources */,
 				279CB35824BA9AFE003126C9 /* TodayBodyView.swift in Sources */,
@@ -972,12 +960,14 @@
 				279CB34D24BA8391003126C9 /* GreetingViewModel.swift in Sources */,
 				27462B0C24CD1F6700AC776B /* AlertViewController.swift in Sources */,
 				A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */,
+				27D9E41524DD9EE30012C810 /* TransitionTaskViewController+Alert.swift in Sources */,
 				A48B2E7824C242360017B79D /* UIView+Shadow.swift in Sources */,
+				27D9E41724DDA1210012C810 /* DailyWorkViewController+AlertDelegate.swift in Sources */,
 				A429788F24DB2279004A707F /* ClockManager.swift in Sources */,
 				27CDB9C924D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
 				A418BE5F24D9330A00F6B4E7 /* DailyWorkViewController.swift in Sources */,
-				270B175224D8A64C00B0F082 /* TasksView.swift in Sources */,
+				270B175224D8A64C00B0F082 /* TaskView.swift in Sources */,
 				278B3A1524CBD41400A6DDB3 /* TasksBodyView.swift in Sources */,
 				278B3A1924CBE9F200A6DDB3 /* UIButton+FHCornerRadius.swift in Sources */,
 				270E394724D0FEFD0012C890 /* AlertViewController+Delegate.swift in Sources */,
@@ -994,7 +984,6 @@
 				A408176A24CEC8D7009C14E3 /* OptionsFooterViewModel.swift in Sources */,
 				27C9EBD224CD173900FDAFCC /* TaskSectionViewDelegate.swift in Sources */,
 				A408176C24CEC9ED009C14E3 /* TaskBodyView+TaskSectionViewDelegate.swift in Sources */,
-				270B175724D8C76D00B0F082 /* GetReadyTasksViewModel.swift in Sources */,
 				A476AFD924D45F200025DFE8 /* TitledCardView.swift in Sources */,
 				275A29AB24BBB83A00C6D0DB /* FooterViewType.swift in Sources */,
 				27CDB9C724D2457F00214097 /* AlertView+TextFieldDelegate.swift in Sources */,
@@ -1005,7 +994,6 @@
 				A476AFD124D445670025DFE8 /* SetupTodayView.swift in Sources */,
 				278045DE24B405FA00AEDFBA /* Style.swift in Sources */,
 				276151CE24D1137F00228661 /* SetupViewController+Alert.swift in Sources */,
-				270B175924D8C82200B0F082 /* GoingHomeTasksViewModel.swift in Sources */,
 				2771C49724C673FC00682DF3 /* AlertView.swift in Sources */,
 				272E95A924D7803E002C5624 /* UIPickerView+Int.swift in Sources */,
 				27E8870724CE68C0001A2868 /* FHTextField.swift in Sources */,

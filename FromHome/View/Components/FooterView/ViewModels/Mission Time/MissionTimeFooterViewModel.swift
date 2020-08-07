@@ -27,17 +27,15 @@ class MissionTimeFooterViewModel: NSObject {
         let hourOption = Option(title: "Work Hours", inputSelected: String(UserDefaultsManager.workingHours()), type: .workingHours)
         let coffeeBreakOption = Option(title: "Coffee Break", inputSelected: String(UserDefaultsManager.coffeeBreakHours()), type: .coffeeBreakHours)
 
-        var mealBreak: String
+        //var mealBreak: String
 
-        if UserDefaultsManager.mealBreak() {
+        //if UserDefaultsManager.mealBreak() {
+            //mealBreak = "yes"
+        //} else {
+            //mealBreak = "no"
+        //}
 
-            mealBreak = "yes"
-        } else {
-
-            mealBreak = "no"
-        }
-
-        let mealBreakOption = Option(title: "Meal Break", inputSelected: mealBreak, type: .mealBreak)
+        //let mealBreakOption = Option(title: "Meal Break", inputSelected: mealBreak, type: .mealBreak)
 
         options = [hourOption, coffeeBreakOption]
     }

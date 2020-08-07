@@ -26,7 +26,7 @@ struct AlertControllerViewModel {
             taskList.tasks?.remove(at: task.index)
             taskList.tasks?.insert(task.name, at: task.index)
 
-            coreDataManager.writeChanges()
+            _ = coreDataManager.writeChanges()
         }
     }
 }
