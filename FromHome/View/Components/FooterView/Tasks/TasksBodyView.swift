@@ -33,8 +33,8 @@ class TasksBodyView: UIView {
 
     init(getReady: (sectionTitle: String, tasks: [String]), goHome: (sectionTitle: String, tasks: [String]), delegate: TaskSectionViewDelegate) {
 
-        self.getReadySectionView = TaskSectionView(sectionTitle: getReady.sectionTitle, tasks: getReady.tasks)
-        self.goHomeSectionView = TaskSectionView(sectionTitle: goHome.sectionTitle, tasks: goHome.tasks)
+        self.getReadySectionView = TaskSectionView(sectionTitle: getReady.sectionTitle, tasks: getReady.tasks, type: .getReady)
+        self.goHomeSectionView = TaskSectionView(sectionTitle: goHome.sectionTitle, tasks: goHome.tasks, type: .goHome)
 
         super.init(frame: .zero)
 
@@ -50,6 +50,11 @@ class TasksBodyView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    func updateView(getReadyTasks: [String], goHomeTasks: [String]) {
+        getReadySectionView.setButtonTitles(to: getReadyTasks)
+        goHomeSectionView.setButtonTitles(to: goHomeTasks)
+    }
+
     override func didMoveToSuperview() {
 
         getReadySectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -57,7 +62,7 @@ class TasksBodyView: UIView {
 
         NSLayoutConstraint.activate([
 
-            getReadySectionView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
+            getReadySectionView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.9),
             goHomeSectionView.widthAnchor.constraint(equalTo: getReadySectionView.widthAnchor)
         ])
 

@@ -12,5 +12,6 @@ extension SetupViewController: AlertControllerDelegate {
 
     func updateView() {
         greetingView.updateView()
+        tasksView.updateView()
     }
 }

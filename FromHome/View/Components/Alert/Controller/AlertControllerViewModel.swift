@@ -7,23 +7,26 @@
 //
 
 import Foundation
+import CoreData
 
 struct AlertControllerViewModel {
 
-    enum InputType {
-        case changeName
-        case changeTask
+    let coreDataManager = CoreDataManager()
+
+    func save(_ name: String) {
+        UserDefaultsManager.save(name: name)
     }
 
-    func save(_ input: String, _ type: InputType) {
+    func save(_ task: Task) {
 
-        switch type {
+        let predicate = NSPredicate(format: "id CONTAINS[cd] %@", task.type.rawValue)
 
-            case .changeName:
-                UserDefaultsManager.save(name: input)
+        if let taskList = coreDataManager.find(objectType: TaskListEntity.self, predicate: predicate).res?.first {
 
-            case .changeTask:
-                break
+            taskList.tasks?.remove(at: task.index)
+            taskList.tasks?.insert(task.name, at: task.index)
+
+            coreDataManager.writeChanges()
         }
     }
 }

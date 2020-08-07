@@ -17,7 +17,7 @@ class TaskSectionView: UIView {
     private var thirdButton = UIButton()
 
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, firstButton, secondButton, thirdButton])
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, buttonStackView])
         stackView.alignment = .fill
         stackView.axis = .vertical
         stackView.spacing = 18
@@ -25,11 +25,25 @@ class TaskSectionView: UIView {
         return stackView
     }()
 
+    private lazy var buttonStackView: UIStackView = {
+        let stackView = UIStackView(
+            subviews: [firstButton, secondButton, thirdButton],
+            alignment: .fill,
+            distribution: .fill,
+            axis: .vertical,
+            spacing: 10)
+
+        return stackView
+    }()
+
     weak var delegate: TaskSectionViewDelegate?
 
-    init(sectionTitle: String, tasks: [String]) {
+    var type: TaskType
+
+    init(sectionTitle: String, tasks: [String], type: TaskType) {
 
         self.titleLabel.text = sectionTitle
+        self.type = type
 
         super.init(frame: .zero)
 
@@ -79,7 +93,7 @@ class TaskSectionView: UIView {
         delegate?.presentChangeTaskAlert(taskSection: self, index: index)
     }
 
-    private func setButtonTitles(to tasks: [String]) {
+    func setButtonTitles(to tasks: [String]) {
 
         firstButton.setTitle(tasks[0], for: .normal)
         secondButton.setTitle(tasks[1], for: .normal)
@@ -107,7 +121,7 @@ class TaskSectionView: UIView {
 
         NSLayoutConstraint.activate([
 
-            firstButton.heightAnchor.constraint(equalToConstant: 36),
+            firstButton.heightAnchor.constraint(equalToConstant: 32),
 
             secondButton.heightAnchor.constraint(equalTo: firstButton.heightAnchor),
 

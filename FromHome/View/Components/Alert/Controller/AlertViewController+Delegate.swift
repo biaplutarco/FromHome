@@ -18,19 +18,18 @@ extension AlertViewController: AlertViewDelegate {
 
         switch alert {
 
-            case .input(let type):
+            case .changeName:
 
-                switch type {
+                guard let name = input else { return }
 
-                    case .changeName:
+                viewModel.save(name)
 
-                        guard let name = input else { return }
+            case .changeTask:
 
-                        viewModel.save(name, .changeName)
+                guard let taskName = input,
+                    let changeTaskViewModel = self.alertViewModel as? ChangeTaskAlertViewModel else { return }
 
-                    default:
-                        break
-                    }
+                viewModel.save(Task(name: taskName, type: changeTaskViewModel.oldTask.type, index: changeTaskViewModel.oldTask.index))
 
             default:
                 break

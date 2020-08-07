@@ -11,12 +11,13 @@ import Foundation
 enum Alert {
 
     case skip(_ type: SkipAlertMessage)
-    case input(_ type: InputAlertTitle)
     case leave(_ type: LeaveAlertMessage)
     case finish(_ type: FinishAlertMessage)
     case stopClock
     case pause(_ type: BreakAlertMessage)
     case atHome
+    case changeName
+    case changeTask(_ oldTask: Task)
 
     var viewModel: AlertViewModel {
 
@@ -24,9 +25,6 @@ enum Alert {
 
             case .skip(let type):
                 return SkipAlertViewModel(type)
-
-            case .input(let type):
-                return InputAlertViewModel(type)
 
             case .leave(let type):
                 return LeaveAlertViewModel(type)
@@ -42,6 +40,12 @@ enum Alert {
 
             case .atHome:
                 return AtHomeAlertViewModel()
+
+            case .changeName:
+                return ChangeNameAlertViewModel()
+
+            case .changeTask(let task):
+                return ChangeTaskAlertViewModel(oldTask: task)
         }
     }
 }

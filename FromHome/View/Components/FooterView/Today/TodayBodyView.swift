@@ -14,7 +14,7 @@ class TodayBodyView: UIView {
 
     lazy var button: UIButton = {
         let button = UIButton()
-        button.layer.cornerRadius = 18
+        button.layer.cornerRadius = 16
 
         return button
     }()
@@ -66,8 +66,8 @@ class TodayBodyView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            button.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.6),
-            button.heightAnchor.constraint(equalToConstant: 36)
+            button.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.7),
+            button.heightAnchor.constraint(equalToConstant: 32)
         ])
 
         stackView.fulfillSuperview()

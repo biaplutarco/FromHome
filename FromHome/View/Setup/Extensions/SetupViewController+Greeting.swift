@@ -12,7 +12,7 @@ extension SetupViewController: GreetingViewDelegate {
 
     func didTapChangeUsername() {
 
-        let alert = AlertViewController(.input(.changeName))
+        let alert = AlertViewController(.changeName)
         alert.delegate = self
 
         present(alert, animated: true, completion: nil)

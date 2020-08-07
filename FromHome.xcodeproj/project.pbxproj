@@ -46,6 +46,9 @@
 		279CB35224BA976A003126C9 /* FooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB35124BA976A003126C9 /* FooterViewModel.swift */; };
 		279CB35824BA9AFE003126C9 /* TodayBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB35724BA9AFE003126C9 /* TodayBodyView.swift */; };
 		27B3C63A24DC73CD00BEBC77 /* SetupKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3C63924DC73CD00BEBC77 /* SetupKeyboardView.swift */; };
+		27B3C63C24DCA46D00BEBC77 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3C63B24DCA46D00BEBC77 /* Task.swift */; };
+		27B3C63F24DCA77800BEBC77 /* ChangeTaskAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3C63E24DCA77800BEBC77 /* ChangeTaskAlertViewModel.swift */; };
+		27B3C64124DCAB3C00BEBC77 /* ChangeNameAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3C64024DCAB3C00BEBC77 /* ChangeNameAlertViewModel.swift */; };
 		27B806DA24BE213800D0BC87 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B806D924BE213700D0BC87 /* Observable.swift */; };
 		27C1D2D824B806F500AA95BF /* CAShapeLayer+Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */; };
 		27C1D2DA24B80A0500AA95BF /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1D2D924B80A0500AA95BF /* GreetingView.swift */; };
@@ -61,7 +64,6 @@
 		27E8D0BD24C7D37D00E3EE4C /* PauseAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0BC24C7D37D00E3EE4C /* PauseAlertViewModel.swift */; };
 		27E8D0BF24C7D63E00E3EE4C /* BreakAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0BE24C7D63E00E3EE4C /* BreakAlertViewModel.swift */; };
 		27E8D0C124C7D86B00E3EE4C /* AtHomeAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0C024C7D86B00E3EE4C /* AtHomeAlertViewModel.swift */; };
-		27EFB4FB24CD1ADA007FDBC0 /* SetupViewController+Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFB4FA24CD1ADA007FDBC0 /* SetupViewController+Footer.swift */; };
 		27F019FA24C7C819001870D0 /* SkipAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F019F924C7C819001870D0 /* SkipAlertViewModel.swift */; };
 		27F019FC24C7C8F1001870D0 /* InputAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F019FB24C7C8F1001870D0 /* InputAlertViewModel.swift */; };
 		27F1BBF324C91BF500AEFF01 /* AlertViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1BBF224C91BF500AEFF01 /* AlertViewDelegate.swift */; };
@@ -168,6 +170,9 @@
 		279CB35424BA9975003126C9 /* TodayFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFooterViewModel.swift; sourceTree = "<group>"; };
 		279CB35724BA9AFE003126C9 /* TodayBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBodyView.swift; sourceTree = "<group>"; };
 		27B3C63924DC73CD00BEBC77 /* SetupKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupKeyboardView.swift; sourceTree = "<group>"; };
+		27B3C63B24DCA46D00BEBC77 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		27B3C63E24DCA77800BEBC77 /* ChangeTaskAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTaskAlertViewModel.swift; sourceTree = "<group>"; };
+		27B3C64024DCAB3C00BEBC77 /* ChangeNameAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameAlertViewModel.swift; sourceTree = "<group>"; };
 		27B806D924BE213700D0BC87 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		27C1D2D724B806F500AA95BF /* CAShapeLayer+Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+Star.swift"; sourceTree = "<group>"; };
 		27C1D2D924B80A0500AA95BF /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
@@ -183,7 +188,6 @@
 		27E8D0BC24C7D37D00E3EE4C /* PauseAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseAlertViewModel.swift; sourceTree = "<group>"; };
 		27E8D0BE24C7D63E00E3EE4C /* BreakAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakAlertViewModel.swift; sourceTree = "<group>"; };
 		27E8D0C024C7D86B00E3EE4C /* AtHomeAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtHomeAlertViewModel.swift; sourceTree = "<group>"; };
-		27EFB4FA24CD1ADA007FDBC0 /* SetupViewController+Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupViewController+Footer.swift"; sourceTree = "<group>"; };
 		27F019F924C7C819001870D0 /* SkipAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipAlertViewModel.swift; sourceTree = "<group>"; };
 		27F019FB24C7C8F1001870D0 /* InputAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAlertViewModel.swift; sourceTree = "<group>"; };
 		27F1BBF224C91BF500AEFF01 /* AlertViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewDelegate.swift; sourceTree = "<group>"; };
@@ -421,6 +425,16 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		27B3C63D24DCA72C00BEBC77 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				27F019FB24C7C8F1001870D0 /* InputAlertViewModel.swift */,
+				27B3C64024DCAB3C00BEBC77 /* ChangeNameAlertViewModel.swift */,
+				27B3C63E24DCA77800BEBC77 /* ChangeTaskAlertViewModel.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
 		27C9EBD024CD172200FDAFCC /* Section */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,7 +480,6 @@
 				A4F42EA224C8EA0D00F6C95E /* SetupViewController+Greeting.swift */,
 				A4AE132624D6C22B00C208F6 /* SetupViewController+SetupToday.swift */,
 				276151CD24D1137F00228661 /* SetupViewController+Alert.swift */,
-				27EFB4FA24CD1ADA007FDBC0 /* SetupViewController+Footer.swift */,
 				A4AE133424D8268600C208F6 /* SetupViewController+TaskSectionViewDelegate.swift */,
 			);
 			path = Extensions;
@@ -476,8 +489,8 @@
 			isa = PBXGroup;
 			children = (
 				27E8D0B724C7CFD300E3EE4C /* Protocol */,
+				27B3C63D24DCA72C00BEBC77 /* Input */,
 				27E8D0B524C7CFC200E3EE4C /* Alert.swift */,
-				27F019FB24C7C8F1001870D0 /* InputAlertViewModel.swift */,
 				27F019F924C7C819001870D0 /* SkipAlertViewModel.swift */,
 				27E8D0B824C7D01200E3EE4C /* LeaveAlertViewModel.swift */,
 				27E8D0BA24C7D1E300E3EE4C /* FinishAlertViewModel.swift */,
@@ -609,6 +622,7 @@
 				278045E724B411AC00AEDFBA /* Style */,
 				A49ED7AA24B7A7B7006C70B6 /* Extensions */,
 				A4AE778624B3994400A49E7F /* AppDelegate.swift */,
+				27B3C63B24DCA46D00BEBC77 /* Task.swift */,
 				A4AE778824B3994400A49E7F /* SceneDelegate.swift */,
 				27B806D924BE213700D0BC87 /* Observable.swift */,
 				A4AE779424B3994700A49E7F /* LaunchScreen.storyboard */,
@@ -904,6 +918,8 @@
 			files = (
 				27DF3B0D24D66F9200E8AA75 /* UIButton+CardButton.swift in Sources */,
 				27F1BBF324C91BF500AEFF01 /* AlertViewDelegate.swift in Sources */,
+				27B3C64124DCAB3C00BEBC77 /* ChangeNameAlertViewModel.swift in Sources */,
+				27B3C63F24DCA77800BEBC77 /* ChangeTaskAlertViewModel.swift in Sources */,
 				A48B2E7624C239620017B79D /* SegmentedTabView.swift in Sources */,
 				A4AE77BF24B3BC6700A49E7F /* Coordinator.swift in Sources */,
 				A4F42E9C24C8E87D00F6C95E /* UniverseView.swift in Sources */,
@@ -945,11 +961,11 @@
 				2746D17524CE5EB8009EFF6B /* MissionTimeFooterViewModel.swift in Sources */,
 				278045E424B40CAE00AEDFBA /* Style+FHSyle.swift in Sources */,
 				27F019FC24C7C8F1001870D0 /* InputAlertViewModel.swift in Sources */,
-				27EFB4FB24CD1ADA007FDBC0 /* SetupViewController+Footer.swift in Sources */,
 				279CB35224BA976A003126C9 /* FooterViewModel.swift in Sources */,
 				27B3C63A24DC73CD00BEBC77 /* SetupKeyboardView.swift in Sources */,
 				A4F42EAB24CDB33600F6C95E /* CoreDataManager.swift in Sources */,
 				2776B7E224C91AC10082F4FF /* UILabel+Init.swift in Sources */,
+				27B3C63C24DCA46D00BEBC77 /* Task.swift in Sources */,
 				2720BE8924B80DBE00A98F87 /* UIView+Card.swift in Sources */,
 				A4AE132724D6C22C00C208F6 /* SetupViewController+SetupToday.swift in Sources */,
 				A418BE6124D937B500F6B4E7 /* TimerClockView.swift in Sources */,

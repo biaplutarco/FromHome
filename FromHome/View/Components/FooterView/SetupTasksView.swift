@@ -32,6 +32,10 @@ class SetupTasksView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    func updateView() {
+        cardContent.updateView(getReadyTasks: viewModel.getReady.tasks, goHomeTasks: viewModel.goHome.tasks)
+    }
+
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
 
