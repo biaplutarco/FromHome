@@ -23,9 +23,8 @@ class ClockManager {
 
     private var isTimerPaused = false
 
-    init(hours: Int, minutes: Int, delegate: ClockManagerDelegate) {
+    init(hours: Int, minutes: Int) {
         counter = hours * 3_600 + minutes * 60
-        self.delegate = delegate
     }
 
     func startTimer() {

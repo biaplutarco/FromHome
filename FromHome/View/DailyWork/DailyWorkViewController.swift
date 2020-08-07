@@ -17,7 +17,7 @@ class DailyWorkViewController: UIViewController {
 
     lazy var cardContent = TimerClockView()
 
-    lazy var clockManager = ClockManager.init(hours: 0, minutes: 1, delegate: self)
+    let clockManager: ClockManager
 
     weak var coordinator: MainCoordinator?
 
@@ -26,7 +26,10 @@ class DailyWorkViewController: UIViewController {
     let playPauseButton = UIButton(cardWithImage: .pause)
 
     init(stars: [CAShapeLayer], coordinator: MainCoordinator) {
+        clockManager = ClockManager.init(hours: UserDefaultsManager.workingHours(), minutes: 0)
         super.init(nibName: nil, bundle: nil)
+
+        clockManager.delegate = self
 
         view = UniverseView.init(frame: view.frame, stars: stars)
 
