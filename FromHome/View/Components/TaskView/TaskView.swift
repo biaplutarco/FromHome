@@ -22,6 +22,10 @@ class TaskView: UIView {
 
         super.init(frame: .zero)
 
+        if taskTitle.isEmpty {
+            toggleState()
+        }
+
         addSubviews([imageView, taskLabel])
 
         Style.fromHome.apply(textStyle: .checklist, to: taskLabel)
