@@ -17,9 +17,9 @@ class TransitionTaskViewController: UIViewController {
 
     let tasksView: UIStackView
 
-    let taskView1: TaskView
-    let taskView2: TaskView
-    let taskView3: TaskView
+    let taskView1: TaskView!
+    let taskView2: TaskView!
+    let taskView3: TaskView!
 
     let backButton = UIButton(cardWithImage: .back)
     let skipButton = UIButton(cardWithImage: .skip)
@@ -37,12 +37,25 @@ class TransitionTaskViewController: UIViewController {
 
         viewModel = TransitionTaskViewModel.init(taskType: taskType)
 
+        var taskList = [TaskView]()
+
         taskView1 = TaskView.init(taskTitle: viewModel.taskList[0])
+        if !viewModel.taskList[0].isEmpty {
+            taskList.append(taskView1)
+        }
+
         taskView2 = TaskView.init(taskTitle: viewModel.taskList[1])
+        if !viewModel.taskList[1].isEmpty {
+            taskList.append(taskView2)
+        }
+
         taskView3 = TaskView.init(taskTitle: viewModel.taskList[2])
+        if !viewModel.taskList[2].isEmpty {
+            taskList.append(taskView3)
+        }
 
         tasksView = UIStackView.init(
-            subviews: [taskView1, taskView2, taskView3],
+            subviews: taskList,
             alignment: .fill,
             distribution: .fillEqually,
             axis: .vertical,
