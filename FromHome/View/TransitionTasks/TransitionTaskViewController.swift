@@ -13,23 +13,34 @@ class TransitionTaskViewController: UIViewController {
         .lightContent
     }
 
+    let contentView: TasksView
+
     let backButton = UIButton(cardWithImage: .back)
     let skipButton = UIButton(cardWithImage: .skip)
 
-    let buttonStackView = UIStackView(subviews: [], alignment: .fill, distribution: .equalSpacing, axis: .horizontal, spacing: 0)
+    let type: TransitionTaskViewModel.TransitionType
 
     weak var coordinator: MainCoordinator?
 
     init(stars: [CAShapeLayer], taskType: TransitionTaskViewModel.TransitionType, coordinator: MainCoordinator) {
+        contentView = TasksView(viewModel: TransitionTaskViewModel(taskType).tasksViewModel)
+        type = taskType
+
         super.init(nibName: nil, bundle: nil)
 
         view = UniverseView.init(frame: view.frame, stars: stars)
 
-        view.addSubviews([TasksView(viewModel: TransitionTaskViewModel(taskType).tasksViewModel), buttonStackView])
+        if taskType == .getReady {
+            view.addSubviews([contentView, backButton, skipButton])
+        } else {
+            view.addSubviews([contentView, skipButton])
+        }
+
+        backButton.addTarget(self, action: #selector(backButtonPressed(_:)), for: .touchUpInside)
+        skipButton.addTarget(self, action: #selector(skipButtonPressed(_:)), for: .touchUpInside)
 
         self.coordinator = coordinator
 
-        setupButtons()
         setupConstraints()
     }
 
@@ -47,39 +58,38 @@ class TransitionTaskViewController: UIViewController {
     }
 
     @objc
-    func backToSetup() {
+    func backButtonPressed(_ sender: UIButton) {
         coordinator?.returnToSetup()
     }
 
     @objc
-    func skipToWork() {
-        if let universeView = view as? UniverseView {
-            coordinator?.startDailyWork(universeView.stars)
+    func skipButtonPressed(_ sender: UIButton) {
+
+        if type == .goingHome {
+            coordinator?.returnToSetup()
+        } else {
+            if let universeView = view as? UniverseView {
+                coordinator?.startDailyWork(universeView.stars)
+            }
         }
-    }
-
-    private func setupButtons() {
-
-        buttonStackView.addArrangedSubview(backButton)
-        buttonStackView.addArrangedSubview(skipButton)
-
-        backButton.addTarget(self, action: #selector(backToSetup), for: .touchUpInside)
-        skipButton.addTarget(self, action: #selector(skipToWork), for: .touchUpInside)
     }
 
     private func setupConstraints() {
 
-        buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        if type == .getReady {
+            NSLayoutConstraint.activate([
+                backButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+                backButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+                backButton.heightAnchor.constraint(equalToConstant: 64),
+                backButton.widthAnchor.constraint(equalToConstant: 64)
+            ])
+        }
 
         NSLayoutConstraint.activate([
-
-            buttonStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            buttonStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            buttonStackView.heightAnchor.constraint(equalToConstant: 64),
-
-            backButton.widthAnchor.constraint(equalToConstant: 64),
-            skipButton.widthAnchor.constraint(equalTo: backButton.widthAnchor)
+            skipButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            skipButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            skipButton.heightAnchor.constraint(equalToConstant: 64),
+            skipButton.widthAnchor.constraint(equalToConstant: 64)
         ])
     }
 }

@@ -17,7 +17,7 @@ class DailyWorkViewController: UIViewController {
 
     lazy var cardContent = TimerClockView()
 
-    lazy var clockManager = ClockManager.init(hours: 0, minutes: 3, delegate: self)
+    lazy var clockManager = ClockManager.init(hours: 0, minutes: 1, delegate: self)
 
     weak var coordinator: MainCoordinator?
 
