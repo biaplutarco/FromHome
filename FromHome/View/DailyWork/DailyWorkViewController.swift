@@ -19,6 +19,8 @@ class DailyWorkViewController: UIViewController {
 
     lazy var clockManager = ClockManager.init(hours: 0, minutes: 1, delegate: self)
 
+    var stars: [CAShapeLayer]?
+
     weak var coordinator: MainCoordinator?
 
     let backButton = UIButton(cardWithImage: .back)

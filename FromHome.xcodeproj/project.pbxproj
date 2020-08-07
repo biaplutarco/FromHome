@@ -54,6 +54,7 @@
 		27CDB9C724D2457F00214097 /* AlertView+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDB9C624D2457F00214097 /* AlertView+TextFieldDelegate.swift */; };
 		27CDB9C924D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDB9C824D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift */; };
 		27D9E41524DD9EE30012C810 /* TransitionTaskViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9E41424DD9EE30012C810 /* TransitionTaskViewController+Alert.swift */; };
+		27D9E41724DDA1210012C810 /* DailyWorkViewController+AlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9E41624DDA1210012C810 /* DailyWorkViewController+AlertDelegate.swift */; };
 		27DF3B0D24D66F9200E8AA75 /* UIButton+CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DF3B0C24D66F9200E8AA75 /* UIButton+CardButton.swift */; };
 		27E8870724CE68C0001A2868 /* FHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8870624CE68C0001A2868 /* FHTextField.swift */; };
 		27E8D0B624C7CFC200E3EE4C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8D0B524C7CFC200E3EE4C /* Alert.swift */; };
@@ -176,6 +177,7 @@
 		27CDB9C624D2457F00214097 /* AlertView+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertView+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		27CDB9C824D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OptionsBodyView+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		27D9E41424DD9EE30012C810 /* TransitionTaskViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransitionTaskViewController+Alert.swift"; sourceTree = "<group>"; };
+		27D9E41624DDA1210012C810 /* DailyWorkViewController+AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyWorkViewController+AlertDelegate.swift"; sourceTree = "<group>"; };
 		27DF3B0C24D66F9200E8AA75 /* UIButton+CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+CardButton.swift"; sourceTree = "<group>"; };
 		27E8870624CE68C0001A2868 /* FHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHTextField.swift; sourceTree = "<group>"; };
 		27E8D0B524C7CFC200E3EE4C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 			isa = PBXGroup;
 			children = (
 				A418BE5E24D9330A00F6B4E7 /* DailyWorkViewController.swift */,
+				27D9E41624DDA1210012C810 /* DailyWorkViewController+AlertDelegate.swift */,
 				A429789024DB2AA4004A707F /* DailyWorkViewController+ClockManager.swift */,
 			);
 			path = DailyWork;
@@ -959,6 +962,7 @@
 				A4F42EA524C8EA3100F6C95E /* TabbedScrollView+Delegates.swift in Sources */,
 				27D9E41524DD9EE30012C810 /* TransitionTaskViewController+Alert.swift in Sources */,
 				A48B2E7824C242360017B79D /* UIView+Shadow.swift in Sources */,
+				27D9E41724DDA1210012C810 /* DailyWorkViewController+AlertDelegate.swift in Sources */,
 				A429788F24DB2279004A707F /* ClockManager.swift in Sources */,
 				27CDB9C924D25FEB00214097 /* OptionsBodyView+TextFieldDelegate.swift in Sources */,
 				A4AE779124B3994400A49E7F /* FromHome.xcdatamodeld in Sources */,
