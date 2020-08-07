@@ -23,6 +23,9 @@ class TaskView: UIView {
         super.init(frame: .zero)
 
         if taskTitle.isEmpty {
+
+            imageView.isHidden = taskTitle.isEmpty
+
             toggleState()
         }
 

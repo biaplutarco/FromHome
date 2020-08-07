@@ -28,6 +28,8 @@ class TransitionTaskViewController: UIViewController {
 
     let viewModel: TransitionTaskViewModel
 
+    var stars: [CAShapeLayer]?
+
     weak var coordinator: MainCoordinator?
 
     init(stars: [CAShapeLayer], taskType: TransitionTaskViewModel.TransitionType, coordinator: MainCoordinator) {
@@ -97,7 +99,13 @@ class TransitionTaskViewController: UIViewController {
                 coordinator?.returnToSetup()
             } else {
                 if let universeView = view as? UniverseView {
-                    coordinator?.startDailyWork(universeView.stars)
+
+                    let alert = AlertViewController(.finish(.preparation))
+                    alert.delegate = self
+
+                    present(alert, animated: true, completion: nil)
+
+                    stars = universeView.stars
                 }
             }
         }
