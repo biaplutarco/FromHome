@@ -10,23 +10,17 @@ import Foundation
 
 struct TransitionTaskViewModel {
 
-    enum TransitionType {
+    enum TransitionType: String {
 
-        case getReady
+        case getReady = "Get Ready"
         case goingHome
     }
 
-    var tasksViewModel: TasksViewModel
+    var title: String
+    var taskList: [String]
 
-    init(_ type: TransitionType) {
-
-        switch type {
-
-            case .getReady:
-                self.tasksViewModel = GetReadyTasksViewModel()
-
-            case .goingHome:
-                self.tasksViewModel = GoingHomeTasksViewModel()
-        }
+    init(taskType: TransitionTaskViewModel.TransitionType) {
+        title = taskType.rawValue
+        taskList = ["1","2","3"]
     }
 }
