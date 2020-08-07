@@ -13,7 +13,7 @@ class TransitionTaskViewController: UIViewController {
         .lightContent
     }
 
-    lazy var cardView = TitledCardView(titleType: .header, title: "Working", subView: self.tasksView, type: .header)
+    lazy var cardView = TitledCardView(titleType: .header, title: self.viewModel.title, subView: self.tasksView, type: .header)
 
     let tasksView: UIStackView
 
