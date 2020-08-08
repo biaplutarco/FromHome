@@ -30,8 +30,8 @@ enum UserDefaultsManager {
         userDefault.set(workingHours, forKey: Key.workingHours.rawValue)
     }
 
-    static func save(coffeeBreakHours: Int) {
-        userDefault.set(coffeeBreakHours, forKey: Key.coffeeBreakHours.rawValue)
+    static func save(coffeeBreakMinutes: Int) {
+        userDefault.set(coffeeBreakMinutes, forKey: Key.coffeeBreakHours.rawValue)
     }
 
     static func save(notificationHour: Int) {
@@ -54,7 +54,7 @@ enum UserDefaultsManager {
         userDefault.value(forKey: Key.workingHours.rawValue) as? Int ?? 8
     }
 
-    static func coffeeBreakHours() -> Int {
+    static func coffeeBreakMinutes() -> Int {
         userDefault.value(forKey: Key.coffeeBreakHours.rawValue) as? Int ?? 15
     }
 

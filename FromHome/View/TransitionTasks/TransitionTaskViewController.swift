@@ -59,7 +59,7 @@ class TransitionTaskViewController: UIViewController {
             alignment: .fill,
             distribution: .fillEqually,
             axis: .vertical,
-            spacing: 12
+            spacing: 24
         )
 
         super.init(nibName: nil, bundle: nil)

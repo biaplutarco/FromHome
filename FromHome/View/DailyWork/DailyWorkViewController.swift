@@ -28,7 +28,7 @@ class DailyWorkViewController: UIViewController {
     let playPauseButton = UIButton(cardWithImage: .pause)
 
     init(stars: [CAShapeLayer], coordinator: MainCoordinator) {
-        clockManager = ClockManager.init(hours: 0, minutes: 1)
+        clockManager = ClockManager.init(workHours: UserDefaultsManager.workingHours(), coffeeBreakMinutes: UserDefaultsManager.coffeeBreakMinutes())
         super.init(nibName: nil, bundle: nil)
 
         clockManager.delegate = self
