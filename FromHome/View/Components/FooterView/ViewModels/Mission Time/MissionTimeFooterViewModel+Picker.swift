@@ -19,7 +19,7 @@ extension MissionTimeFooterViewModel: OptionsFooterViewModel {
             return 12
         } else if pickerView.tag == OptionType.coffeeBreakHours.rawValue {
 
-            return 60
+            return 16
         } else {
 
             return enableData.count
@@ -47,7 +47,7 @@ extension MissionTimeFooterViewModel: OptionsFooterViewModel {
             selectedHour = row
         } else if pickerView.tag == OptionType.coffeeBreakHours.rawValue {
 
-            selectedCoffeeBreakHour = row
+            selectedCoffeeBreakMinutes = row
         } else {
 
             if enableData[row] == "yes" {

@@ -12,7 +12,7 @@ class MissionTimeFooterViewModel: NSObject {
 
     var enableData = ["no", "yes"]
 
-    var selectedCoffeeBreakHour = 0
+    var selectedCoffeeBreakMinutes = 0
     var selectedHour = 0
     var selectedMealBreakEnable = false
 
@@ -24,8 +24,17 @@ class MissionTimeFooterViewModel: NSObject {
 
     override init() {
 
-        let hourOption = Option(title: "Work Hours", inputSelected: String(UserDefaultsManager.workingHours()), type: .workingHours)
-        let coffeeBreakOption = Option(title: "Coffee Break", inputSelected: String(UserDefaultsManager.coffeeBreakHours()), type: .coffeeBreakHours)
+        let hourOption = Option(
+            title: "Work Hours",
+            inputSelected: String(UserDefaultsManager.workingHours()),
+            type: .workingHours
+        )
+
+        let coffeeBreakOption = Option(
+            title: "Coffee Break",
+            inputSelected: String(UserDefaultsManager.coffeeBreakMinutes()),
+            type: .coffeeBreakHours
+        )
 
         //var mealBreak: String
 
@@ -43,7 +52,7 @@ class MissionTimeFooterViewModel: NSObject {
     func save() {
 
         UserDefaultsManager.save(workingHours: selectedHour)
-        UserDefaultsManager.save(coffeeBreakHours: selectedCoffeeBreakHour)
+        UserDefaultsManager.save(coffeeBreakMinutes: selectedCoffeeBreakMinutes)
         UserDefaultsManager.change(mealBreak: selectedMealBreakEnable)
     }
 }

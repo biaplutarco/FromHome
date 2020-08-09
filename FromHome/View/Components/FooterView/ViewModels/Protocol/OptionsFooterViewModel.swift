@@ -61,7 +61,7 @@ extension OptionsFooterViewModel {
                 return String(UserDefaultsManager.workingHours())
 
             case 5:
-                return String(UserDefaultsManager.coffeeBreakHours())
+                return String(UserDefaultsManager.coffeeBreakMinutes())
 
             default:
                 return nil

@@ -59,4 +59,8 @@ class TitledCardView: UIView {
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -18)
         ])
     }
+
+    func changeTitle(title: String) {
+        titleView.changeTitle(title)
+    }
 }
