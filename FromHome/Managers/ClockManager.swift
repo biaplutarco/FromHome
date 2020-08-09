@@ -32,11 +32,6 @@ class ClockManager {
 
         workingTime = (30 * 60, 30 * 60)
         coffeeBreakTime = (coffeeBreakMinutes * 60, coffeeBreakMinutes * 60)
-
-        totalTime = 60
-
-        workingTime = (9, 9)
-        coffeeBreakTime = (3, 3)
     }
 
     func startTimer() {
@@ -55,10 +50,20 @@ class ClockManager {
 
     func isPaused() -> Bool { isTimerPaused }
 
-    func currentTime() -> (hours: Int, minutes: Int, seconds: Int) {
+    func isOnCoffeeBreak() -> Bool { isOnBreak }
+
+    func currentTotalTime() -> (hours: Int, minutes: Int, seconds: Int) {
         let hours = totalTime / 3_600
         let minutes = totalTime % 3_600 / 60
         let seconds = totalTime % 60
+
+        return (hours, minutes, seconds)
+    }
+
+    func currentBreakTime() -> (hours: Int, minutes: Int, seconds: Int) {
+        let hours = coffeeBreakTime.current / 3_600
+        let minutes = coffeeBreakTime.current % 3_600 / 60
+        let seconds = coffeeBreakTime.current % 60
 
         return (hours, minutes, seconds)
     }

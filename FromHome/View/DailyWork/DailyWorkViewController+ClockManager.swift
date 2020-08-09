@@ -11,9 +11,13 @@ import UIKit
 extension DailyWorkViewController: ClockManagerDelegate {
 
     func didTick(clockManager: ClockManager) {
-        let currentTime = clockManager.currentTime()
-
-        cardContent.updateClock(hours: currentTime.hours, minutes: currentTime.minutes, seconds: currentTime.seconds)
+        if clockManager.isOnCoffeeBreak() {
+            let currentTime = clockManager.currentBreakTime()
+            cardContent.updateClock(hours: currentTime.hours, minutes: currentTime.minutes, seconds: currentTime.seconds)
+        } else {
+            let currentTime = clockManager.currentTotalTime()
+            cardContent.updateClock(hours: currentTime.hours, minutes: currentTime.minutes, seconds: currentTime.seconds)
+        }
     }
 
     func didFinishCounting(clockManager: ClockManager) {
@@ -29,6 +33,10 @@ extension DailyWorkViewController: ClockManagerDelegate {
     }
 
     func didChangeState(clockManager: ClockManager, isOnBreak: Bool) {
-        print("CHANGE!! isOnBreak: \(isOnBreak)")
+        if isOnBreak {
+            cardView.changeTitle(title: "Coffee Break Time")
+        } else {
+            cardView.changeTitle(title: "Work Time")
+        }
     }
 }

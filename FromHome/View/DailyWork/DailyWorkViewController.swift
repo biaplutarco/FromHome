@@ -13,7 +13,7 @@ class DailyWorkViewController: UIViewController {
         .lightContent
     }
 
-    lazy var cardView = TitledCardView(titleType: .header, title: "Working", subView: self.cardContent, type: .header)
+    lazy var cardView = TitledCardView(titleType: .header, title: "Work Time", subView: self.cardContent, type: .header)
 
     lazy var cardContent = TimerClockView()
 
