@@ -64,9 +64,9 @@ class DailyWorkViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        if let view = view as? UniverseView {
-            view.makeSky()
-        }
+//        if let view = view as? UniverseView {
+//            view.makeSky()
+//        }
     }
 
     @objc

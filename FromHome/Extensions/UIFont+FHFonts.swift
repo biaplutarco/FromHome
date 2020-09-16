@@ -33,4 +33,10 @@ extension UIFont {
     static var workClockNumbers: UIFont { UIFont.monospacedSystemFont(ofSize: 48, weight: .regular) }
 
     static var workClockLabels: UIFont { UIFont.preferredFont(forTextStyle: .subheadline) }
+
+    static var onboardingMainTitle: UIFont { UIFont.systemFont(ofSize: 36.0, weight: .bold) }
+
+    static var onboardingSectionTitle: UIFont { UIFont.systemFont(ofSize: 18.0, weight: .bold) }
+
+    static var onboardingSectionBody: UIFont { UIFont.systemFont(ofSize: 18.0, weight: .regular) }
 }

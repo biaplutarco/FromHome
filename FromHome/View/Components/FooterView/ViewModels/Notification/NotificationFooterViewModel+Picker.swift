@@ -13,10 +13,8 @@ extension NotificationFooterViewModel: OptionsFooterViewModel {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
 
         if pickerView.tag == OptionType.time.rawValue {
-
             return 2
         } else {
-
             return 1
         }
     }
@@ -24,15 +22,11 @@ extension NotificationFooterViewModel: OptionsFooterViewModel {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 
         if pickerView.tag == OptionType.time.rawValue {
-
             switch component {
-
                 case 0:
                     return 25
-
                 case 1:
                     return 60
-
                 default:
                     return 0
             }
@@ -47,10 +41,8 @@ extension NotificationFooterViewModel: OptionsFooterViewModel {
         if pickerView.tag == OptionType.time.rawValue {
 
             switch component {
-
                 case 0:
                     return "\(row) Hour"
-
                 case 1:
                     return "\(row) Minute"
                 default:
@@ -78,12 +70,9 @@ extension NotificationFooterViewModel: OptionsFooterViewModel {
                     return
             }
         } else {
-
             if enableData[row] == "yes" {
-
                 selectedEnable = true
             } else {
-
                 selectedEnable = false
             }
         }

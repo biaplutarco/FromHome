@@ -16,12 +16,9 @@ class TodayFooterViewModel: FooterViewModel {
     var buttonTitle: String { "Start" }
 
     var bodyText: String {
-
         if isWorkinHoursCompleted {
-
             return "You already completed your working hours for today. Comeback tomorrow!"
         } else {
-
             return "Would you like to start your today’s mission now?"
         }
     }

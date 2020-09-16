@@ -17,13 +17,9 @@ enum SkipAlertMessage: String {
 class SkipAlertViewModel: AlertViewModel {
 
     var type: AlertViewModelType { .getOut }
-
     var title: String = "Skip"
-
     var leftButtonTitle: String = "Skip"
-
     var bodyMessage: String?
-
     var rightButtonTitle: String? { "Cancel" }
 
     init(_ message: SkipAlertMessage) {

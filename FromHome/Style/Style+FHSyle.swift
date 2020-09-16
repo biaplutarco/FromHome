@@ -54,6 +54,15 @@ extension Style.TextStyle {
 
             case .workClockLabels:
                 return Style.TextAttributes(font: .workClockLabels, color: .primaryText)
+
+            case .onboardingMainTitle:
+                return Style.TextAttributes(font: .onboardingMainTitle, color: .primaryText)
+
+            case .onboardingSectionTitle:
+                return Style.TextAttributes(font: .onboardingSectionTitle, color: .primaryText)
+
+            case .onboardingSectionBody:
+                return Style.TextAttributes(font: .onboardingSectionBody, color: .primaryText)
         }
     }
 }

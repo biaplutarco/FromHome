@@ -15,9 +15,7 @@ class SetupNotificationView: SetupKeyboardView {
     let viewModel = NotificationFooterViewModel()
 
     init() {
-
         cardContent = OptionsBodyView(options: viewModel.options, viewModel: viewModel)
-
         super.init(cardView: TitledCardView(titleType: .footer, title: viewModel.title, subView: cardContent, type: .footer))
     }
 }

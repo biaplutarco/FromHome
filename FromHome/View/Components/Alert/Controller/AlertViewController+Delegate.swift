@@ -15,26 +15,17 @@ protocol AlertControllerDelegate: AnyObject {
 extension AlertViewController: AlertViewDelegate {
 
     func action(withInput input: String?) {
-
         switch alert {
-
             case .changeName:
-
                 guard let name = input else { return }
-
                 viewModel.save(name)
-
             case .changeTask:
-
                 guard let taskName = input,
                     let changeTaskViewModel = self.alertViewModel as? ChangeTaskAlertViewModel else { return }
-
                 viewModel.save(Task(name: taskName, type: changeTaskViewModel.oldTask.type, index: changeTaskViewModel.oldTask.index))
-
             default:
                 break
         }
-
         dismiss(animated: true) {
             self.delegate?.updateView()
         }

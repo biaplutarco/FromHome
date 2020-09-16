@@ -59,8 +59,15 @@ class SetupViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        if let view = view as? UniverseView {
-            view.makeSky()
+//        if let view = view as? UniverseView {
+//            view.makeSky()
+//        }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if UserDefaultsManager.onboarding() {
+            coordinator?.showOnboarding()
         }
     }
 
@@ -69,12 +76,6 @@ class SetupViewController: UIViewController {
         planetView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-
-            //planetView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            //planetView.topAnchor.constraint(equalTo: greetingView.bottomAnchor, constant: 32),
-            //planetView.heightAnchor.constraint(equalTo: planetView.widthAnchor, multiplier: 1),
-            //planetView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 64),
-
             tabbedScrollView.topAnchor.constraint(equalTo: greetingView.bottomAnchor, constant: 16)
         ])
     }

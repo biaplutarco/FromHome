@@ -18,19 +18,13 @@ enum FinishAlertMessage: String {
 class FinishAlertViewModel: AlertViewModel {
 
     var type: AlertViewModelType { .warning }
-
     var title: String
-
     var leftButtonTitle: String = "OK"
-
     var bodyMessage: String?
-
     var rightButtonTitle: String?
 
     init(_ message: FinishAlertMessage) {
-
         self.bodyMessage = message.rawValue
-
         switch message {
 
             case .coffeeBreak:

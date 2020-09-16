@@ -17,13 +17,9 @@ enum LeaveAlertMessage: String {
 class LeaveAlertViewModel: AlertViewModel {
 
     var type: AlertViewModelType { .getOut }
-
     var title: String = "Leave"
-
     var leftButtonTitle: String = "Yes"
-
     var bodyMessage: String?
-
     var rightButtonTitle: String? { "Cancel" }
 
     init(_ message: LeaveAlertMessage) {

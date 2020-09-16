@@ -24,11 +24,16 @@ class UniverseView: UIView {
         super.init(frame: frame)
 
         stars = randomStars(quant: 20)
+
+        makeSky()
     }
 
     init(frame: CGRect, stars: [CAShapeLayer]) {
         super.init(frame: frame)
+
         self.stars = stars
+
+        makeSky()
     }
 
     @available(*, unavailable)

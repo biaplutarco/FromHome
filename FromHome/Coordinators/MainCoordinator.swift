@@ -48,6 +48,12 @@ class MainCoordinator: Coordinator {
         rootController.pushViewController(viewController, animated: false)
     }
 
+    func showOnboarding() {
+        let onboarding = OnboardingViewController.init(nibName: nil, bundle: nil)
+        //onboarding.modalPresentationStyle = .fullScreen
+        rootController.present(onboarding, animated: true, completion: nil)
+    }
+
     func returnToSetup() {
         rootController.popToRootViewController(animated: false)
     }

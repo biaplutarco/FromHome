@@ -16,4 +16,16 @@ extension UIButton {
 
         setImage(image, for: .normal)
     }
+
+    convenience init(title: String) {
+        self.init(frame: .zero)
+
+        translatesAutoresizingMaskIntoConstraints = false
+
+        backgroundColor = UIColor.backgroundTextfield
+        layer.cornerRadius = 16
+        setTitle(title, for: .normal)
+        Style.fromHome.apply(textStyle: .titleButton, to: self)
+        applyCornerRadius()
+    }
 }

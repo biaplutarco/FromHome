@@ -18,26 +18,18 @@ class TasksFooterViewModel: FooterViewModel {
     var title: String { "Tasks" }
 
     var getReady: (sectionTitle: String, tasks: [String]) {
-
         let predicate = NSPredicate(format: "id CONTAINS[cd] %@", TaskType.getReady.rawValue)
-
         guard let tasks = coreDataManager.find(objectType: TaskListEntity.self, predicate: predicate).res?.first?.tasks else {
-
             return ("To get ready", ["", "", ""])
         }
-
         return ("To get ready", tasks)
     }
 
     var goHome: (sectionTitle: String, tasks: [String]) {
-
         let predicate = NSPredicate(format: "id CONTAINS[cd] %@", TaskType.goHome.rawValue)
-
         guard let tasks = coreDataManager.find(objectType: TaskListEntity.self, predicate: predicate).res?.first?.tasks else {
-
             return ("To go home", ["", "", ""])
         }
-
         return ("To go home", tasks)
     }
 }

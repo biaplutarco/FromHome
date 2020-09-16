@@ -21,15 +21,11 @@ class AlertViewController: UIViewController {
     weak var delegate: AlertControllerDelegate?
 
     init(_ alert: Alert) {
-
         self.alertView = AlertView(alert.viewModel)
         self.alert = alert
         self.alertViewModel = alert.viewModel
-
         super.init(nibName: nil, bundle: nil)
-
         self.alertView.delegate = self
-
         setupView()
     }
 
@@ -39,12 +35,9 @@ class AlertViewController: UIViewController {
     }
 
     private func setupView() {
-
         view.backgroundColor = .backgroundTransparentAlert
-
         modalTransitionStyle = .crossDissolve
         modalPresentationStyle = .overCurrentContext
-
         view.addSubview(alertView)
     }
 }

@@ -11,7 +11,6 @@ import UIKit
 class ChangeNameAlertViewModel: InputAlertViewModel {
 
     init() {
-
         super.init(.changeName)
     }
 }

@@ -9,6 +9,5 @@
 import Foundation
 
 class GreetingViewModel: NSObject {
-
     var username: String { UserDefaultsManager.userName() }
 }

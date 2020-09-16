@@ -17,21 +17,14 @@ enum BreakAlertMessage: String {
 class BreakAlertViewModel: AlertViewModel {
 
     var type: AlertViewModelType { .warning }
-
     var title: String
-
     var leftButtonTitle: String
-
     var bodyMessage: String?
-
     var rightButtonTitle: String?
 
     init(_ message: BreakAlertMessage) {
-
         self.bodyMessage = message.rawValue
-
         switch message {
-
             case .coffee:
                 self.title = "Meal break"
                 self.leftButtonTitle = "I'm back!"

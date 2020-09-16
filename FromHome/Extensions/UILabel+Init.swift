@@ -19,12 +19,14 @@ extension UILabel {
         textAlignment = .center
     }
 
-    convenience init(text: String, textAlignment: NSTextAlignment = .center) {
+    convenience init(text: String, textAlignment: NSTextAlignment = .center, lines: Int = 1) {
         self.init()
 
         translatesAutoresizingMaskIntoConstraints = false
 
         self.text = text
         self.textAlignment = textAlignment
+        lineBreakMode = .byWordWrapping
+        numberOfLines = lines
     }
 }

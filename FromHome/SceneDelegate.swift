@@ -16,6 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     let coreDataManager = CoreDataManager()
 
+    var backgroundDate = Date.init(timeIntervalSince1970: 0)
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
@@ -57,6 +59,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
@@ -67,11 +71,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
+
+        guard let viewController = coordinator?.rootController.viewControllers.last as? DailyWorkViewController else { return }
+
+        backgroundDate = viewController.clockManager.makeNotification()
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+
+        guard let viewController = coordinator?.rootController.viewControllers.last as? DailyWorkViewController else { return }
+
+        let clockManager = viewController.clockManager
+
+        if backgroundDate != Date.init(timeIntervalSince1970: 0) {
+            clockManager.updateCurrentTime(timeInterval: backgroundDate.distance(to: Date.init(timeIntervalSinceNow: 0)))
+            clockManager.startTimer()
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+
+            backgroundDate = Date.init(timeIntervalSince1970: 0)
+        }
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

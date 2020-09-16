@@ -13,9 +13,7 @@ class ChangeTaskAlertViewModel: InputAlertViewModel {
     var oldTask: Task
 
     init(oldTask: Task) {
-
         self.oldTask = oldTask
-
         super.init(.changeTask)
     }
 }

@@ -29,6 +29,10 @@ class Style {
 
         case workClockNumbers
         case workClockLabels
+
+        case onboardingMainTitle
+        case onboardingSectionTitle
+        case onboardingSectionBody
     }
 
     struct TextAttributes {

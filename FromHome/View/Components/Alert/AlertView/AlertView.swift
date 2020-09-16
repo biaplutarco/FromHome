@@ -39,15 +39,12 @@ class AlertView: UIView {
 
     init(_ viewModel: AlertViewModel) {
         self.type = viewModel.type
-
         super.init(frame: .zero)
-
         setupView()
         setupTexts(for: viewModel)
     }
 
     deinit {
-
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -58,10 +55,8 @@ class AlertView: UIView {
     }
 
     private func setupTexts(for viewModel: AlertViewModel) {
-
         titleLabel.text = viewModel.title
         bodyLabel.text = viewModel.bodyMessage
-
         leftButton.setTitle(viewModel.leftButtonTitle, for: .normal)
         rightButton.setTitle(viewModel.rightButtonTitle, for: .normal)
     }
@@ -117,20 +112,16 @@ class AlertView: UIView {
     }
 
     private func withRigthButton() {
-
         buttonStackView.addArrangedSubview(verticalLine)
         buttonStackView.addArrangedSubview(rightButton)
-
         rigtButtonConstraints()
     }
 
     private func applyStyle() {
-
         textField.textColor = .secondaryText
 
         Style.fromHome.apply(textStyle: .titleAlert, to: titleLabel)
         Style.fromHome.apply(textStyle: .bodyCardFooter, to: bodyLabel)
-
         Style.fromHome.apply(textStyle: .alertTitleButton, to: leftButton)
         Style.fromHome.apply(textStyle: .destructiveTitleButton, to: rightButton)
     }
@@ -140,7 +131,6 @@ class AlertView: UIView {
     }
 
     private func actions() {
-
         rightButton.addTarget(self, action: #selector(rightAction), for: .touchUpInside)
         leftButton.addTarget(self, action: #selector(leftAction), for: .touchUpInside)
     }
@@ -170,20 +160,15 @@ class AlertView: UIView {
 
     @objc
     func keyboardWillShow(notification: NSNotification) {
-
         guard let userInfo = notification.userInfo,
             let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey],
             let superview = superview else { return }
-
         let endRect = convert((endValue as AnyObject).cgRectValue, from: window)
         let keyboardOverlap = frame.maxY - endRect.origin.y
-
         let offSet = superview.center.y - keyboardOverlap
-
         centerYConstraint?.isActive = false
         centerYConstraint?.constant = -offSet
         centerYConstraint?.isActive = true
-
         UIView.animate(withDuration: 0.5) {
             self.layoutIfNeeded()
         }
@@ -191,40 +176,30 @@ class AlertView: UIView {
 
     @objc
     func keyboardWillHide() {
-
         centerYConstraint?.isActive = false
         centerYConstraint?.constant = 0
         centerYConstraint?.isActive = true
-
         UIView.animate(withDuration: 0.5) {
             self.layoutIfNeeded()
         }
     }
 
     override func didMoveToSuperview() {
-
         translatesAutoresizingMaskIntoConstraints = false
-
         guard let superview = superview else { return }
-
         centerYConstraint = centerYAnchor.constraint(equalTo: superview.centerYAnchor)
         centerYConstraint?.isActive = true
-
         NSLayoutConstraint.activate([
-
             leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 24),
             trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -24)
         ])
     }
 
     private func subviewsConstraints() {
-
         stackView.translatesAutoresizingMaskIntoConstraints = false
         horizontalLine.translatesAutoresizingMaskIntoConstraints = false
         leftButton.translatesAutoresizingMaskIntoConstraints = false
-
         NSLayoutConstraint.activate([
-
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 24),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -238,11 +213,8 @@ class AlertView: UIView {
     }
 
     private func textFieldConstraints() {
-
         textField.translatesAutoresizingMaskIntoConstraints = false
-
         NSLayoutConstraint.activate([
-
             textField.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 16),
             textField.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -16),
             textField.heightAnchor.constraint(equalToConstant: 28)
@@ -250,12 +222,9 @@ class AlertView: UIView {
     }
 
     private func rigtButtonConstraints() {
-
         verticalLine.translatesAutoresizingMaskIntoConstraints = false
         rightButton.translatesAutoresizingMaskIntoConstraints = false
-
         NSLayoutConstraint.activate([
-
             verticalLine.widthAnchor.constraint(equalToConstant: 1),
             verticalLine.heightAnchor.constraint(equalTo: buttonStackView.heightAnchor),
 
@@ -265,11 +234,8 @@ class AlertView: UIView {
     }
 
     private func bodyLabelConstraints() {
-
         bodyLabel.translatesAutoresizingMaskIntoConstraints = false
-
         NSLayoutConstraint.activate([
-
             bodyLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 12),
             bodyLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -12)
         ])

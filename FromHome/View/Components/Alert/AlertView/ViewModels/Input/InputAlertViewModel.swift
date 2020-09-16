@@ -17,13 +17,9 @@ enum InputAlertTitle: String {
 class InputAlertViewModel: AlertViewModel {
 
     var type: AlertViewModelType { .input }
-
     var title: String
-
     var leftButtonTitle: String = "Save"
-
     var bodyMessage: String?
-
     var rightButtonTitle: String? { "Cancel" }
 
     init(_ title: InputAlertTitle) {

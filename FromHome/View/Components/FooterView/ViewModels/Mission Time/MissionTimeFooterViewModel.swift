@@ -36,21 +36,10 @@ class MissionTimeFooterViewModel: NSObject {
             type: .coffeeBreakHours
         )
 
-        //var mealBreak: String
-
-        //if UserDefaultsManager.mealBreak() {
-            //mealBreak = "yes"
-        //} else {
-            //mealBreak = "no"
-        //}
-
-        //let mealBreakOption = Option(title: "Meal Break", inputSelected: mealBreak, type: .mealBreak)
-
         options = [hourOption, coffeeBreakOption]
     }
 
     func save() {
-
         UserDefaultsManager.save(workingHours: selectedHour)
         UserDefaultsManager.save(coffeeBreakMinutes: selectedCoffeeBreakMinutes)
         UserDefaultsManager.change(mealBreak: selectedMealBreakEnable)

@@ -24,17 +24,13 @@ class GreetingView: UIView {
         let stackView = UIStackView(arrangedSubviews: [greetingLabel, usernameLabel])
         stackView.alignment = .leading
         stackView.axis = .vertical
-
         return stackView
     }()
 
     init() {
-
         self.usernameLabel.text = viewModel.username
         self.greetingLabel.text = "Hello,"
-
         super.init(frame: .zero)
-
         styleAsCard(.header)
         setupView()
     }
@@ -49,41 +45,31 @@ class GreetingView: UIView {
     }
 
     private func setupView() {
-
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
         addGestureRecognizer(tap)
-
         clipsToBounds = false
         translatesAutoresizingMaskIntoConstraints = false
-
         addSubviews([stackView, astronautView])
-
         applyStyle()
     }
 
     @objc
     func tapped() {
-
         impact.impactOccurred()
-
         scale(0.97, withDurarion: 0.1) {
             self.delegate?.didTapChangeUsername()
         }
     }
 
     private func applyStyle() {
-
         Style.fromHome.apply(textStyle: .greeting, to: greetingLabel)
         Style.fromHome.apply(textStyle: .username, to: usernameLabel)
     }
 
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-
         guard let superview = superview else { fatalError("No super view") }
-
         NSLayoutConstraint.activate([
-
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),

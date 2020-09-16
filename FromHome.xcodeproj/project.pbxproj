@@ -99,6 +99,9 @@
 		A4AE77BA24B39A8A00A49E7F /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = A4AE77B924B39A8900A49E7F /* README.MD */; };
 		A4AE77BF24B3BC6700A49E7F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE77BE24B3BC6700A49E7F /* Coordinator.swift */; };
 		A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */; };
+		A4B1A946250159D5001DC9FB /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B1A945250159D5001DC9FB /* OnboardingViewController.swift */; };
+		A4B4D0D7251246D500F17E64 /* OnboardingTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B4D0D6251246D500F17E64 /* OnboardingTipView.swift */; };
+		A4F04E8224FEC8530025D786 /* UNUserNotificationCenter+sendNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F04E8124FEC8530025D786 /* UNUserNotificationCenter+sendNotification.swift */; };
 		A4F42E9C24C8E87D00F6C95E /* UniverseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2722122024B7C3390053478F /* UniverseView.swift */; };
 		A4F42E9D24C8E8E300F6C95E /* TodayFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CB35424BA9975003126C9 /* TodayFooterViewModel.swift */; };
 		A4F42EA124C8E9F400F6C95E /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F42EA024C8E9F400F6C95E /* SetupViewController.swift */; };
@@ -230,6 +233,9 @@
 		A4AE77B924B39A8900A49E7F /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		A4AE77BE24B3BC6700A49E7F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A4B1A945250159D5001DC9FB /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A4B4D0D6251246D500F17E64 /* OnboardingTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTipView.swift; sourceTree = "<group>"; };
+		A4F04E8124FEC8530025D786 /* UNUserNotificationCenter+sendNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UNUserNotificationCenter+sendNotification.swift"; sourceTree = "<group>"; };
 		A4F42EA024C8E9F400F6C95E /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		A4F42EA224C8EA0D00F6C95E /* SetupViewController+Greeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupViewController+Greeting.swift"; sourceTree = "<group>"; };
 		A4F42EA424C8EA3100F6C95E /* TabbedScrollView+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabbedScrollView+Delegates.swift"; sourceTree = "<group>"; };
@@ -532,6 +538,7 @@
 				A48B2E6824C0E9500017B79D /* Setup */,
 				A4AE132824D6C3DD00C208F6 /* TransitionTasks */,
 				A418BE5D24D932D300F6B4E7 /* DailyWork */,
+				A4B1A944250159C2001DC9FB /* Onboarding */,
 				A49ED7A924B7A7A8006C70B6 /* Components */,
 			);
 			path = View;
@@ -544,6 +551,7 @@
 				2722122024B7C3390053478F /* UniverseView.swift */,
 				27E8870624CE68C0001A2868 /* FHTextField.swift */,
 				A476AFD824D45F200025DFE8 /* TitledCardView.swift */,
+				A4B4D0D6251246D500F17E64 /* OnboardingTipView.swift */,
 				270B175024D8A5AD00B0F082 /* TaskView */,
 				279CB35024BA974B003126C9 /* FooterView */,
 				279CB34924BA6F84003126C9 /* GreetingView */,
@@ -565,6 +573,7 @@
 				272E95A824D7803E002C5624 /* UIPickerView+Int.swift */,
 				A48B2E7B24C75D7E0017B79D /* UIImage+Assets.swift */,
 				A48B2E7F24C779CA0017B79D /* StackView+Init.swift */,
+				A4F04E8124FEC8530025D786 /* UNUserNotificationCenter+sendNotification.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -605,15 +614,14 @@
 		A4AE778524B3994400A49E7F /* FromHome */ = {
 			isa = PBXGroup;
 			children = (
+				A4F04E8024FEC5310025D786 /* Model */,
 				A4F42EA924CDB32500F6C95E /* Managers */,
 				A49ED7A824B7A797006C70B6 /* View */,
 				A4AE77BD24B3BAE400A49E7F /* Coordinators */,
 				278045E724B411AC00AEDFBA /* Style */,
 				A49ED7AA24B7A7B7006C70B6 /* Extensions */,
 				A4AE778624B3994400A49E7F /* AppDelegate.swift */,
-				27B3C63B24DCA46D00BEBC77 /* Task.swift */,
 				A4AE778824B3994400A49E7F /* SceneDelegate.swift */,
-				27B806D924BE213700D0BC87 /* Observable.swift */,
 				A4AE779424B3994700A49E7F /* LaunchScreen.storyboard */,
 				A4AE779224B3994700A49E7F /* Assets.xcassets */,
 				A4AE779724B3994700A49E7F /* Info.plist */,
@@ -647,6 +655,23 @@
 				A4AE77C024B3BCC000A49E7F /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		A4B1A944250159C2001DC9FB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A4B1A945250159D5001DC9FB /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A4F04E8024FEC5310025D786 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27B3C63B24DCA46D00BEBC77 /* Task.swift */,
+				27B806D924BE213700D0BC87 /* Observable.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A4F42EA924CDB32500F6C95E /* Managers */ = {
@@ -919,6 +944,7 @@
 				278B3A1724CBDCDD00A6DDB3 /* TaskSectionView.swift in Sources */,
 				270E394524D08F470012C890 /* UserDefaultsManager.swift in Sources */,
 				A4AE778724B3994400A49E7F /* AppDelegate.swift in Sources */,
+				A4B4D0D7251246D500F17E64 /* OnboardingTipView.swift in Sources */,
 				2776134C24C7C63A00E3C0B9 /* AlertViewModel.swift in Sources */,
 				27E8D0BB24C7D1E300E3EE4C /* FinishAlertViewModel.swift in Sources */,
 				A4F42EAF24CDB9A000F6C95E /* AppContext.swift in Sources */,
@@ -980,6 +1006,7 @@
 				A4AE77C124B3BCC000A49E7F /* MainCoordinator.swift in Sources */,
 				A4AE132A24D6C3F800C208F6 /* TransitionTaskViewController.swift in Sources */,
 				270E394C24D0FFA50012C890 /* AlertControllerViewModel.swift in Sources */,
+				A4F04E8224FEC8530025D786 /* UNUserNotificationCenter+sendNotification.swift in Sources */,
 				A4AE778924B3994400A49E7F /* SceneDelegate.swift in Sources */,
 				A408176A24CEC8D7009C14E3 /* OptionsFooterViewModel.swift in Sources */,
 				27C9EBD224CD173900FDAFCC /* TaskSectionViewDelegate.swift in Sources */,
@@ -989,6 +1016,7 @@
 				27CDB9C724D2457F00214097 /* AlertView+TextFieldDelegate.swift in Sources */,
 				27F019FA24C7C819001870D0 /* SkipAlertViewModel.swift in Sources */,
 				2771C49924C678DE00682DF3 /* UIView+Line.swift in Sources */,
+				A4B1A946250159D5001DC9FB /* OnboardingViewController.swift in Sources */,
 				27309EFF24B531B400D60FE8 /* CardTitleView.swift in Sources */,
 				A48B2E7424C236C40017B79D /* TabbedScrollView.swift in Sources */,
 				A476AFD124D445670025DFE8 /* SetupTodayView.swift in Sources */,
@@ -1172,7 +1200,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.biaplutarco.FromHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1191,7 +1219,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.biaplutarco.FromHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
